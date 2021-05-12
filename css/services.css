@@ -1,0 +1,25 @@
+/* .service>a {
+  background-color: gray; 
+  color: #fff;  
+} */
+
+.service>a:hover {
+   
+    color: #000;
+}
+
+/*code to change background color*/
+.service>.active>a {
+  color: #fff;
+  background-color: #3dc9b3;
+}
+
+.service>.h3 {
+  font-size: large;
+}
+
+.button {
+  height: 20px;
+  width: 50px;
+  border: none;
+}
