@@ -5,9 +5,10 @@ import { useState, useEffect } from 'react';
 import { NavLink as RouterLink, useLocation } from 'react-router-dom';
 import arrowIosUpwardFill from '@iconify/icons-eva/arrow-ios-upward-fill';
 import arrowIosDownwardFill from '@iconify/icons-eva/arrow-ios-downward-fill';
+import InboxIcon from '@material-ui/icons/Inbox';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Link, Grid, List, Stack, Popover, ListItem, ListSubheader, CardActionArea } from '@material-ui/core';
+import { Box, Link, Grid, List, Stack, Popover, ListItem, ListSubheader, CardActionArea, ListItemIcon } from '@material-ui/core';
 
 // ----------------------------------------------------------------------
 
@@ -98,7 +99,8 @@ function MenuDesktopItem({ item, pathname, isHome, isOpen, isOffset, onOpen, onC
               pb: 3,
               right: 16,
               margin: 'auto',
-              maxWidth: 1280,
+              minWidth: 380,
+              maxWidth: 780,
               borderRadius: 2,
               boxShadow: (theme) => theme.customShadows.z24
             }
@@ -110,12 +112,12 @@ function MenuDesktopItem({ item, pathname, isHome, isOpen, isOffset, onOpen, onC
 
               return (
                 <Grid key={subheader} item xs={12} md={subheader === 'Dashboard' ? 6 : 2}>
-                  <List disablePadding>
-                    <ListSubheader
+                  <Stack disablePadding>
+                    {subheader ? (<ListSubheader
                       disableSticky
                       disableGutters
                       sx={{
-                        display: 'flex',
+                        display : 'flex',
                         lineHeight: 'unset',
                         alignItems: 'center',
                         color: 'text.primary',
@@ -123,7 +125,8 @@ function MenuDesktopItem({ item, pathname, isHome, isOpen, isOffset, onOpen, onC
                       }}
                     >
                       <IconBullet type="subheader" /> {subheader}
-                    </ListSubheader>
+                    </ListSubheader>)
+                    : null}
 
                     {items.map((item) => (
                       <ListItem
@@ -133,7 +136,8 @@ function MenuDesktopItem({ item, pathname, isHome, isOpen, isOffset, onOpen, onC
                         underline="none"
                         sx={{
                           p: 0,
-                          mt: 3,
+                          // mt: 3,
+                          display : 'flex',
                           typography: 'body2',
                           color: 'text.secondary',
                           transition: (theme) => theme.transitions.create('color'),
@@ -167,13 +171,16 @@ function MenuDesktopItem({ item, pathname, isHome, isOpen, isOffset, onOpen, onC
                           </CardActionArea>
                         ) : (
                           <>
-                            <IconBullet />
+                            <ListItemIcon>
+                              {item.icon}
+                            </ListItemIcon>
+                            {/* <IconBullet /> */}
                             {item.title}
                           </>
                         )}
                       </ListItem>
                     ))}
-                  </List>
+                  </Stack>
                 </Grid>
               );
             })}

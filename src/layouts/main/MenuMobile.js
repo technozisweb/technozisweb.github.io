@@ -47,7 +47,7 @@ function MenuMobileItem({ item, isOpen, isActive, onOpen }) {
     return (
       <div key={title}>
         <ListItemStyle onClick={onOpen}>
-          <ListItemIcon>{icon}</ListItemIcon>
+          {/* <ListItemIcon>{icon}</ListItemIcon> */}
           <ListItemText disableTypography primary={title} />
           <Box
             component={Icon}
@@ -122,7 +122,7 @@ function MenuMobileItem({ item, isOpen, isActive, onOpen }) {
           })
         }}
       >
-        <ListItemIcon>{icon}</ListItemIcon>
+        {/* <ListItemIcon>{icon}</ListItemIcon> */}
         <ListItemText disableTypography primary={title} />
       </ListItemStyle>
     );
@@ -140,7 +140,7 @@ function MenuMobileItem({ item, isOpen, isActive, onOpen }) {
         })
       }}
     >
-      <ListItemIcon>{icon}</ListItemIcon>
+      {/* <ListItemIcon>{icon}</ListItemIcon> */}
       <ListItemText disableTypography primary={title} />
     </ListItemStyle>
   );

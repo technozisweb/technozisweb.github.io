@@ -7,10 +7,14 @@ import useOffSetTop from '../../hooks/useOffSetTop';
 // components
 import Logo from '../../components/Logo';
 import Label from '../../components/Label';
-import { MHidden } from '../../components/@material-extend';
+import { MHidden } from '../../components/@material-extend';import {
+  MegaMenuDesktopVertical,
+  MegaMenuDesktopHorizon,
+  MegaMenuMobile,
+  MenuConfig
+} from '../../components/mega-menu';
 //
 // import MenuDesktop from './MenuDesktop';
-import { MegaMenuDesktopHorizon, MenuConfig, MegaMenuMobile } from '../../components/mega-menu';
 // import MenuMobile from './MenuMobile';
 // import navConfig from './MenuConfig';
 
@@ -75,18 +79,31 @@ export default function MainNavbar() {
           <Label color="info" sx={{ ml: 1 }}>
             Technozis
           </Label>
-          <Box sx={{ flexGrow: 1 }} />
-
           <MHidden width="mdDown">
-            <MegaMenuDesktopHorizon isOffset={isOffset} isHome={isHome} navConfig={MenuConfig} />
+            {/* <MenuDesktop isOffset={isOffset} isHome={isHome} navConfig={navConfig} />
+            <MegaMenuDesktopHorizon navConfig={MenuConfig} /> */}
+
+            <Container sx={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
+              <Box sx={{ flexGrow: 1 }} />
+              <MegaMenuDesktopHorizon isOffset={isOffset} isHome={isHome} navConfig={MenuConfig} />
+              <Box sx={{ flexGrow: 0.1 }} />
+              <Button variant="contained" target="_blank" href="https://material-ui.com/store/items/minimal-dashboard/">
+                Contact us
+              </Button>
+            </Container>
           </MHidden>
 
-          <Button variant="outlined" target="_blank">
-            Contact Us
-          </Button>
-
           <MHidden width="mdUp">
-            <MegaMenuMobile isOffset={isOffset} isHome={isHome} navConfig={MenuConfig} />
+            {/* <MenuMobile isOffset={isOffset} isHome={isHome} navConfig={navConfig} />
+            <MegaMenuDesktopHorizon navConfig={MenuConfig} /> */}
+            <Container sx={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
+              <Box sx={{ flexGrow: 1 }} />
+              <MegaMenuMobile navConfig={MenuConfig} />
+              <Box sx={{ flexGrow: 0.5 }} />
+              <Button variant="contained" target="_blank" href="https://material-ui.com/store/items/minimal-dashboard/">
+                Contact us
+              </Button>
+            </Container>
           </MHidden>
         </Container>
       </ToolbarStyle>
