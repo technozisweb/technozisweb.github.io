@@ -55,7 +55,7 @@ export default function MainNavbar() {
   const isHome = pathname === '/';
 
   return (
-    <AppBar sx={{ boxShadow: 0, bgcolor: 'transparent' }}>
+    <AppBar sx={{ boxShadow: 0, bgcolor: 'background.default' }}>
       <ToolbarStyle
         disableGutters
         sx={{
@@ -87,7 +87,7 @@ export default function MainNavbar() {
               <Box sx={{ flexGrow: 1 }} />
               <MegaMenuDesktopHorizon isOffset={isOffset} isHome={isHome} navConfig={MenuConfig} />
               <Box sx={{ flexGrow: 0.1 }} />
-              <Button variant="contained" target="_blank" href="https://material-ui.com/store/items/minimal-dashboard/">
+              <Button variant="contained" target="_blank">
                 Contact us
               </Button>
             </Container>

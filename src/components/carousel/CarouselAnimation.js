@@ -8,12 +8,12 @@ import { Box, Card, Paper, Button, Typography, CardContent } from '@material-ui/
 // utils
 import mockData from '../../utils/mock-data';
 //
-import { varFadeInRight, MotionContainer } from '../animate';
-import { CarouselControlsArrowsIndex } from './controls';
+import { varFadeInRight, varSlideInDown, varSlideInUp, MotionContainer, TextAnimate } from '../animate';
+import { CarouselControlsArrowsBasic2 } from './controls';
 
 // ----------------------------------------------------------------------
 
-const MOCK_CAROUSELS = [...Array(5)].map((_, index) => ({
+const MOCK_CAROUSELS = [...Array(3)].map((_, index) => ({
   id: mockData.id(index),
   title: mockData.text.title(index),
   image: mockData.image.feed(index),
@@ -61,28 +61,36 @@ function CarouselItem({ item, isActive }) {
       />
       <CardContent
         sx={{
-          bottom: 0,
+          top: '30%',
+          left: '18%',
+          textAlign: 'center',
+          [theme.breakpoints.up('md')]: {
+            textAlign: 'left',
+            position: 'absolute',
+            bottom: theme.spacing(10)
+          },
           width: '100%',
-          maxWidth: 480,
-          textAlign: 'left',
-          position: 'absolute',
+          maxWidth: 680,
+          // textAlign: 'left',
+          // position: 'absolute',
           color: 'common.white'
         }}
       >
         <MotionContainer open={isActive}>
-          <motion.div variants={varFadeInRight}>
-            <Typography variant="h3" gutterBottom>
+          <motion.div variants={varSlideInDown}>
+            <TextAnimate text="Digital Transformation" sx={{ color: 'primary.main' }} variants={varFadeInRight} />
+            <Typography variant="h4" gutterBottom>
               {item.title}
             </Typography>
           </motion.div>
-          <motion.div variants={varFadeInRight}>
+          <motion.div variants={varSlideInUp}>
             <Typography variant="body2" noWrap gutterBottom>
               {item.description}
             </Typography>
           </motion.div>
           <motion.div variants={varFadeInRight}>
-            <Button variant="contained" sx={{ mt: 3 }}>
-              View More
+            <Button variant="outlined" sx={{ mt: 3 }}>
+              Get in Touch
             </Button>
           </motion.div>
         </MotionContainer>
@@ -97,8 +105,8 @@ export default function CarouselAnimation() {
   const [currentIndex, setCurrentIndex] = useState(theme.direction === 'rtl' ? MOCK_CAROUSELS.length - 1 : 0);
 
   const settings = {
-    speed: 800,
-    dots: false,
+    speed: 1000,
+    dots: true,
     arrows: false,
     autoplay: true,
     slidesToShow: 1,
@@ -123,9 +131,9 @@ export default function CarouselAnimation() {
         ))}
       </Slider>
 
-      <CarouselControlsArrowsIndex
-        index={currentIndex}
-        total={MOCK_CAROUSELS.length}
+      <CarouselControlsArrowsBasic2
+        // index={currentIndex}
+        // total={MOCK_CAROUSELS.length}
         onNext={handleNext}
         onPrevious={handlePrevious}
       />

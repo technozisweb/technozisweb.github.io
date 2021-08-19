@@ -22,7 +22,7 @@ const MOCK_SKILLS = [...Array(3)].map((_, index) => ({
 
 const RootStyle = styled('div')(({ theme }) => ({
   textAlign: 'center',
-  paddingTop: theme.spacing(20),
+  paddingTop: theme.spacing(10),
   paddingBottom: theme.spacing(10),
   [theme.breakpoints.up('md')]: {
     textAlign: 'left'

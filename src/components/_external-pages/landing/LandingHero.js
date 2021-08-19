@@ -9,18 +9,19 @@ import { Button, Box, Link, Container, Typography, Stack } from '@material-ui/co
 import { PATH_DASHBOARD } from '../../../routes/paths';
 //
 import { varFadeIn, varFadeInUp, varWrapEnter, varFadeInRight } from '../../animate';
+import CarouselAnimation from '../../carousel/CarouselAnimation';
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(motion.div)(({ theme }) => ({
   position: 'relative',
-  backgroundColor: theme.palette.grey[400],
+  // backgroundColor: theme.palette.grey[400],
   [theme.breakpoints.up('md')]: {
     top: 0,
     left: 0,
     width: '100%',
-    height: '100vh',
-    display: 'flex',
+    height: '100%',
+    // display: 'flex',
     position: 'fixed',
     alignItems: 'center'
   }
@@ -69,11 +70,13 @@ export default function LandingHero() {
   return (
     <>
       <RootStyle initial="initial" animate="animate" variants={varWrapEnter}>
-        <HeroOverlayStyle alt="overlay" src="/static/overlay.svg" variants={varFadeIn} />
+        {/* <CarouselBasic1 /> */}
+        {/* <HeroOverlayStyle alt="overlay" src="/static/overlay.svg" variants={varFadeIn} /> */}
 
-        <HeroImgStyle alt="hero" src="/static/home/hero.png" variants={varFadeInUp} />
-
-        <Container maxWidth="lg">
+        {/* <HeroImgStyle alt="hero" src="/static/home/hero.png" variants={varFadeInUp} /> */}
+        <CarouselAnimation />
+        {/* <Container maxWidth="lg">
+          
           <ContentStyle>
             <motion.div variants={varFadeInRight}>
               <Typography variant="h1" sx={{ color: 'common.white' }}>
@@ -92,48 +95,16 @@ export default function LandingHero() {
               </Typography>
             </motion.div>
 
-            {/* <Stack
-              component={motion.div}
-              variants={varFadeInRight}
-              direction="row"
-              spacing={1}
-              justifyContent={{ xs: 'center', md: 'flex-start' }}
-            >
-              <img alt="sketch icon" src="/static/home/ic_sketch_small.svg" width={20} height={20} />
-
-              <Link
-                underline="always"
-                href="https://www.sketch.com/s/0fa4699d-a3ff-4cd5-a3a7-d851eb7e17f0"
-                target="_blank"
-                color="common.white"
-                sx={{ typography: 'body2' }}
-              >
-                Preview in Sketch Cloud
-              </Link>
-            </Stack>
-
-            <motion.div variants={varFadeInRight}>
-              <Button
-                size="large"
-                variant="contained"
-                component={RouterLink}
-                to={PATH_DASHBOARD.root}
-                startIcon={<Icon icon={flashFill} width={20} height={20} />}
-              >
-                Live Preview
-              </Button>
-            </motion.div> */}
-
-            {/* <Stack direction="row" spacing={1.5} justifyContent={{ xs: 'center', md: 'flex-start' }}>
+            <Stack direction="row" spacing={1.5} justifyContent={{ xs: 'center', md: 'flex-start' }}>
               <motion.img variants={varFadeInRight} src="/static/home/ic_sketch.svg" />
               <motion.img variants={varFadeInRight} src="/static/home/ic_figma.svg" />
               <motion.img variants={varFadeInRight} src="/static/home/ic_material.svg" />
               <motion.img variants={varFadeInRight} src="/static/home/ic_react.svg" />
               <motion.img variants={varFadeInRight} src="/static/home/ic_js.svg" />
               <motion.img variants={varFadeInRight} src="/static/home/ic_ts.svg" />
-            </Stack> */}
+            </Stack>
           </ContentStyle>
-        </Container>
+        </Container> */}
       </RootStyle>
       <Box sx={{ height: { md: '100vh' } }} />
     </>

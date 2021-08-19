@@ -1,16 +1,17 @@
 import { Link as RouterLink } from 'react-router-dom';
 // material
 import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { Box, Grid, Button, Container, Typography } from '@material-ui/core';
+import { Box, Grid, Button, Container, Typography, List, ListItem, ListItemIcon } from '@material-ui/core';
 // routes
 import { PATH_PAGE } from '../../../routes/paths';
 //
 import { varFadeInUp, MotionInView } from '../../animate';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  padding: theme.spacing(24, 0),
+  padding: theme.spacing(10, 0),
   backgroundImage:
     theme.palette.mode === 'light'
       ? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 100%)`
@@ -84,7 +85,7 @@ export default function LandingHugePackElements() {
     <RootStyle>
       <Container maxWidth="lg">
         <Grid container spacing={5} justifyContent="center">
-          <Grid item xs={12} md={4} sx={{ display: 'flex', alignItems: 'center' }}>
+          <Grid item xs={12} md={5} sx={{ display: 'flex', alignItems: 'center' }}>
             <ContentStyle>
               <MotionInView variants={varFadeInUp}>
                 <Typography component="p" variant="overline" sx={{ mb: 2, color: 'text.secondary' }}>
@@ -111,6 +112,28 @@ export default function LandingHugePackElements() {
               </MotionInView>
 
               <MotionInView variants={varFadeInUp}>
+                <List
+                  sx={{
+                    mb: 5,
+                    color: isLight ? 'text.secondary' : 'common.white'
+                  }}
+                >
+                  <ListItem>
+                    <ListItemIcon><ArrowForwardIosIcon /></ListItemIcon>
+                    Here is some information about the company.
+                  </ListItem>
+                  <ListItem>
+                    <ListItemIcon><ArrowForwardIosIcon /></ListItemIcon>
+                    Here is some information about the company.
+                  </ListItem>
+                  <ListItem>
+                    <ListItemIcon><ArrowForwardIosIcon /></ListItemIcon>
+                    Here is some information about the company.
+                  </ListItem>
+                </List>
+              </MotionInView>
+
+              <MotionInView variants={varFadeInUp}>
                 <Button
                   size="large"
                   color="inherit"
@@ -124,7 +147,7 @@ export default function LandingHugePackElements() {
             </ContentStyle>
           </Grid>
 
-          <Grid item xs={12} md={8} dir="ltr">
+          <Grid item xs={12} md={7} dir="ltr">
             <Box
               sx={{
                 display: 'flex',

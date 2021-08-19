@@ -12,6 +12,8 @@ import {
   LandingCleanInterfaces,
   LandingHugePackElements
 } from '../components/_external-pages/landing';
+import { AboutWhat } from '../components/_external-pages/about';
+// import LandingServices from 'src/components/_external-pages/landing/LandingServices';
 
 // ----------------------------------------------------------------------
 
@@ -32,12 +34,14 @@ export default function LandingPage() {
     <RootStyle title="The starting point for your next project | Minimal-UI" id="move_top">
       <LandingHero />
       <ContentStyle>
+        {/* <LandingServices /> */}
         <LandingMinimal />
+        <AboutWhat />
+        {/* <LandingDarkMode /> */}
         <LandingHugePackElements />
-        <LandingDarkMode />
-        <LandingThemeColor />
+        {/* <LandingThemeColor /> */}
         <LandingCleanInterfaces />
-        <LandingPricingPlans />
+        {/* <LandingPricingPlans /> */}
         <LandingAdvertisement />
       </ContentStyle>
     </RootStyle>

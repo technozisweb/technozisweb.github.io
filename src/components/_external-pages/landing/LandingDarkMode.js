@@ -1,13 +1,13 @@
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Grid, Container, Typography } from '@material-ui/core';
+import { Box, Grid, Container, Typography, List, ListItem, ListItemIcon } from '@material-ui/core';
 //
 import { MotionInView, varFadeInUp, varFadeInDown } from '../../animate';
-
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  padding: theme.spacing(28, 0),
+  padding: theme.spacing(10, 0),
   backgroundColor: theme.palette.grey[900]
 }));
 
@@ -42,13 +42,13 @@ export default function LandingDarkMode() {
             bottom: 0,
             my: 'auto',
             position: 'absolute',
-            filter: 'grayscale(1) opacity(48%)',
+            filter: 'grayscale(1) opacity(100%)',
             display: { xs: 'none', md: 'block' }
           }}
         />
 
-        <Grid container spacing={5} direction="row-reverse" justifyContent="space-between">
-          <Grid item xs={12} md={4}>
+        <Grid container spacing={2} direction="row-reverse" justifyContent="space-between">
+          <Grid item xs={12} md={5}>
             <ContentStyle>
               <MotionInView variants={varFadeInUp}>
                 <Typography component="p" variant="overline" sx={{ mb: 2, color: 'text.disabled', display: 'block' }}>
@@ -65,18 +65,45 @@ export default function LandingDarkMode() {
               <MotionInView variants={varFadeInUp}>
                 <Typography sx={{ color: 'common.white', mb: 5 }}>
                   A dark theme that feels easier on the eyes.
+                  A dark theme that feels easier on the eyes.
                 </Typography>
+              </MotionInView>
+              <MotionInView variants={varFadeInUp}>
+                <Typography component="p" variant="overline" sx={{ mb: 2, color: 'text.disabled', display: 'block' }}>
+                  Easy switch between styles.
+                </Typography>
+              </MotionInView>
+
+              <MotionInView variants={varFadeInUp}>
+                <List sx={{ color: 'common.white' }}>
+                  <ListItem>
+                    <ListItemIcon><ArrowForwardIosIcon /></ListItemIcon>
+                    A dark theme that feels easier on the eyes.
+                  </ListItem>
+                  <ListItem>
+                    <ListItemIcon><ArrowForwardIosIcon /></ListItemIcon>
+                    A dark theme that feels easier on the eyes.
+                  </ListItem>
+                  <ListItem>
+                    <ListItemIcon><ArrowForwardIosIcon /></ListItemIcon>
+                    A dark theme that feels easier on the eyes.
+                  </ListItem>
+                  <ListItem>
+                    <ListItemIcon><ArrowForwardIosIcon /></ListItemIcon>
+                    A dark theme that feels easier on the eyes.
+                  </ListItem>
+                </List>
               </MotionInView>
             </ContentStyle>
           </Grid>
 
-          <Grid item xs={12} md={7} sx={{ position: 'relative' }}>
+          <Grid item xs={12} md={6} sx={{ position: 'relative', height: '100%' }}>
             <MotionInView threshold={0.5} variants={varFadeInUp}>
-              <img alt="light mode" src="/static/home/lightmode.png" />
+              <img alt="light mode" src="/static/home/cover.jpg" />
             </MotionInView>
-            <MotionInView threshold={0.5} variants={varFadeInDown} sx={{ top: 0, left: 0, position: 'absolute' }}>
+            {/* <MotionInView threshold={0.5} variants={varFadeInDown} sx={{ top: 0, left: 0, position: 'absolute' }}>
               <img alt="dark mode" src="/static/home/darkmode.png" />
-            </MotionInView>
+            </MotionInView> */}
           </Grid>
         </Grid>
       </Container>
