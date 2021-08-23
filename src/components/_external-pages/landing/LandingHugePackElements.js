@@ -6,7 +6,7 @@ import { Box, Grid, Button, Container, Typography, List, ListItem, ListItemIcon 
 import { PATH_PAGE } from '../../../routes/paths';
 //
 import { varFadeInUp, MotionInView } from '../../animate';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 
 // ----------------------------------------------------------------------
 
@@ -85,7 +85,7 @@ export default function LandingHugePackElements() {
     <RootStyle>
       <Container maxWidth="lg">
         <Grid container spacing={5} justifyContent="center">
-          <Grid item xs={12} md={5} sx={{ display: 'flex', alignItems: 'center' }}>
+          <Grid item xs={12} md={6} sx={{ display: 'flex', alignItems: 'center' }}>
             <ContentStyle>
               <MotionInView variants={varFadeInUp}>
                 <Typography component="p" variant="overline" sx={{ mb: 2, color: 'text.secondary' }}>
@@ -94,9 +94,8 @@ export default function LandingHugePackElements() {
               </MotionInView>
 
               <MotionInView variants={varFadeInUp}>
-                <Typography variant="h2" sx={{ mb: 3 }}>
-                  Huge pack <br />
-                  of elements
+                <Typography variant="h3" sx={{ mb: 3 }}>
+                  Huge pack of elements
                 </Typography>
               </MotionInView>
 
@@ -112,25 +111,13 @@ export default function LandingHugePackElements() {
               </MotionInView>
 
               <MotionInView variants={varFadeInUp}>
-                <List
+                <Typography
                   sx={{
                     mb: 5,
                     color: isLight ? 'text.secondary' : 'common.white'
-                  }}
-                >
-                  <ListItem>
-                    <ListItemIcon><ArrowForwardIosIcon /></ListItemIcon>
-                    Here is some information about the company.
-                  </ListItem>
-                  <ListItem>
-                    <ListItemIcon><ArrowForwardIosIcon /></ListItemIcon>
-                    Here is some information about the company.
-                  </ListItem>
-                  <ListItem>
-                    <ListItemIcon><ArrowForwardIosIcon /></ListItemIcon>
-                    Here is some information about the company.
-                  </ListItem>
-                </List>
+                  }}>
+                  Paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph.
+                </Typography>
               </MotionInView>
 
               <MotionInView variants={varFadeInUp}>
@@ -147,8 +134,8 @@ export default function LandingHugePackElements() {
             </ContentStyle>
           </Grid>
 
-          <Grid item xs={12} md={7} dir="ltr">
-            <Box
+          <Grid item xs={12} md={6} dir="ltr">
+            {/* <Box
               sx={{
                 display: 'flex',
                 alignItems: 'center',
@@ -189,7 +176,60 @@ export default function LandingHugePackElements() {
                   />
                 </ScreenStyle>
               ))}
-            </Box>
+            </Box> */}
+
+            {/* <MotionInView variants={varFadeInUp}>
+              <Typography component="p" variant="overline" sx={{ mb: 2, color: 'text.secondary' }}>
+                Interface Starter Kit
+              </Typography>
+            </MotionInView>
+
+            <MotionInView variants={varFadeInUp}>
+              <Typography variant="h3" sx={{ mb: 3 }}>
+                Huge pack of elements
+              </Typography>
+            </MotionInView> */}
+
+            <MotionInView variants={varFadeInUp}>
+              <Typography
+                sx={{
+                  mb: 5,
+                  color: isLight ? 'text.secondary' : 'common.white'
+                }}
+              >
+                We collected most popular elements. Menu, sliders, buttons, inputs etc. are all here. Just dive in!
+              </Typography>
+            </MotionInView>
+
+            <MotionInView variants={varFadeInUp}>
+              <List
+                sx={{
+                  mb: 5,
+                  color: isLight ? 'text.secondary' : 'common.white'
+                }}
+              >
+                <ListItem>
+                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
+                  Here is some information about the company.
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
+                  Here is some information about the company.
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
+                  Here is some information about the company.
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
+                  Here is some information about the company.
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
+                  Here is some information about the company.
+                </ListItem>
+              </List>
+            </MotionInView>
           </Grid>
         </Grid>
       </Container>

@@ -46,8 +46,8 @@ const CardStyle = styled(Card)(({ theme }) => {
       : alpha(theme.palette.common.black, opacity);
 
   return {
-    maxWidth: 300,
-    minHeight: 380,
+    maxWidth: 280,
+    minHeight: 280,
     margin: 'auto',
     textAlign: 'center',
     padding: theme.spacing(10, 5, 0),
@@ -62,9 +62,9 @@ const CardStyle = styled(Card)(({ theme }) => {
         backgroundColor: theme.palette.background.paper,
         boxShadow: `-40px 40px 80px 0 ${shadowCard(0.1)}`
       },
-      '&:hover': {
-        boxShadow: `-0px 40px 80px 0 ${shadowCard(1)}`,
-      },
+    '&:hover': {
+      boxShadow: `-0px 40px 80px 0 ${shadowCard(1)}`,
+    },
     },
     '&.cardCenter': {
       [theme.breakpoints.up('md')]: {
@@ -149,7 +149,7 @@ export default function LandingMinimalHelps() {
                   <Typography sx={{ color: isLight ? 'text.secondary' : 'common.white' }}>
                     {card.description}
                   </Typography>
-                  <Button variant="text" >Read more</Button>
+                  <Button variant="text">Read more</Button>
                 </CardStyle>
               </MotionInView>
             </Grid>
