@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react';
 import chevronDownFill from '@iconify/icons-eva/chevron-down-fill';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Link, Paper, Typography, List, Stack, ListItemIcon, ListItem } from '@material-ui/core';
+import { Box, Link, Paper, Typography, List, Stack, ListItemIcon, ListItem, Divider } from '@material-ui/core';
 import arrowIosUpwardFill from '@iconify/icons-eva/arrow-ios-upward-fill';
 import arrowIosDownwardFill from '@iconify/icons-eva/arrow-ios-downward-fill';
 //
@@ -73,32 +73,33 @@ function ParentItem({ path, title, open, hasSub, pathname, isHome, isOffset, ...
         transition: (theme) => theme.transitions.create('all'),
         '&:hover': activeStyle,
         ...(open && activeStyle),
-        ...(isHome && { color: 'common.white' }),
-        ...(isOffset && { color: 'text.primary' }),
-        ...(isActive && { color: 'primary.main' })
       }}
       {...other}
     >
       {title}
       {/* {hasSub && <Box component={Icon} icon={chevronDownFill} sx={{ ml: 1, width: 20, height: 20 }} />} */}
-      {hasSub && 
+      {/* {hasSub && 
         <Box
           component={Icon}
           icon={open ? arrowIosUpwardFill : arrowIosDownwardFill}
-          sx={{ ml: 1, width: 20, height: 20 }}
+          sx={{ ml: 0.5, width: 20, height: 20 }}
         />
-      }
+      } */}
     </LinkStyle>
   );
 }
 
 MegaMenuItem.propTypes = {
-  parent: PropTypes.object
+  parent: PropTypes.object,
+  isHome: PropTypes.bool,
+  isOffset: PropTypes.bool,
+  pathname: PropTypes.string,
 };
 
-function MegaMenuItem({ parent }) {
-  const { title, path, more, products, tags, children } = parent;
+function MegaMenuItem({ parent, pathname }) {
+  const { title, path, more, products, tags, children, isHome, isOffset } = parent;
   const [open, setOpen] = useState(false);
+  const isActive = pathname === path;
 
   const handleOpen = () => {
     setOpen(true);
@@ -150,7 +151,7 @@ function MegaMenuItem({ parent }) {
                           color: 'text.primary',
                           fontSize: 16,
                           transition: (theme) => theme.transitions.create('all'),
-                          '&:hover': { color: 'primary.main' }
+                          '&:hover': { color: 'primary.main' },
                         }}
                       >
                         <ListItem>

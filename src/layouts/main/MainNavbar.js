@@ -1,13 +1,13 @@
 import { NavLink as RouterLink, useLocation } from 'react-router-dom';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Button, AppBar, Toolbar, Container } from '@material-ui/core';
+import { Box, Button, AppBar, Toolbar, Container, Link } from '@material-ui/core';
 // hooks
 import useOffSetTop from '../../hooks/useOffSetTop';
 // components
 import Logo from '../../components/Logo';
 import Label from '../../components/Label';
-import { MHidden } from '../../components/@material-extend';import {
+import { MHidden } from '../../components/@material-extend'; import {
   MegaMenuDesktopVertical,
   MegaMenuDesktopHorizon,
   MegaMenuMobile,
@@ -83,12 +83,18 @@ export default function MainNavbar() {
             {/* <MenuDesktop isOffset={isOffset} isHome={isHome} navConfig={navConfig} />
             <MegaMenuDesktopHorizon navConfig={MenuConfig} /> */}
 
-            <Container sx={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
+            <Container sx={{ display: 'flex', alignItems: 'center', position: 'relative', color: 'white' }}>
               <Box sx={{ flexGrow: 1 }} />
               <MegaMenuDesktopHorizon isOffset={isOffset} isHome={isHome} navConfig={MenuConfig} />
-              <Box sx={{ flexGrow: 0.1 }} />
-              <Button variant="contained" target="_blank">
-                Contact us
+              <Box sx={{ flexGrow: 0.5 }} />
+              <Button variant="outlined" target="_blank">
+                <Link
+                  underline="none"
+                  href="/contact-us"
+                  // color="black"
+                >
+                  Contact us
+                </Link>
               </Button>
             </Container>
           </MHidden>
@@ -100,9 +106,6 @@ export default function MainNavbar() {
               <Box sx={{ flexGrow: 1 }} />
               <MegaMenuMobile navConfig={MenuConfig} />
               <Box sx={{ flexGrow: 0.5 }} />
-              <Button variant="contained" target="_blank" href="https://material-ui.com/store/items/minimal-dashboard/">
-                Contact us
-              </Button>
             </Container>
           </MHidden>
         </Container>
