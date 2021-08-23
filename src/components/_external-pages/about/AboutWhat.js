@@ -67,7 +67,21 @@ export default function AboutWhat() {
 
   return (
     <RootStyle>
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ position: 'relative' }}>
+        <Box
+          component="img"
+          alt="image shape"
+          src="/static/home/shape.svg"
+          sx={{
+            top: 0,
+            right: 0,
+            bottom: 0,
+            my: 'auto',
+            position: 'absolute',
+            filter: 'grayscale(1) opacity(100%)',
+            display: { xs: 'none', md: 'block' }
+          }}
+        />
         <Grid container spacing={3}>
           <MHidden width="mdDown">
             <Grid item xs={12} md={6} lg={7} sx={{ pr: { md: 7 } }}>
