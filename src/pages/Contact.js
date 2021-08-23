@@ -3,7 +3,7 @@ import { styled } from '@material-ui/core/styles';
 import { Grid, Container } from '@material-ui/core';
 // components
 import Page from '../components/Page';
-import { ContactHero, ContactForm, ContactMap } from '../components/_external-pages/contact';
+import { ContactHero, ContactForm, ContactMap, ContactInfo } from '../components/_external-pages/contact';
 
 // ----------------------------------------------------------------------
 
@@ -22,13 +22,14 @@ export default function Contact() {
       <ContactHero />
 
       <Container sx={{ my: 10 }}>
+        <ContactInfo />
         <Grid container spacing={10}>
-          <Grid item xs={12} md={6}>
+          {/* <Grid item xs={12} md={6}>
             <ContactForm />
-          </Grid>
-          <Grid item xs={12} md={6}>
+          </Grid> */}
+          {/* <Grid item xs={12} md={6}>
             <ContactMap />
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </RootStyle>
