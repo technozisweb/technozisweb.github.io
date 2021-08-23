@@ -4,29 +4,31 @@ import { styled } from '@material-ui/core/styles';
 import { Box, Container, Typography, Grid } from '@material-ui/core';
 //
 import { varFadeIn, varWrapEnter, varFadeInRight, TextAnimate } from '../../animate';
+import { Icon } from '@iconify/react';
+import twitterFill from '@iconify/icons-eva/twitter-fill';
+import linkedinFill from '@iconify/icons-eva/linkedin-fill';
+import facebookFill from '@iconify/icons-eva/facebook-fill';
+import roundArrowRightAlt from '@iconify/icons-ic/round-arrow-right-alt';
+import instagramFilled from '@iconify/icons-ant-design/instagram-filled';
 
 // ----------------------------------------------------------------------
 
 const CONTACTS = [
   {
-    country: 'Bali',
-    address: '508 Bridle Avenue Newnan, GA 30263',
-    phoneNumber: '(239) 555-0108'
+    icon: twitterFill,
+    address: 'twitter.com',
   },
   {
-    country: 'London',
-    address: '508 Bridle Avenue Newnan, GA 30263',
-    phoneNumber: '(319) 555-0115'
+    icon: linkedinFill,
+    address: 'linkedin.com',
   },
   {
-    country: 'Prague',
-    address: '508 Bridle Avenue Newnan, GA 30263',
-    phoneNumber: '(252) 555-0126'
+    icon: facebookFill,
+    address: 'facebook.com',
   },
   {
-    country: 'Moscow',
-    address: '508 Bridle Avenue Newnan, GA 30263',
-    phoneNumber: '(307) 555-0133'
+    icon: instagramFilled,
+    address: 'instagram.com',
   }
 ];
 
@@ -36,7 +38,7 @@ const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundImage: 'url(/static/overlay.svg), url(/static/contact/hero.jpg)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
-    height: 560,
+    height: 600,
     padding: 0
   }
 }));
@@ -67,10 +69,10 @@ export default function ContactHero() {
 
           <Grid container spacing={5} sx={{ mt: 5, color: 'common.white' }}>
             {CONTACTS.map((contact) => (
-              <Grid key={contact.country} item xs={12} sm={6} md={3} lg={2} sx={{ pr: { md: 5 } }}>
+              <Grid key={contact.icon} item xs={12} sm={6} md={3} lg={2} sx={{ pr: { md: 5 } }}>
                 <motion.div variants={varFadeIn}>
                   <Typography variant="h6" paragraph>
-                    {contact.country}
+                    <Icon icon={contact.icon} />
                   </Typography>
                 </motion.div>
                 <motion.div variants={varFadeInRight}>
