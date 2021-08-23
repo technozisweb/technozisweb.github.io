@@ -8,13 +8,13 @@ import facebookFill from '@iconify/icons-eva/facebook-fill';
 import roundArrowRightAlt from '@iconify/icons-ic/round-arrow-right-alt';
 import instagramFilled from '@iconify/icons-ant-design/instagram-filled';
 // material
-import { useTheme } from '@material-ui/core/styles';
+import { alpha, useTheme, styled } from '@material-ui/core/styles';
 import { Box, Card, Button, Container, Typography, IconButton } from '@material-ui/core';
 // utils
 import mockData from '../../../utils/mock-data';
 //
 import { varFadeIn, varFadeInUp, MotionInView, varFadeInDown } from '../../animate';
-import { CarouselControlsArrowsBasic2 } from '../../carousel';
+import { CarouselControlsArrowsBasic2, CarouselControlsPaging2 } from '../../carousel';
 
 // ----------------------------------------------------------------------
 
@@ -22,10 +22,60 @@ const MOCK_MEMBERS = [...Array(5)].map((_, index) => ({
   id: mockData.id(index),
   name: mockData.name.fullName(index),
   role: mockData.role(index),
-  avatar: mockData.image.avatar(index)
+  // avatar: mockData.image.avatar(index)
 }));
 
+const CARDS = [
+  {
+    icon: '/static/icons/ic_design.svg',
+    title: '1- UI & UX Design',
+    description:
+      'The set is built on the principles of the atomic design system.',
+    footer: 'meet unique requirem'
+  },
+  {
+    icon: '/static/icons/ic_code.svg',
+    title: '2- Development',
+    description: 'Easy to customize and extend each component, saving you time and money.'
+  },
+  {
+    icon: '/static/brand/logo_single.svg',
+    title: '3- Branding',
+    description: 'Consistent design in colors, fonts ... makes brand recognition easy.'
+  },
+  {
+    icon: '/static/brand/logo_single.svg',
+    title: '4- Branding',
+    description: 'Consistent design in colors, fonts ... makes brand recognition easy.'
+  },
+  {
+    icon: '/static/brand/logo_single.svg',
+    title: '5- Branding',
+    description: 'Consistent design in colors, fonts ... makes brand recognition easy.'
+  }
+];
+
+const shadowIcon = (color) => `drop-shadow(2px 2px 2px ${alpha(color, 0.48)})`;
+
 // ----------------------------------------------------------------------
+
+const CardStyle = styled(Card)(({ theme }) => ({
+  padding: theme.spacing(5, 5, 0),
+  maxWidth: 280,
+  height: 340,
+  margin: 'auto',
+  '&:hover': {
+    boxShadow: `0px 10px 10px 10px ${alpha(theme.palette.grey[300], 1)}`,
+  },
+}));
+
+const CardIconStyle = styled('img')(({ theme }) => ({
+  width: 40,
+  height: 40,
+  margin: 'auto',
+  marginBottom: theme.spacing(5),
+  filter: shadowIcon(theme.palette.primary.main)
+}));
 
 MemberCard.propTypes = {
   member: PropTypes.shape({
@@ -37,24 +87,29 @@ MemberCard.propTypes = {
 };
 
 function MemberCard({ member }) {
-  const { name, role, avatar } = member;
+  const { title, description, icon } = member;
   return (
-    <Card key={name} sx={{ p: 1, mx: 1.5 }}>
+    <CardStyle key={title}>
+      <CardIconStyle
+        src={icon}
+        alt={title}
+      />
+      {/* <Box sx={{ bgColor: 'red', height: 10 }} /> */}
       <Typography variant="subtitle1" sx={{ mt: 2, mb: 0.5 }}>
-        {name}
+        {title}
       </Typography>
       <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
-        {role}
+        {description}
       </Typography>
-      <Box component="img" src={avatar} sx={{ width: '100%', borderRadius: 1.5 }} />
-      <Box sx={{ mt: 2, mb: 1 }}>
+      {/* <Box component="img" src={avatar} sx={{ width: '100%', borderRadius: 1.5 }} /> */}
+      {/* <Box sx={{ mt: 2, mb: 1 }}>
         {[facebookFill, instagramFilled, linkedinFill, twitterFill].map((social, index) => (
           <IconButton key={index}>
             <Icon icon={social} width={20} height={20} />
           </IconButton>
         ))}
-      </Box>
-    </Card>
+      </Box> */}
+    </CardStyle>
   );
 }
 
@@ -63,10 +118,18 @@ export default function AboutTeam() {
   const theme = useTheme();
 
   const settings = {
+    speed: 500,
+    dots: true,
+    arrows: false,
+    autoplay: true,
     slidesToShow: 4,
+    // slidesToScroll: 4,
     centerMode: true,
     centerPadding: '0 80px',
     rtl: Boolean(theme.direction === 'rtl'),
+    // ...CarouselControlsPaging2({
+    // sx: { mt: 3 }
+    // }),
     responsive: [
       {
         breakpoint: 1279,
@@ -121,7 +184,7 @@ export default function AboutTeam() {
 
       <Box sx={{ position: 'relative' }}>
         <Slider ref={carouselRef} {...settings}>
-          {MOCK_MEMBERS.map((member) => (
+          {CARDS.map((member) => (
             <MotionInView key={member.id} variants={varFadeIn}>
               <MemberCard member={member} />
             </MotionInView>
@@ -133,7 +196,7 @@ export default function AboutTeam() {
           sx={{ transform: 'translateY(-64px)' }}
         />
       </Box>
-      <Button
+      {/* <Button
         variant="outlined"
         color="inherit"
         size="large"
@@ -141,7 +204,7 @@ export default function AboutTeam() {
         sx={{ mx: 'auto' }}
       >
         View all team members
-      </Button>
+      </Button> */}
     </Container>
   );
 }
