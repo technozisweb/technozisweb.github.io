@@ -16,53 +16,75 @@ const ICON_SIZE = {
 
 const menuConfig = [
   {
-    title: 'Home',
-    icon: <Icon icon={homeFill} {...ICON_SIZE} />,
-    path: '/'
-  },
-  {
-    title: 'Sevices',
-    path: '/pages',
-    // icon: <Icon icon={fileFill} {...ICON_SIZE} />,
-    children: [
-      {
-        items: [
-          { title: 'Custom Software Development', icon: <AdbIcon color="error" />, path: '#' },
-          { title: 'Business Intelligence and Analytics', icon: <AdbIcon color="error" />, path: '#' },
-        ]
-      },
-      // {
-      //   subheader: 'Authentication',
-      //   items: [
-      //     { title: 'Login', path: PATH_AUTH.loginUnprotected },
-      //     { title: 'Register', path: PATH_AUTH.registerUnprotected },
-      //     { title: 'Reset password', path: PATH_AUTH.resetPassword },
-      //     { title: 'Verify code', path: PATH_AUTH.verify }
-      //   ]
-      // },
-      // {
-      //   subheader: 'Error',
-      //   items: [
-      //     { title: 'Page 404', path: PATH_PAGE.page404 },
-      //     { title: 'Page 500', path: PATH_PAGE.page500 }
-      //   ]
-      // },
-      // {
-      //   subheader: 'Dashboard',
-      //   items: [{ title: 'Dashboard', path: PATH_DASHBOARD.root }]
-      // }
-    ]
-  },
-  {
-    title: 'Technologies',
+    title: 'Custom Software Development',
     icon: <Icon icon={roundGrain} {...ICON_SIZE} />,
-    path: PATH_PAGE.components
+    path: '/components',
   },
   {
-    title: 'About',
+    title: 'Hire developer',
+    path: '/services',
+    icon: <Icon icon={fileFill} {...ICON_SIZE} />,
+  },
+  {
+    title: 'Technologies consultant',
     icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
-    path: PATH_PAGE.about
-  }
+    path: '/services/software-development',
+  },
+  {
+    title: 'Management and Support',
+    icon: <Icon icon={roundGrain} {...ICON_SIZE} />,
+    path: '/components',
+  },
+  {
+    title: 'Technologies consultant',
+    icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
+    path: '/services/software-development',
+  },
+  {
+    title: 'SAP',
+    icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
+    path: '/services',
+  },
+  {
+    title: 'Product Engineering',
+    icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
+    path: '/services/software-development',
+  },
+  {
+    title: 'Application Development',
+    icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
+    path: '/services/software-development',
+  },
+  {
+    title: 'Digital Transformation',
+    icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
+    path: '/services/software-development',
+  },
+  {
+    title: 'Cloud Application',
+    icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
+    path: '/services/software-development',
+  },
+  {
+    title: 'Business Intelligence and Analytics',
+    icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
+    path: '/services/software-development',
+  },
+  {
+    title: 'Embedded Product',
+    icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
+    path: '/services/software-development',
+  },
+  {
+    title: 'Enterprise Mobility',
+    icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
+    path: '/services/software-development',
+  },
+  {
+    title: 'System Integration',
+    icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
+    path: '/services/software-development',
+  },
 ];
 
 export default menuConfig;
