@@ -9,6 +9,8 @@ import { Box, Link, List, Paper, ListItem, Typography, Divider, Stack } from '@m
 //
 import MenuHotProducts from './MenuHotProducts';
 import MegaMenuCarousel from './MegaMenuCarousel';
+import { makeStyles } from '@material-ui/styles';
+import RemoveIcon from '@material-ui/icons/Remove';
 
 // ----------------------------------------------------------------------
 
@@ -25,6 +27,12 @@ const ITEM_ON_ROW = {
 
 // ----------------------------------------------------------------------
 
+const styles = makeStyles(( theme ) => ({
+  active: {
+    color: theme.palette.primary.main
+  },
+}));
+
 ParentItem.propTypes = {
   path: PropTypes.string,
   title: PropTypes.string,
@@ -33,9 +41,11 @@ ParentItem.propTypes = {
 };
 
 function ParentItem({ path, title, open, hasSub, ...other }) {
+  const classes = styles();
   const activeStyle = {
     color: 'primary.main',
-    bgcolor: (theme) => alpha(theme.palette.primary.main, theme.palette.action.hoverOpacity)
+
+    // bgcolor: (theme) => alpha(theme.palette.primary.main, theme.palette.action.hoverOpacity)
   };
 
   return (
@@ -43,21 +53,31 @@ function ParentItem({ path, title, open, hasSub, ...other }) {
       disableGutters
       to={path}
       component={RouterLink}
+      activeClassName={classes.active}
       sx={{
-        pl: 2.5,
-        pr: 1.5,
+        // pl: 2.5,
+        // mb: 1,
         height: ITEM_HEIGHT,
         cursor: 'pointer',
         color: 'text.primary',
-        typography: 'subtitle2',
+        typography: 'subtitle1',
         textTransform: 'capitalize',
-        justifyContent: 'space-between',
+        // justifyContent: 'space-between',
         transition: (theme) => theme.transitions.create('all'),
         '&:hover': activeStyle,
-        ...(open && activeStyle)
+        ...(open && activeStyle),
+        '&:active': { color: 'primary.main' },
       }}
       {...other}
     >
+      <RemoveIcon
+        sx={{
+          // width: 40, height: 40,
+          '&:hover': activeStyle,
+          ...(open && activeStyle),
+          '&:active': { color: 'primary.main' },
+          mr: 2,
+        }} />
       {title}
       {hasSub && <Box component={Icon} icon={chevronRightFill} sx={{ ml: 1, width: 20, height: 20 }} />}
     </ListItem>
@@ -83,9 +103,7 @@ function MegaMenuItem({ parent }) {
   if (children) {
     return (
       <>
-        <ParentItem onMouseEnter={handleOpen} onMouseLeave={handleClose} path={path} title={title} open={open} hasSub>
-          {title}
-        </ParentItem>
+        <ParentItem onMouseEnter={handleOpen} onMouseLeave={handleClose} path={path} title={title} open={open} hasSub />
 
         {open && (
           <Paper
