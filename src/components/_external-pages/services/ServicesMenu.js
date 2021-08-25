@@ -1,123 +1,115 @@
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
-import listFill from '@iconify/icons-eva/list-fill';
+import { NavLink as RouterLink } from 'react-router-dom';
+import chevronRightFill from '@iconify/icons-eva/chevron-right-fill';
 // material
-import { styled, alpha } from '@material-ui/core/styles';
-import { Box, Card, Paper, Stack, Container, AppBar, Typography, Grid } from '@material-ui/core';
-// routes
-import { PATH_PAGE } from 'src/routes/paths';
-// components
-import Page from 'src/components/Page';
-import HeaderBreadcrumbs from 'src/components/HeaderBreadcrumbs';
-import {
-  MegaMenuDesktopVertical,
-  MegaMenuDesktopHorizon,
-  MegaMenuMobile,
-  // MenuConfig
-} from 'src/components/mega-menu';
-import MenuConfig from 'src/layouts/main/MenuConfig.js';
-import ServicesDescription from './ServicesDescription';
+import { alpha } from '@material-ui/core/styles';
+import { Box, Link, List, Paper, ListItem, Typography, Divider, Stack } from '@material-ui/core';
+//
+import { makeStyles } from '@material-ui/styles';
+import RemoveIcon from '@material-ui/icons/Remove';
+import navConfig from 'src/layouts/main/MenuConfig.js';
 
 // ----------------------------------------------------------------------
 
-const RootStyle = styled(Page)(({ theme }) => ({
-  paddingTop: theme.spacing(11),
-  paddingBottom: theme.spacing(10),
-  // backgroundImage:
-  //   theme.palette.mode === 'light'
-  //     ? `linear-gradient(0deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 100%)`
-  //     : 'none'
-}));
-
-const ContentStyle = styled(Page)(({ theme }) => ({
-  backgroundImage:
-    theme.palette.mode === 'light'
-      ? `linear-gradient(0deg, ${alpha(theme.palette.grey[500], 0)} 0%, ${theme.palette.primary.main} 100%)`
-      : 'none'
-}));
+const MENU_WIDTH = 280;
+const MENU_PAPER_WIDTH = 800;
+const CONTENT_HEIGHT = 400;
+const ITEM_HEIGHT = 40;
+const ITEM_ON_ROW = {
+  width: 'calc((100%/3) - 16px)',
+  '&:nth-child(3n+1)': { order: 1 },
+  '&:nth-child(3n+2)': { order: 2 },
+  '&:nth-child(3n)': { order: 3 }
+};
 
 // ----------------------------------------------------------------------
 
-export default function MegaMenu() {
+const styles = makeStyles(( theme ) => ({
+  active: {
+    color: theme.palette.primary.main
+  },
+}));
+
+ParentItem.propTypes = {
+  path: PropTypes.string,
+  title: PropTypes.string,
+  open: PropTypes.bool,
+  hasSub: PropTypes.bool
+};
+
+function ParentItem({ path, title, open, hasSub, ...other }) {
+  const classes = styles();
+  const activeStyle = {
+    color: 'primary.main',
+    bgcolor: (theme) => alpha(theme.palette.primary.main, theme.palette.action.hoverOpacity)
+  };
+
   return (
-    <RootStyle title="Mega Menu | Minimal-UI">
-      {/* <Box
+    <ListItem
+      disableGutters
+      to={path}
+      component={RouterLink}
+      activeClassName={classes.active}
+      // onClick={window.scrollTo(0, 200)}
+      sx={{
+        // pl: 2.5,
+        // mb: 1,
+        height: ITEM_HEIGHT,
+        cursor: 'pointer',
+        color: 'text.primary',
+        typography: 'subtitle1',
+        textTransform: 'capitalize',
+        // justifyContent: 'space-between',
+        transition: (theme) => theme.transitions.create('all'),
+        '&:hover': activeStyle,
+        ...(open && activeStyle),
+        '&:active': { color: 'primary.main' },
+      }}
+      {...other}
+    >
+      <RemoveIcon
         sx={{
-          pt: 6,
-          pb: 1,
-          bgcolor: (theme) => (theme.palette.mode === 'light' ? 'grey.200' : 'grey.800')
-        }}
-      >
-        <Container maxWidth="lg">
-          <HeaderBreadcrumbs
-            heading="Mega Menu"
-            links={[{ name: 'Components', href: PATH_PAGE.components }, { name: 'Mega Menu' }]}
-          />
-        </Container>
-      </Box> */}
+          mr: 2,
+          // color: 'black',
+          '&:hover': activeStyle,
+        }} />
+      {title}
+      {hasSub && <Box component={Icon} icon={chevronRightFill} sx={{ ml: 1, width: 20, height: 20 }} />}
+    </ListItem>
+  );
+}
 
-      {/* <AppBar
-        position="static"
-        color="transparent"
-        sx={{
-          boxShadow: (theme) => theme.customShadows.z8
-        }}
-      >
-        <Container sx={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Menu Horizon
-          </Typography>
-          <MegaMenuDesktopHorizon navConfig={MenuConfig} />
-        </Container>
-      </AppBar> */}
+MegaMenuItem.propTypes = {
+  parent: PropTypes.object
+};
 
-      <Container>
-        {/* <MegaMenuMobile navConfig={MenuConfig} /> */}
+function MegaMenuItem({ parent }) {
+  const { title, path, more, products, tags, children } = parent;
+  const [open, setOpen] = useState(false);
 
-        {/* <Stack direction="row" spacing={3} mt={5}>
-          <Box sx={{ width: 380, flexShrink: 0, overflow: 'unset' }}>
-            <Typography variant="h6" sx={{ p: 2, display: 'flex', alignItems: 'center' }}>
-              <Box component={Icon} icon={listFill} sx={{ mr: 1, width: 24, height: 24 }} /> SERVICES
-            </Typography>
-            <MegaMenuDesktopVertical navConfig={MenuConfig} />
-          </Box>
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
-          <Paper sx={{ minHeight: 480, minWidth: 480, overflow: 'hidden', borderRadius: 1, backgroundColor: 'red', border: '2px solid black' }}>
-            <Box
-              // component="img"
-              // src="/static/mock-images/fhome/rocket.png"
-              sx={{ height: '100%', objectFit: 'cover', backgroundColor: 'red' }}
-            />
-          </Paper>
-        </Stack> */}
-        <Grid container>
-          <Grid item xs={12} md={4}>
-            <Box sx={{ width: 480, flexShrink: 0, overflow: 'unset' }}>
-              {/* <Typography variant="h6" sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
-                <Box sx={{ width: 24, height: 24 }} /> SERVICES
-              </Typography> */}
-              <MegaMenuDesktopVertical navConfig={MenuConfig} />
-            </Box>
-          </Grid>
-          <Grid item xs={12} md={1}></Grid>
-          <Grid item xs={12} md={7}>
-            <Paper sx={{ minHeight: 380, maxWidth: 740, overflow: 'hidden' }}>
-              <ContentStyle>
-                <Box
-                  // component="img"
-                  // src="/static/mock-images/fhome/rocket.png"
-                  sx={{
-                    height: '100%',
-                    objectFit: 'cover',
-                  }}
-                >
-                  <ServicesDescription />
-                </Box>
-              </ContentStyle>
-            </Paper>
-          </Grid>
-        </Grid>
-      </Container>
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-    </RootStyle>
+  return (
+    <ParentItem path={path} title={title}>
+      {title}
+    </ParentItem>
+  );
+}
+
+export default function ServicesMenuConfig() {
+  return (
+    <List disablePadding>
+      {navConfig.map((parent) => (
+        <MegaMenuItem key={parent.title} parent={parent} />
+      ))}
+    </List>
   );
 }

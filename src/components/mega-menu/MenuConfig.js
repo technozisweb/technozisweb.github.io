@@ -12,8 +12,8 @@ import { PATH_AUTH, PATH_DOCS, PATH_PAGE, PATH_DASHBOARD } from '../../routes/pa
 // ----------------------------------------------------------------------
 
 const ICON_SIZE = {
-  width: '100%',
-  height: '100%'
+  width: '7%',
+  height: '7%'
 };
 
 const MOCK_PRODUCTS = [...Array(10)].map((_, index) => ({
@@ -21,6 +21,8 @@ const MOCK_PRODUCTS = [...Array(10)].map((_, index) => ({
   image: mockData.image.feed(index),
   path: '#'
 }));
+
+
 
 const TAGS = [
   { name: 'Paper Cup', path: '#' },
@@ -38,7 +40,7 @@ const menuConfig = [
   },
   {
     title: 'Services',
-    path: '/',
+    path: '/services/custom-software-development',
     icon: <Icon icon={fileFill} {...ICON_SIZE} />,
     more: { title: 'More Categories', path: '#' },
     products: MOCK_PRODUCTS,
@@ -47,17 +49,57 @@ const menuConfig = [
       {
         // subheader: 'Agriculture Machinery',
         items: [
-          { title: 'Custom Software Development', icon: <AdbIcon size="small" color="error" />, path: '/services/software-development' },
+          { title: 'Custom Software Development', icon: <img src="/static/icons/custom-software.png"  {...ICON_SIZE} style={{ color: 'blue' }} />, path: '/services/custom-software-development' },
         ]
       },
       {
         items: [
-          { title: 'CNC Machine Tools', icon: <AdbIcon size="small" color="success" />, path: '#' },
+          { title: 'Hire Developer', icon: <img src="/static/icons/custom-software.png"  {...ICON_SIZE} />, path: '/services/hire-developer' },
         ]
       },
       {
         items: [
-          { title: 'CNC Machine Tools', icon: <AdbIcon size="small" color="info" />, path: '#' },
+          { title: 'Technologies Consultant', icon: <AdbIcon size="small" color="info" />, path: '/services/technologies-consultant' },
+        ]
+      },
+      {
+        items: [
+          { title: 'Management and Support', icon: <AdbIcon size="small" color="info" />, path: '/services/technologies-consultant' },
+        ]
+      },
+      {
+        items: [
+          { title: 'System Integration', icon: <AdbIcon size="small" color="info" />, path: '/services/technologies-consultant' },
+        ]
+      },
+      {
+        items: [
+          { title: 'Enterprise Mobility', icon: <AdbIcon size="small" color="info" />, path: '/services/technologies-consultant' },
+        ]
+      },
+      {
+        items: [
+          { title: 'Product Engineering', icon: <AdbIcon size="small" color="info" />, path: '/services/technologies-consultant' },
+        ]
+      },
+      {
+        items: [
+          { title: 'Software Testing & QA', icon: <AdbIcon size="small" color="info" />, path: '/services/technologies-consultant' },
+        ]
+      },
+      {
+        items: [
+          { title: 'Application Development', icon: <AdbIcon size="small" color="info" />, path: '/services/technologies-consultant' },
+        ]
+      },
+      {
+        items: [
+          { title: 'Embedded Product', icon: <AdbIcon size="small" color="info" />, path: '/services/technologies-consultant' },
+        ]
+      },
+      {
+        items: [
+          { title: 'Cloud Application', icon: <AdbIcon size="small" color="info" />, path: '/services/technologies-consultant' },
         ]
       },
     ]
@@ -73,17 +115,17 @@ const menuConfig = [
       {
         // subheader: 'Agriculture Machinery',
         items: [
-          { title: 'Custom Software Development', icon: <AdbIcon size="small" color="error" />, path: '/services/software-development' },
+          { title: 'Custom Software Development', icon: <AdbIcon size="small" color="error" />, path: '/services' },
         ]
       },
       {
         items: [
-          { title: 'CNC Machine Tools', icon: <AdbIcon size="small" color="success" />, path: '/services/software-development' },
+          { title: 'CNC Machine Tools', icon: <AdbIcon size="small" color="success" />, path: '/services' },
         ]
       },
       {
         items: [
-          { title: 'CNC Machine Tools', icon: <AdbIcon size="small" color="info" />, path: '/services/software-development' },
+          { title: 'CNC Machine Tools', icon: <AdbIcon size="small" color="info" />, path: '/services' },
         ]
       },
     ]
@@ -99,17 +141,17 @@ const menuConfig = [
       {
         // subheader: 'Agriculture Machinery',
         items: [
-          { title: 'Custom Software Development', icon: <AdbIcon size="small" color="error" />, path: '/services/software-development' },
+          { title: 'Custom Software Development', icon: <AdbIcon size="small" color="error" />, path: '/services' },
         ]
       },
       {
         items: [
-          { title: 'CNC Machine Tools', icon: <AdbIcon size="small" color="success" />, path: '/services/software-development' },
+          { title: 'CNC Machine Tools', icon: <AdbIcon size="small" color="success" />, path: '/services' },
         ]
       },
       {
         items: [
-          { title: 'CNC Machine Tools', icon: <AdbIcon size="small" color="info" />, path: '/services/software-development' },
+          { title: 'CNC Machine Tools', icon: <AdbIcon size="small" color="info" />, path: '/services' },
         ]
       },
     ]
@@ -125,17 +167,17 @@ const menuConfig = [
       {
         // subheader: 'Agriculture Machinery',
         items: [
-          { title: 'Custom Software Development', icon: <AdbIcon size="small" color="error" />, path: '/services/software-development' },
+          { title: 'Custom Software Development', icon: <AdbIcon size="small" color="error" />, path: '/services' },
         ]
       },
       {
         items: [
-          { title: 'CNC Machine Tools', icon: <AdbIcon size="small" color="success" />, path: '/services/software-development' },
+          { title: 'CNC Machine Tools', icon: <AdbIcon size="small" color="success" />, path: '/services' },
         ]
       },
       {
         items: [
-          { title: 'CNC Machine Tools', icon: <AdbIcon size="small" color="info" />, path: '/services/software-development' },
+          { title: 'CNC Machine Tools', icon: <AdbIcon size="small" color="info" />, path: '/services' },
         ]
       },
     ]

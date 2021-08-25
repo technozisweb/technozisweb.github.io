@@ -7,10 +7,10 @@ import StopTwoToneIcon from '@material-ui/icons/StopTwoTone';
 
 const RootStyle = styled('div')(({ theme }) => ({
   padding: theme.spacing(5, 0),
-  backgroundImage:
-    theme.palette.mode === 'light'
-      ? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 50%)`
-      : 'none'
+  // backgroundImage:
+  //   theme.palette.mode === 'light'
+  //     ? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 50%)`
+  //     : 'none'
 }));
 
 const ContentStyle = styled('div')(({ theme }) => ({

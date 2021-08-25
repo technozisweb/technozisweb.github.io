@@ -18,72 +18,72 @@ const menuConfig = [
   {
     title: 'Custom Software Development',
     icon: <Icon icon={roundGrain} {...ICON_SIZE} />,
-    path: '/components',
+    path: '/services/custom-software-development',
   },
   {
     title: 'Hire developer',
-    path: '/services',
+    path: '/services/hire-developer',
     icon: <Icon icon={fileFill} {...ICON_SIZE} />,
   },
   {
     title: 'Technologies consultant',
     icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
-    path: '/services/software-development',
+    path: '/services/technologies-consultant',
   },
   {
     title: 'Management and Support',
     icon: <Icon icon={roundGrain} {...ICON_SIZE} />,
-    path: '/components',
+    path: '/services/management-and-support',
   },
   {
     title: 'Technologies consultant',
     icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
-    path: '/services/software-development',
+    path: '/services/technologies-consultant',
   },
   {
     title: 'SAP',
     icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
-    path: '/services',
+    path: '/services/sap',
   },
   {
     title: 'Product Engineering',
     icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
-    path: '/services/software-development',
+    path: '/services/product-engineering',
   },
   {
     title: 'Application Development',
     icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
-    path: '/services/software-development',
+    path: '/services/application-development',
   },
   {
     title: 'Digital Transformation',
     icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
-    path: '/services/software-development',
+    path: '/services/digital-transformation',
   },
   {
     title: 'Cloud Application',
     icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
-    path: '/services/software-development',
+    path: '/services/cloud-application',
   },
   {
     title: 'Business Intelligence and Analytics',
     icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
-    path: '/services/software-development',
+    path: '/services/business-intelligence-and-analytics',
   },
   {
     title: 'Embedded Product',
     icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
-    path: '/services/software-development',
+    path: '/services/embedded-product',
   },
   {
     title: 'Enterprise Mobility',
     icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
-    path: '/services/software-development',
+    path: '/services/enterprise-mobility',
   },
   {
     title: 'System Integration',
     icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
-    path: '/services/software-development',
+    path: '/services/system-integrtion',
   },
 ];
 
