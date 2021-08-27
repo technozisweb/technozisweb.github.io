@@ -164,6 +164,35 @@ export default function Router() {
         { path: 'about-us', element: <About /> },
         { path: 'contact-us', element: <Contact /> },
         { path: 'faqs', element: <Faqs /> },
+        { path: 'industries', element: <Industries />},
+        {
+          path: 'technologies',
+          children: [
+            { path: '/', element: <Technologies /> },
+            { path: '/front', element: <Technologies /> },
+            { path: '/back', element: <Technologies /> },
+            { path: '/devops', element: <Technologies /> },
+            { path: '/cloud', element: <Technologies /> },
+            { path: '/database', element: <Technologies /> },
+            { path: '/ecommerce', element: <Technologies /> },
+            { path: '/mobile', element: <Technologies /> },
+            { path: '/frameworks', element: <Technologies /> },
+            { path: '/platforms', element: <Technologies /> },
+            { path: '/cms', element: <Technologies /> }
+          ]
+        },
+        {
+          path: 'services',
+          children: [
+            { path: '/', element: <Services /> },
+            { path: '/custom-software-development', element: <Services /> },
+            { path: '/sap', element: <Services /> },
+            { path: '/hire-developer', element: <Services /> },
+            { path: '/technologies-consultant', element: <Services /> },
+            { path: '/management-and-support', element: <Services /> },
+            { path: '/product-engineering', element: <Services /> }
+          ]
+        },
         {
           path: 'components',
           children: [
@@ -258,6 +287,9 @@ const Kanban = Loadable(lazy(() => import('../pages/dashboard/Kanban')));
 // Main
 const LandingPage = Loadable(lazy(() => import('../pages/LandingPage')));
 const About = Loadable(lazy(() => import('../pages/About')));
+const Services = Loadable(lazy(() => import('../pages/Services')));
+const Technologies = Loadable(lazy(() => import('../pages/Technologies')));
+const Industries = Loadable(lazy(() => import('../pages/Industries')));
 const Contact = Loadable(lazy(() => import('../pages/Contact')));
 const Faqs = Loadable(lazy(() => import('../pages/Faqs')));
 const ComingSoon = Loadable(lazy(() => import('../pages/ComingSoon')));
