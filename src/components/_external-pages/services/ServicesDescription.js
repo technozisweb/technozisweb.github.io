@@ -48,7 +48,7 @@ export default function ServicesDescription({ serviceData }) {
         </Box>
       </Container>
       <Box sx={{ mb: 2 }}>
-        {get(serviceData.points)
+        {/* {get(serviceData.points)
           ? <>
             {serviceData.points.map((point, index) => {
               <List>
@@ -58,13 +58,13 @@ export default function ServicesDescription({ serviceData }) {
                 </ListItem>
               </List>
             })}</>
-          : null}
-        {/* <List>
+          : null} */}
+        <List>
           <ListItem>
             <ListItemIcon><FiberManualRecordIcon fontSize="small" sx={{ color: "white", filter: `drop-shadow(2px 2px 2px ${alpha(theme.palette.primary.main, 0.48)})` }} /></ListItemIcon>
-            {serviceData.points[0]}
+            Data about service.
           </ListItem>
-        </List> */}
+        </List>
       </Box>
     </RootStyle>
   );

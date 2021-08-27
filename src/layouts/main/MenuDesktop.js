@@ -25,6 +25,13 @@ const LinkStyle = styled(Link)(({ theme }) => ({
   }
 }));
 
+const ITEM_ON_ROW = {
+  width: 'calc((100%/3) - 16px)',
+  '&:nth-child(3n+1)': { order: 1 },
+  '&:nth-child(3n+2)': { order: 2 },
+  '&:nth-child(3n)': { order: 3 }
+};
+
 // ----------------------------------------------------------------------
 
 IconBullet.propTypes = {
@@ -112,7 +119,7 @@ function MenuDesktopItem({ item, pathname, isHome, isOpen, isOffset, onOpen, onC
 
               return (
                 <Grid key={subheader} item xs={12} md={subheader === 'Dashboard' ? 6 : 2}>
-                  <Stack disablePadding>
+                  <Stack disablePadding sx={{ mb: 2.5, ...ITEM_ON_ROW }} direction="column">
                     {subheader ? (<ListSubheader
                       disableSticky
                       disableGutters
@@ -175,7 +182,7 @@ function MenuDesktopItem({ item, pathname, isHome, isOpen, isOffset, onOpen, onC
                               {item.icon}
                             </ListItemIcon>
                             {/* <IconBullet /> */}
-                            {item.title}
+                            {/* {item.title} */}
                           </>
                         )}
                       </ListItem>

@@ -127,7 +127,8 @@ function SubMenu({ parent, pathname }) {
                             justifyContent: 'center'
                           }}
                         >
-                          <Box sx={{ width: 4, height: 4, bgcolor: 'currentColor', borderRadius: '50%' }} />
+                          {link.icon}
+                          {/* <Box sx={{ width: 4, height: 4, bgcolor: 'currentColor', borderRadius: '50%' }} /> */}
                         </ListItemIcon>
                         <ListItemText
                           primary={link.title}

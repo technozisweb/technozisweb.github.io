@@ -7,7 +7,8 @@ import useOffSetTop from '../../hooks/useOffSetTop';
 // components
 import Logo from '../../components/Logo';
 import Label from '../../components/Label';
-import { MHidden } from '../../components/@material-extend'; import {
+import { MHidden } from '../../components/@material-extend';
+import {
   MegaMenuDesktopVertical,
   MegaMenuDesktopHorizon,
   MegaMenuMobile,

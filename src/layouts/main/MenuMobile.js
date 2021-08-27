@@ -140,7 +140,7 @@ function MenuMobileItem({ item, isOpen, isActive, onOpen }) {
         })
       }}
     >
-      {/* <ListItemIcon>{icon}</ListItemIcon> */}
+      <ListItemIcon>{icon}</ListItemIcon>
       <ListItemText disableTypography primary={title} />
     </ListItemStyle>
   );

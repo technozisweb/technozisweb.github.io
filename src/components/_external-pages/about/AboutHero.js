@@ -13,7 +13,7 @@ const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundImage: 'url(/static/overlay.svg), url(/static/about/hero.jpg)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
-    height: 560,
+    height: 360,
     padding: 0
   }
 }));
@@ -51,7 +51,7 @@ export default function AboutHero() {
               }}
             >
               Let's work together and
-              <br /> make awesome site easily
+               make awesome site easily
             </Typography>
           </motion.div>
         </ContentStyle>

@@ -10,7 +10,8 @@ const IMG = [...Array(10)].map((_, index) => `/static/home/clean-${index + 1}.pn
 
 const RootStyle = styled('div')(({ theme }) => ({
   paddingTop: theme.spacing(15),
-  paddingBottom: theme.spacing(10)
+  paddingBottom: theme.spacing(10),
+  // backgroundImage: `url(/static/home/developmentprocess.jpg)`
 }));
 
 const ContentStyle = styled('div')(({ theme }) => ({
@@ -21,7 +22,8 @@ const ContentStyle = styled('div')(({ theme }) => ({
     zIndex: 11,
     textAlign: 'left',
     position: 'absolute'
-  }
+  },
+  // backgroundImage: "/static/home/developmentprocess.jpg"
 }));
 
 // ----------------------------------------------------------------------
@@ -34,7 +36,8 @@ export default function LandingCleanInterfaces() {
     <RootStyle>
       <Container maxWidth="lg">
         <ContentStyle>
-          <MotionInView variants={varFadeInUp}>
+          <Box component="img" scr={'/static/home/developmentprocess.jpg'} />
+          {/* <MotionInView variants={varFadeInUp}>
             <Typography component="p" variant="overline" sx={{ mb: 2, color: 'text.secondary' }}>
               clean & clear
             </Typography>
@@ -52,10 +55,10 @@ export default function LandingCleanInterfaces() {
             >
               Beautiful, modern and clean user interfaces
             </Typography>
-          </MotionInView>
+          </MotionInView> */}
         </ContentStyle>
 
-        <Box sx={{ position: 'relative' }}>
+        {/* <Box sx={{ position: 'relative' }}>
           {IMG.map((_, index) => (
             <MotionInView
               key={index}
@@ -72,7 +75,7 @@ export default function LandingCleanInterfaces() {
               <Box component="img" src={`/static/home/clean-${index + 1}.png`} />
             </MotionInView>
           ))}
-        </Box>
+        </Box> */}
       </Container>
     </RootStyle>
   );

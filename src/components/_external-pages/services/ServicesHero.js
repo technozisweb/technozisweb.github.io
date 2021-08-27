@@ -10,7 +10,7 @@ import { varWrapEnter, varFadeInRight, TextAnimate } from '../../animate';
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: 'url(/static/home/servicehero.jpg), url(/static/about/hero.jpg)',
+  // backgroundImage: 'url(/static/home/servicehero.jpg), url(/static/about/hero.jpg)',
   padding: theme.spacing(0, 0),
   [theme.breakpoints.up('md')]: {
     height: 150,
