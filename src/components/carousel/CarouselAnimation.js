@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 import { useState, useRef } from 'react';
 // material
 import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { MHidden } from 'src/components/@material-extend';
 import { Box, Card, Paper, Button, Typography, CardContent, Container } from '@material-ui/core';
 // utils
 import mockData from '../../utils/mock-data';
 //
-import { varFadeInRight, varSlideInDown, varSlideInUp, MotionContainer, TextAnimate } from '../animate';
+import { varFadeInRight, MotionContainer } from '../animate';
+// import { CarouselControlsArrowsIndex } from './controls';
 import { CarouselControlsArrowsBasic2 } from './controls';
 
 // ----------------------------------------------------------------------
@@ -28,20 +28,6 @@ const CarouselImgStyle = styled('img')({
   objectFit: 'cover',
   position: 'absolute'
 });
-
-// const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ theme }) => ({
-//   zIndex: 10,
-//   maxWidth: 520,
-//   margin: 'auto',
-//   textAlign: 'center',
-//   position: 'relative',
-//   paddingTop: theme.spacing(15),
-//   paddingBottom: theme.spacing(15),
-//   [theme.breakpoints.up('md')]: {
-//     margin: 'unset',
-//     textAlign: 'left'
-//   }
-// }));
 
 // ----------------------------------------------------------------------
 
@@ -74,45 +60,37 @@ function CarouselItem({ item, isActive }) {
           )} 100%)`
         }}
       />
-      {/* <Container> */}
+      <Container>
         <CardContent
           sx={{
-            // top: '30%',
-            // left: '18%',
-            mb: 20,
-            textAlign: 'center',
-            [theme.breakpoints.up('md')]: {
-              textAlign: 'left',
-              position: 'absolute',
-              bottom: theme.spacing(10)
-            },
+            bottom: 0,
             width: '100%',
-            maxWidth: 680,
-            // textAlign: 'left',
-            // position: 'absolute',
-            color: 'common.white'
+            maxWidth: 480,
+            textAlign: 'left',
+            position: 'absolute',
+            color: 'common.white',
+            mb: {xs: 0, md: '10%'}
           }}
         >
           <MotionContainer open={isActive}>
             <motion.div variants={varFadeInRight}>
-              {/* <TextAnimate text="Digital Transformation" sx={{ color: 'primary.main' }} variants={varFadeInRight} /> */}
-              <Typography variant="h4" gutterBottom>
+              <Typography variant="h3" gutterBottom>
                 {item.title}
               </Typography>
             </motion.div>
-            <motion.div variants={varSlideInUp}>
-                <Typography variant="body2" noWrap gutterBottom>
-                  {item.description}
-                </Typography>
-              </motion.div>
+            <motion.div variants={varFadeInRight}>
+              <Typography variant="body2" gutterBottom>
+                {item.description}
+              </Typography>
+            </motion.div>
             <motion.div variants={varFadeInRight}>
               <Button variant="outlined" sx={{ mt: 3 }}>
-                Get in Touch
+                Contact us
               </Button>
             </motion.div>
           </MotionContainer>
         </CardContent>
-      {/* </Container> */}
+      </Container>
     </Paper>
   );
 }
@@ -123,8 +101,8 @@ export default function CarouselAnimation() {
   const [currentIndex, setCurrentIndex] = useState(theme.direction === 'rtl' ? MOCK_CAROUSELS.length - 1 : 0);
 
   const settings = {
-    speed: 1000,
-    dots: true,
+    speed: 800,
+    dots: false,
     arrows: false,
     autoplay: true,
     slidesToShow: 1,
@@ -150,8 +128,8 @@ export default function CarouselAnimation() {
       </Slider>
 
       <CarouselControlsArrowsBasic2
-        // index={currentIndex}
-        // total={MOCK_CAROUSELS.length}
+        index={currentIndex}
+        total={MOCK_CAROUSELS.length}
         onNext={handleNext}
         onPrevious={handlePrevious}
       />
