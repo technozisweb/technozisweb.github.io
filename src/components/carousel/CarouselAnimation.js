@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import { useState, useRef } from 'react';
 // material
 import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { Box, Card, Paper, Button, Typography, CardContent } from '@material-ui/core';
+import { MHidden } from 'src/components/@material-extend';
+import { Box, Card, Paper, Button, Typography, CardContent, Container } from '@material-ui/core';
 // utils
 import mockData from '../../utils/mock-data';
 //
@@ -27,6 +28,20 @@ const CarouselImgStyle = styled('img')({
   objectFit: 'cover',
   position: 'absolute'
 });
+
+// const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ theme }) => ({
+//   zIndex: 10,
+//   maxWidth: 520,
+//   margin: 'auto',
+//   textAlign: 'center',
+//   position: 'relative',
+//   paddingTop: theme.spacing(15),
+//   paddingBottom: theme.spacing(15),
+//   [theme.breakpoints.up('md')]: {
+//     margin: 'unset',
+//     textAlign: 'left'
+//   }
+// }));
 
 // ----------------------------------------------------------------------
 
@@ -59,42 +74,45 @@ function CarouselItem({ item, isActive }) {
           )} 100%)`
         }}
       />
-      <CardContent
-        sx={{
-          top: '30%',
-          left: '18%',
-          textAlign: 'center',
-          [theme.breakpoints.up('md')]: {
-            textAlign: 'left',
-            position: 'absolute',
-            bottom: theme.spacing(10)
-          },
-          width: '100%',
-          maxWidth: 680,
-          // textAlign: 'left',
-          // position: 'absolute',
-          color: 'common.white'
-        }}
-      >
-        <MotionContainer open={isActive}>
-          <motion.div variants={varSlideInDown}>
-            <TextAnimate text="Digital Transformation" sx={{ color: 'primary.main' }} variants={varFadeInRight} />
-            <Typography variant="h4" gutterBottom>
-              {item.title}
-            </Typography>
-          </motion.div>
-          <motion.div variants={varSlideInUp}>
-            <Typography variant="body2" noWrap gutterBottom>
-              {item.description}
-            </Typography>
-          </motion.div>
-          <motion.div variants={varFadeInRight}>
-            <Button variant="outlined" sx={{ mt: 3 }}>
-              Get in Touch
-            </Button>
-          </motion.div>
-        </MotionContainer>
-      </CardContent>
+      {/* <Container> */}
+        <CardContent
+          sx={{
+            // top: '30%',
+            // left: '18%',
+            mb: 20,
+            textAlign: 'center',
+            [theme.breakpoints.up('md')]: {
+              textAlign: 'left',
+              position: 'absolute',
+              bottom: theme.spacing(10)
+            },
+            width: '100%',
+            maxWidth: 680,
+            // textAlign: 'left',
+            // position: 'absolute',
+            color: 'common.white'
+          }}
+        >
+          <MotionContainer open={isActive}>
+            <motion.div variants={varFadeInRight}>
+              {/* <TextAnimate text="Digital Transformation" sx={{ color: 'primary.main' }} variants={varFadeInRight} /> */}
+              <Typography variant="h4" gutterBottom>
+                {item.title}
+              </Typography>
+            </motion.div>
+            <motion.div variants={varSlideInUp}>
+                <Typography variant="body2" noWrap gutterBottom>
+                  {item.description}
+                </Typography>
+              </motion.div>
+            <motion.div variants={varFadeInRight}>
+              <Button variant="outlined" sx={{ mt: 3 }}>
+                Get in Touch
+              </Button>
+            </motion.div>
+          </MotionContainer>
+        </CardContent>
+      {/* </Container> */}
     </Paper>
   );
 }

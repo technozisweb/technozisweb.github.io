@@ -21,7 +21,7 @@ const RootStyle = styled(motion.div)(({ theme }) => ({
     left: 0,
     width: '100%',
     height: '100%',
-    // display: 'flex',
+    display: 'flex',
     position: 'fixed',
     alignItems: 'center'
   }
