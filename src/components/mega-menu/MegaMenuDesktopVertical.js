@@ -44,8 +44,7 @@ function ParentItem({ path, title, open, hasSub, ...other }) {
   const classes = styles();
   const activeStyle = {
     color: 'primary.main',
-
-    // bgcolor: (theme) => alpha(theme.palette.primary.main, theme.palette.action.hoverOpacity)
+    bgcolor: (theme) => alpha(theme.palette.primary.main, theme.palette.action.hoverOpacity)
   };
 
   return (
@@ -72,11 +71,9 @@ function ParentItem({ path, title, open, hasSub, ...other }) {
     >
       <RemoveIcon
         sx={{
-          // width: 40, height: 40,
-          '&:hover': activeStyle,
-          ...(open && activeStyle),
-          '&:active': { color: 'primary.main' },
           mr: 2,
+          // color: 'black',
+          '&:hover': activeStyle,
         }} />
       {title}
       {hasSub && <Box component={Icon} icon={chevronRightFill} sx={{ ml: 1, width: 20, height: 20 }} />}
@@ -110,9 +107,9 @@ function MegaMenuItem({ parent }) {
             onMouseEnter={handleOpen}
             onMouseLeave={handleClose}
             sx={{
-              p: 3,
+              // p: 3,
               top: -62,
-              left: MENU_WIDTH,
+              // left: MENU_WIDTH,
               width: MENU_PAPER_WIDTH,
               borderRadius: 2,
               position: 'absolute',
@@ -124,7 +121,7 @@ function MegaMenuItem({ parent }) {
                 const { subheader, items } = list;
 
                 return (
-                  <Stack key={subheader} spacing={1.25} sx={{ mb: 2.5, ...ITEM_ON_ROW }}>
+                  <Stack key={subheader} sx={{ mb: 2.5, ...ITEM_ON_ROW }}>
                     <Typography variant="subtitle1" sx={{ fontWeight: 'fontWeightBold' }} noWrap>
                       {subheader}
                     </Typography>

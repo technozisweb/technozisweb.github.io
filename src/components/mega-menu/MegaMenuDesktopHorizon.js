@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react';
 import chevronDownFill from '@iconify/icons-eva/chevron-down-fill';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Link, Paper, Typography, List, Stack, ListItemIcon, ListItem, Divider } from '@material-ui/core';
+import { Box, Link, Paper, Typography, List, Stack, ListItemIcon, ListItem, Divider, ListItemText } from '@material-ui/core';
 import arrowIosUpwardFill from '@iconify/icons-eva/arrow-ios-upward-fill';
 import arrowIosDownwardFill from '@iconify/icons-eva/arrow-ios-downward-fill';
 //
@@ -17,7 +17,13 @@ import MegaMenuCarousel from './MegaMenuCarousel';
 const CONTENT_HEIGHT = 400;
 const ITEM_SPACING = 4;
 const ITEM_HEIGHT = 64;
-const ITEM_ON_ROW = {
+const ITEM_ON_ROW4 = {
+  width: 'calc((100%/4) - 16px)',
+  '&:nth-child(3n+1)': { order: 1 },
+  '&:nth-child(3n+2)': { order: 2 },
+  '&:nth-child(3n)': { order: 3 }
+};
+const ITEM_ON_ROW3 = {
   width: 'calc((100%/3) - 16px)',
   '&:nth-child(3n+1)': { order: 1 },
   '&:nth-child(3n+2)': { order: 2 },
@@ -27,7 +33,7 @@ const ITEM_ON_ROW = {
 const LinkStyle = styled(Link)(({ theme }) => ({
   ...theme.typography.subtitle2,
   color: theme.palette.text.primary,
-  marginRight: theme.spacing(5),
+  // marginRight: theme.spacing(5),
   transition: theme.transitions.create('opacity', {
     duration: theme.transitions.duration.shortest
   }),
@@ -116,11 +122,11 @@ function MegaMenuItem({ parent, pathname }) {
 
         {open && (
           <Paper
-            elevation= "24"
+            elevation="24"
             onMouseEnter={handleOpen}
             onMouseLeave={handleClose}
             sx={{
-              p: 1,
+              p: 0.5,
               width: '100%',
               position: 'absolute',
               // borderRadius: 2,
@@ -130,40 +136,83 @@ function MegaMenuItem({ parent, pathname }) {
               boxShadow: (theme) => theme.customShadows.z100
             }}
           >
-            <Stack flexWrap="wrap" alignContent="space-between" direction="row">
-              {children.map((list) => {
-                const { subheader, items } = list;
+            {title === 'Technologies'
+              ?
+              <Stack flexWrap="wrap" alignContent="space-between" direction="row">
+                {children.map((list) => {
+                  const { subheader, items } = list;
 
-                return (
-                  <Stack key={subheader} spacing={1} sx={{ mb: 2.5, ...ITEM_ON_ROW }}>
-                    <Typography variant="subtitle1" sx={{ fontWeight: 'fontWeightBold' }} noWrap>
-                      {subheader}
-                    </Typography>
-                    {items.map((link) => (
-                      <Link
-                        noWrap
-                        key={link.title}
-                        component={RouterLink}
-                        to={link.path}
-                        underline="none"
-                        sx={{
-                          typography: 'body2',
-                          color: 'text.primary',
-                          fontSize: 16,
-                          transition: (theme) => theme.transitions.create('all'),
-                          '&:hover': { color: 'primary.main' },
-                        }}
-                      >
-                        <ListItem>
-                          <ListItemIcon>{link.icon}</ListItemIcon>
-                          {link.title}
-                        </ListItem>
-                      </Link>
-                    ))}
-                  </Stack>
-                );
-              })}
-            </Stack>
+                  return (
+                    <Stack
+                      key={subheader} sx={{ mb: 0, ...ITEM_ON_ROW4 }}>
+                      <Typography variant="subtitle2" sx={{ fontWeight: 'fontWeightBold', mt: 2, ml: 2 }} noWrap>
+                        {subheader}
+                      </Typography>
+                      {items.map((link) => (
+                        <Link
+                          noWrap
+                          key={link.title}
+                          component={RouterLink}
+                          to={link.path}
+                          underline="none"
+                          sx={{
+                            // typography: 'body2',
+                            color: 'text.primary',
+                            fontSize: 12,
+                            transition: (theme) => theme.transitions.create('all'),
+                            '&:hover': { color: 'primary.main' },
+                          }}
+                        >
+                          <List>
+                            <ListItem>
+                              <ListItemIcon sx={{ width: '15%' }}>{link.icon}</ListItemIcon>
+                              <ListItemText sx={{ fontSize: 10 }}>{link.title}</ListItemText>
+                            </ListItem>
+                          </List>
+                        </Link>
+                      ))}
+                    </Stack>
+                  );
+                })}
+              </Stack>
+              :
+              <Stack flexWrap="wrap" alignContent="space-between" direction="row">
+                {children.map((list) => {
+                  const { subheader, items } = list;
+
+                  return (
+                    <Stack
+                      key={subheader} sx={{ mb: 0, ...ITEM_ON_ROW3 }}>
+                      <Typography variant="subtitle2" sx={{ fontWeight: 'fontWeightBold', mt: 2, ml: 2 }} noWrap>
+                        {subheader}
+                      </Typography>
+                      {items.map((link) => (
+                        <Link
+                          noWrap
+                          key={link.title}
+                          component={RouterLink}
+                          to={link.path}
+                          underline="none"
+                          sx={{
+                            typography: 'body2',
+                            color: 'text.primary',
+                            // fontSize: 18,
+                            transition: (theme) => theme.transitions.create('all'),
+                            '&:hover': { color: 'primary.main' },
+                          }}
+                        >
+                          <List>
+                            <ListItem>
+                              <ListItemIcon sx={{ width: '15%' }}>{link.icon}</ListItemIcon>
+                              <ListItemText>{link.title}</ListItemText>
+                            </ListItem>
+                          </List>
+                        </Link>
+                      ))}
+                    </Stack>
+                  );
+                })}
+              </Stack>}
 
             {/* <Stack spacing={3}>
               <Link
