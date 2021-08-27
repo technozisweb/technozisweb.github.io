@@ -32,7 +32,7 @@ const slice = createSlice({
 
     // GET POSTS
     getPostsSuccess(state, action) {
-      state.i5sLoading = false;
+      state.isLoading = false;
       state.posts = action.payload;
     },
 
