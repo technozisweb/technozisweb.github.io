@@ -34,6 +34,7 @@ export const PATH_PAGE = {
   services: '/services',
   technologies: '/technologies',
   industries: '/industries',
+  businesssolutions: '/business-solutions'
 };
 
 // export const PATH_SERVICES = {

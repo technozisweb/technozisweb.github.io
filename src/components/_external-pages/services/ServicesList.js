@@ -76,7 +76,7 @@ export default function MegaMenu() {
           </Grid>
           <Grid item xs={12} md={1}></Grid>
           <Grid item xs={12} md={7}>
-            <Paper sx={{ minHeight: 380, maxWidth: 740, overflow: 'hidden' }} elevation='5'>
+            <Paper sx={{ minHeight: 340, maxWidth: 740, overflow: 'hidden' }} elevation='5'>
               <ContentStyle>
                 <Box
                   // component="img"

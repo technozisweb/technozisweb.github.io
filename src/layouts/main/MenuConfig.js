@@ -26,11 +26,6 @@ const menuConfig = [
     icon: <Icon icon={fileFill} {...ICON_SIZE} />,
   },
   {
-    title: 'Technologies consultant',
-    icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
-    path: '/services/technologies-consultant',
-  },
-  {
     title: 'Management and Support',
     icon: <Icon icon={roundGrain} {...ICON_SIZE} />,
     path: '/services/management-and-support',

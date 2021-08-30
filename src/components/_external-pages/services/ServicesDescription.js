@@ -59,12 +59,12 @@ export default function ServicesDescription({ serviceData }) {
               </List>
             })}</>
           : null} */}
-        <List>
+        {/* <List>
           <ListItem>
             <ListItemIcon><FiberManualRecordIcon fontSize="small" sx={{ color: "white", filter: `drop-shadow(2px 2px 2px ${alpha(theme.palette.primary.main, 0.48)})` }} /></ListItemIcon>
             Data about service.
           </ListItem>
-        </List>
+        </List> */}
       </Box>
     </RootStyle>
   );

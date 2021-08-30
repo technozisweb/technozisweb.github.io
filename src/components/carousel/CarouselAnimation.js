@@ -14,12 +14,23 @@ import { CarouselControlsArrowsBasic2 } from './controls';
 
 // ----------------------------------------------------------------------
 
-const MOCK_CAROUSELS = [...Array(3)].map((_, index) => ({
-  id: mockData.id(index),
-  title: mockData.text.title(index),
-  image: mockData.image.feed(index),
-  description: mockData.text.description(index)
-}));
+const MOCK_CAROUSELS = [
+  {
+    title: 'Digital Transformation',
+    description: 'We blend innovation, security, and speed to help you transition your business seamlessly to digital',
+    image: '/static/mock-images/feeds/feed_1.jpg'
+  },
+  {
+    title: 'Custom Software development',
+    description: 'Design, Create, Deploy, and manage requirements efficiently for the future',
+    image: '/static/mock-images/feeds/feed_2.jpg'
+  },
+  {
+    title: 'Business Intelligence and Analytics',
+    description: 'Unlock meaningful insights to improve performance, reduce risk, and plan future with data-driven strategy',
+    image: '/static/mock-images/feeds/feed_3.jpg'
+  },
+]
 
 const CarouselImgStyle = styled('img')({
   top: 0,
@@ -65,21 +76,21 @@ function CarouselItem({ item, isActive }) {
           sx={{
             bottom: 0,
             width: '100%',
-            maxWidth: 480,
+            maxWidth: 780,
             textAlign: 'left',
             position: 'absolute',
             color: 'common.white',
-            mb: {xs: 0, md: '10%'}
+            // mb: {xs: 0, md: '10%'}
           }}
         >
           <MotionContainer open={isActive}>
             <motion.div variants={varFadeInRight}>
-              <Typography variant="h3" gutterBottom>
+              <Typography variant="h2" gutterBottom>
                 {item.title}
               </Typography>
             </motion.div>
             <motion.div variants={varFadeInRight}>
-              <Typography variant="body2" gutterBottom>
+              <Typography variant="body1" gutterBottom>
                 {item.description}
               </Typography>
             </motion.div>

@@ -31,20 +31,6 @@ export default function MegaMenu(props) {
   console.log(props.setTitle);
   return (
     <RootStyle title="Mega Menu | Minimal-UI">
-      {/* <Box
-        sx={{
-          pt: 6,
-          pb: 1,
-          bgcolor: (theme) => (theme.palette.mode === 'light' ? 'grey.200' : 'grey.800')
-        }}
-      >
-        <Container maxWidth="lg">
-          <HeaderBreadcrumbs
-            heading="Mega Menu"
-            links={[{ name: 'Components', href: PATH_PAGE.components }, { name: 'Mega Menu' }]}
-          />
-        </Container>
-      </Box> */}
 
       <AppBar
         position="static"
@@ -63,17 +49,12 @@ export default function MegaMenu(props) {
           }}
         >
           <MHidden width="lgDown">
-            {/* <MenuDesktop isOffset={isOffset} isHome={isHome} navConfig={navConfig} />
-            <MegaMenuDesktopHorizon navConfig={MenuConfig} /> */}
-
             <Container>
               <TechnologiesDesktopMenu navConfig={MenuConfig} setTitle={props.setTitle} />
             </Container>
           </MHidden>
 
           <MHidden width="lgUp">
-            {/* <MenuMobile isOffset={isOffset} isHome={isHome} navConfig={navConfig} />
-            <MegaMenuDesktopHorizon navConfig={MenuConfig} /> */}
             <Container sx={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
               <TechnologiesMobileMenu navConfig={MenuConfig} />
             </Container>

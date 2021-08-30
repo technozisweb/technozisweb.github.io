@@ -84,9 +84,9 @@ export default function AboutWhat() {
         />
         <Grid container spacing={3}>
           <MHidden width="mdDown">
-            <Grid item xs={12} md={6} lg={7} sx={{ pr: { md: 7 } }}>
+            <Grid item xs={12} md={5} lg={6} sx={{ pr: { md: 7 } }}>
               <Grid container spacing={3} alignItems="flex-end">
-                <Grid item xs={6}>
+                {/* <Grid item xs={6}>
                   <MotionInView variants={varFadeInUp}>
                     <Box
                       component="img"
@@ -97,33 +97,59 @@ export default function AboutWhat() {
                       }}
                     />
                   </MotionInView>
-                </Grid>
-                <Grid item xs={6}>
+                </Grid> */}
+                <Grid item xs={12}>
                   <MotionInView variants={varFadeInUp}>
-                    <Box component="img" src="/static/about/what-2.jpg" sx={{ borderRadius: 2 }} />
+                    <Box component="img" src="/static/home/team.png" sx={{ borderRadius: 2 }} />
                   </MotionInView>
                 </Grid>
               </Grid>
             </Grid>
           </MHidden>
 
-          <Grid item xs={12} md={6} lg={5}>
+          <Grid item xs={12} md={7} lg={6}>
             <MotionInView variants={varFadeInRight}>
               <Typography variant="h2" sx={{ mb: 3 }}>
-                What is minimal?
+                Why choose us?
               </Typography>
             </MotionInView>
 
             <MotionInView variants={varFadeInRight}>
               <Typography
+                variant="h6"
+                sx={{
+                  mb: 3,
+                  color: (theme) => (theme.palette.mode === 'light' ? 'text.secondary' : 'common.white')
+                }}>
+                We deliver world-class digital solutions to take on tomorrow's challenges.
+              </Typography>
+            </MotionInView>
+
+            <MotionInView variants={varFadeInRight}>
+              <Typography variant="subtitle1">
+                Consistent Delivery:
+              </Typography>
+              <Typography
                 sx={{
                   color: (theme) => (theme.palette.mode === 'light' ? 'text.secondary' : 'common.white')
                 }}
+                variant="body1"
               >
-                Our theme is the most advanced and user-friendly theme you will find on the market, we have
-                documentation and video to help set your site really easily, pre-installed demos you can import in one
-                click and everything from the theme options to page content can be edited from the front-end. This is
-                the theme you are looking for.
+                Using a nimble, creative approach, with in-depth expertise and time-tested processes, we work from start to finish to deliver optimal output.
+              </Typography>
+            </MotionInView>
+
+            <MotionInView variants={varFadeInRight}>
+              <Typography variant="subtitle1" sx={{ mt: 2 }}>
+                Minimize Project Risks:
+              </Typography>
+              <Typography
+                sx={{
+                  color: (theme) => (theme.palette.mode === 'light' ? 'text.secondary' : 'common.white')
+                }}
+                variant="body1"
+              >
+                We just don't focus on technology but solutions and adapt all the measures to deliver solutions with zero risks
               </Typography>
             </MotionInView>
 
@@ -141,8 +167,9 @@ export default function AboutWhat() {
                 color="inherit"
                 size="large"
                 endIcon={<Icon icon={roundArrowRightAlt} width={24} height={24} />}
+                href="/about-us"
               >
-                Check out our work
+                About us
               </Button>
             </MotionInView>
           </Grid>

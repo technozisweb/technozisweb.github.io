@@ -18,7 +18,7 @@ const CONTENT_HEIGHT = 400;
 const ITEM_SPACING = 4;
 const ITEM_HEIGHT = 64;
 const ITEM_ON_ROW4 = {
-  width: 'calc((100%/4) - 16px)',
+  width: 'calc((100%/5) - 16px)',
   '&:nth-child(3n+1)': { order: 1 },
   '&:nth-child(3n+2)': { order: 2 },
   '&:nth-child(3n)': { order: 3 }
@@ -203,7 +203,7 @@ function MegaMenuItem({ parent, pathname }) {
                         >
                           <List>
                             <ListItem>
-                              <ListItemIcon sx={{ width: '15%' }}>{link.icon}</ListItemIcon>
+                              <ListItemIcon sx={{ width: '12%' }}>{link.icon}</ListItemIcon>
                               <ListItemText>{link.title}</ListItemText>
                             </ListItem>
                           </List>

@@ -164,7 +164,8 @@ export default function Router() {
         { path: 'about-us', element: <About /> },
         { path: 'contact-us', element: <Contact /> },
         { path: 'faqs', element: <Faqs /> },
-        { path: 'industries', element: <Industries />},
+        { path: 'industries', element: <Industries /> },
+        { path: 'business-solutions', element: <BusinessSolutions />},
         {
           path: 'technologies',
           children: [
@@ -290,6 +291,7 @@ const About = Loadable(lazy(() => import('../pages/About')));
 const Services = Loadable(lazy(() => import('../pages/Services')));
 const Technologies = Loadable(lazy(() => import('../pages/Technologies')));
 const Industries = Loadable(lazy(() => import('../pages/Industries')));
+const BusinessSolutions = Loadable(lazy(() => import('../pages/BusinessSolutions')));
 const Contact = Loadable(lazy(() => import('../pages/Contact')));
 const Faqs = Loadable(lazy(() => import('../pages/Faqs')));
 const ComingSoon = Loadable(lazy(() => import('../pages/ComingSoon')));

@@ -13,7 +13,7 @@ const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundImage: 'url(/static/overlay.svg), url(/static/about/hero.jpg)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
-    height: 360,
+    height: 150,
     padding: 0
   }
 }));
@@ -23,7 +23,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
     textAlign: 'left',
     position: 'absolute',
-    bottom: theme.spacing(10)
+    top: theme.spacing(2)
   }
 }));
 
@@ -36,24 +36,10 @@ export default function AboutHero() {
         <ContentStyle>
           <TextAnimate text="Technologies" sx={{ color: 'primary.main' }} variants={varFadeInRight} />
           <br />
-          <Box sx={{ display: 'inline-flex', color: 'common.white' }}>
+          {/* <Box sx={{ display: 'inline-flex', color: 'common.white' }}>
             <TextAnimate text="we" sx={{ mr: 2 }} />
             <TextAnimate text="deliver" />
-          </Box>
-
-          {/* <motion.div variants={varFadeInRight}>
-            <Typography
-              variant="h4"
-              sx={{
-                mt: 5,
-                color: 'common.white',
-                fontWeight: 'fontWeightMedium'
-              }}
-            >
-              Let's work together and
-              <br /> make awesome site easily
-            </Typography>
-          </motion.div> */}
+          </Box> */}
         </ContentStyle>
       </Container>
     </RootStyle>
