@@ -24,7 +24,7 @@ import ServicesMenuConfig from './ServicesMenu';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
-  paddingTop: theme.spacing(7),
+  paddingTop: theme.spacing(10),
   paddingBottom: theme.spacing(10),
   // backgroundImage:
   //   theme.palette.mode === 'light'
@@ -33,10 +33,11 @@ const RootStyle = styled(Page)(({ theme }) => ({
 }));
 
 const ContentStyle = styled(Page)(({ theme }) => ({
-  backgroundImage:
+  backgroundImage: 
     theme.palette.mode === 'light'
-      ? `linear-gradient(0deg, ${alpha(theme.palette.grey[500], 0)} 0%, ${theme.palette.grey[400]} 100%)`
-      : 'none'
+      ? `linear-gradient(0deg, ${alpha(theme.palette.grey[900], 0)} 0%, ${theme.palette.grey[400]} 200%)`
+      : 'none',
+  backgroundColor: theme.palette.grey[800]
 }));
 
 // ----------------------------------------------------------------------

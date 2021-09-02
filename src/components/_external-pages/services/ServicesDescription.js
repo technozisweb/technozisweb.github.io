@@ -10,7 +10,7 @@ import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  padding: theme.spacing(5),
+  padding: theme.spacing(3),
   // color: 'white'
   // [theme.breakpoints.up('md')]: {
   //   paddingBottom: theme.spacing(15)
@@ -22,7 +22,7 @@ ServicesDescription.propTypes = {
 };
 
 export default function ServicesDescription({ serviceData }) {
-  console.log('servicesData in points', serviceData.points);
+  console.log('servicesData in points', serviceData.path);
   if (get(serviceData.points)) serviceData.points.map((point) => { console.log({ point }) });
   const theme = useTheme();
   const isLight = theme.palette.mode === 'light';
@@ -31,21 +31,17 @@ export default function ServicesDescription({ serviceData }) {
   return (
     <RootStyle>
       <Container maxWidth="lg">
-        <Box>
-          {/* <MotionInView variants={varFadeInUp}> */}
-          <Typography component="p" variant="h5" sx={{ mb: 2 }}>
-            {serviceData.title}
-          </Typography>
-          {/* </MotionInView>
-          <MotionInView variants={varFadeInDown}> */}
-          <Typography component="p" variant="body1">
-            {serviceData.description}
-            {serviceData.description}
-            {serviceData.description}
-          </Typography>
-          {/* </MotionInView> */}
-          {/* <Box component="img" src="/static/home/service.png" alt="service" /> */}
-        </Box>
+        <List>
+          {/* <ListItem>
+            <ListItemIcon sx={{ height: 60, width: 60 }}><img src={serviceData.path} /></ListItemIcon>
+
+          </ListItem> */}
+          <MotionInView variants={varFadeInUp}>
+            <Typography variant="body1" sx={{ mt: 2, color: 'common.white' }}>
+              {serviceData.info}
+            </Typography>
+          </MotionInView>
+        </List>
       </Container>
       <Box sx={{ mb: 2 }}>
         {/* {get(serviceData.points)

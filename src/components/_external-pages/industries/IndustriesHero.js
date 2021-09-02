@@ -13,7 +13,7 @@ const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundImage: 'url(/static/overlay.svg), url(/static/about/hero.jpg)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
-    height: 360,
+    height: 150,
     padding: 0
   }
 }));
@@ -23,7 +23,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
     textAlign: 'left',
     position: 'absolute',
-    bottom: theme.spacing(10)
+    top: theme.spacing(12)
   }
 }));
 
@@ -32,14 +32,14 @@ const ContentStyle = styled('div')(({ theme }) => ({
 export default function AboutHero() {
   return (
     <RootStyle initial="initial" animate="animate" variants={varWrapEnter}>
-      <Container maxWidth="lg" sx={{ position: 'relative', height: '100%' }}>
+      <Container maxWidth="lg" sx={{ height: '100%' }}>
         <ContentStyle>
           <TextAnimate text="Industries" sx={{ color: 'primary.main' }} variants={varFadeInRight} />
-          <br />
+          {/* <br />
           <Box sx={{ display: 'inline-flex', color: 'common.white' }}>
             <TextAnimate text="we" sx={{ mr: 2 }} />
             <TextAnimate text="cater" />
-          </Box>
+          </Box> */}
 
           {/* <motion.div variants={varFadeInRight}>
             <Typography

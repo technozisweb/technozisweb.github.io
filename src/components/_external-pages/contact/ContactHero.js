@@ -38,7 +38,7 @@ const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundImage: 'url(/static/overlay.svg), url(/static/contact/hero.jpg)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
-    height: 600,
+    height: 480,
     padding: 0
   }
 }));

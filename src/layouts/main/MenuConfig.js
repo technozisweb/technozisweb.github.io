@@ -80,6 +80,11 @@ const menuConfig = [
     icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
     path: '/services/system-integrtion',
   },
+  {
+    title: 'Software Testing and Quality Analysis',
+    icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
+    path: '/services/software-testing',
+  },
 ];
 
 export default menuConfig;

@@ -9,7 +9,7 @@ import instagramFilled from '@iconify/icons-ant-design/instagram-filled';
 import roundArrowRightAlt from '@iconify/icons-ic/round-arrow-right-alt';
 // material
 import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { Box, Card, Button, Container, Typography, IconButton, Link } from '@material-ui/core';
+import { Box, Card, Button, Container, Typography, IconButton, Link, CardMedia, CardContent, Divider } from '@material-ui/core';
 // utils
 import mockData from '../../../utils/mock-data';
 //
@@ -27,7 +27,7 @@ const MOCK_MEMBERS = [...Array(5)].map((_, index) => ({
 
 const CARDS = [
   {
-    icon: '/static/services/1custom-software.png',
+    icon: '/static/services/1csd.png',
     title: 'Software Development Outsourcing',
     description:
       'Reduce cost and efforts. Build scalable, tailor-made software solutions for targeted business functions at fastest time-to-market.',
@@ -36,60 +36,86 @@ const CARDS = [
     path: '/services/custom-software-development'
   },
   {
-    icon: '/static/services/4hire-developers.png',
-    title: '2- Development',
+    icon: '/static/services/4hd.png',
+    title: 'Hire Developer',
     description: 'Easy to customize and extend each component, saving you time and money.',
-    path: '/services/custom-software-development'
+    path: '/services/hire-developer'
   },
   {
-    icon: '/static/services/10technology-consulting.png',
-    title: '3- Branding',
+    icon: '/static/services/10TC.png',
+    title: 'Technology Consultant',
     description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
-    path: '/services/custom-software-development'
+    path: '/services/technology-consultant'
   },
   {
-    icon: '2Management-and-Support.png',
-    title: '4- Branding',
-    description: 'Consistent design in colors, fonts ... makes brand recognition easy.'
+    icon: '/static/services/2ms.png',
+    title: 'Management and Support',
+    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
+    path: '/services/management-and-support'
   },
-  // {
-  //   icon: '7system-integration.png',
-  //   title: '5- Branding',
-  //   description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
-  //   path: '/services/custom-software-development'
-  // },
   {
-    icon: '/static/services/3enterprise-mobility.png',
-    title: '1- UI & UX Design',
+    icon: '/static/services/3em.png',
+    title: 'Enterprise Mobility',
     description:
       'The set is built on the principles of the atomic design system.',
     footer: 'meet unique requirem',
-    path: '/services/custom-software-development'
+    path: '/services/enterprise-mobility'
   },
   {
-    icon: '/static/services/11product-engineering.png',
-    title: '2- Development',
+    icon: '/static/services/11pe.png',
+    title: 'Product Engineering',
     description: 'Easy to customize and extend each component, saving you time and money.',
-    path: '/services/custom-software-development'
+    path: '/services/product-engineering'
+  },
+
+  {
+    icon: '/static/services/13dt.png',
+    title: 'Digital Transformation',
+    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
+    path: '/services/digital-transformation'
   },
   {
-    icon: '/static/services/12software-testing-and-qa.png',
-    title: '3- Branding',
+    icon: '/static/services/12sta.png',
+    title: 'Software Testing and Quality Analysis',
     description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
-    path: '/services/custom-software-development'
+    path: '/services/software-testing'
   },
   {
-    icon: '/static/services/5app-development.png',
-    title: '4- Branding',
+    icon: '/static/services/5ad.png',
+    title: 'Application Development',
     description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
-    path: '/services/custom-software-development'
+    path: '/services/application-development'
   },
   {
-    icon: '/static/services/9embedded-product.png',
-    title: '5- Branding',
+    icon: '/static/services/9EP.png',
+    title: 'Embedded Product',
     description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
-    path: '/services/custom-software-development'
-  }
+    path: '/services/embedded-product'
+  },
+  {
+    icon: '/static/services/7si.png',
+    title: 'System Integration',
+    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
+    path: '/services/system-integration'
+  },
+  {
+    icon: '/static/services/6ca.png',
+    title: 'Cloud Application',
+    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
+    path: '/services/cloud-application'
+  },
+  {
+    icon: '/static/services/8bia.png',
+    title: 'Business Intelligence Analystics',
+    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
+    path: '/services/business-intelligence-analytics'
+  },
+  {
+    icon: '/static/services/14SAP.png',
+    title: 'SAP',
+    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
+    path: '/services/sap'
+  },
 ];
 
 const shadowIcon = (color) => `drop-shadow(2px 2px 2px ${alpha(color, 0.48)})`;
@@ -97,9 +123,9 @@ const shadowIcon = (color) => `drop-shadow(2px 2px 2px ${alpha(color, 0.48)})`;
 // ----------------------------------------------------------------------
 
 const CardStyle = styled(Card)(({ theme }) => ({
-  padding: theme.spacing(3, 3, 0),
-  maxWidth: 300,
-  height: 340,
+  // padding: theme.spacing(3, 3, 0),
+  maxWidth: 320,
+  height: 380,
   margin: 'auto',
   '&:hover': {
     boxShadow: `0px 10px 10px 10px ${alpha(theme.palette.grey[300], 1)}`,
@@ -136,25 +162,32 @@ function MemberCard({ member }) {
   const { title, description, icon, bgcolor, path } = member;
   return (
     <CardStyle key={title}>
-      <CardIconStyle
+      {/* <CardIconStyle
         src={icon}
         alt={title}
+      /> */}
+      <CardMedia
+        component='img'
+        image={icon}
+        height="120"
       />
-      {/* <Box sx={{ bgColor: 'red', height: 10 }} /> */}
-      <Typography variant="subtitle1" sx={{ mt: 2, mb: 0.5 }}>
+      <Typography variant="subtitle2" sx={{ mt: 2 }}>
         {title}
       </Typography>
-      <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
-        {description}
-      </Typography>
-      <Box>
-        <MotionInView variants={varFadeInLeft}>
-          <Link href={path} variant="subtitle2" sx={{ alignItems: 'center', alignContent: 'center' }}>
-            Read more
-            {/* <Box component={Icon} icon={roundArrowRightAlt} sx={{ ml: 1, width: 20, height: 20 }} /> */}
-          </Link>
-        </MotionInView>
-      </Box>
+      <CardContent>
+        {/* <Divider /> */}
+        <Typography variant="body2" sx={{ mb: 1, color: 'text.secondary' }}>
+          {description}
+        </Typography>
+        <Box>
+          <MotionInView variants={varFadeInLeft}>
+            <Link href={path} variant="subtitle2" sx={{ alignItems: 'center', alignContent: 'center' }}>
+              Read more
+              {/* <Box component={Icon} icon={roundArrowRightAlt} sx={{ ml: 1, width: 20, height: 20 }} /> */}
+            </Link>
+          </MotionInView>
+        </Box>
+      </CardContent>
     </CardStyle>
   );
 }
@@ -167,7 +200,7 @@ export default function AboutTeam() {
     speed: 500,
     dots: false,
     arrows: false,
-    autoplay: false,
+    autoplay: true,
     slidesToShow: 3,
     slidesToScroll: 3,
     centerMode: true,

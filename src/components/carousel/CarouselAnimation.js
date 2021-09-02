@@ -17,17 +17,17 @@ import { CarouselControlsArrowsBasic2 } from './controls';
 const MOCK_CAROUSELS = [
   {
     title: 'Digital Transformation',
-    description: 'We blend innovation, security, and speed to help you transition your business seamlessly to digital',
+    description: 'We blend innovation, security, and speed to help you transition your business seamlessly to digital.',
     image: '/static/mock-images/feeds/feed_1.jpg'
   },
   {
     title: 'Custom Software development',
-    description: 'Design, Create, Deploy, and manage requirements efficiently for the future',
+    description: 'Design, Create, Deploy, and manage requirements efficiently for the future.',
     image: '/static/mock-images/feeds/feed_2.jpg'
   },
   {
     title: 'Business Intelligence and Analytics',
-    description: 'Unlock meaningful insights to improve performance, reduce risk, and plan future with data-driven strategy',
+    description: 'Unlock meaningful insights to improve performance, reduce risk, and plan future with data-driven strategy.',
     image: '/static/mock-images/feeds/feed_3.jpg'
   },
 ]
@@ -55,7 +55,7 @@ function CarouselItem({ item, isActive }) {
     <Paper
       sx={{
         position: 'relative',
-        paddingTop: { xs: '100%', md: '50%' }
+        paddingTop: { xs: '100%', md: '50%' },
       }}
     >
       <CarouselImgStyle alt={title} src={image} />
@@ -79,18 +79,28 @@ function CarouselItem({ item, isActive }) {
             maxWidth: 780,
             textAlign: 'left',
             position: 'absolute',
-            color: 'common.white',
-            // mb: {xs: 0, md: '10%'}
+            color: 'primary.main',
+            mb: { xs: 0, md: '10%' },
+            // mt: {xs: '30%', md: 0},
           }}
         >
           <MotionContainer open={isActive}>
             <motion.div variants={varFadeInRight}>
-              <Typography variant="h2" gutterBottom>
+              <Typography variant='h2' gutterBottom sx={{ fontSize: { xs: 30, md: 60 }}}>
                 {item.title}
               </Typography>
             </motion.div>
             <motion.div variants={varFadeInRight}>
-              <Typography variant="body1" gutterBottom>
+              <Typography
+                variant="h5"
+                gutterBottom
+                sx={{
+                  fontFamily: 'Roboto',
+                  fontStyle: "italic",
+                  color: 'common.white',
+                  fontSize: { xs: 20, md: 24 }
+                }}
+              >
                 {item.description}
               </Typography>
             </motion.div>

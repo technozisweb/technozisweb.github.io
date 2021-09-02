@@ -1,19 +1,21 @@
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 // material
 import { styled } from '@material-ui/core/styles';
 import { Box, Container, Typography } from '@material-ui/core';
 //
 import { varWrapEnter, varFadeInRight, TextAnimate } from '../../animate';
+import SERVICES from 'src/utils/servicesInfo';
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  // backgroundImage: 'url(/static/home/servicehero.jpg), url(/static/about/hero.jpg)',
-  padding: theme.spacing(0, 0),
+  backgroundImage: 'url(/static/overlay.svg), url(/static/about/hero.jpg)',
+  padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
-    height: 150,
+    height: 480,
     padding: 0
   }
 }));
@@ -23,63 +25,56 @@ const ContentStyle = styled('div')(({ theme }) => ({
   [theme.breakpoints.up('md')]: {
     textAlign: 'left',
     position: 'absolute',
-    // bottom: theme.spacing(10)
+    bottom: theme.spacing(12)
   }
 }));
 
 // ----------------------------------------------------------------------
 
-export default function SoftwareDevHero() {
+export default function AboutHero() {
+  const [path, setPath] = useState('');
+
+  useEffect(() => {
+    setPath(window.location.pathname);
+    console.log(path.replace(/[^a-zA-Z0-9]/g, '').slice(8,));
+  }, [window.location.pathname])
+
   return (
     <RootStyle initial="initial" animate="animate" variants={varWrapEnter}>
       <Container maxWidth="lg" sx={{ position: 'relative', height: '100%' }}>
         <ContentStyle>
-          {/* <TextAnimate text="Custom" sx={{ mr: 3, color: 'primary.main' }} variants={varFadeInRight} />
-          <TextAnimate text="Software" sx={{ mr: 3, color: 'primary.main' }} variants={varFadeInRight} />
-          <TextAnimate text="Development" sx={{ mr: 3, color: 'primary.main' }} variants={varFadeInRight} /> */}
+          <TextAnimate text="SERVICES" sx={{ color: 'primary.main' }} variants={varFadeInRight} />
           <br />
-          <Box sx={{ display: 'inline-flex' }}>
-            {/* <TextAnimate text="Custom" sx={{ mr: 2 }} variants={varFadeInRight} />
-            <TextAnimate text="Software" sx={{ mr: 2 }} />
-            <TextAnimate text="Development" sx={{ mr: 2 }} /> */}
-            <motion.div variants={varFadeInRight}>
-              <Typography
-                variant="h3"
-                sx={{
-                  // mt: 5,
-                  // color: 'common.white',
-                  // fontWeight: 'fontWeightMedium'
-                }}
-              >
-                SERVICES
-              </Typography>
-            </motion.div>
-          </Box>
-
-          <motion.div variants={varFadeInRight}>
-            <Typography
-              variant="h6"
-              sx={{
-                mt: 0,
-                // color: 'common.white',
-                fontWeight: 'fontWeightMedium'
-              }}
-            >
-              Let's work together and Let's work together make awesome site easily
-            </Typography>
-          </motion.div>
-          {/* <motion.div variants={varFadeInRight}>
-            <Typography
-              variant="p"
-              sx={{
-                mt: 5,
-                color: 'common.white',
-                // fontWeight: 'fontWeightMedium'
-              }}
-            >
-              Let's work together and Let's work together and Let's work together and
-            </Typography>
-          </motion.div> */}
+          {SERVICES.map((tech) => (
+            <Box sx={{ display: 'inline-flex', color: 'common.white' }}>
+              {tech.title.replace(/ /g, '').toLowerCase() == path.replace(/[^a-zA-Z0-9]/g, '').slice(8,)
+                ? (
+                  <motion.div variants={varFadeInRight}>
+                    <Typography
+                      variant="h3"
+                      sx={{
+                        mt: 5,
+                        color: 'common.white',
+                        fontWeight: 'fontWeightLarge'
+                      }}
+                    >
+                      {tech.title}
+                    </Typography>
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        fontFamily: 'Roboto',
+                        fontStyle: "italic"
+                      }}
+                    >
+                      {tech.description}
+                    </Typography>
+                  </motion.div>
+                )
+                : null}
+              {/* <TextAnimate text="deliver" /> */}
+            </Box>
+          ))}
         </ContentStyle>
       </Container>
     </RootStyle>

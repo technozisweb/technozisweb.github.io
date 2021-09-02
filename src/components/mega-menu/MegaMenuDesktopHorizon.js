@@ -144,7 +144,7 @@ function MegaMenuItem({ parent, pathname }) {
 
                   return (
                     <Stack
-                      key={subheader} sx={{ mb: 0, ...ITEM_ON_ROW4 }}>
+                      key={subheader} sx={{ m: 1, ...ITEM_ON_ROW4 }}>
                       <Typography variant="subtitle2" sx={{ fontWeight: 'fontWeightBold', mt: 2, ml: 2 }} noWrap>
                         {subheader}
                       </Typography>
@@ -182,7 +182,8 @@ function MegaMenuItem({ parent, pathname }) {
 
                   return (
                     <Stack
-                      key={subheader} sx={{ mb: 0, ...ITEM_ON_ROW3 }}>
+                      key={subheader} sx={{ p: 0, ...ITEM_ON_ROW3 }}
+                    >
                       <Typography variant="subtitle2" sx={{ fontWeight: 'fontWeightBold', mt: 2, ml: 2 }} noWrap>
                         {subheader}
                       </Typography>

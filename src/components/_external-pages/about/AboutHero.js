@@ -13,7 +13,7 @@ const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundImage: 'url(/static/overlay.svg), url(/static/about/hero.jpg)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
-    height: 360,
+    height: 480,
     padding: 0
   }
 }));
@@ -47,11 +47,12 @@ export default function AboutHero() {
               sx={{
                 mt: 5,
                 color: 'common.white',
-                fontWeight: 'fontWeightMedium'
+                // fontWeight: 'fontWeightMedium',
+                fontFamily: 'Roboto',
+                fontStyle: "italic"
               }}
             >
-              Let's work together and
-               make awesome site easily
+              We bring transformation to your business with our cutting-edge and innovative digital solution
             </Typography>
           </motion.div>
         </ContentStyle>

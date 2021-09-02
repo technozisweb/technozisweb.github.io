@@ -14,7 +14,7 @@ import TechnologiesMobileMenu from './TechnologiesMobileMenu';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
-  paddingTop: theme.spacing(7),
+  paddingTop: theme.spacing(2),
   paddingBottom: theme.spacing(5),
   display: 'flex',
 }));
@@ -28,7 +28,7 @@ MegaMenu.propTypes = {
 
 export default function MegaMenu(props) {
   // const { setTitle } = props;
-  console.log(props.setTitle);
+  // console.log(props.setTitle);
   return (
     <RootStyle title="Mega Menu | Minimal-UI">
 
@@ -37,7 +37,8 @@ export default function MegaMenu(props) {
         color="transparent"
         sx={{
           boxShadow: (theme) => theme.customShadows.z8,
-          alignContent: 'center'
+          alignContent: 'center',
+          // backgroundColor: 'primary.main'
         }}
       >
         <Container

@@ -7,6 +7,7 @@ import chevronDownFill from '@iconify/icons-eva/chevron-down-fill';
 import { styled } from '@material-ui/core/styles';
 import { Box, Link, Paper, Typography, List, Stack, ListItemIcon, ListItem, Divider } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
+import TECHNOLOGY from 'src/utils/technologies';
 
 // ----------------------------------------------------------------------
 
@@ -58,7 +59,8 @@ ParentItem.propTypes = {
 function ParentItem({ path, title, setTitle, open, hasSub, pathname, isHome, isOffset, ...other }) {
   const classes = styles();
   const activeStyle = {
-    color: 'primary.main'
+    color: 'primary.main',
+    // transform: "scale3d(1.1, 1.1, 1)"
   };
   const isActive = pathname === path;
 

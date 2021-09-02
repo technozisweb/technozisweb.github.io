@@ -87,80 +87,94 @@ const menuConfig = [
       {
         subheader: 'Frontend',
         items: [
-          { title: 'Angular JS', icon: <img src="/static/technologies/frontend/angularjs.png" />, path: '/services' },
-          { title: 'React JS', icon: <img src="/static/technologies/frontend/reactjs.png" />, path: '/services' },
-          { title: 'Vue JS', icon: <img src="/static/technologies/frontend/vue-js.png" />, path: '/services' },
-          { title: 'Javascript', icon: <img src="/static/technologies/frontend/javascript.png" />, path: '/services' },
-          { title: 'CSS3', icon: <img src="/static/technologies/frontend/css3.png" />, path: '/services' },
-          { title: 'HTML5', icon: <img src="/static/technologies/frontend/html5.png" />, path: '/services' },
+          { title: 'Angular JS', icon: <img src="/static/technologies/frontend/angularjs.png" />, path: '/technologies/front' },
+          { title: 'React JS', icon: <img src="/static/technologies/frontend/reactjs.png" />, path: '/technologies/front' },
+          { title: 'Vue JS', icon: <img src="/static/technologies/frontend/vue-js.png" />, path: '/technologies/front' },
+          { title: 'Javascript', icon: <img src="/static/technologies/frontend/javascript.png" />, path: '/technologies/front' },
+          { title: 'CSS3', icon: <img src="/static/technologies/frontend/css3.png" />, path: '/technologies/front' },
+          { title: 'HTML5', icon: <img src="/static/technologies/frontend/html5.png" />, path: '/technologies/front' },
         ]
       },
       {
         subheader: 'Mobile',
         items: [
-          { title: 'IOS', icon: <img src="/static/technologies/mobile/ios.png" />, path: '/services' },
-          { title: 'Android', icon: <img src="/static/technologies/mobile/android.png" />, path: '/services' },
-          { title: 'React Native', icon: <img src="/static/technologies/mobile/anhularjs.png" />, path: '/services' },
-          { title: 'Hybrid', icon: <img src="/static/technologies/mobile/anhularjs.png" />, path: '/services' },
-          { title: 'Flutter', icon: <img src="/static/technologies/mobile/flutter.png" />, path: '/services' },
-          { title: 'Swift', icon: <img src="/static/technologies/mobile/swift.png" />, path: '/services' },
+          { title: 'IOS', icon: <img src="/static/technologies/mobile/ios.png" />, path: '/technologies/mobile' },
+          { title: 'Android', icon: <img src="/static/technologies/mobile/android.png" />, path: '/technologies/mobile' },
+          { title: 'React Native', icon: <img src="/static/technologies/mobile/anhularjs.png" />, path: '/technologies/mobile' },
+          { title: 'Hybrid', icon: <img src="/static/technologies/mobile/anhularjs.png" />, path: '/technologies/mobile' },
+          { title: 'Flutter', icon: <img src="/static/technologies/mobile/flutter.png" />, path: '/technologies/mobile' },
+          { title: 'Swift', icon: <img src="/static/technologies/mobile/swift.png" />, path: '/technologies/mobile' },
         ]
       },
       {
         subheader: 'Cloud',
         items: [
-          { title: 'AWS', icon: <img src="/static/technologies/cloud/AWS.png" />, path: '/services' },
-          { title: 'Google Cloud', icon: <img src="/static/technologies/cloud/google cloud.png" />, path: '/services' }
+          { title: 'AWS', icon: <img src="/static/technologies/cloud/AWS.png" />, path: '/technologies/cloud' },
+          { title: 'Google Cloud', icon: <img src="/static/technologies/cloud/google cloud.png" />, path: '/technologies/cloud' }
         ]
       },
       {
         subheader: 'Backend',
         items: [
-          { title: '.NET', icon: <img src="/static/technologies/backend/netdevelopment.png" />, path: '/services' },
-          { title: 'Node JS', icon: <img src="/static/technologies/backend/node-js.png" />, path: '/services' },
-          { title: 'C#', icon: <img src="/static/technologies/backend/C#.png" />, path: '/services' },
-          { title: 'PHP', icon: <img src="/static/technologies/backend/php.png" />, path: '/services' },
-          { title: 'C++', icon: <img src="/static/technologies/backend/C++.png" />, path: '/services' },
-          { title: '.NETcore', icon: <img src="/static/technologies/backend/netcore.png" />, path: '/services' },
+          { title: '.NET', icon: <img src="/static/technologies/backend/netdevelopment.png" />, path: '/technologies/back' },
+          { title: 'Node JS', icon: <img src="/static/technologies/backend/node-js.png" />, path: '/technologies/back' },
+          { title: 'C#', icon: <img src="/static/technologies/backend/C#.png" />, path: '/technologies/back' },
+          { title: 'PHP', icon: <img src="/static/technologies/backend/php.png" />, path: '/technologies/back' },
+          { title: 'C++', icon: <img src="/static/technologies/backend/C++.png" />, path: '/technologies/back' },
+          { title: '.NETcore', icon: <img src="/static/technologies/backend/netcore.png" />, path: '/technologies/back' },
         ]
       },
       {
         subheader: 'Frameworks',
         items: [
-          { title: 'Laravel', icon: <img src="/static/technologies/frameworks/lavarel.png" />, path: '/services' },
-          { title: 'MEAN', icon: <img src="/static/technologies/frameworks/mean stack.png" />, path: '/services' },
-          { title: 'Codeigniter', icon: <img src="/static/technologies/frameworks/codeigniter.png" />, path: '/services' },
-          { title: 'RubyOnRails', icon: <img src="/static/technologies/frameworks/Ruby_On_Rails_Logo.png" />, path: '/services' },
-          { title: 'CakePHP', icon: <img src="/static/technologies/frameworks/CakePHP.png" />, path: '/services' }
+          { title: 'Laravel', icon: <img src="/static/technologies/frameworks/lavarel.png" />, path: '/technologies/frameworks' },
+          { title: 'MEAN', icon: <img src="/static/technologies/frameworks/mean stack.png" />, path: '/technologies/frameworks' },
+          { title: 'Codeigniter', icon: <img src="/static/technologies/frameworks/codeigniter.png" />, path: '/technologies/frameworks' },
+          { title: 'RubyOnRails', icon: <img src="/static/technologies/frameworks/Ruby_On_Rails_Logo.png" />, path: '/technologies/frameworks' },
+          { title: 'CakePHP', icon: <img src="/static/technologies/frameworks/CakePHP.png" />, path: '/technologies/frameworks' }
         ]
       },
       {
         subheader: 'E-commerce',
         items: [
-          { title: 'Magneto', icon: <img src="/static/technologies/ecommerce/monento-logo.png" />, path: '/services' },
-          { title: 'Shopify', icon: <img src="/static/technologies/ecommerce/Shopify-Logo.png" />, path: '/services' },
-          { title: 'WooCommerce', icon: <img src="/static/technologies/ecommerce/WooCommerce.png" />, path: '/services' },
-          { title: 'NopCommerce', icon: <img src="/static/technologies/ecommerce/nopcommerce.png" />, path: '/services' }
+          { title: 'Magneto', icon: <img src="/static/technologies/ecommerce/monento-logo.png" />, path: '/technologies/ecommerce' },
+          { title: 'Shopify', icon: <img src="/static/technologies/ecommerce/Shopify-Logo.png" />, path: '/technologies/ecommerce' },
+          { title: 'WooCommerce', icon: <img src="/static/technologies/ecommerce/WooCommerce.png" />, path: '/technologies/ecommerce' },
+          { title: 'NopCommerce', icon: <img src="/static/technologies/ecommerce/nopcommerce.png" />, path: '/technologies/ecommerce' }
         ]
       },
       {
         subheader: 'Database',
         items: [
-          { title: 'SQL Lerver', icon: <img src="/static/technologies/database/sqlserver.png" />, path: '/services' },
-          { title: 'MySQL', icon: <img src="/static/technologies/database/mysql-logo.png" />, path: '/services' },
-          { title: 'PostgreSQL', icon: <img src="/static/technologies/database/PostgreSQL.png" />, path: '/services' },
-          { title: 'MongoDB', icon: <img src="/static/technologies/database/mongodb.png" />, path: '/services' },
-          { title: 'DynamoDB', icon: <img src="/static/technologies/database/DynamoDB.png" />, path: '/services' },
+          { title: 'SQL Lerver', icon: <img src="/static/technologies/database/sqlserver.png" />, path: '/technologies/database' },
+          { title: 'MySQL', icon: <img src="/static/technologies/database/mysql-logo.png" />, path: '/technologies/database' },
+          { title: 'PostgreSQL', icon: <img src="/static/technologies/database/PostgreSQL.png" />, path: '/technologies/database' },
+          { title: 'MongoDB', icon: <img src="/static/technologies/database/mongodb.png" />, path: '/technologies/database' },
+          { title: 'DynamoDB', icon: <img src="/static/technologies/database/DynamoDB.png" />, path: '/technologies/database' },
+        ]
+      },
+      {
+        subheader: 'Platforms',
+        items: [
+          { title: 'Zoho', icon: <img src="/static/technologies/platforms/zoho.png" />, path: '/technologies/platforms' },
+          { title: 'MS Dynamics CRM', icon: <img src="/static/technologies/platforms/MS_Dynamics_CRM.png" />, path: '/technologies/platforms' },
+          { title: 'PowerBI', icon: <img src="/static/technologies/platforms/PowerBI.png" />, path: '/technologies/platforms' },
+        ]
+      },
+      {
+        subheader: 'DevOps',
+        items: [
+          { title: 'Azure Ops', icon: <img src="/static/technologies/devops/azure-devops.png" />, path: '/technologies/devops' },
         ]
       },
       {
         subheader: 'CMS',
         items: [
-          { title: 'WordPress', icon: <img src="/static/technologies/cms/wordpress.png" />, path: '/services' },
-          { title: 'Kentico', icon: <img src="/static/technologies/cms/kentico.png" />, path: '/services' },
-          { title: 'Joomla', icon: <img src="/static/technologies/cms/joomla.png" />, path: '/services' },
-          { title: 'DotNetNuke', icon: <img src="/static/technologies/cms/DotNetNuke.png" />, path: '/services' },
-          { title: 'Sitefinity', icon: <img src="/static/technologies/cms/Sitefinity.png" />, path: '/services' }
+          { title: 'WordPress', icon: <img src="/static/technologies/cms/wordpress.png" />, path: '/technologies/cms' },
+          { title: 'Kentico', icon: <img src="/static/technologies/cms/kentico.png" />, path: '/technologies/cms' },
+          { title: 'Joomla', icon: <img src="/static/technologies/cms/joomla.png" />, path: '/technologies/cms' },
+          { title: 'DotNetNuke', icon: <img src="/static/technologies/cms/DotNetNuke.png" />, path: '/technologies/cms' },
+          { title: 'Sitefinity', icon: <img src="/static/technologies/cms/Sitefinity.png" />, path: '/technologies/cms' }
         ]
       },
     ]
@@ -176,29 +190,29 @@ const menuConfig = [
       {
         // subheader: 'Agriculture Machinery',
         items: [
-          { title: 'BFSI', icon: <img src="/static/technologies/industry/bfsi.png" />, path: '/services/custom-software-development' },
-          { title: 'Construction', icon: <img src="/static/technologies/industry/construction.png" />, path: '/services/hire-developer' },
-          { title: 'Aviation', icon: <img src="/static/technologies/industry/aviation.png" />, path: '/services/technologies-consultant' },
-          { title: 'Automobile', icon: <img src="/static/technologies/industry/automobile.png" />, path: '/services/technologies-consultant' },
-          { title: 'Engineering/Heavy Equipment', icon: <img src="/static/technologies/industry/bfsi.png" />, path: '/services/technologies-consultant' },
+          { title: 'BFSI', icon: <img src="/static/industry/2bfsi.png" />, path: '/services/custom-software-development' },
+          { title: 'Construction', icon: <img src="/static/industry/3construction.png" />, path: '/services/hire-developer' },
+          { title: 'Aviation', icon: <img src="/static/industry/4aviation.png" />, path: '/services-consultant' },
+          { title: 'Automobile', icon: <img src="/static/industry/automobile.png" />, path: '/services-consultant' },
+          { title: 'Engineering/Heavy Equipment', icon: <img src="/static/industry/bfsi.png" />, path: '/services-consultant' },
         ]
       },
       {
         items: [
-          { title: 'Education & Training', icon: <img src="/static/services" />, path: '/services/technologies-consultant' },
-          { title: 'FMCG', icon: <img src="/static/technologies/industry/retail-and-fmcg.png" />, path: '/services/technologies-consultant' },
-          { title: 'Travel', icon: <img src="/static/services" />, path: '/services/technologies-consultant' },
-          { title: 'Information Technology', icon: <img src="/static/services" />, path: '/services/technologies-consultant' },
-          { title: 'Logistics', icon: <img src="/static/services" />, path: '/services/technologies-consultant' },
+          { title: 'Education & Training', icon: <img src="/static/industry/10education.png" />, path: '/services-consultant' },
+          { title: 'FMCG', icon: <img src="/static/industry/5retail-and-fmcg.png" />, path: '/services-consultant' },
+          { title: 'Media', icon: <img src="/static/industry/9media.png" />, path: '/' },
+          { title: 'Information Technology', icon: <img src="/static/industry/12it.png" />, path: '/services-consultant' },
+          { title: 'Engineering', icon: <img src="/static/industry/11engineering.png" />, path: '/services-consultant' },
         ]
       },
       {
         items: [
-          { title: 'Consultancy', icon: <img src="/static/services" />, path: '/services/technologies-consultant' },
-          { title: 'Marine/Shipping', icon: <img src="/static/services" />, path: '/services/technologies-consultant' },
-          { title: 'Pharmaceutical', icon: <img src="/static/services" />, path: '/services/technologies-consultant' },
-          { title: 'Oil & Gas', icon: <img src="/static/services" />, path: '/services/technologies-consultant' },
-          { title: 'Telecom', icon: <img src="/static/services" />, path: '/services/technologies-consultant' },
+          { title: 'Consultancy', icon: <img src="/static/industry/7consultancy.png" />, path: '/services-consultant' },
+          { title: 'Retail', icon: <img src="/static/industry/.png" />, path: '/services-consultant' },
+          { title: 'Pharmaceutical', icon: <img src="/static/industry/13-pharma.png" />, path: '/services-consultant' },
+          { title: 'Healthcare', icon: <img src="/static/industry/6healthcare.png" />, path: '/services-consultant' },
+          { title: 'Telecom', icon: <img src="/static/industry/8telecom.png" />, path: '/services-consultant' },
         ]
       },
     ]

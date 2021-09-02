@@ -16,11 +16,11 @@ const ICON_SIZE = {
 
 const menuConfig = [
   {
-    title: 'FRONT',
+    title: 'FRONTEND',
     path: '/technologies/front',
   },
   {
-    title: 'BACK',
+    title: 'BACKEND',
     path: '/technologies/back',
   },
   {

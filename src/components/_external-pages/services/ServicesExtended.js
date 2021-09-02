@@ -1,16 +1,18 @@
+import { useState, useEffect } from 'react';
 // material
 import { styled, alpha } from '@material-ui/core/styles';
 import { Box, Grid, Container, Typography, List, ListItem, ListItemIcon } from '@material-ui/core';
 //
 import { MotionInView, varFadeInUp, varFadeInDown } from '../../animate';
 import StopTwoToneIcon from '@material-ui/icons/StopTwoTone';
+import SERVICES from 'src/utils/servicesInfo';
 
 const RootStyle = styled('div')(({ theme }) => ({
   padding: theme.spacing(5, 0),
-  // backgroundImage:
-  //   theme.palette.mode === 'light'
-  //     ? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 50%)`
-  //     : 'none'
+  // backgroundImage: `url(/static/home/bgimg.jpg)`
+  // theme.palette.mode === 'light'
+  //   ? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 50%)`
+  //   : 'none'
 }));
 
 const ContentStyle = styled('div')(({ theme }) => ({
@@ -30,10 +32,31 @@ const ContentStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function LandingDarkMode() {
+export default function ServicesExtended() {
+  const [serviceInfo, setServiceInfo] = useState({});
+  const [path, setPath] = useState();
+
+  useEffect(() => {
+    let pathname = window.location.pathname;
+    pathname = pathname.replace(/[^a-zA-Z0-9]/g, '');
+    pathname = pathname.slice(8,);
+    setPath(pathname);
+  }, [window.location.pathname]);
+
+  useEffect(async () => {
+    SERVICES.map((service, index) => {
+      // console.log('path', path);
+      // console.log('services[index]', services[index].title.replace(/ /g, '').toLowerCase());
+      if (path == service.title.replace(/ /g, '').toLowerCase()) {
+        setServiceInfo(service.info);
+        console.log('serviceInfo', serviceInfo);
+      }
+    });
+    // window.scrollTo(100, 300);
+  }, [serviceInfo, path]);
   return (
     <RootStyle>
-      <Container maxWidth="lg" sx={{ position: 'relative' }}>
+      <Container maxWidth="lg" sx={{ position: 'relative', mb: 10 }}>
         {/* <Box
           component="img"
           alt="image shape"
@@ -60,7 +83,7 @@ export default function LandingDarkMode() {
           </Grid> */}
           <Grid item xs={12}>
             <ContentStyle>
-              <MotionInView variants={varFadeInUp}>
+              {/* <MotionInView variants={varFadeInUp}>
                 <Typography component="p" variant="overline" sx={{ mb: 2, color: 'text.disabled', display: 'block' }}>
                   Easy switch between styles.
                 </Typography>
@@ -70,19 +93,28 @@ export default function LandingDarkMode() {
                 <Typography variant="h3" sx={{ mb: 3 }}>
                   Some Info
                 </Typography>
-              </MotionInView>
+              </MotionInView> */}
 
               <MotionInView variants={varFadeInUp}>
-                <Typography variant="p" sx={{ mb: 5 }}>
-                Custom digital experiences are pivotal to today’s dynamic and new-age businesses to build a better future ahead. We, at SPEC INDIA leverage 3 decade-long experience in creating top-rated, customized, and high-performing enterprise software solutions that help enterprises become future-ready. We are designing, developing, measuring, and improving next-gen solutions across a range of industry verticals. SPEC INDIA’s software development team has been successfully delivering impactful digital transformation with optimum efficiency and agility for over 30 years. Our result-driven custom software development services include a multitude of services including Custom CRM, Custom ERP, Enterprise software development, Digital product development, SaaS development, Cloud-enabled development, Software consulting, and Custom software solutions. We utilize modern technologies and advanced approaches like Agile and DevOps to accelerate the time-to-market of your applications with a focus on delivering powerful, scalable, and cutting-edge software solutions.
+                <Typography
+                  variant="body1"
+                  sx={{
+                    fontFamily: 'Raleway',
+                    color: 'gray',
+                    fontSize: 22,
+                    fontStyle: 'italic'
+                    // fontWeight: 'fontWeightMedium'
+                  }}
+                >
+                  {/* {serviceInfo} */}
                 </Typography>
               </MotionInView>
-              <MotionInView variants={varFadeInUp}>
+              {/* <MotionInView variants={varFadeInUp}>
                 <Typography component="p" variant="overline" sx={{ mb: 10, color: 'text.disabled', display: 'block' }}>
                   Easy switch between styles.
                 </Typography>
-              </MotionInView>
-              
+              </MotionInView> */}
+
             </ContentStyle>
           </Grid>
 

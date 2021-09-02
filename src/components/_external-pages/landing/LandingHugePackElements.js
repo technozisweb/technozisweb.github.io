@@ -12,10 +12,10 @@ import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 
 const RootStyle = styled('div')(({ theme }) => ({
   padding: theme.spacing(10, 0),
-  backgroundImage:
-    theme.palette.mode === 'light'
-      ? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 100%)`
-      : 'none'
+  // backgroundImage:
+  //   theme.palette.mode === 'light'
+  //     ? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 100%)`
+  //     : 'none'
 }));
 
 const ContentStyle = styled('div')(({ theme }) => ({
@@ -33,7 +33,7 @@ const ScreenStyle = styled(MotionInView)(({ theme }) => ({
   paddingBottom: 1,
   maxWidth: 160,
   borderRadius: 8,
-  backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 300 : 800],
+  // backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 300 : 800],
   [theme.breakpoints.up('sm')]: {
     maxWidth: 320,
     paddingRight: 4,
@@ -83,155 +83,8 @@ export default function LandingHugePackElements() {
 
   return (
     <RootStyle>
-      <Container maxWidth="lg">
-        <Grid container spacing={5} justifyContent="center">
-          <Grid item xs={12} md={6} sx={{ display: 'flex', alignItems: 'center' }}>
-            <ContentStyle>
-              <MotionInView variants={varFadeInUp}>
-                <Typography component="p" variant="overline" sx={{ mb: 2, color: 'text.secondary' }}>
-                  Interface Starter Kit
-                </Typography>
-              </MotionInView>
-
-              <MotionInView variants={varFadeInUp}>
-                <Typography variant="h3" sx={{ mb: 3 }}>
-                  Huge pack of elements
-                </Typography>
-              </MotionInView>
-
-              <MotionInView variants={varFadeInUp}>
-                <Typography
-                  sx={{
-                    mb: 5,
-                    color: isLight ? 'text.secondary' : 'common.white'
-                  }}
-                >
-                  We collected most popular elements. Menu, sliders, buttons, inputs etc. are all here. Just dive in!
-                </Typography>
-              </MotionInView>
-
-              <MotionInView variants={varFadeInUp}>
-                <Typography
-                  sx={{
-                    mb: 5,
-                    color: isLight ? 'text.secondary' : 'common.white'
-                  }}>
-                  Paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph.
-                </Typography>
-              </MotionInView>
-
-              <MotionInView variants={varFadeInUp}>
-                <Button
-                  size="large"
-                  color="inherit"
-                  variant="outlined"
-                  component={RouterLink}
-                  to={PATH_PAGE.components}
-                >
-                  View All Components
-                </Button>
-              </MotionInView>
-            </ContentStyle>
-          </Grid>
-
-          <Grid item xs={12} md={6} dir="ltr">
-            {/* <Box
-              sx={{
-                display: 'flex',
-                alignItems: 'center',
-                position: 'relative',
-                justifyContent: 'center'
-              }}
-            >
-              {[...Array(3)].map((_, index) => (
-                <ScreenStyle
-                  key={index}
-                  threshold={0.72}
-                  variants={{
-                    ...(index === 0 && screenLeftAnimate),
-                    ...(index === 1 && screenCenterAnimate),
-                    ...(index === 2 && screenRightAnimate)
-                  }}
-                  transition={{ duration: 0.72, ease: 'easeOut' }}
-                  sx={{
-                    boxShadow: `${isRTL ? -80 : 80}px -40px 80px ${alpha(
-                      isLight ? theme.palette.grey[600] : theme.palette.common.black,
-                      0.48
-                    )}`,
-                    ...(index === 0 && {
-                      zIndex: 3,
-                      position: 'absolute'
-                    }),
-                    ...(index === 1 && { zIndex: 2 }),
-                    ...(index === 2 && {
-                      zIndex: 1,
-                      position: 'absolute',
-                      boxShadow: 'none'
-                    })
-                  }}
-                >
-                  <img
-                    alt={`screen ${index + 1}`}
-                    src={`/static/home/screen_${isLight ? 'light' : 'dark'}_${index + 1}.png`}
-                  />
-                </ScreenStyle>
-              ))}
-            </Box> */}
-
-            {/* <MotionInView variants={varFadeInUp}>
-              <Typography component="p" variant="overline" sx={{ mb: 2, color: 'text.secondary' }}>
-                Interface Starter Kit
-              </Typography>
-            </MotionInView>
-
-            <MotionInView variants={varFadeInUp}>
-              <Typography variant="h3" sx={{ mb: 3 }}>
-                Huge pack of elements
-              </Typography>
-            </MotionInView> */}
-
-            <MotionInView variants={varFadeInUp}>
-              <Typography
-                sx={{
-                  mb: 5,
-                  color: isLight ? 'text.secondary' : 'common.white'
-                }}
-              >
-                We collected most popular elements. Menu, sliders, buttons, inputs etc. are all here. Just dive in!
-              </Typography>
-            </MotionInView>
-
-            <MotionInView variants={varFadeInUp}>
-              <List
-                sx={{
-                  mb: 5,
-                  color: isLight ? 'text.secondary' : 'common.white'
-                }}
-              >
-                <ListItem>
-                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
-                  Here is some information about the company.
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
-                  Here is some information about the company.
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
-                  Here is some information about the company.
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
-                  Here is some information about the company.
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
-                  Here is some information about the company.
-                </ListItem>
-              </List>
-            </MotionInView>
-          </Grid>
-        </Grid>
+      <Container maxWidth="lg" sx={{ mt: 5 }}>
+        <Box component='img' src='/static/home/key-highlights.jpg' />
       </Container>
     </RootStyle>
   );

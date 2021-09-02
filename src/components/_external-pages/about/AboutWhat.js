@@ -153,13 +153,13 @@ export default function AboutWhat() {
               </Typography>
             </MotionInView>
 
-            <Box sx={{ my: 5 }}>
+            {/* <Box sx={{ my: 5 }}>
               {MOCK_SKILLS.map((progress) => (
                 <MotionInView key={progress.label} variants={varFadeInRight}>
                   <ProgressItem progress={progress} />
                 </MotionInView>
               ))}
-            </Box>
+            </Box> */}
 
             <MotionInView variants={varFadeInRight}>
               <Button
@@ -168,6 +168,7 @@ export default function AboutWhat() {
                 size="large"
                 endIcon={<Icon icon={roundArrowRightAlt} width={24} height={24} />}
                 href="/about-us"
+                sx={{ mt: 5 }}
               >
                 About us
               </Button>

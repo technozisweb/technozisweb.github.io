@@ -46,7 +46,7 @@ export default function LandingDarkMode() {
           }}
         /> */}
 
-        <Grid container spacing={2} direction="row-reverse" justifyContent="space-between">
+        <Grid container spacing={2} direction="row-reverse" justifyContent="space-between" sx={{ mt: 5 }}>
           <Grid item xs={12} md={5} sx={{ position: 'relative', height: '100%' }}>
             <MotionInView threshold={0.5} variants={varFadeInUp}>
               <img alt="light mode" src="/static/home/team.png" />
@@ -57,27 +57,33 @@ export default function LandingDarkMode() {
           </Grid>
           <Grid item xs={12} md={6}>
             <ContentStyle>
-              <MotionInView variants={varFadeInUp}>
+              {/* <MotionInView variants={varFadeInUp}>
                 <Typography component="p" variant="overline" sx={{ mb: 2, color: 'text.disabled', display: 'block' }}>
                   Easy switch between styles.
                 </Typography>
-              </MotionInView>
+              </MotionInView> */}
 
               <MotionInView variants={varFadeInUp}>
                 <Typography variant="h2" sx={{ mb: 3 }}>
-                  Some Info
+                  What do we do?
                 </Typography>
               </MotionInView>
 
               <MotionInView variants={varFadeInUp}>
                 <Typography sx={{ mb: 5 }}>
-                  A dark theme that feels easier on the eyes.
-                  A dark theme that feels easier on the eyes.
+                  We are a value-driven which commits to design and develop technology products that can streamline your business processes and grow revenue. We build custom software applications that are tailored to meet your specific use case, budget and timeline
                 </Typography>
               </MotionInView>
               <MotionInView variants={varFadeInUp}>
-                <Typography component="p" variant="overline" sx={{ mb: 2, color: 'text.disabled', display: 'block' }}>
-                  Easy switch between styles.
+                <Typography variant="h5"
+                  sx={{
+                    mb: 2,
+                    color: 'text.main',
+                    display: 'block',
+                    fontFamily: 'Raleway'
+                    // fontStyle: "italic"
+                  }}>
+                  Empower sustainable business with us
                 </Typography>
               </MotionInView>
 
@@ -85,19 +91,15 @@ export default function LandingDarkMode() {
                 <List sx={{ color: 'text.secondary' }}>
                   <ListItem>
                     <ListItemIcon><StopTwoToneIcon color="primary" fontSize="small" /></ListItemIcon>
-                    A dark theme that feels easier on the eyes.
+                    Technozis is a team that has passion for developing and delivering solutions that matters.
                   </ListItem>
                   <ListItem>
                     <ListItemIcon><StopTwoToneIcon color="primary" fontSize="small" /></ListItemIcon>
-                    A dark theme that feels easier on the eyes.
+                    We combine our in-depth expertise, nimble and creative approach, and time-tested processes to achieve your business goals.
                   </ListItem>
                   <ListItem>
                     <ListItemIcon><StopTwoToneIcon color="primary" fontSize="small" /></ListItemIcon>
-                    A dark theme that feels easier on the eyes.
-                  </ListItem>
-                  <ListItem>
-                    <ListItemIcon><StopTwoToneIcon color="primary" fontSize="small" /></ListItemIcon>
-                    A dark theme that feels easier on the eyes.
+                    Our vision is to bring ideas to life by simplifying complicated issues and build scalable solutions.
                   </ListItem>
                 </List>
               </MotionInView>
