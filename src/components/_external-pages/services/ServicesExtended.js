@@ -9,6 +9,7 @@ import SERVICES from 'src/utils/servicesInfo';
 
 const RootStyle = styled('div')(({ theme }) => ({
   padding: theme.spacing(5, 0),
+  // backgroundColor: 'lightyellow',
   // backgroundImage: `url(/static/home/bgimg.jpg)`
   // theme.palette.mode === 'light'
   //   ? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 50%)`
@@ -18,7 +19,11 @@ const RootStyle = styled('div')(({ theme }) => ({
 const ContentStyle = styled('div')(({ theme }) => ({
   textAlign: 'center',
   position: 'relative',
-  marginBottom: theme.spacing(10),
+  borderBottom: '2px solid lightblue',
+  borderRight: '2px solid lightblue',
+  // borderColor: theme.palette.grey[400],
+  marginBottom: theme.spacing(20),
+  // backgroundColor: theme.palette.grey[200],
   [theme.breakpoints.up('md')]: {
     height: '100%',
     marginBottom: 0,
@@ -44,11 +49,11 @@ export default function ServicesExtended() {
   }, [window.location.pathname]);
 
   useEffect(async () => {
-    SERVICES.map((service, index) => {
-      // console.log('path', path);
-      // console.log('services[index]', services[index].title.replace(/ /g, '').toLowerCase());
-      if (path == service.title.replace(/ /g, '').toLowerCase()) {
-        setServiceInfo(service.info);
+    SERVICES.map((item, index) => {
+      console.log('item.info', item.info);
+      if (path == item.title.replace(/ /g, '').toLowerCase()) {
+        const info = item.info;
+        setServiceInfo(info);
         console.log('serviceInfo', serviceInfo);
       }
     });
@@ -56,69 +61,41 @@ export default function ServicesExtended() {
   }, [serviceInfo, path]);
   return (
     <RootStyle>
-      <Container maxWidth="lg" sx={{ position: 'relative', mb: 10 }}>
-        {/* <Box
-          component="img"
-          alt="image shape"
-          src="/static/home/shape.svg"
-          sx={{
-            top: 0,
-            right: 0,
-            bottom: 0,
-            my: 'auto',
-            position: 'absolute',
-            filter: 'grayscale(1) opacity(100%)',
-            display: { xs: 'none', md: 'block' }
-          }}
-        /> */}
+      <Container maxWidth="lg" sx={{ position: 'relative', mb: 5 }}>
+        {serviceInfo && serviceInfo.length
+          ? (
+            <Grid container spacing={2} direction="row-reverse" justifyContent="space-between">
+              <Grid item xs={12} sx={{ mt: 5, mb: 5 }}>
+                <ContentStyle>
+                  {serviceInfo.map((item) => (
+                    <MotionInView variants={varFadeInUp}>
+                      <Typography
+                        variant="body1"
+                        sx={{
+                          // fontFamily: 'Raleway',
+                          color: 'gray',
+                          // fontSize: 22,
+                          // fontStyle: 'italic',
+                          m: 1,
+                          // fontWeight: 'fontWeightMedium'
+                        }}
+                      >
+                        {item}
+                      </Typography>
+                    </MotionInView>
+                  ))}
+                  {/* <MotionInView variants={varFadeInUp}>
+                    <Typography component="p" variant="overline" sx={{ mb: 10, color: 'text.disabled', display: 'block' }}>
+                      Easy switch between styles.
+                    </Typography>
+                  </MotionInView> */}
 
-        <Grid container spacing={2} direction="row-reverse" justifyContent="space-between">
-          {/* <Grid item xs={12} md={5} sx={{ position: 'relative', height: '100%' }}>
-            <MotionInView threshold={0.5} variants={varFadeInUp}>
-              <img alt="light mode" src="/static/home/team.png" />
-            </MotionInView>
-            <MotionInView threshold={0.5} variants={varFadeInDown} sx={{ top: 0, left: 0, position: 'absolute' }}>
-              <img alt="dark mode" src="/static/home/darkmode.png" />
-            </MotionInView>
-          </Grid> */}
-          <Grid item xs={12}>
-            <ContentStyle>
-              {/* <MotionInView variants={varFadeInUp}>
-                <Typography component="p" variant="overline" sx={{ mb: 2, color: 'text.disabled', display: 'block' }}>
-                  Easy switch between styles.
-                </Typography>
-              </MotionInView>
+                </ContentStyle>
+              </Grid>
 
-              <MotionInView variants={varFadeInUp}>
-                <Typography variant="h3" sx={{ mb: 3 }}>
-                  Some Info
-                </Typography>
-              </MotionInView> */}
-
-              <MotionInView variants={varFadeInUp}>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontFamily: 'Raleway',
-                    color: 'gray',
-                    fontSize: 22,
-                    fontStyle: 'italic'
-                    // fontWeight: 'fontWeightMedium'
-                  }}
-                >
-                  {/* {serviceInfo} */}
-                </Typography>
-              </MotionInView>
-              {/* <MotionInView variants={varFadeInUp}>
-                <Typography component="p" variant="overline" sx={{ mb: 10, color: 'text.disabled', display: 'block' }}>
-                  Easy switch between styles.
-                </Typography>
-              </MotionInView> */}
-
-            </ContentStyle>
-          </Grid>
-
-        </Grid>
+            </Grid>
+          )
+          : null}
       </Container>
     </RootStyle>
   );

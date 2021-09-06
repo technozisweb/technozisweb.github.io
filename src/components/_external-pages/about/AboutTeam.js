@@ -1,4 +1,7 @@
-import { Card, CardContent, CardMedia, Container, Grid, Typography, Paper } from "@material-ui/core";
+import { Card, CardContent, CardMedia, Container, Grid, Typography, Paper, Box } from "@material-ui/core";
+//
+
+import { varFadeInUp, varFadeIn, MotionInView } from '../../animate';
 
 const TEAM = [
   {
@@ -20,33 +23,99 @@ const TEAM = [
 
 const AboutTeam = () => {
   return (
-    <Container>
-      <Grid container sx={{ mb: 15 }}>
-        <Card>
-          {TEAM.map((item) => (
-            <Grid item xs={12} md={12} sx={{ m: 1 }}>
-              <Paper sx={{ mt: 1 }}>
-                {/* <CardMedia
-                component="img"
-                image={item.image}
-                sx={{ borderLeft: '3px solid' }}
-              /> */}
-                <CardContent sx={{ borderLeft: '3px solid', backgroundColor: '' }}>
-                  <Typography variant="h6" sx={{ backgroundColor: '#DFE3E8' }}>
-                    {item.title}
-                  </Typography>
-                </CardContent>
-                <CardContent>
-                  <Typography>
-                    {item.description}
-                  </Typography>
-                </CardContent>
-              </Paper>
-            </Grid>
-          ))}
-        </Card>
+    <>
+      <Grid container justifyContent="center" sx={{ backgroundColor: 'lightblue', mt: 10 }}>
+        <Grid item xs={12} sm={8}>
+          <MotionInView variants={varFadeInUp}>
+            <Typography variant="h3" sx={{
+              textAlign: 'center',
+              fontFamily: 'cursive'
+            }}>
+              Our Team
+            </Typography>
+          </MotionInView>
+        </Grid>
       </Grid>
-    </Container>
+      <Container sx={{ mb: 15, mt: 10 }}>
+        <Grid container>
+          <Grid item xs={12} md={0.2} />
+
+          <Grid item xs={12} md={1} sx={{
+            backgroundColor: 'lightblue',
+            border: '2px solid',
+            mr: { xs: 0, md: 2 },
+            // borderBottom: 0
+          }} />
+          <Grid item xs={12} md={5} sx={{ border: '2px solid' }}>
+            <Paper>
+              <CardContent>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontFamily: 'Raleway',
+                    borderBottom: '4px solid lightblue'
+                  }}
+                >
+                  {TEAM[2].title}
+                </Typography>
+                <Typography sx={{ mt: 2 }}>{TEAM[2].description}</Typography>
+              </CardContent>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} md={5} sx={{ border: '2px solid', ml: { xs: 0, md: 2 } }}>
+            <Paper>
+              <CardContent>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontFamily: 'Raleway',
+                    borderBottom: '4px solid lightblue'
+                  }}
+                >
+                  {TEAM[1].title}
+                </Typography>
+                <Typography sx={{ mt: 2 }}>{TEAM[1].description}</Typography>
+              </CardContent>
+            </Paper>
+          </Grid>
+
+          <Grid item xs={12} md={0.3} />
+          <Grid item xs={12} md={0.2} />
+
+          <Grid item xs={12} md={5} sx={{ border: '2px solid', mt: { xs: 0, md: 2 } }}>
+            <Paper>
+              <CardMedia
+                component='img'
+                image='/static/home/aboutteam.jpg'
+                height='280'
+              />
+            </Paper>
+          </Grid>
+          <Grid item xs={12} md={5} sx={{ border: '2px solid', ml: { xs: 0, md: 2 }, mt: { xs: 0, md: 2 } }}>
+            <Paper>
+              <CardContent>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontFamily: 'Raleway',
+                    borderBottom: '4px solid lightblue'
+                  }}
+                >
+                  {TEAM[0].title}
+                </Typography>
+                <Typography sx={{ mt: 2 }}>{TEAM[0].description}</Typography>
+              </CardContent>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} md={1} sx={{
+            backgroundColor: 'lightblue',
+            border: '2px solid',
+            ml: { xs: 0, md: 2 },
+            mt: { xs: 0, md: 2 },
+          }} />
+        </Grid>
+      </Container>
+    </>
   );
 }
 

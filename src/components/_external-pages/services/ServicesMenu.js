@@ -5,11 +5,12 @@ import { NavLink as RouterLink } from 'react-router-dom';
 import chevronRightFill from '@iconify/icons-eva/chevron-right-fill';
 // material
 import { alpha } from '@material-ui/core/styles';
-import { Box, Link, List, Paper, ListItem, Typography, Divider, Stack } from '@material-ui/core';
+import { Box, Link, List, Paper, ListItem, Typography, Divider, Stack, ListItemIcon } from '@material-ui/core';
 //
 import { makeStyles } from '@material-ui/styles';
 import RemoveIcon from '@material-ui/icons/Remove';
 import navConfig from 'src/layouts/main/MenuConfig.js';
+import SERVICES from 'src/utils/servicesInfo';
 
 // ----------------------------------------------------------------------
 
@@ -28,7 +29,8 @@ const ITEM_ON_ROW = {
 
 const styles = makeStyles(( theme ) => ({
   active: {
-    color: theme.palette.primary.main
+    color: theme.palette.primary.main,
+    // backgroundColor: alpha(theme.palette.primary.main, theme.palette.action.hoverOpacity)
   },
 }));
 
@@ -39,7 +41,7 @@ ParentItem.propTypes = {
   hasSub: PropTypes.bool
 };
 
-function ParentItem({ path, title, open, hasSub, ...other }) {
+function ParentItem({ path, title, icon, open, hasSub, ...other }) {
   const classes = styles();
   const activeStyle = {
     color: 'primary.main',
@@ -56,13 +58,15 @@ function ParentItem({ path, title, open, hasSub, ...other }) {
       activeClassName={classes.active}
       // onClick={window.scrollTo(0, 200)}
       sx={{
-        // pl: 2.5,
+        p: 2,
         // mb: 1,
         height: ITEM_HEIGHT,
         cursor: 'pointer',
         color: 'text.primary',
         typography: 'subtitle1',
         textTransform: 'capitalize',
+        borderLeft: '4px solid',
+        marginBottom: 1,
         // justifyContent: 'space-between',
         transition: (theme) => theme.transitions.create('all'),
         '&:hover': activeStyle,
@@ -71,12 +75,13 @@ function ParentItem({ path, title, open, hasSub, ...other }) {
       }}
       {...other}
     >
-      <RemoveIcon
+      {/* <RemoveIcon
         sx={{
           mr: 2,
           // color: 'black',
           '&:hover': activeStyle,
-        }} />
+        }} /> */}
+      {/* <ListItemIcon sx={{ height: 30, width: 30 }}><img src={icon} /></ListItemIcon> */}
       {title}
       {hasSub && <Box component={Icon} icon={chevronRightFill} sx={{ ml: 1, width: 20, height: 20 }} />}
     </ListItem>
@@ -88,7 +93,7 @@ MegaMenuItem.propTypes = {
 };
 
 function MegaMenuItem({ parent }) {
-  const { title, path, more, products, tags, children } = parent;
+  const { title, path, icon, more, products, tags, children } = parent;
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -100,7 +105,7 @@ function MegaMenuItem({ parent }) {
   };
 
   return (
-    <ParentItem path={path} title={title}>
+    <ParentItem path={path} title={title} icon={icon}>
       {title}
     </ParentItem>
   );
@@ -109,7 +114,7 @@ function MegaMenuItem({ parent }) {
 export default function ServicesMenuConfig() {
   return (
     <List disablePadding>
-      {navConfig.map((parent) => (
+      {SERVICES.map((parent) => (
         <MegaMenuItem key={parent.title} parent={parent} />
       ))}
     </List>

@@ -6,11 +6,13 @@ import { Box, Grid, Card, Container, Typography, useMediaQuery, Button, ListItem
 //
 import { varFadeInUp, MotionInView, varFadeInDown } from '../../animate';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import RemoveIcon from '@material-ui/icons/Remove';
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  padding: theme.spacing(3),
+  padding: theme.spacing(2),
+  color: theme.palette.grey[600],
   // color: 'white'
   // [theme.breakpoints.up('md')]: {
   //   paddingBottom: theme.spacing(15)
@@ -22,7 +24,7 @@ ServicesDescription.propTypes = {
 };
 
 export default function ServicesDescription({ serviceData }) {
-  console.log('servicesData in points', serviceData.path);
+  console.log('servicesData in points', serviceData.content);
   if (get(serviceData.points)) serviceData.points.map((point) => { console.log({ point }) });
   const theme = useTheme();
   const isLight = theme.palette.mode === 'light';
@@ -31,17 +33,55 @@ export default function ServicesDescription({ serviceData }) {
   return (
     <RootStyle>
       <Container maxWidth="lg">
-        <List>
-          {/* <ListItem>
-            <ListItemIcon sx={{ height: 60, width: 60 }}><img src={serviceData.path} /></ListItemIcon>
+        {serviceData && serviceData.content
+          ? (
+            <List>
+              {/* <ListItem>
+                <ListItemIcon sx={{ height: 60, width: 60 }}><img src={serviceData.path} /></ListItemIcon>
+              </ListItem> */}
+              {/* {serviceData.info.map((item) => (
+                <MotionInView variants={varFadeInUp}>
+                  <Typography
+                    variant="body1"
+                    sx={{ mb: 3, color: 'text.main', fontFamily: 'Roboto', fontSize: 22, }}
+                  >
+                    {item}
+                  </Typography>
+                </MotionInView>
+              ))} */}
+              {/* <ListItemIcon sx={{ height: 60, width: 60 }}><img src={serviceData.icon} /></ListItemIcon> */}
+              <Typography variant="subtitle1"
+                sx={{
+                  fontSize: 20,
+                  marginTop: 2,
+                  fontFamily: 'sans-serif',
+                  fontStyle: "italic",
+                  // backgroundColor: 'red'
+                }}>
+                {serviceData.subheader}
+              </Typography>
+              <Typography variant="body1" sx={{ fontSize: 20, marginTop: 5 }}>
+                {serviceData.content}
+              </Typography>
+              {serviceData.points.map((point) => (
+                <List key={point.header}>
+                  <ListItem>
+                    <ListItemIcon sx={{ color: "lightcoral" }}><RemoveIcon fontSize="large" /></ListItemIcon>
+                    <Typography variant="subtitle1">
+                      {point.header}
+                    </Typography>
+                  </ListItem>
+                  <ListItem>
+                    <Typography variant="body1">
+                      {point.description}
+                    </Typography>
+                  </ListItem>
+                </List>
+              ))}
 
-          </ListItem> */}
-          <MotionInView variants={varFadeInUp}>
-            <Typography variant="body1" sx={{ mt: 2, color: 'common.white' }}>
-              {serviceData.info}
-            </Typography>
-          </MotionInView>
-        </List>
+            </List>
+          )
+          : null}
       </Container>
       <Box sx={{ mb: 2 }}>
         {/* {get(serviceData.points)

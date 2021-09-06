@@ -33,11 +33,11 @@ const RootStyle = styled(Page)(({ theme }) => ({
 }));
 
 const ContentStyle = styled(Page)(({ theme }) => ({
-  backgroundImage: 
-    theme.palette.mode === 'light'
-      ? `linear-gradient(0deg, ${alpha(theme.palette.grey[900], 0)} 0%, ${theme.palette.grey[400]} 200%)`
-      : 'none',
-  backgroundColor: theme.palette.grey[800]
+  // backgroundImage: 
+  //   theme.palette.mode === 'light'
+  //     ? `linear-gradient(0deg, ${alpha(theme.palette.grey[900], 0)} 0%, ${theme.palette.grey[400]} 200%)`
+  //     : 'none',
+  // backgroundColor: theme.palette.grey[800]
 }));
 
 // ----------------------------------------------------------------------
@@ -68,7 +68,21 @@ export default function MegaMenu() {
   return (
     <RootStyle title="Mega Menu | Minimal-UI">
 
-      <Container>
+      <Container maxWidth="lg" sx={{ position: 'relative' }}>
+        <Box
+          component="img"
+          alt="image shape"
+          src="/static/home/bg2.jpg"
+          sx={{
+            top: 0,
+            right: 24,
+            bottom: 0,
+            my: 'auto',
+            position: 'absolute',
+            filter: 'grayscale(1) opacity(100%)',
+            display: { xs: 'none', md: 'block' }
+          }}
+        />
         <Grid container>
           <Grid item xs={12} md={4}>
             <Box sx={{ width: 420, flexShrink: 0, overflow: 'unset' }}>
@@ -77,7 +91,7 @@ export default function MegaMenu() {
           </Grid>
           <Grid item xs={12} md={1}></Grid>
           <Grid item xs={12} md={7}>
-            <Paper sx={{ minHeight: 340, maxWidth: 740, overflow: 'hidden' }} elevation='5'>
+            <Paper sx={{ minHeight: 340, maxWidth: 740, overflow: 'hidden' }}>
               <ContentStyle>
                 <Box
                   // component="img"

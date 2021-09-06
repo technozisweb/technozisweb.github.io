@@ -90,15 +90,15 @@ export default function LandingDarkMode() {
               <MotionInView variants={varFadeInUp}>
                 <List sx={{ color: 'text.secondary' }}>
                   <ListItem>
-                    <ListItemIcon><StopTwoToneIcon color="primary" fontSize="small" /></ListItemIcon>
+                    <ListItemIcon><StopTwoToneIcon fontSize="small" /></ListItemIcon>
                     Technozis is a team that has passion for developing and delivering solutions that matters.
                   </ListItem>
                   <ListItem>
-                    <ListItemIcon><StopTwoToneIcon color="primary" fontSize="small" /></ListItemIcon>
+                    <ListItemIcon><StopTwoToneIcon fontSize="small" /></ListItemIcon>
                     We combine our in-depth expertise, nimble and creative approach, and time-tested processes to achieve your business goals.
                   </ListItem>
                   <ListItem>
-                    <ListItemIcon><StopTwoToneIcon color="primary" fontSize="small" /></ListItemIcon>
+                    <ListItemIcon><StopTwoToneIcon fontSize="small" /></ListItemIcon>
                     Our vision is to bring ideas to life by simplifying complicated issues and build scalable solutions.
                   </ListItem>
                 </List>

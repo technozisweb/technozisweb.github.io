@@ -25,11 +25,11 @@ export default function About() {
     <RootStyle title="About us | Minimal-UI">
       <AboutHero />
       <LandingDarkMode />
+      <AboutTeam />
+      <AboutTestimonials />
       <AboutVision />
       {/* <LandingServices /> */}
       <Divider orientation="vertical" sx={{ my: 10, mx: 'auto', width: 2, height: 40 }} />
-      <AboutTeam />
-      <AboutTestimonials />
     </RootStyle>
   );
 }

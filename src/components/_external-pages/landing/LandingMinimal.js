@@ -15,6 +15,7 @@ import mockData from '../../../utils/mock-data';
 //
 import { varFadeIn, varFadeInUp, MotionInView, varFadeInDown, varFadeInLeft } from '../../animate';
 import { CarouselControlsArrowsBasic2, CarouselControlsPaging2 } from '../../carousel';
+import ServiceData from 'src/utils/servicesInfo';
 
 // ----------------------------------------------------------------------
 
@@ -25,126 +26,30 @@ const MOCK_MEMBERS = [...Array(5)].map((_, index) => ({
   // avatar: mockData.image.avatar(index),
 }));
 
-const CARDS = [
-  {
-    icon: '/static/services/1csd.png',
-    title: 'Software Development Outsourcing',
-    description:
-      'Reduce cost and efforts. Build scalable, tailor-made software solutions for targeted business functions at fastest time-to-market.',
-    // footer: 'meet unique requirem',
-    // bgcolor: 'pink',
-    path: '/services/custom-software-development'
-  },
-  {
-    icon: '/static/services/4hd.png',
-    title: 'Hire Developer',
-    description: 'Easy to customize and extend each component, saving you time and money.',
-    path: '/services/hire-developer'
-  },
-  {
-    icon: '/static/services/10TC.png',
-    title: 'Technology Consultant',
-    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
-    path: '/services/technology-consultant'
-  },
-  {
-    icon: '/static/services/2ms.png',
-    title: 'Management and Support',
-    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
-    path: '/services/management-and-support'
-  },
-  {
-    icon: '/static/services/3em.png',
-    title: 'Enterprise Mobility',
-    description:
-      'The set is built on the principles of the atomic design system.',
-    footer: 'meet unique requirem',
-    path: '/services/enterprise-mobility'
-  },
-  {
-    icon: '/static/services/11pe.png',
-    title: 'Product Engineering',
-    description: 'Easy to customize and extend each component, saving you time and money.',
-    path: '/services/product-engineering'
-  },
-
-  {
-    icon: '/static/services/13dt.png',
-    title: 'Digital Transformation',
-    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
-    path: '/services/digital-transformation'
-  },
-  {
-    icon: '/static/services/12sta.png',
-    title: 'Software Testing and Quality Analysis',
-    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
-    path: '/services/software-testing'
-  },
-  {
-    icon: '/static/services/5ad.png',
-    title: 'Application Development',
-    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
-    path: '/services/application-development'
-  },
-  {
-    icon: '/static/services/9EP.png',
-    title: 'Embedded Product',
-    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
-    path: '/services/embedded-product'
-  },
-  {
-    icon: '/static/services/7si.png',
-    title: 'System Integration',
-    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
-    path: '/services/system-integration'
-  },
-  {
-    icon: '/static/services/6ca.png',
-    title: 'Cloud Application',
-    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
-    path: '/services/cloud-application'
-  },
-  {
-    icon: '/static/services/8bia.png',
-    title: 'Business Intelligence Analystics',
-    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
-    path: '/services/business-intelligence-analytics'
-  },
-  {
-    icon: '/static/services/14SAP.png',
-    title: 'SAP',
-    description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
-    path: '/services/sap'
-  },
-];
-
 const shadowIcon = (color) => `drop-shadow(2px 2px 2px ${alpha(color, 0.48)})`;
 
 // ----------------------------------------------------------------------
 
 const CardStyle = styled(Card)(({ theme }) => ({
   // padding: theme.spacing(3, 3, 0),
-  maxWidth: 320,
-  height: 380,
+  maxWidth: 300,
+  minHeight: 320,
   margin: 'auto',
   '&:hover': {
     boxShadow: `0px 10px 10px 10px ${alpha(theme.palette.grey[300], 1)}`,
   },
 }));
 
-const CardIconStyle = styled('img')(({ theme }) => ({
-  width: 50,
-  height: 50,
-  margin: 'auto',
-  marginBottom: theme.spacing(2),
-  // filter: shadowIcon(theme.palette.primary.main)
+const CardButton = styled(Button)(({ theme }) => ({
+  transition: "transform 0.15s ease-in-out",
+  "&:hover": { transform: "scale3d(1.1, 1.1, 1)", backgroundColor: 'transparent' },
 }));
 
 function ServiceLink() {
   return (
     <Link href="/services" variant="subtitle2" sx={{ alignItems: 'center', alignContent: 'center' }}>
       Read more
-      {/* <Box component={Icon} icon={roundArrowRightAlt} sx={{ ml: 1, width: 20, height: 20 }} /> */}
+      <Box component={Icon} icon={roundArrowRightAlt} sx={{ ml: 1, width: 20, height: 20 }} />
     </Link>
   );
 }
@@ -159,7 +64,7 @@ MemberCard.propTypes = {
 };
 
 function MemberCard({ member }) {
-  const { title, description, icon, bgcolor, path } = member;
+  const { title, subheader, icon, bgcolor, path } = member;
   return (
     <CardStyle key={title}>
       {/* <CardIconStyle
@@ -174,20 +79,20 @@ function MemberCard({ member }) {
       <Typography variant="subtitle2" sx={{ mt: 2 }}>
         {title}
       </Typography>
-      <CardContent>
+      {/* <CardContent> */}
         {/* <Divider /> */}
-        <Typography variant="body2" sx={{ mb: 1, color: 'text.secondary' }}>
-          {description}
+        <Typography variant="body2" sx={{ mb: 1, mt: 1, color: 'text.secondary' }}>
+          {subheader}
         </Typography>
-        <Box>
+        <CardButton>
           <MotionInView variants={varFadeInLeft}>
             <Link href={path} variant="subtitle2" sx={{ alignItems: 'center', alignContent: 'center' }}>
               Read more
               {/* <Box component={Icon} icon={roundArrowRightAlt} sx={{ ml: 1, width: 20, height: 20 }} /> */}
             </Link>
           </MotionInView>
-        </Box>
-      </CardContent>
+        </CardButton>
+      {/* </CardContent> */}
     </CardStyle>
   );
 }
@@ -263,7 +168,7 @@ export default function AboutTeam() {
 
       <Box sx={{ position: 'relative' }}>
         <Slider ref={carouselRef} {...settings}>
-          {CARDS.map((member) => (
+          {ServiceData.map((member) => (
             <MotionInView key={member.id} variants={varFadeIn}>
               <MemberCard member={member} />
             </MotionInView>

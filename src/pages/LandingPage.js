@@ -10,7 +10,8 @@ import {
   LandingPricingPlans,
   LandingAdvertisement,
   LandingCleanInterfaces,
-  LandingHugePackElements
+  LandingHugePackElements,
+  LandingHighlights
 } from '../components/_external-pages/landing';
 import { AboutWhat } from '../components/_external-pages/about';
 import MainFooter from 'src/layouts/main/MainFooter';
@@ -39,7 +40,8 @@ export default function LandingPage() {
         <LandingMinimal />
         <AboutWhat />
         {/* <LandingDarkMode /> */}
-        <LandingHugePackElements />
+        {/* <LandingHugePackElements /> */}
+        <LandingHighlights />
         {/* <LandingThemeColor /> */}
         <LandingCleanInterfaces />
         {/* <LandingPricingPlans /> */}

@@ -3,3 +3,4 @@ export { default as ServicesMenu } from './ServicesList';
 export { default as ServicesDescription } from './ServicesDescription';
 export { default as ServicesVision } from './ServicesVision';
 export { default as ServicesExtended } from './ServicesExtended';
+export { default as ServiceProcess } from './ServiceProcess';

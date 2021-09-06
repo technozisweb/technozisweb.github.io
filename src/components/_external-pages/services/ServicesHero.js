@@ -12,7 +12,7 @@ import SERVICES from 'src/utils/servicesInfo';
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: 'url(/static/overlay.svg), url(/static/about/hero.jpg)',
+  backgroundImage: ' url(/static/home/service-top.jpg)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
     height: 480,
@@ -22,6 +22,7 @@ const RootStyle = styled(motion.div)(({ theme }) => ({
 
 const ContentStyle = styled('div')(({ theme }) => ({
   textAlign: 'center',
+  // width: 900,
   [theme.breakpoints.up('md')]: {
     textAlign: 'left',
     position: 'absolute',
@@ -60,15 +61,16 @@ export default function AboutHero() {
                     >
                       {tech.title}
                     </Typography>
-                    <Typography
+                    {/* <Typography
                       variant="h6"
                       sx={{
                         fontFamily: 'Roboto',
-                        fontStyle: "italic"
+                        fontStyle: "italic",
+                        width: { md: 800 }
                       }}
                     >
-                      {tech.description}
-                    </Typography>
+                      {tech.subheader}
+                    </Typography> */}
                   </motion.div>
                 )
                 : null}

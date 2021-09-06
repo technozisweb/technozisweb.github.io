@@ -18,17 +18,17 @@ const MOCK_CAROUSELS = [
   {
     title: 'Digital Transformation',
     description: 'We blend innovation, security, and speed to help you transition your business seamlessly to digital.',
-    image: '/static/mock-images/feeds/feed_1.jpg'
+    image: '/static/home/1dt-blank.jpg'
   },
   {
     title: 'Custom Software development',
     description: 'Design, Create, Deploy, and manage requirements efficiently for the future.',
-    image: '/static/mock-images/feeds/feed_2.jpg'
+    image: '/static/home/2csd-blank.jpg'
   },
   {
     title: 'Business Intelligence and Analytics',
     description: 'Unlock meaningful insights to improve performance, reduce risk, and plan future with data-driven strategy.',
-    image: '/static/mock-images/feeds/feed_3.jpg'
+    image: '/static/home/3bia-blank.jpg'
   },
 ]
 
@@ -65,10 +65,10 @@ function CarouselItem({ item, isActive }) {
           width: '100%',
           height: '100%',
           position: 'absolute',
-          backgroundImage: `linear-gradient(to top, ${theme.palette.grey[900]} 0%,${alpha(
-            theme.palette.grey[900],
-            0
-          )} 100%)`
+          // backgroundImage: `linear-gradient(to top, ${theme.palette.grey[900]} 0%,${alpha(
+          //   theme.palette.grey[900],
+          //   0
+          // )} 100%)`
         }}
       />
       <Container>
@@ -76,36 +76,36 @@ function CarouselItem({ item, isActive }) {
           sx={{
             bottom: 0,
             width: '100%',
-            maxWidth: 780,
+            maxWidth: 680,
             textAlign: 'left',
             position: 'absolute',
-            color: 'primary.main',
-            mb: { xs: 0, md: '10%' },
+            color: 'black',
+            // ml: { xs: 0, md: '5%' },
             // mt: {xs: '30%', md: 0},
           }}
         >
           <MotionContainer open={isActive}>
             <motion.div variants={varFadeInRight}>
-              <Typography variant='h2' gutterBottom sx={{ fontSize: { xs: 30, md: 60 }}}>
+              <Typography variant='h1' gutterBottom sx={{ fontSize: { xs: 30, md: 60 }}}>
                 {item.title}
               </Typography>
             </motion.div>
             <motion.div variants={varFadeInRight}>
               <Typography
-                variant="h5"
+                variant="h4"
                 gutterBottom
                 sx={{
                   fontFamily: 'Roboto',
                   fontStyle: "italic",
                   color: 'common.white',
-                  fontSize: { xs: 20, md: 24 }
+                  fontSize: { xs: 20, md: 30 }
                 }}
               >
                 {item.description}
               </Typography>
             </motion.div>
             <motion.div variants={varFadeInRight}>
-              <Button variant="outlined" sx={{ mt: 3 }}>
+              <Button variant="outlined" sx={{ mt: 3, color: 'black' }}>
                 Contact us
               </Button>
             </motion.div>

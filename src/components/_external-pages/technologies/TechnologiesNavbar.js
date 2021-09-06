@@ -14,9 +14,10 @@ import TechnologiesMobileMenu from './TechnologiesMobileMenu';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
-  paddingTop: theme.spacing(2),
+  // paddingTop: theme.spacing(2),
   paddingBottom: theme.spacing(5),
   display: 'flex',
+  // backgroundColor: theme.palette.grey[300],
 }));
 
 // ----------------------------------------------------------------------
@@ -36,9 +37,11 @@ export default function MegaMenu(props) {
         position="static"
         color="transparent"
         sx={{
-          boxShadow: (theme) => theme.customShadows.z8,
+          // boxShadow: (theme) => theme.customShadows.z8,
           alignContent: 'center',
-          // backgroundColor: 'primary.main'
+          backgroundColor: (theme) => theme.palette.grey[300],
+          paddingTop: 1,
+          paddingBottom: 1
         }}
       >
         <Container
