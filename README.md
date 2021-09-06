@@ -1,1 +1,0 @@
-# technozisweb.github.io
