@@ -1,6 +1,5 @@
 // material
 import { styled } from '@material-ui/core/styles';
-import { Divider } from '@material-ui/core';
 // components
 import Page from '../components/Page';
 import BusinessSolutionsHero from '../components/_external-pages/business-solutions/BusinessSolutionsHero';

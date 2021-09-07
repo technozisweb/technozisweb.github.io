@@ -2,15 +2,15 @@ import { last } from 'lodash';
 import PropTypes from 'prop-types';
 // material
 import { Link as RouterLink } from 'react-router-dom';
-import { Typography, Box, Link, Breadcrumbs } from '@material-ui/core';
+import {
+  Typography, Box, Link, Breadcrumbs,
+} from '@material-ui/core';
 
 // ----------------------------------------------------------------------
 
-const Separator = <Box component="span" sx={{ width: 4, height: 4, borderRadius: '50%', bgcolor: 'text.disabled' }} />;
-
-LinkItem.propTypes = {
-  link: PropTypes.object
-};
+const Separator = <Box component="span" sx={{
+  width: 4, height: 4, borderRadius: '50%', bgcolor: 'text.disabled',
+}} />;
 
 function LinkItem({ link }) {
   const { href, name, icon } = link;
@@ -25,14 +25,14 @@ function LinkItem({ link }) {
         display: 'flex',
         alignItems: 'center',
         color: 'text.primary',
-        '& > div': { display: 'inherit' }
+        '& > div': { display: 'inherit' },
       }}
     >
       {icon && (
         <Box
           sx={{
             mr: 1,
-            '& svg': { width: 20, height: 20 }
+            '& svg': { width: 20, height: 20 },
           }}
         >
           {icon}
@@ -43,9 +43,8 @@ function LinkItem({ link }) {
   );
 }
 
-MBreadcrumbs.propTypes = {
-  links: PropTypes.array.isRequired,
-  activeLast: PropTypes.bool
+LinkItem.propTypes = {
+  link: PropTypes.object,
 };
 
 export default function MBreadcrumbs({ links, activeLast = false, ...other }) {
@@ -64,7 +63,7 @@ export default function MBreadcrumbs({ links, activeLast = false, ...other }) {
             overflow: 'hidden',
             whiteSpace: 'nowrap',
             color: 'text.disabled',
-            textOverflow: 'ellipsis'
+            textOverflow: 'ellipsis',
           }}
         >
           {currentLink}
@@ -79,3 +78,9 @@ export default function MBreadcrumbs({ links, activeLast = false, ...other }) {
     </Breadcrumbs>
   );
 }
+
+MBreadcrumbs.propTypes = {
+  links: PropTypes.array.isRequired,
+  activeLast: PropTypes.bool,
+};
+  

@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import PropTypes from 'prop-types';
 // material
 import { styled } from '@material-ui/core/styles';

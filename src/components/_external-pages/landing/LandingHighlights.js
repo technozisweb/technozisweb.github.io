@@ -1,12 +1,10 @@
-import { Link as RouterLink } from 'react-router-dom';
+
 // material
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { Box, Grid, Button, Container, Typography, List, ListItem, ListItemIcon, Card, CardContent, CardMedia, Paper } from '@material-ui/core';
+import { styled } from '@material-ui/core/styles';
+import { Grid, Container, Typography, CardContent, CardMedia, Card } from '@material-ui/core';
 // routes
-import { PATH_PAGE } from '../../../routes/paths';
+// import { PATH_PAGE } from '../../../routes/paths';
 //
-import { varFadeInUp, MotionInView } from '../../animate';
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import CountUp from 'react-countup';
 
 // ----------------------------------------------------------------------
@@ -19,28 +17,28 @@ const RootStyle = styled('div')(({ theme }) => ({
   //     : 'none'
 }));
 
-const COMMON = {
-  scaleX: 0.86,
-  skewY: 8,
-  skewX: 0,
-  scaleY: 1,
-  translateX: 0,
-  translateY: 0,
-  opacity: 0
-};
+// const COMMON = {
+//   scaleX: 0.86,
+//   skewY: 8,
+//   skewX: 0,
+//   scaleY: 1,
+//   translateX: 0,
+//   translateY: 0,
+//   opacity: 0
+// };
 
-const variantScreenLeft = {
-  initial: COMMON,
-  animate: { ...COMMON, translateX: '-50%', translateY: 40, opacity: 1 }
-};
-const variantScreenCenter = {
-  initial: COMMON,
-  animate: { ...COMMON, opacity: 1 }
-};
-const variantScreenRight = {
-  initial: COMMON,
-  animate: { ...COMMON, translateX: '50%', translateY: -40, opacity: 1 }
-};
+// const variantScreenLeft = {
+//   initial: COMMON,
+//   animate: { ...COMMON, translateX: '-50%', translateY: 40, opacity: 1 }
+// };
+// const variantScreenCenter = {
+//   initial: COMMON,
+//   animate: { ...COMMON, opacity: 1 }
+// };
+// const variantScreenRight = {
+//   initial: COMMON,
+//   animate: { ...COMMON, translateX: '50%', translateY: -40, opacity: 1 }
+// };
 
 // ----------------------------------------------------------------------
 
@@ -67,7 +65,7 @@ const highlights = [
 ]
 
 export default function LandingHugePackElements() {
-  const theme = useTheme();
+  // const theme = useTheme();
 
   return (
     <RootStyle>
@@ -80,7 +78,7 @@ export default function LandingHugePackElements() {
         </Typography>
         <Grid container sx={{ mt: 5 }}>
           {highlights.map((card) => (
-            <Grid item xs={12} md={3} sx={{ p: 3 }}>
+            <Grid item xs={12} md={3} sx={{ p: 3 }} key={card.text}>
               <Card sx={{ border: '2px solid lightblue' }} elevation={10}>
                 <CardContent>
                   <CardMedia

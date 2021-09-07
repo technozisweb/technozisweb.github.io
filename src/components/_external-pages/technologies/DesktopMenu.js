@@ -3,9 +3,9 @@ import Box from '@material-ui/core/Box';
 import Tab from '@material-ui/core/Tab';
 import TabContext from '@material-ui/lab/TabContext';
 import TabList from '@material-ui/lab/TabList';
-import TabPanel from '@material-ui/lab/TabPanel';
+// import TabPanel from '@material-ui/lab/TabPanel';
 import TECHNOLOGY from 'src/utils/technologies';
-import { Typography, Card, Grid, Container } from '@material-ui/core';
+import { Container } from '@material-ui/core';
 // import Container from 'src/theme/overrides/Container';
 
 export default function LabTabs() {

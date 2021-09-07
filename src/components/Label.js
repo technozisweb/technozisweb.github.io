@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 // material
-import { alpha, styled } from '@material-ui/core/styles';
+import { styled } from '@material-ui/core/styles';
 
 // ----------------------------------------------------------------------
 
@@ -19,7 +19,7 @@ const RootStyle = styled('span')(({ theme, styleProps }) => {
     // border: `1px solid ${theme.palette[color].main}`
   });
 
-  const styleGhost = (color) => ({
+  const styleGhost = () => ({
     // color: theme.palette[color][isLight ? 'dark' : 'light'],
     // backgroundColor: alpha(theme.palette[color].main, 0.16)
   });

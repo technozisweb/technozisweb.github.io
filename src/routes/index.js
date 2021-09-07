@@ -1,12 +1,11 @@
+/* eslint-disable react/display-name */
 import { Suspense, lazy } from 'react';
-import { Navigate, useRoutes, useLocation } from 'react-router-dom';
+import { Navigate, useRoutes } from 'react-router-dom';
 // layouts
 import MainLayout from '../layouts/main';
-import DashboardLayout from '../layouts/dashboard';
+// import DashboardLayout from '../layouts/dashboard';
 import LogoOnlyLayout from '../layouts/LogoOnlyLayout';
 // guards
-import GuestGuard from '../guards/GuestGuard';
-import AuthGuard from '../guards/AuthGuard';
 // import RoleBasedGuard from '../guards/RoleBasedGuard';
 // components
 import LoadingScreen from '../components/LoadingScreen';
@@ -14,22 +13,21 @@ import LoadingScreen from '../components/LoadingScreen';
 // ----------------------------------------------------------------------
 
 const Loadable = (Component) => (props) => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { pathname } = useLocation();
-  const isDashboard = pathname.includes('/dashboard');
+  // const { pathname } = useLocation();
+  // const isDashboard = pathname.includes('/dashboard');
 
   return (
     <Suspense
       fallback={
         <LoadingScreen
           sx={{
-            ...(!isDashboard && {
-              top: 0,
-              left: 0,
-              width: 1,
-              zIndex: 9999,
-              position: 'fixed'
-            })
+            // ...(!isDashboard && {
+            //   top: 0,
+            //   left: 0,
+            //   width: 1,
+            //   zIndex: 9999,
+            //   position: 'fixed'
+            // })
           }}
         />
       }
@@ -59,7 +57,7 @@ export default function Router() {
         { path: '/', element: <LandingPage /> },
         { path: 'about-us', element: <About /> },
         { path: 'contact-us', element: <Contact /> },
-        { path: 'faqs', element: <Faqs /> },
+        // { path: 'faqs', element: <Faqs /> },
         { path: 'industries', element: <Industries /> },
         { path: 'business-solutions', element: <BusinessSolutions />},
         {
@@ -116,7 +114,7 @@ const Technologies = Loadable(lazy(() => import('../pages/TechnologiesPage')));
 const Industries = Loadable(lazy(() => import('../pages/IndustriesPage')));
 const BusinessSolutions = Loadable(lazy(() => import('../pages/BusinessSolutions')));
 const Contact = Loadable(lazy(() => import('../pages/Contact')));
-const Faqs = Loadable(lazy(() => import('../pages/Faqs')));
+// const Faqs = Loadable(lazy(() => import('../pages/Faqs')));
 const Page500 = Loadable(lazy(() => import('../pages/Page500')));
 const NotFound = Loadable(lazy(() => import('../pages/Page404')));
 // Components

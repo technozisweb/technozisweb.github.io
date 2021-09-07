@@ -45,7 +45,7 @@ export default function AboutHero() {
           <TextAnimate text="Technologies" sx={{ color: 'primary.main' }} variants={varFadeInRight} />
           <br />
           {TECHNOLOGY.map((tech) => (
-            <Box sx={{ display: 'inline-flex', color: 'common.white' }}>
+            <Box sx={{ display: 'inline-flex', color: 'common.white' }} key={tech.header}>
               {tech.title.toLowerCase() == path.slice(14,)
                 ? (
                   <motion.div variants={varFadeInRight}>

@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
-import { get } from 'lodash';
 // material
 import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { Box, Grid, Card, Container, Typography, useMediaQuery, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
+import { Box, Grid, Card, Container, Typography, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 //
-import { varFadeInUp, MotionInView, varFadeInDown, varZoomIn } from '../../animate';
+import { varFadeInUp, MotionInView, varZoomIn } from '../../animate';
 import TECHNOLOGY from 'src/utils/technologies';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 // ----------------------------------------------------------------------
 
@@ -47,7 +45,6 @@ const CardIconStyle = styled('img')(({ theme }) => ({
 export default function LandingMinimalHelps() {
   const theme = useTheme();
   const isLight = theme.palette.mode === 'light';
-  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const [location, setLocation] = useState();
   const [value, setValue] = useState([]);
 
@@ -85,7 +82,7 @@ export default function LandingMinimalHelps() {
               {value.expertise
                 ?
                 <Grid container sx={{ mt: 15, alignContent: 'center' }}>
-                  {value.expertise.map((card, index) => (
+                  {value.expertise.map((card) => (
                     <Grid key={card.title} item xs={12} md={2}>
                       <MotionInView variants={varZoomIn}>
                         <CardStyle>
@@ -107,7 +104,7 @@ export default function LandingMinimalHelps() {
                 <Grid container spacing={5} sx={{ mt: 10 }}>
                   <Grid item xs={12} md={8}>
                     {value.points.map((item) => (
-                      <MotionInView variants={varFadeInUp}>
+                      <MotionInView variants={varFadeInUp} key={item}>
                         <List
                           sx={{
                             // mb: 5,
@@ -135,7 +132,7 @@ export default function LandingMinimalHelps() {
                 <Grid container spacing={5} sx={{ mt: 10 }}>
                   <Grid item xs={12}>
                     {value.expertise.map((item) => (
-                      <MotionInView variants={varFadeInUp}>
+                      <MotionInView variants={varFadeInUp} key={item.title}>
                         <List
                           sx={{
                             // mb: 5,

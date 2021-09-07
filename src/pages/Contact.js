@@ -3,7 +3,7 @@ import { styled } from '@material-ui/core/styles';
 import { Grid, Container } from '@material-ui/core';
 // components
 import Page from '../components/Page';
-import { ContactHero, ContactForm, ContactMap, ContactInfo } from '../components/_external-pages/contact';
+import { ContactHero, ContactInfo } from '../components/_external-pages/contact';
 
 // ----------------------------------------------------------------------
 

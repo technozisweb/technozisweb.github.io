@@ -9,7 +9,7 @@ import Logo from '../../components/Logo';
 import Label from '../../components/Label';
 import { MHidden } from '../../components/@material-extend';
 import {
-  MegaMenuDesktopVertical,
+  // MegaMenuDesktopVertical,
   MegaMenuDesktopHorizon,
   MegaMenuMobile,
   MenuConfig

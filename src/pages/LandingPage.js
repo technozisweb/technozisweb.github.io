@@ -5,12 +5,12 @@ import Page from '../components/Page';
 import {
   LandingHero,
   LandingMinimal,
-  LandingDarkMode,
-  LandingThemeColor,
-  LandingPricingPlans,
+  // LandingDarkMode,
+  // LandingThemeColor,
+  // LandingPricingPlans,
   LandingAdvertisement,
   LandingCleanInterfaces,
-  LandingHugePackElements,
+  // LandingHugePackElements,
   LandingHighlights
 } from '../components/_external-pages/landing';
 import { AboutWhat } from '../components/_external-pages/about';

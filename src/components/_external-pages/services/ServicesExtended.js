@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 // material
-import { styled, alpha } from '@material-ui/core/styles';
-import { Box, Grid, Container, Typography, List, ListItem, ListItemIcon } from '@material-ui/core';
+import { styled } from '@material-ui/core/styles';
+import { Grid, Container, Typography } from '@material-ui/core';
 //
-import { MotionInView, varFadeInUp, varFadeInDown } from '../../animate';
-import StopTwoToneIcon from '@material-ui/icons/StopTwoTone';
+import { MotionInView, varFadeInUp } from '../../animate';
+// import StopTwoToneIcon from '@material-ui/icons/StopTwoTone';
 import SERVICES from 'src/utils/servicesInfo';
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -49,7 +49,7 @@ export default function ServicesExtended() {
   }, [window.location.pathname]);
 
   useEffect(async () => {
-    SERVICES.map((item, index) => {
+    SERVICES.map((item) => {
       console.log('item.info', item.info);
       if (path == item.title.replace(/ /g, '').toLowerCase()) {
         const info = item.info;
@@ -68,7 +68,7 @@ export default function ServicesExtended() {
               <Grid item xs={12} sx={{ mt: 5, mb: 5 }}>
                 <ContentStyle>
                   {serviceInfo.map((item) => (
-                    <MotionInView variants={varFadeInUp}>
+                    <MotionInView variants={varFadeInUp} key={item}>
                       <Typography
                         variant="body1"
                         sx={{

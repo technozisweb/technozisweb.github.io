@@ -1,10 +1,9 @@
 import { useState } from 'react';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Divider } from '@material-ui/core';
 // components
 import Page from '../components/Page';
-import { TechnologiesHero, DesktopMenu, TechnologiesNavbar, TechnologiesDesktopMenu, TechnologiesContent } from '../components/_external-pages/technologies';
+import { TechnologiesHero, TechnologiesNavbar, TechnologiesContent } from '../components/_external-pages/technologies';
 
 // ----------------------------------------------------------------------
 

@@ -1,17 +1,16 @@
 import Slider from 'react-slick';
 import PropTypes from 'prop-types';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 // material
 // import { useTheme, styled } from '@material-ui/core/styles';
 // import { Box } from '@material-ui/core';
 import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { CardContent, Box, Card, Typography } from '@material-ui/core';
+import { CardContent, Box, Typography } from '@material-ui/core';
 // utils
 import mockData from '../../utils/mock-data';
 //
 import { varFadeInRight, MotionContainer } from '../animate';
-import { CarouselControlsPaging1, CarouselControlsArrowsBasic1 } from '../carousel';
 // utils
 //
 import { CarouselControlsPaging2, CarouselControlsArrowsBasic2 } from './controls';
@@ -105,7 +104,7 @@ function CarouselItem({ item, isActive }) {
 export default function CarouselBasic3() {
   const theme = useTheme();
   const carouselRef = useRef();
-  const [currentIndex, setCurrentIndex] = useState(theme.direction === 'rtl' ? MOCK_CAROUSELS.length - 1 : 0);
+  const currentIndex = theme.direction === 'rtl' ? MOCK_CAROUSELS.length - 1 : 0
 
   const settings = {
     dots: true,

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Card, Paper, Stack, Container, AppBar, Typography } from '@material-ui/core';
+import { Container, AppBar } from '@material-ui/core';
 // routes
 // components
 import Page from '../../../components/Page';

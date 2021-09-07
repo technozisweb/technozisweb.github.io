@@ -1,6 +1,6 @@
-import { Grid, Card, Stack, Typography, Box, Container, CardContent, List, ListItem, ListItemIcon } from "@material-ui/core";
+import { Grid, Typography, Container, List, ListItem, ListItemIcon } from "@material-ui/core";
 import TECHNOLOGY from 'src/utils/technologies';
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
+import { styled } from '@material-ui/core/styles';
 
 const RootStyle = styled('div')(({ theme }) => ({
   paddingTop: theme.spacing(5),
@@ -37,7 +37,7 @@ const Technology = () => {
                   {item.header}
                 </Typography>
                 {item.expertise.map((list) => (
-                  <List>
+                  <List key={list.title}>
                     <ListItem>
                       <ListItemIcon sx={{ width: 50, height: 50 }}><img src={list.path} /></ListItemIcon>
                       {list.title}

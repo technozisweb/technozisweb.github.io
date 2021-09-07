@@ -1,7 +1,7 @@
-import { Card, CardContent, CardMedia, Container, Grid, Typography, Paper, Box } from "@material-ui/core";
+import { CardContent, CardMedia, Container, Grid, Typography, Paper } from "@material-ui/core";
 //
 
-import { varFadeInUp, varFadeIn, MotionInView } from '../../animate';
+import { varFadeInUp, MotionInView } from '../../animate';
 
 const TEAM = [
   {

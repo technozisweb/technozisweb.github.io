@@ -1,32 +1,26 @@
 import PropTypes from 'prop-types';
 import { useRef } from 'react';
 import Slider from 'react-slick';
-import { Icon } from '@iconify/react';
-import twitterFill from '@iconify/icons-eva/twitter-fill';
-import linkedinFill from '@iconify/icons-eva/linkedin-fill';
-import facebookFill from '@iconify/icons-eva/facebook-fill';
-import instagramFilled from '@iconify/icons-ant-design/instagram-filled';
-import roundArrowRightAlt from '@iconify/icons-ic/round-arrow-right-alt';
 // material
 import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { Box, Card, Button, Container, Typography, IconButton, Link, CardMedia, CardContent, Divider } from '@material-ui/core';
+import { Box, Button, Container, Typography, Link, CardMedia, Card } from '@material-ui/core';
 // utils
-import mockData from '../../../utils/mock-data';
+// import mockData from '../../../utils/mock-data';
 //
 import { varFadeIn, varFadeInUp, MotionInView, varFadeInDown, varFadeInLeft } from '../../animate';
-import { CarouselControlsArrowsBasic2, CarouselControlsPaging2 } from '../../carousel';
+import { CarouselControlsArrowsBasic2 } from '../../carousel';
 import ServiceData from 'src/utils/servicesInfo';
 
 // ----------------------------------------------------------------------
 
-const MOCK_MEMBERS = [...Array(5)].map((_, index) => ({
-  id: mockData.id(index),
-  name: mockData.name.fullName(index),
-  role: mockData.role(index),
-  // avatar: mockData.image.avatar(index),
-}));
+// const MOCK_MEMBERS = [...Array(5)].map((_, index) => ({
+//   id: mockData.id(index),
+//   name: mockData.name.fullName(index),
+//   role: mockData.role(index),
+//   // avatar: mockData.image.avatar(index),
+// }));
 
-const shadowIcon = (color) => `drop-shadow(2px 2px 2px ${alpha(color, 0.48)})`;
+// const shadowIcon = (color) => `drop-shadow(2px 2px 2px ${alpha(color, 0.48)})`;
 
 // ----------------------------------------------------------------------
 
@@ -40,31 +34,35 @@ const CardStyle = styled(Card)(({ theme }) => ({
   },
 }));
 
-const CardButton = styled(Button)(({ theme }) => ({
+const CardButton = styled(Button)(() => ({
   transition: "transform 0.15s ease-in-out",
   "&:hover": { transform: "scale3d(1.1, 1.1, 1)", backgroundColor: 'transparent' },
 }));
 
-function ServiceLink() {
-  return (
-    <Link href="/services" variant="subtitle2" sx={{ alignItems: 'center', alignContent: 'center' }}>
-      Read more
-      <Box component={Icon} icon={roundArrowRightAlt} sx={{ ml: 1, width: 20, height: 20 }} />
-    </Link>
-  );
-}
+// function ServiceLink() {
+//   return (
+//     <Link href="/services" variant="subtitle2" sx={{ alignItems: 'center', alignContent: 'center' }}>
+//       Read more
+//       <Box component={Icon} icon={roundArrowRightAlt} sx={{ ml: 1, width: 20, height: 20 }} />
+//     </Link>
+//   );
+// }
 
 MemberCard.propTypes = {
   member: PropTypes.shape({
     id: PropTypes.string,
     avatar: PropTypes.string,
     name: PropTypes.string,
-    role: PropTypes.string
+    role: PropTypes.string,
+    title: PropTypes.string,
+    subheader: PropTypes.string,
+    icon: PropTypes.string,
+    path: PropTypes.string
   })
 };
 
 function MemberCard({ member }) {
-  const { title, subheader, icon, bgcolor, path } = member;
+  const { title, subheader, icon, path } = member;
   return (
     <CardStyle key={title}>
       {/* <CardIconStyle
@@ -80,18 +78,18 @@ function MemberCard({ member }) {
         {title}
       </Typography>
       {/* <CardContent> */}
-        {/* <Divider /> */}
-        <Typography variant="body2" sx={{ mb: 1, mt: 1, color: 'text.secondary' }}>
-          {subheader}
-        </Typography>
-        <CardButton>
-          <MotionInView variants={varFadeInLeft}>
-            <Link href={path} variant="subtitle2" sx={{ alignItems: 'center', alignContent: 'center' }}>
-              Read more
-              {/* <Box component={Icon} icon={roundArrowRightAlt} sx={{ ml: 1, width: 20, height: 20 }} /> */}
-            </Link>
-          </MotionInView>
-        </CardButton>
+      {/* <Divider /> */}
+      <Typography variant="body2" sx={{ mb: 1, mt: 1, color: 'text.secondary' }}>
+        {subheader}
+      </Typography>
+      <CardButton>
+        <MotionInView variants={varFadeInLeft}>
+          <Link href={path} variant="subtitle2" sx={{ alignItems: 'center', alignContent: 'center' }}>
+            Read more
+            {/* <Box component={Icon} icon={roundArrowRightAlt} sx={{ ml: 1, width: 20, height: 20 }} /> */}
+          </Link>
+        </MotionInView>
+      </CardButton>
       {/* </CardContent> */}
     </CardStyle>
   );

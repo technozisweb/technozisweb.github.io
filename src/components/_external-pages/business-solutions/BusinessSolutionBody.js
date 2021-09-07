@@ -1,13 +1,9 @@
-import { Link as RouterLink } from 'react-router-dom';
 // material
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { Box, Grid, Button, Container, Typography, List, ListItem, ListItemIcon } from '@material-ui/core';
+import { useTheme, styled } from '@material-ui/core/styles';
+import { Box, Grid, Container, Typography } from '@material-ui/core';
 // routes
-import { PATH_PAGE } from '../../../routes/paths';
 //
-import { varFadeInUp, MotionInView, varZoomIn } from '../../animate';
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-
+import { MotionInView, varFadeInUp, varZoomIn } from 'src/components/animate';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -28,59 +24,12 @@ const ContentStyle = styled('div')(({ theme }) => ({
   }
 }));
 
-const ScreenStyle = styled(MotionInView)(({ theme }) => ({
-  paddingRight: 2,
-  paddingBottom: 1,
-  maxWidth: 160,
-  borderRadius: 8,
-  backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 300 : 800],
-  [theme.breakpoints.up('sm')]: {
-    maxWidth: 320,
-    paddingRight: 4,
-    borderRadius: 12
-  },
-  '& img': {
-    borderRadius: 8,
-    [theme.breakpoints.up('sm')]: {
-      borderRadius: 12
-    }
-  }
-}));
-
-const COMMON = {
-  scaleX: 0.86,
-  skewY: 8,
-  skewX: 0,
-  scaleY: 1,
-  translateX: 0,
-  translateY: 0,
-  opacity: 0
-};
-
-const variantScreenLeft = {
-  initial: COMMON,
-  animate: { ...COMMON, translateX: '-50%', translateY: 40, opacity: 1 }
-};
-const variantScreenCenter = {
-  initial: COMMON,
-  animate: { ...COMMON, opacity: 1 }
-};
-const variantScreenRight = {
-  initial: COMMON,
-  animate: { ...COMMON, translateX: '50%', translateY: -40, opacity: 1 }
-};
-
 // ----------------------------------------------------------------------
 
 export default function LandingHugePackElements() {
   const theme = useTheme();
   const isLight = theme.palette.mode === 'light';
-  const isRTL = theme.direction === 'rtl';
-
-  const screenLeftAnimate = variantScreenLeft;
-  const screenCenterAnimate = variantScreenCenter;
-  const screenRightAnimate = variantScreenRight;
-
+  
   return (
     <RootStyle>
       <Container maxWidth="lg">
@@ -147,36 +96,6 @@ export default function LandingHugePackElements() {
                 src="/static/home/businesspeople.jpg"
               />
             </MotionInView>
-
-            {/* <MotionInView variants={varFadeInUp}>
-              <List
-                sx={{
-                  mb: 5,
-                  color: isLight ? 'text.secondary' : 'common.white'
-                }}
-              >
-                <ListItem>
-                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
-                  Here is some information about the company.
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
-                  Here is some information about the company.
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
-                  Here is some information about the company.
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
-                  Here is some information about the company.
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
-                  Here is some information about the company.
-                </ListItem>
-              </List>
-            </MotionInView> */}
           </Grid>
         </Grid>
       </Container>

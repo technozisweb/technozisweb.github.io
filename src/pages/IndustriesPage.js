@@ -1,7 +1,6 @@
-import { useState } from 'react';
+
 // material
 import { styled } from '@material-ui/core/styles';
-import { Divider } from '@material-ui/core';
 // components
 import Page from '../components/Page';
 import IndustriesHero from '../components/_external-pages/industries/IndustriesHero';

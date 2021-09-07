@@ -14,7 +14,7 @@ import RemoveIcon from '@material-ui/icons/Remove';
 
 // ----------------------------------------------------------------------
 
-const MENU_WIDTH = 280;
+// const MENU_WIDTH = 280;
 const MENU_PAPER_WIDTH = 800;
 const CONTENT_HEIGHT = 400;
 const ITEM_HEIGHT = 40;

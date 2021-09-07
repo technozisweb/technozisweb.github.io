@@ -1,13 +1,9 @@
-import PropTypes from 'prop-types';
-import { Icon } from '@iconify/react';
-import roundArrowRightAlt from '@iconify/icons-ic/round-arrow-right-alt';
+
 // material
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { Box, Grid, Link, Paper, Rating, Container, Typography, useMediaQuery, CardContent, Divider } from '@material-ui/core';
+import { styled } from '@material-ui/core/styles';
+import { Grid, Container, Typography, CardContent } from '@material-ui/core';
+import { MotionInView, varFadeInLeft } from 'src/components/animate';
 //
-import { varFadeInUp, varFadeInLeft, MotionInView } from '../../animate';
-import { MHidden } from '../../@material-extend';
-// import FontStyle from '../../../../public/fonts'
 
 // ----------------------------------------------------------------------
 
@@ -85,8 +81,8 @@ const RootStyle = styled('div')(({ theme }) => ({
 // },
 
 export default function AboutTestimonials() {
-  const theme = useTheme();
-  const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
+  // const theme = useTheme();
+  // const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
     <RootStyle>
@@ -104,7 +100,7 @@ export default function AboutTestimonials() {
             </Typography>
           </Grid>
           {TESTIMONIALS.map((item) => (
-            <Grid item xs={12} md={4} sx={{ p: 2 }}>
+            <Grid item xs={12} md={4} sx={{ p: 2 }} key={item.name}>
               <CardContent>
                 {/* <MotionInView variants={varFadeInLeft}> */}
                 <Typography variant="h5" color='lightpink'>{item.name}</Typography>

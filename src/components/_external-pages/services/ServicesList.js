@@ -1,21 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Icon } from '@iconify/react';
-import listFill from '@iconify/icons-eva/list-fill';
 // material
-import { styled, alpha } from '@material-ui/core/styles';
-import { Box, Card, Paper, Stack, Container, AppBar, Typography, Grid } from '@material-ui/core';
+import { styled } from '@material-ui/core/styles';
+import { Box, Paper, Container, Grid } from '@material-ui/core';
 // routes
-import { PATH_PAGE } from 'src/routes/paths';
-import { withRouter } from 'react-router-dom';
 // components
 import Page from 'src/components/Page';
-import HeaderBreadcrumbs from 'src/components/HeaderBreadcrumbs';
-import {
-  MegaMenuDesktopVertical,
-  MegaMenuDesktopHorizon,
-  MegaMenuMobile,
-  // MenuConfig
-} from 'src/components/mega-menu';
 import MenuConfig from 'src/layouts/main/MenuConfig.js';
 import ServicesDescription from './ServicesDescription';
 import services from 'src/utils/servicesInfo';
@@ -32,7 +21,7 @@ const RootStyle = styled(Page)(({ theme }) => ({
   //     : 'none'
 }));
 
-const ContentStyle = styled(Page)(({ theme }) => ({
+const ContentStyle = styled(Page)(() => ({
   // backgroundImage: 
   //   theme.palette.mode === 'light'
   //     ? `linear-gradient(0deg, ${alpha(theme.palette.grey[900], 0)} 0%, ${theme.palette.grey[400]} 200%)`

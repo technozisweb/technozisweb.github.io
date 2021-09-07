@@ -1,12 +1,11 @@
 // material
-import { alpha, styled } from '@material-ui/core/styles';
-import { Box, Container, Typography, useTheme } from '@material-ui/core';
+import { styled } from '@material-ui/core/styles';
+import { Box, Container } from '@material-ui/core';
 //
-import { varFadeInUp, MotionInView } from '../../animate';
 
 // ----------------------------------------------------------------------
 
-const IMG = [...Array(10)].map((_, index) => `/static/home/clean-${index + 1}.png`);
+// const IMG = [...Array(10)].map((_, index) => `/static/home/clean-${index + 1}.png`);
 
 const RootStyle = styled('div')(({ theme }) => ({
   paddingTop: theme.spacing(15),
@@ -29,8 +28,8 @@ const ContentStyle = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function LandingCleanInterfaces() {
-  const theme = useTheme();
-  const isLight = theme.palette.mode === 'light';
+  // const theme = useTheme();
+  // const isLight = theme.palette.mode === 'light';
 
   return (
     <RootStyle>

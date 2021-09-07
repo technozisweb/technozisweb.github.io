@@ -1,24 +1,19 @@
-import { useState, useEffect } from 'react';
-import { get } from 'lodash';
+import { useState } from 'react';
 // material
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
+import { styled } from '@material-ui/core/styles';
 import {
   Box,
   Grid,
-  Card,
   Container,
   Typography,
-  useMediaQuery,
   CardMedia,
   CardContent,
-  CardHeader,
   Paper,
   CardActionArea,
   Modal
 } from '@material-ui/core';
 //
-import { varFadeInUp, MotionInView, varFadeInDown, varZoomIn } from '../../animate';
-import TECHNOLOGY_CARDS from 'src/utils/technologies';
+import { MotionInView, varZoomIn } from '../../animate';
 
 // ----------------------------------------------------------------------
 
@@ -152,28 +147,21 @@ const style = {
   p: 4,
 };
 
-const CardIconStyle = styled('img')(({ theme }) => ({
-  width: 100,
-  height: 100,
-  margin: 'auto',
-  marginBottom: theme.spacing(2),
-}));
-
 // ----------------------------------------------------------------------
 
 export default function LandingMinimalHelps() {
-  const theme = useTheme();
+  // const theme = useTheme();
   const [open, setOpen] = useState(false);
   const [title, setTitle] = useState();
-  const isLight = theme.palette.mode === 'light';
-  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
+  // const isLight = theme.palette.mode === 'light';
+  // const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   console.log(title);
 
   return (
     <RootStyle>
       <Container maxWidth="lg">
         <Grid container>
-          {IndustryData.map((card, index) => (
+          {IndustryData.map((card) => (
             <Grid key={card.title} item xs={12} md={4} sx={{
               p: 3,
               // border: '2px solid',
@@ -203,7 +191,7 @@ export default function LandingMinimalHelps() {
         </Grid>
 
         {IndustryData.map((industry) => (
-          <Box>
+          <Box key={industry.title}>
             {title === industry.title
               ? (
                 <Modal

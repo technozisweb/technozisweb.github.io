@@ -1,24 +1,14 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+// import { useState } from 'react';
 import { NavLink as RouterLink, useLocation } from 'react-router-dom';
-import { Icon } from '@iconify/react';
-import chevronDownFill from '@iconify/icons-eva/chevron-down-fill';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Link, Paper, Typography, List, Stack, ListItemIcon, ListItem, Divider, Grid } from '@material-ui/core';
+import { Link, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
 // ----------------------------------------------------------------------
 
-const CONTENT_HEIGHT = 400;
-const ITEM_SPACING = 4;
 const ITEM_HEIGHT = 64;
-const ITEM_ON_ROW = {
-  width: 'calc((100%/3) - 16px)',
-  '&:nth-child(3n+1)': { order: 1 },
-  '&:nth-child(3n+2)': { order: 2 },
-  '&:nth-child(3n)': { order: 3 }
-};
 
 const styles = makeStyles((theme) => ({
   active: {
@@ -55,12 +45,11 @@ ParentItem.propTypes = {
   isOffset: PropTypes.bool,
 };
 
-function ParentItem({ path, title, setTitle, open, hasSub, pathname, isHome, isOffset, ...other }) {
+function ParentItem({ path, title, setTitle, open, ...other }) {
   const classes = styles();
   const activeStyle = {
     color: 'primary.main'
   };
-  const isActive = pathname === path;
 
   return (
     <LinkStyle
@@ -106,19 +95,9 @@ MegaMenuItem.propTypes = {
   setTitle: PropTypes.func
 };
 
-function MegaMenuItem({ parent, pathname, setTitle }) {
-  const { title, path, more, products, tags, children, isHome, isOffset } = parent;
-  const [open, setOpen] = useState(false);
-  const isActive = pathname === path;
+function MegaMenuItem({ parent, setTitle }) {
+  const { title, path } = parent;
   // console.log(setTitle);
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
 
   return <ParentItem path={path} title={title} setTitle={setTitle} />;
 }
@@ -128,7 +107,7 @@ MegaMenuDesktopHorizon.propTypes = {
   setTitle: PropTypes.func
 };
 
-export default function MegaMenuDesktopHorizon({ navConfig, setTitle, ...other }) {
+export default function MegaMenuDesktopHorizon({ navConfig, setTitle }) {
   const { pathname } = useLocation();
   // const {setTitle} = props;
   // setTitle('blabla');
@@ -136,7 +115,7 @@ export default function MegaMenuDesktopHorizon({ navConfig, setTitle, ...other }
   return (
     <Grid container>
       {navConfig.map((parent) => (
-        <Grid item xs={12} md={2}>
+        <Grid item xs={12} md={2} key={parent.title}>
           <MegaMenuItem
             key={parent.title}
             parent={parent}

@@ -1,27 +1,16 @@
-import PropTypes from 'prop-types';
-import { useRef } from 'react';
-import Slider from 'react-slick';
-import { Icon } from '@iconify/react';
-import twitterFill from '@iconify/icons-eva/twitter-fill';
-import linkedinFill from '@iconify/icons-eva/linkedin-fill';
-import facebookFill from '@iconify/icons-eva/facebook-fill';
-import roundArrowRightAlt from '@iconify/icons-ic/round-arrow-right-alt';
-import instagramFilled from '@iconify/icons-ant-design/instagram-filled';
+
 // material
-import { useTheme } from '@material-ui/core/styles';
-import { Box, Card, Button, Container, Typography, IconButton, Grid } from '@material-ui/core';
+import { Box, Card, Container, Typography, Grid } from '@material-ui/core';
 import DraftsTwoToneIcon from '@material-ui/icons/DraftsTwoTone';
 import PhoneIphoneTwoToneIcon from '@material-ui/icons/PhoneIphoneTwoTone';
 import ExploreTwoToneIcon from '@material-ui/icons/ExploreTwoTone';
 // utils
-import mockData from '../../../utils/mock-data';
 //
 import { varFadeIn, varFadeInUp, MotionInView, varFadeInDown } from '../../animate';
 
 // ----------------------------------------------------------------------
 
 export default function ContactUs() {
-  const theme = useTheme();
 
   return (
     <Container maxWidth="lg" sx={{ pb: 10, textAlign: 'center' }}>
@@ -33,7 +22,7 @@ export default function ContactUs() {
 
       <MotionInView variants={varFadeInUp}>
         <Typography variant="h2" sx={{ mb: 3 }}>
-          Let's Build Great Softwares
+          Let&apos;s Build Great Softwares
         </Typography>
       </MotionInView>
 
@@ -60,8 +49,8 @@ export default function ContactUs() {
               <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
                 <DraftsTwoToneIcon color="error" fontSize="large" />
               </Typography>
-              <Typography variant="subtitle1" sx={{ mt: 2, mb: 2 }}>
-                Email
+              <Typography variant="body1" sx={{ mt: 2, mb: 2 }}>
+                contact@technozis.com
               </Typography>
               <Box component="img" sx={{ width: '100%', borderRadius: 1.5 }} />
             </Card>
@@ -73,8 +62,8 @@ export default function ContactUs() {
               <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
                 <PhoneIphoneTwoToneIcon color="success" fontSize="large" />
               </Typography>
-              <Typography variant="subtitle1" sx={{ mt: 2, mb: 2 }}>
-                Phone
+              <Typography variant="body1" sx={{ mt: 2, mb: 2 }}>
+                9996600068
               </Typography>
               {/* <Box component="img" sx={{ width: '100%', borderRadius: 1.5 }} /> */}
             </Card>
@@ -86,8 +75,8 @@ export default function ContactUs() {
               <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
                 <ExploreTwoToneIcon color="info" fontSize="large" />
               </Typography>
-              <Typography variant="subtitle1" sx={{ mt: 2, mb: 2 }}>
-                Location
+              <Typography variant="body2" sx={{ mt: 2, mb: 2 }}>
+                210, Tower 2, DLF Corporate Greens, Sector 74A, Gurugram, 122004  
               </Typography>
               <Box component="img" sx={{ width: '100%', borderRadius: 1.5 }} />
             </Card>

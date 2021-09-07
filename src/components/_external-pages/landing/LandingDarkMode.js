@@ -1,8 +1,8 @@
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Grid, Container, Typography, List, ListItem, ListItemIcon } from '@material-ui/core';
+import { Grid, Container, Typography, List, ListItem, ListItemIcon } from '@material-ui/core';
 //
-import { MotionInView, varFadeInUp, varFadeInDown } from '../../animate';
+import { MotionInView, varFadeInUp } from '../../animate';
 import StopTwoToneIcon from '@material-ui/icons/StopTwoTone';
 
 const RootStyle = styled('div')(({ theme }) => ({

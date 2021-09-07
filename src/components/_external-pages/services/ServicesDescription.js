@@ -1,11 +1,9 @@
 // material
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
+import { styled } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import { get } from 'lodash';
-import { Box, Grid, Card, Container, Typography, useMediaQuery, Button, ListItem, ListItemIcon, List } from '@material-ui/core';
+import { Box, Container, Typography, ListItem, ListItemIcon, List } from '@material-ui/core';
 //
-import { varFadeInUp, MotionInView, varFadeInDown } from '../../animate';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import RemoveIcon from '@material-ui/icons/Remove';
 
 // ----------------------------------------------------------------------
@@ -20,15 +18,15 @@ const RootStyle = styled('div')(({ theme }) => ({
 }));
 
 ServicesDescription.propTypes = {
-  servicesData: PropTypes.object,
+  serviceData: PropTypes.object,
 };
 
 export default function ServicesDescription({ serviceData }) {
   console.log('servicesData in points', serviceData.content);
   if (get(serviceData.points)) serviceData.points.map((point) => { console.log({ point }) });
-  const theme = useTheme();
-  const isLight = theme.palette.mode === 'light';
-  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
+  // const theme = useTheme();
+  // const isLight = theme.palette.mode === 'light';
+  // const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
 
   return (
     <RootStyle>

@@ -2,23 +2,23 @@ import PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
 import roundArrowRightAlt from '@iconify/icons-ic/round-arrow-right-alt';
 // material
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
+import { styled } from '@material-ui/core/styles';
 import { Box, Grid, Button, Container, Typography, LinearProgress } from '@material-ui/core';
 // utils
 import { fPercent } from '../../../utils/formatNumber';
-import mockData from '../../../utils/mock-data';
+// import mockData from '../../../utils/mock-data';
 //
 import { MHidden } from '../../@material-extend';
 import { varFadeInUp, varFadeInRight, MotionInView } from '../../animate';
 
 // ----------------------------------------------------------------------
 
-const LABEL = ['Development', 'Design', 'Marketing'];
+// const LABEL = ['Development', 'Design', 'Marketing'];
 
-const MOCK_SKILLS = [...Array(3)].map((_, index) => ({
-  label: LABEL[index],
-  value: mockData.number.percent(index)
-}));
+// const MOCK_SKILLS = [...Array(3)].map((_, index) => ({
+//   label: LABEL[index],
+//   value: mockData.number.percent(index)
+// }));
 
 const RootStyle = styled('div')(({ theme }) => ({
   textAlign: 'center',
@@ -61,9 +61,9 @@ function ProgressItem({ progress }) {
 }
 
 export default function AboutWhat() {
-  const theme = useTheme();
-  const isLight = theme.palette.mode === 'light';
-  const shadow = `-40px 40px 80px ${alpha(isLight ? theme.palette.grey[500] : theme.palette.common.black, 0.48)}`;
+  // const theme = useTheme();
+  // const isLight = theme.palette.mode === 'light';
+  // const shadow = `-40px 40px 80px ${alpha(isLight ? theme.palette.grey[500] : theme.palette.common.black, 0.48)}`;
 
   return (
     <RootStyle>
@@ -121,7 +121,7 @@ export default function AboutWhat() {
                   mb: 3,
                   color: (theme) => (theme.palette.mode === 'light' ? 'text.secondary' : 'common.white')
                 }}>
-                We deliver world-class digital solutions to take on tomorrow's challenges.
+                We deliver world-class digital solutions to take on tomorrow&apos;s challenges.
               </Typography>
             </MotionInView>
 
@@ -149,7 +149,7 @@ export default function AboutWhat() {
                 }}
                 variant="body1"
               >
-                We just don't focus on technology but solutions and adapt all the measures to deliver solutions with zero risks
+                We just don&apos;t focus on technology but solutions and adapt all the measures to deliver solutions with zero risks
               </Typography>
             </MotionInView>
 

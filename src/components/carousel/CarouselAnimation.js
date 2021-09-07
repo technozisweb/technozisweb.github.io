@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import { useState, useRef } from 'react';
 // material
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
+import { useTheme, styled } from '@material-ui/core/styles';
 import { Box, Card, Paper, Button, Typography, CardContent, Container } from '@material-ui/core';
 // utils
-import mockData from '../../utils/mock-data';
 //
 import { varFadeInRight, MotionContainer } from '../animate';
 // import { CarouselControlsArrowsIndex } from './controls';
@@ -18,12 +17,12 @@ const MOCK_CAROUSELS = [
   {
     title: 'Digital Transformation',
     description: 'We blend innovation, security, and speed to help you transition your business seamlessly to digital.',
-    image: '/static/home/1dt-blank.jpg'
+    image: '/blob/wip/build/static/home/1dt-blank.JPG'
   },
   {
     title: 'Custom Software development',
     description: 'Design, Create, Deploy, and manage requirements efficiently for the future.',
-    image: '/static/home/2csd-blank.jpg'
+    image: '/static/home/2csd-blank.JPG'
   },
   {
     title: 'Business Intelligence and Analytics',
@@ -48,7 +47,7 @@ CarouselItem.propTypes = {
 };
 
 function CarouselItem({ item, isActive }) {
-  const theme = useTheme();
+  // const theme = useTheme();
   const { image, title } = item;
 
   return (

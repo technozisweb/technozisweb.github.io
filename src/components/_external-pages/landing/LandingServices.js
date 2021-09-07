@@ -3,10 +3,10 @@ import { useRef } from 'react';
 import Slider from 'react-slick';
 import { Icon } from '@iconify/react';
 import roundArrowRightAlt from '@iconify/icons-ic/round-arrow-right-alt';
-import instagramFilled from '@iconify/icons-ant-design/instagram-filled';
+// import instagramFilled from '@iconify/icons-ant-design/instagram-filled';
 // material
 import { useTheme } from '@material-ui/core/styles';
-import { Box, Card, Button, Container, Typography, IconButton } from '@material-ui/core';
+import { Box, Card, Button, Container, Typography } from '@material-ui/core';
 // utils
 import mockData from '../../../utils/mock-data';
 //

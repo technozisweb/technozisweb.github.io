@@ -1,10 +1,8 @@
 // material
 import { styled } from '@material-ui/core/styles';
-import { Divider } from '@material-ui/core';
 // components
 import Page from '../components/Page';
-import { ServicesHero, ServicesDescription, ServicesVision, ServicesMenu, ServicesExtended, ServiceProcess } from 'src/components/_external-pages/services';
-import { v} from 'src/components/_external-pages/landing';
+import { ServicesHero, ServicesVision, ServicesMenu, ServicesExtended, ServiceProcess } from 'src/components/_external-pages/services';
 
 // ----------------------------------------------------------------------
 

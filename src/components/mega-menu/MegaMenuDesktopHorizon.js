@@ -1,20 +1,14 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { NavLink as RouterLink, useLocation } from 'react-router-dom';
-import { Icon } from '@iconify/react';
-import chevronDownFill from '@iconify/icons-eva/chevron-down-fill';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Link, Paper, Typography, List, Stack, ListItemIcon, ListItem, Divider, ListItemText } from '@material-ui/core';
-import arrowIosUpwardFill from '@iconify/icons-eva/arrow-ios-upward-fill';
-import arrowIosDownwardFill from '@iconify/icons-eva/arrow-ios-downward-fill';
-//
-import MenuHotProducts from './MenuHotProducts';
-import MegaMenuCarousel from './MegaMenuCarousel';
+import { Link, Paper, Typography, List, Stack, ListItemIcon, ListItem, ListItemText } from '@material-ui/core';
+
 
 // ----------------------------------------------------------------------
 
-const CONTENT_HEIGHT = 400;
+// const CONTENT_HEIGHT = 400;
 const ITEM_SPACING = 4;
 const ITEM_HEIGHT = 64;
 const ITEM_ON_ROW4 = {
@@ -55,11 +49,11 @@ ParentItem.propTypes = {
   isOffset: PropTypes.bool,
 };
 
-function ParentItem({ path, title, open, hasSub, pathname, isHome, isOffset, ...other }) {
+function ParentItem({ path, title, open, ...other }) {
   const activeStyle = {
     color: 'primary.main'
   };
-  const isActive = pathname === path;
+  // const isActive = pathname === path;
 
   return (
     <LinkStyle
@@ -102,10 +96,9 @@ MegaMenuItem.propTypes = {
   pathname: PropTypes.string,
 };
 
-function MegaMenuItem({ parent, pathname }) {
-  const { title, path, more, products, tags, children, isHome, isOffset } = parent;
+function MegaMenuItem({ parent }) {
+  const { title, path, children } = parent;
   const [open, setOpen] = useState(false);
-  const isActive = pathname === path;
 
   const handleOpen = () => {
     setOpen(true);
