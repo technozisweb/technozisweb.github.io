@@ -3,9 +3,12 @@
   "author": "minimals.cc",
   "version": "2.4.0",
   "private": true,
+  "homepage": "https://technozisweb/technozisweb.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx ./src",
@@ -135,16 +138,17 @@
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/eslint-parser": "^7.15.0",
-    "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-flowtype": "^5.9.0",
-    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react": "^7.25.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.3.2"
   }
 }
