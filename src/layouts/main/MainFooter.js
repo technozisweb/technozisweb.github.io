@@ -13,6 +13,7 @@ import { Grid, Link, Divider, Container, Typography, IconButton, Stack, Popover 
 import { PATH_PAGE } from '../../routes/paths';
 //
 import Logo from '../../components/Logo';
+import Label from 'src/components/Label';
 
 // ----------------------------------------------------------------------
 
@@ -25,25 +26,18 @@ const SOCIALS = [
 
 const LINKS = [
   {
-    headline: 'Technozisz',
+    headline: 'Technozis',
     children: [
       { name: 'About us', href: PATH_PAGE.about },
       { name: 'Contact us', href: PATH_PAGE.contact },
-      { name: 'FAQs', href: PATH_PAGE.faqs }
-    ]
-  },
-  {
-    headline: 'Legal',
-    children: [
-      { name: 'Terms and Condition', href: '#' },
-      { name: 'Privacy Policy', href: '#' }
+      // { name: 'FAQs', href: PATH_PAGE.faqs }
     ]
   },
   {
     headline: 'Contact',
     children: [
-      { name: 'support@minimals.cc', href: '#' },
-      { name: 'Los Angeles, 359  Hidden Valley Road', href: '#' }
+      { name: 'contact@technozis.com', href: '#' },
+      { name: '210, Tower 2, DLF Corporate Greens, Sector 74A, Gurugram', href: '#' }
     ]
   }
 ];
@@ -57,9 +51,11 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 export default function MainFooter() {
   const [anchorEl, setAnchorEl] = useState(null);
+  const [title, setTitle] = useState();
 
-  const handleClick = (event) => {
+  const handleClick = (event, name) => {
     setAnchorEl(event.currentTarget);
+    setTitle(name);
   };
 
   const handleClose = () => {
@@ -78,16 +74,20 @@ export default function MainFooter() {
           justifyContent={{ xs: 'center', md: 'space-between' }}
           sx={{ textAlign: { xs: 'center', md: 'left' } }}
         >
-          <Grid item xs={12} sx={{ mb: 3 }}>
+          <Grid item xs={12} sx={{ mb: 1 }}>
             <ScrollLink to="move_top" spy smooth>
               <Logo sx={{ mx: { xs: 'auto', md: 'inherit' } }} />
+              {/* <Label></Label> */}
             </ScrollLink>
+            <Label color="info">
+              Technozis
+            </Label>
           </Grid>
           <Grid item xs={8} md={3}>
-            <Typography variant="body2" sx={{ pr: { md: 5 } }}>
+            {/* <Typography variant="body2" sx={{ pr: { md: 5 } }}>
               The starting point for your next project with Minimal UI Kit, built on the newest version of Material-UI
               ©, ready to be customized to your style.
-            </Typography>
+            </Typography> */}
 
             <Stack
               spacing={1.5}
@@ -97,21 +97,25 @@ export default function MainFooter() {
             >
               {SOCIALS.map((social) => (
                 <>
-                  <IconButton key={social.name} color="primary" sx={{ p: 1 }} onClick={handleClick}>
+                  <IconButton key={social.name} color="primary" sx={{ p: 1 }} onClick={(e) => handleClick(e, social.name)}>
                     <Icon icon={social.icon} width={16} height={16} />
                   </IconButton>
-                  <Popover
-                    id={social.name}
-                    open={open}
-                    anchorEl={anchorEl}
-                    onClose={handleClose}
-                    anchorOrigin={{
-                      vertical: 'bottom',
-                      horizontal: 'left',
-                    }}
-                  >
-                    <Typography variant="caption">{social.link}</Typography>
-                  </Popover>
+                  {title === social.name
+                    ? (
+                      <Popover
+                        id={social.name}
+                        open={open}
+                        anchorEl={anchorEl}
+                        onClose={handleClose}
+                        anchorOrigin={{
+                          vertical: 'bottom',
+                          horizontal: 'left',
+                        }}
+                      >
+                        <Typography variant="caption">{social.link}</Typography>
+                      </Popover>
+                    )
+                    : null}
                 </>
               ))}
             </Stack>

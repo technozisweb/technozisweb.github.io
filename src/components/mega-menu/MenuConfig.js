@@ -52,26 +52,26 @@ const menuConfig = [
         items: [
           { title: 'Custom Software', icon: <img src="/static/services/1custom-software.png" />, path: '/services/custom-software-development' },
           { title: 'Hire Developer', icon: <img src="/static/services/4hire-developers.png" />, path: '/services/hire-developer' },
-          { title: 'Technologies Consultant', icon: <img src="/static/services/10technology-consulting.png" />, path: '/services/technologies-consultant' },
-          { title: 'Management and Support', icon: <img src="/static/services/2Management-and-Support.png" />, path: '/services/technologies-consultant' },
-          { title: 'System Integration', icon: <img src="/static/services/7system-integration.png" />, path: '/services/technologies-consultant' },
+          { title: 'Technologies Consultant', icon: <img src="/static/services/10technology-consulting.png" />, path: '/services/technology-consultant' },
+          { title: 'Management and Support', icon: <img src="/static/services/2Management-and-Support.png" />, path: '/services/management-and-support' },
+          { title: 'System Integration', icon: <img src="/static/services/7system-integration.png" />, path: '/services/system-integration' },
         ]
       },
       {
         items: [
-          { title: 'Enterprise Mobility', icon: <img src="/static/services/3enterprise-mobility.png" />, path: '/services/technologies-consultant' },
-          { title: 'Product Engineering', icon: <img src="/static/services/11product-engineering.png" />, path: '/services/technologies-consultant' },
-          { title: 'Software Testing & QA', icon: <img src="/static/services/12software-testing-and-qa.png" />, path: '/services/technologies-consultant' },
-          { title: 'Application', icon: <img src="/static/services/5app-development.png" />, path: '/services/technologies-consultant' },
-          { title: 'Embedded Product', icon: <img src="/static/services/9embedded-product.png" />, path: '/services/technologies-consultant' },
+          { title: 'Enterprise Mobility', icon: <img src="/static/services/3enterprise-mobility.png" />, path: '/services/enterprise-mobility' },
+          { title: 'Product Engineering', icon: <img src="/static/services/11product-engineering.png" />, path: '/services/product-engineering' },
+          { title: 'Software Testing & QA', icon: <img src="/static/services/12software-testing-and-qa.png" />, path: '/services/software-testing' },
+          { title: 'Application Development', icon: <img src="/static/services/5app-development.png" />, path: '/services/application-development' },
+          { title: 'Embedded Product', icon: <img src="/static/services/9embedded-product.png" />, path: '/services/embedded-product' },
         ]
       },
       {
         items: [
-          { title: 'Cloud Application', icon: <img src="/static/services/6cloud-application.png" />, path: '/services/technologies-consultant' },
-          { title: 'SAP', icon: <img src="/static/services/14sap.png" />, path: '/services/technologies-consultant' },
-          { title: 'Digital Transformation', icon: <img src="/static/services/13digital-transformation.png" />, path: '/services/technologies-consultant' },
-          { title: 'Business Intelligence and Analytics', icon: <img src="/static/services/8business-intelligence-analytics.png" />, path: '/services/technologies-consultant' },
+          { title: 'Cloud Application', icon: <img src="/static/services/6cloud-application.png" />, path: '/services/cloud-application' },
+          { title: 'SAP', icon: <img src="/static/services/14sap.png" />, path: '/services/sap' },
+          { title: 'Digital Transformation', icon: <img src="/static/services/13digital-transformation.png" />, path: '/services/digital-transformation' },
+          { title: 'Business Intelligence and Analytics', icon: <img src="/static/services/8business-intelligence-analytics.png" />, path: '/services/business-intelligence-and-analytics' },
         ]
       },
     ]
@@ -190,29 +190,29 @@ const menuConfig = [
       {
         // subheader: 'Agriculture Machinery',
         items: [
-          { title: 'BFSI', icon: <img src="/static/industry/2bfsi.png" />, path: '/services/custom-software-development' },
-          { title: 'Construction', icon: <img src="/static/industry/3construction.png" />, path: '/services/hire-developer' },
-          { title: 'Aviation', icon: <img src="/static/industry/4aviation.png" />, path: '/services-consultant' },
-          { title: 'Automobile', icon: <img src="/static/industry/automobile.png" />, path: '/services-consultant' },
-          { title: 'Engineering/Heavy Equipment', icon: <img src="/static/industry/bfsi.png" />, path: '/services-consultant' },
+          { title: 'BFSI', icon: <img src="/static/industry/2bfsi.png" />, path: '/industries' },
+          { title: 'Construction', icon: <img src="/static/industry/3construction.png" />, path: '/industries' },
+          { title: 'Aviation', icon: <img src="/static/industry/4aviation.png" />, path: '/industries' },
+          { title: 'Automobile', icon: <img src="/static/industry/automobile.png" />, path: '/industries' },
+          { title: 'Engineering/Heavy Equipment', icon: <img src="/static/industry/bfsi.png" />, path: '/industries' },
         ]
       },
       {
         items: [
-          { title: 'Education & Training', icon: <img src="/static/industry/10education.png" />, path: '/services-consultant' },
-          { title: 'FMCG', icon: <img src="/static/industry/5retail-and-fmcg.png" />, path: '/services-consultant' },
+          { title: 'Education & Training', icon: <img src="/static/industry/10education.png" />, path: '/industries' },
+          { title: 'FMCG', icon: <img src="/static/industry/5retail-and-fmcg.png" />, path: '/industries' },
           { title: 'Media', icon: <img src="/static/industry/9media.png" />, path: '/' },
-          { title: 'Information Technology', icon: <img src="/static/industry/12it.png" />, path: '/services-consultant' },
-          { title: 'Engineering', icon: <img src="/static/industry/11engineering.png" />, path: '/services-consultant' },
+          { title: 'Information Technology', icon: <img src="/static/industry/12it.png" />, path: '/industries' },
+          { title: 'Engineering', icon: <img src="/static/industry/11engineering.png" />, path: '/industries' },
         ]
       },
       {
         items: [
-          { title: 'Consultancy', icon: <img src="/static/industry/7consultancy.png" />, path: '/services-consultant' },
-          { title: 'Retail', icon: <img src="/static/industry/.png" />, path: '/services-consultant' },
-          { title: 'Pharmaceutical', icon: <img src="/static/industry/13-pharma.png" />, path: '/services-consultant' },
-          { title: 'Healthcare', icon: <img src="/static/industry/6healthcare.png" />, path: '/services-consultant' },
-          { title: 'Telecom', icon: <img src="/static/industry/8telecom.png" />, path: '/services-consultant' },
+          { title: 'Consultancy', icon: <img src="/static/industry/7consultancy.png" />, path: '/industries' },
+          { title: 'Retail', icon: <img src="/static/industry/.png" />, path: '/industries' },
+          { title: 'Pharmaceutical', icon: <img src="/static/industry/13-pharma.png" />, path: '/industries' },
+          { title: 'Healthcare', icon: <img src="/static/industry/6healthcare.png" />, path: '/industries' },
+          { title: 'Telecom', icon: <img src="/static/industry/8telecom.png" />, path: '/industries' },
         ]
       },
     ]

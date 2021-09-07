@@ -60,8 +60,8 @@ export default function ContactUs() {
               <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
                 <DraftsTwoToneIcon color="error" fontSize="large" />
               </Typography>
-              <Typography variant="subtitle1" sx={{ mt: 2, mb: 2 }}>
-                Email
+              <Typography variant="body1" sx={{ mt: 2, mb: 2 }}>
+                contact@technozis.com
               </Typography>
               <Box component="img" sx={{ width: '100%', borderRadius: 1.5 }} />
             </Card>
@@ -73,8 +73,8 @@ export default function ContactUs() {
               <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
                 <PhoneIphoneTwoToneIcon color="success" fontSize="large" />
               </Typography>
-              <Typography variant="subtitle1" sx={{ mt: 2, mb: 2 }}>
-                Phone
+              <Typography variant="body1" sx={{ mt: 2, mb: 2 }}>
+                9996600068
               </Typography>
               {/* <Box component="img" sx={{ width: '100%', borderRadius: 1.5 }} /> */}
             </Card>
@@ -86,8 +86,8 @@ export default function ContactUs() {
               <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
                 <ExploreTwoToneIcon color="info" fontSize="large" />
               </Typography>
-              <Typography variant="subtitle1" sx={{ mt: 2, mb: 2 }}>
-                Location
+              <Typography variant="body2" sx={{ mt: 2, mb: 2 }}>
+                210, Tower 2, DLF Corporate Greens, Sector 74A, Gurugram, 122004  
               </Typography>
               <Box component="img" sx={{ width: '100%', borderRadius: 1.5 }} />
             </Card>
