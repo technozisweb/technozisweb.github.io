@@ -46,7 +46,7 @@ export default function AboutHero() {
           <br />
           {TECHNOLOGY.map((tech) => (
             <Box sx={{ display: 'inline-flex', color: 'common.white' }}>
-              {tech.title.toLowerCase() == path.slice(14,)
+              {tech.title.toLowerCase() === path.slice(14,)
                 ? (
                   <motion.div variants={varFadeInRight}>
                     <Typography

@@ -3,7 +3,6 @@ import { Link, Stack } from '@material-ui/core';
 import { styled } from '@material-ui/core/styles';
 import { makeStyles } from '@material-ui/styles';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 import { NavLink as RouterLink, useLocation } from 'react-router-dom';
 
 // ----------------------------------------------------------------------

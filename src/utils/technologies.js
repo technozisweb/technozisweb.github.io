@@ -45,6 +45,8 @@ const TECHNOLOGY = [
   },
   {
     title: 'Mobile',
+    heroimg: '/static/technologies/mobile/mobilemain.jpg',
+    imagesrc: '/static/technologies/mobile/mobile.jpg',
     header: 'Mobile Development',
     subheader: 'Get your business directly into the palms of your customers with mobile apps with incredible user experience.',
     description: 'Businesses with customized mobile apps helps improve customer service, increase  business visibility, augment  brand loyalty.',
@@ -66,12 +68,12 @@ const TECHNOLOGY = [
       },
       {
         title: 'React Native',
-        path: "/static/technologies/mobile/anhularjs.png",
+        path: "/static/technologies/frontend/reactjs.png",
         data: 'Develop native apps for their business which are extremely reliant, load faster and are more flexible than other mobile applications. Every business has different needs. We help to customize native apps according to the business need of our client and tailor it accordingly.'
       },
       {
         title: 'Hybrid',
-        path: "/static/technologies/mobile/anhularjs.png",
+        path: "/static/technologies/mobile/hybrid.png",
         data: 'As experts of hybrid app development, we combine the exceptional HTML5 with various mobile platforms like Phone Gap and Sencha. We contribute in developing the perfect app that has the flexibility to access mobile features and is highly interactive.'
       },
       {
@@ -88,6 +90,8 @@ const TECHNOLOGY = [
   },
   {
     title: 'Cloud',
+    heroimg: '/static/technologies/cloud/cloud-technology-main.jpg',
+    imagesrc: '/static/technologies/cloud/cloud-technology.jpg',
     header: 'Cloud Development',
     subheader: 'Redefine and future-proof your business with intelligent cloud serivices',
     description: 'Leveraging cloud environments enable businesses to scale their compute and storage needs up on an as-needed basis, which can keep costs low',
@@ -111,26 +115,65 @@ const TECHNOLOGY = [
   },
   {
     title: 'Back',
+    heroimg: '/static/technologies/backend/backendmain.jpg',
+    imagesrc: '/static/technologies/backend/backend.jpg',
     header: 'Backend Development',
-    subheader: '',
+    subheader: 'Backend: Backbone of software solutions that drives the business growth strategies.',
+    description: 'Leveraging cloud environments enable businesses to scale their compute and storage needs up on an as-needed basis, which can keep costs low',
+    points: [
+      "Create services that process business logic and access other resources such as databases, file servers, cloud services and more.",
+      'Adds Utility to Frontend Functionalities.',
+      'Improves the User Experience of the Website or application.',
+    ],
     expertise: [
-      { title: '.NET', path: "/static/technologies/backend/netdevelopment.png" },
-      { title: 'Node JS', path: "/static/technologies/backend/node-js.png" },
-      { title: 'C#', path: "/static/technologies/backend/c#.png" },
-      { title: 'PHP', path: "/static/technologies/backend/php.png" },
-      { title: 'C++', path: "/static/technologies/backend/C++.png" },
-      { title: '.NETcore', path: "/static/technologies/backend/netcore.png" },
+      {
+        title: '.NET',
+        path: "/static/technologies/backend/netdevelopment.png",
+        data: 'Get dynamic solutions that works cross-platform. .NETDevelopment is an open source developer platform for building many different types of applications. With .NET, you can use multiple languages, editors, and libraries to build for web, mobile, desktop, games, and IoT.'
+      },
+      {
+        title: 'Node JS',
+        path: "/static/technologies/backend/node-js.png",
+        data: 'An event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.'
+      },
+      {
+        title: 'C#',
+        path: "/static/technologies/backend/csharp.png",
+        data: ' Develop desktop, web application, and games with C#. Have high memeory backup with no memory leak problems.              '
+      },
+      {
+        title: 'PHP',
+        path: "/static/technologies/backend/php.png",
+        data: 'With expert PHP developers, create rich and vibrant web applications. Capable of meeting and exceeding all the business goals. '
+      },
+      {
+        title: 'C++',
+        path: "/static/technologies/backend/C++.png",
+        data: 'Free-form programming language that supports procedural, object-oriented, and generic programming. Secure and stabilise backend C++ development that fortifies backend application.'
+      },
+      {
+        title: '.NETcore',
+        path: "/static/technologies/backend/netcore.png",
+        data: 'With .NETcore, unleash the most versatile framework used to build all kinds of software including Web applications, Mobile apps, Desktop applications, Cloud services, Microservices, APIs, Games, and IoT applications. Get the extensive .NETCore services like ASP .NET Migration, Web and Cloud App Development, 3rd party integration, etc. '
+      },
     ]
   },
   {
     title: 'Frameworks',
+    heroimg: '/static/technologies/backend/backendmain.jpg',
+    imagesrc: '/static/technologies/frameworks/framework.jpg',
     header: 'Frameworks',
     subheader: 'Build interactive and powerful web and mobile servirces powered by superior software frameworks',
     description: 'Modern frameworks offers the most efficient ways to uild enterprise-grade website and mobile inetrfaces that delivers matchless exoerience.',
+    points: [
+      'Provide platforms for developing software applications. ',
+      'Save time and provide shortcuts.',
+      'Optimize the development process and allow to use, change and integrate code simplifying the work.',
+    ],
     expertise: [
       {
         title: 'Laravel',
-        path: "/static/technologies/frameworks/lavarel.png",
+        path: "/static/technologies/frameworks/laravel.png",
         data: 'Leverage the outstanding features from security to localization of Laravel to invoke trust and safety of your customers. Our in-house experts will help you build websites that gives suburb scaling opportunities, and makes testing your website or business application easier than ever.  Laravel framework is a great option if you are worried about security breaches and will ensure that you keep your clients, and your business, safe.'
       },
       {
@@ -157,6 +200,8 @@ const TECHNOLOGY = [
   },
   {
     title: 'Ecommerce',
+    heroimg: '/static/technologies/ecommerce/e-commercemain.jpg',
+    imagesrc: '/static/technologies/ecommerce/e-commerce.jpg',
     header: 'E-Commerce',
     subheader: 'Build highy intuitive and visually-rich website and e-commerce solutions that ensures great user experience and engagement',
     description: 'Launch omni-channel e-commerce store, build brand experience, or expand your  business into new geographies with e-commerce development services',
@@ -167,8 +212,8 @@ const TECHNOLOGY = [
     ],
     expertise: [
       {
-        title: 'Magneto',
-        path: "/static/technologies/ecommerce/monento-logo.png",
+        title: 'Magento',
+        path: "/static/technologies/ecommerce/magento-logo.png",
         data: 'Deliver high-end user experience by building e-commerce stores with Magneto which are visually-rich and customer-centric. As an adept partner, we will help you articultae your business goals and transform them into optimal tech solutions with Magneto web development. Evoke a full suite of Magneto development services with aligned e-commerce startegy to give your brnad an exceptional value and dleiver bsuienss results.'
       },
       {
@@ -190,6 +235,8 @@ const TECHNOLOGY = [
   },
   {
     title: 'Database',
+    heroimg: '/static/technologies/database/database-main.jpg',
+    imagesrc: '/static/technologies/database/database.jpg',
     header: 'Database',
     subheader: 'Spend less time managing data and security with high-quality database managemnet system ',
     description: 'Reduce the negative impacts of exponential, uncontorlled data growth with the right database. ',
@@ -228,6 +275,8 @@ const TECHNOLOGY = [
   },
   {
     title: 'CMS',
+    heroimg: '/static/technologies/cms/cmsmain.jpg',
+    imagesrc: '/static/technologies/cms/cms.jpg',
     header: 'CMS',
     subheader: 'Ensure brand consistency and govern content quality and deliver your content at scale.',
     description: 'Accelearte your online presence with a robust content platform and publish content on the go.',
@@ -266,6 +315,8 @@ const TECHNOLOGY = [
   },
   {
     title: 'Devops',
+    heroimg: '/static/technologies/devops/devops-main.jpg',
+    imagesrc: '/static/technologies/devops/devops.jpg',
     header: 'DevOps',
     subheader: 'Plan smarter, collaborate better, and deliver faster with modern Dev services.',
     description: 'Teams who fully embrace DevOps practices work smarter and faster, and deliver better quality to their customers.',
@@ -284,9 +335,16 @@ const TECHNOLOGY = [
   },
   {
     title: 'Platforms',
+    heroimg: '/static/technologies/platforms/platformsmain2.jpg',
+    imagesrc: '/static/technologies/platforms/platforms.jpg',
     header: 'Platforms',
     subheader: 'Offer hyper-personalized customer experience, lead management, and data intelligence- anywhere, anytime, and all at one place.',
     description: 'Manage your day-to-day customer experiences seemlessly and effortlessly with the right platform to manage diffrent touchpoints in a customer journey',
+    points: [
+      'Act as foundation or base upon which other applications, processes, or technologies are developed.',
+      'Enable growth through connection: connect external tools, teams, data, and processes.',
+      'Offer a different, more straightforward approach to managing your growing business.',
+    ],
     expertise: [
       {
         title: 'Zoho',
