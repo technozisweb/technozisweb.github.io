@@ -1,24 +1,11 @@
-import { useState, useEffect } from 'react';
-import { get } from 'lodash';
-// material
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
 import {
-  Box,
-  Grid,
-  Card,
-  Container,
-  Typography,
-  useMediaQuery,
-  CardMedia,
-  CardContent,
-  CardHeader,
-  Paper,
-  CardActionArea,
-  Modal
+  Box, CardActionArea, CardContent, CardMedia, Container, Grid, Modal, Paper, Typography
 } from '@material-ui/core';
+// material
+import { styled } from '@material-ui/core/styles';
+import { useState } from 'react';
 //
-import { varFadeInUp, MotionInView, varFadeInDown, varZoomIn } from '../../animate';
-import TECHNOLOGY_CARDS from 'src/utils/technologies';
+import { MotionInView, varZoomIn } from '../../animate';
 
 // ----------------------------------------------------------------------
 
@@ -70,11 +57,11 @@ const IndustryData = [
     icon: '/static/industry/whiteicons/bank.png',
     description: 'Description about industry.'
   },
-  {
-    title: 'Engineering',
-    icon: '/static/industry/whiteicons/11engineering.png',
-    description: 'Description about industry.'
-  },
+  // {
+  //   title: 'Engineering',
+  //   icon: '/static/industry/whiteicons/11engineering.png',
+  //   description: 'Description about industry.'
+  // },
   {
     title: 'Pharmaceutical',
     icon: '/static/industry/whiteicons/13-pharma.png',
@@ -92,7 +79,7 @@ const IndustryData = [
     icon: '/static/industry/whiteicons/7consultancy.png',
     description: 'Work smarter, faster and more efficiently and take your cosulting business to next level with right digital solutions.',
     content: 'As your client’s needs change, your management consultancy must adapt quickly with services and operations. The faster your firm adapts to the changes within your industry, and to the needs of your clients and staff, the more you’ll ensure your competitive edge and long-term growth. The key is to harness your knowledge via software so it can be shared across the entire team and the managers they consult. '
-    
+
   },
   {
     title: 'Retail',
@@ -127,10 +114,8 @@ const CardStyle = styled(Paper)(({ theme }) => {
     // minWidth: 320,
     height: 280,
     color: 'common.white',
-    [theme.breakpoints.up('md')]: {
-      boxShadow: 'none',
-      backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 800 : 800]
-    },
+    boxShadow: 'none',
+    backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 800 : 800],
     transition: "transform 0.15s ease-in-out",
     "&:hover": {
       transform: "scale3d(1.02, 1.02, 1)",
@@ -144,7 +129,7 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 700,
+  minWidth: 280,
   bgcolor: 'background.paper',
   border: '4px solid lightblue',
   boxShadow: 24,
@@ -152,28 +137,18 @@ const style = {
   p: 4,
 };
 
-const CardIconStyle = styled('img')(({ theme }) => ({
-  width: 100,
-  height: 100,
-  margin: 'auto',
-  marginBottom: theme.spacing(2),
-}));
-
 // ----------------------------------------------------------------------
 
 export default function LandingMinimalHelps() {
-  const theme = useTheme();
   const [open, setOpen] = useState(false);
   const [title, setTitle] = useState();
-  const isLight = theme.palette.mode === 'light';
-  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   console.log(title);
 
   return (
     <RootStyle>
       <Container maxWidth="lg">
         <Grid container>
-          {IndustryData.map((card, index) => (
+          {IndustryData.map((card) => (
             <Grid key={card.title} item xs={12} md={4} sx={{
               p: 3,
               // border: '2px solid',
@@ -214,10 +189,10 @@ export default function LandingMinimalHelps() {
                 >
                   <Box sx={style}>
                     <>
-                      <Typography variant="h6" component="h2" sx={{ borderBottom: '4px solid lightblue'}}>
+                      <Typography variant="h6" component="h2" sx={{ borderBottom: '4px solid lightblue' }}>
                         {industry.title}
                       </Typography>
-                      <Typography id="modal-modal-description" sx={{ mt: 2, fontFamily: 'Raleway', fontStyle: 'italic' }}>
+                      <Typography id="modal-modal-description" sx={{ mt: 2, fontFamily: 'Raleway', fontStyle: 'italic', fontSize: { xs: 14, md: 18 } }}>
                         {industry.content}
                       </Typography>
                     </>

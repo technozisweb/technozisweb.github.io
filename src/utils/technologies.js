@@ -2,6 +2,7 @@ const TECHNOLOGY = [
   {
     title: 'Front',
     header: 'Frontend Development',
+    imagesrc: '/static/technologies/frontend/frontendmain.jpg',
     subheader: 'Innovative and robust front end development services to build best  visual experince across devices.',
     description: 'First impression is the last impression! Fronted helps create intuitive and business concentric user experience for websites and mobile.',
     points: [

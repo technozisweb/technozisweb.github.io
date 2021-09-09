@@ -1,18 +1,17 @@
-import { useState, useEffect } from 'react';
-import { get } from 'lodash';
+import { Box, Card, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@material-ui/core';
 // material
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { Box, Grid, Card, Container, Typography, useMediaQuery, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
-//
-import { varFadeInUp, MotionInView, varFadeInDown, varZoomIn } from '../../animate';
-import TECHNOLOGY from 'src/utils/technologies';
+import { styled, useTheme } from '@material-ui/core/styles';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import { useEffect, useState } from 'react';
+import TECHNOLOGY from 'src/utils/technologies';
+//
+import { MotionInView, varFadeInUp, varZoomIn } from '../../animate';
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
   paddingTop: theme.spacing(5),
+  textAlign: 'justify',
   [theme.breakpoints.up('md')]: {
     paddingBottom: theme.spacing(15)
   }
@@ -24,12 +23,8 @@ const CardStyle = styled(Card)(({ theme }) => {
     height: 200,
     margin: 'auto',
     textAlign: 'center',
-    // padding: theme.spacing(2, 2, 0),
-    // boxShadow: `-40px 40px 80px 0 ${shadowCard(0.48)}`,
-    [theme.breakpoints.up('md')]: {
-      boxShadow: 'none',
-      // backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800]
-    },
+    fontFamily: 'Roboto',
+    boxShadow: 'none',
     transition: "transform 0.15s ease-in-out",
     "&:hover": { transform: "scale3d(1.1, 1.1, 1)" },
   };
@@ -47,12 +42,12 @@ const CardIconStyle = styled('img')(({ theme }) => ({
 export default function LandingMinimalHelps() {
   const theme = useTheme();
   const isLight = theme.palette.mode === 'light';
-  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
+  // const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const [location, setLocation] = useState();
   const [value, setValue] = useState([]);
 
   // const listicon = <FiberManualRecordIcon fontSize="small" sx={{ color: "white", filter: `drop-shadow(2px 2px 5px ${alpha(theme.palette.primary.main, 1)})` }} />
-  const listicon = <ArrowRightIcon fontSize="large" sx={{ color: "black", filter: `drop-shadow(2px 2px 5px ${alpha(theme.palette.primary.main, 0.9)})` }} />
+  const listicon = <ArrowRightIcon fontSize="large" sx={{ color: "black" }} />
 
   useEffect(() => {
     // setTech([]);
@@ -78,7 +73,7 @@ export default function LandingMinimalHelps() {
           ? (
             <>
               <MotionInView variants={varFadeInUp}>
-                <Typography variant="h5">
+                <Typography variant="h6">
                   {value.description}
                 </Typography>
               </MotionInView>
@@ -112,8 +107,8 @@ export default function LandingMinimalHelps() {
                           sx={{
                             // mb: 5,
                             color: isLight ? 'text.secondary' : 'common.white',
-                            fontWeight: 'fontWeightMedium',
-                            fontSize: 22
+                            // fontWeight: 'fontWeightMedium',
+                            // fontSize: 22,
                           }}
                         >
                           <ListItem>
@@ -125,7 +120,7 @@ export default function LandingMinimalHelps() {
                     ))}
                   </Grid>
                   <Grid item xs={12} md={4}>
-                    <Box component="img" src="/static/technologies/frontendmain.jpg" />
+                    <Box component="img" src={value.imagesrc} alt={value.title} />
                   </Grid>
                 </Grid>
                 : null}
@@ -145,8 +140,10 @@ export default function LandingMinimalHelps() {
                           }}
                         >
                           <Box sx={{ borderLeft: '2px solid black', borderLeftColor: theme.palette.grey[300], borderRight: '2px solid black', borderRightColor: theme.palette.grey[300], mt: 5 }}>
-                            <ListItem>
-                              <ListItemIcon sx={{ mr: 3, height: 60, width: 60 }}><img src={item.path} /></ListItemIcon>
+                            <ListItem sx={{ textAlign: 'justify' }}>
+                              <ListItemIcon sx={{ mr: 3, height: 60, width: 60 }}>
+                                <img src={item.path} alt={item.title} />
+                              </ListItemIcon>
                               <ListItemText
                                 primary={
                                   <Typography>

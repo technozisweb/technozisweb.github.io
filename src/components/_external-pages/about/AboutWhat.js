@@ -6,26 +6,19 @@ import { alpha, useTheme, styled } from '@material-ui/core/styles';
 import { Box, Grid, Button, Container, Typography, LinearProgress } from '@material-ui/core';
 // utils
 import { fPercent } from '../../../utils/formatNumber';
-import mockData from '../../../utils/mock-data';
 //
 import { MHidden } from '../../@material-extend';
 import { varFadeInUp, varFadeInRight, MotionInView } from '../../animate';
 
 // ----------------------------------------------------------------------
 
-const LABEL = ['Development', 'Design', 'Marketing'];
-
-const MOCK_SKILLS = [...Array(3)].map((_, index) => ({
-  label: LABEL[index],
-  value: mockData.number.percent(index)
-}));
-
 const RootStyle = styled('div')(({ theme }) => ({
-  textAlign: 'center',
+  textAlign: 'justify',
+  fontFamily: 'Roboto',
   paddingTop: theme.spacing(10),
   paddingBottom: theme.spacing(10),
   [theme.breakpoints.up('md')]: {
-    textAlign: 'left'
+    textAlign: 'justify'
   }
 }));
 
@@ -61,9 +54,6 @@ function ProgressItem({ progress }) {
 }
 
 export default function AboutWhat() {
-  const theme = useTheme();
-  const isLight = theme.palette.mode === 'light';
-  const shadow = `-40px 40px 80px ${alpha(isLight ? theme.palette.grey[500] : theme.palette.common.black, 0.48)}`;
 
   return (
     <RootStyle>

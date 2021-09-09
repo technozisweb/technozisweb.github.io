@@ -18,10 +18,10 @@ const RootStyle = styled(Page)(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function About() {
+export default function Industries() {
 
   return (
-    <RootStyle title="About us | Minimal-UI">
+    <RootStyle title="About us | Industries">
       <IndustriesHero />
       <IndustriesContent />
       {/* <Divider orientation="vertical" sx={{ my: 10, mx: 'auto', width: 2, height: 40 }} /> */}

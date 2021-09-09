@@ -19,7 +19,7 @@ const RootStyle = styled(Page)(({ theme }) => ({
 
 export default function About() {
   return (
-    <RootStyle title="Software development | Minimal-UI">
+    <RootStyle title="Software development">
       <ServicesHero />
       <ServicesMenu />
       {/* <ServicesDescription /> */}

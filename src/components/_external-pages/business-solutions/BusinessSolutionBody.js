@@ -6,7 +6,7 @@ import { Box, Grid, Button, Container, Typography, List, ListItem, ListItemIcon 
 import { PATH_PAGE } from '../../../routes/paths';
 //
 import { varFadeInUp, MotionInView, varZoomIn } from '../../animate';
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 // ----------------------------------------------------------------------
 
@@ -57,29 +57,29 @@ const COMMON = {
   opacity: 0
 };
 
-const variantScreenLeft = {
-  initial: COMMON,
-  animate: { ...COMMON, translateX: '-50%', translateY: 40, opacity: 1 }
-};
-const variantScreenCenter = {
-  initial: COMMON,
-  animate: { ...COMMON, opacity: 1 }
-};
-const variantScreenRight = {
-  initial: COMMON,
-  animate: { ...COMMON, translateX: '50%', translateY: -40, opacity: 1 }
-};
+// const variantScreenLeft = {
+//   initial: COMMON,
+//   animate: { ...COMMON, translateX: '-50%', translateY: 40, opacity: 1 }
+// };
+// const variantScreenCenter = {
+//   initial: COMMON,
+//   animate: { ...COMMON, opacity: 1 }
+// };
+// const variantScreenRight = {
+//   initial: COMMON,
+//   animate: { ...COMMON, translateX: '50%', translateY: -40, opacity: 1 }
+// };
 
 // ----------------------------------------------------------------------
 
 export default function LandingHugePackElements() {
   const theme = useTheme();
   const isLight = theme.palette.mode === 'light';
-  const isRTL = theme.direction === 'rtl';
+  // const isRTL = theme.direction === 'rtl';
 
-  const screenLeftAnimate = variantScreenLeft;
-  const screenCenterAnimate = variantScreenCenter;
-  const screenRightAnimate = variantScreenRight;
+  // const screenLeftAnimate = variantScreenLeft;
+  // const screenCenterAnimate = variantScreenCenter;
+  // const screenRightAnimate = variantScreenRight;
 
   return (
     <RootStyle>
@@ -94,31 +94,38 @@ export default function LandingHugePackElements() {
                 </Typography>
               </MotionInView>
 
+
+              <MotionInView variants={varZoomIn}>
+                <Box
+                  component="img"
+                  src="/static/home/crm.jpg"
+                />
+              </MotionInView>
+
               <MotionInView variants={varFadeInUp}>
-                <Typography
+                <List
                   sx={{
                     mb: 5,
                     color: isLight ? 'text.secondary' : 'common.white'
                   }}
                 >
-                  We collected most popular elements. Menu, sliders, buttons, inputs etc. are all here. Just dive in!
-                </Typography>
-              </MotionInView>
-
-              <MotionInView variants={varZoomIn}>
-                <Box
-                  component="img"
-                  src="/static/home/business-intelligence.jpg"
-                />
-              </MotionInView>
-
-              <MotionInView variants={varFadeInUp}>
-                <Typography
-                  sx={{
-                    mb: 5,
-                    color: isLight ? 'text.secondary' : 'common.white'
-                  }}>
-                </Typography>
+                  <ListItem>
+                    <ListItemIcon><FiberManualRecordIcon fontSize="small" /></ListItemIcon>
+                    Cloud-based, scalable, customizable, and integrated Mobile ERP software.
+                  </ListItem>
+                  <ListItem>
+                    <ListItemIcon><FiberManualRecordIcon fontSize="small" /></ListItemIcon>
+                    Enable a 360-degree business view and a single point of real-time data reference.
+                  </ListItem>
+                  <ListItem>
+                    <ListItemIcon><FiberManualRecordIcon fontSize="small" /></ListItemIcon>
+                    Automate, manage, and integrate various business components.
+                  </ListItem>
+                  <ListItem>
+                    <ListItemIcon><FiberManualRecordIcon fontSize="small" /></ListItemIcon>
+                    Advanced ERP software is accessible on mobile/desktops/laptops/tablets/smart screens/wireless display devices, providing data visibility and availability anywhere, anytime.
+                  </ListItem>
+                </List>
               </MotionInView>
             </ContentStyle>
           </Grid>
@@ -131,7 +138,7 @@ export default function LandingHugePackElements() {
               </Typography>
             </MotionInView>
 
-            <MotionInView variants={varFadeInUp}>
+            {/* <MotionInView variants={varFadeInUp}>
               <Typography
                 sx={{
                   mb: 5,
@@ -140,15 +147,15 @@ export default function LandingHugePackElements() {
               >
                 We collected most popular elements. Menu, sliders, buttons, inputs etc. are all here. Just dive in!
               </Typography>
-            </MotionInView>
+            </MotionInView> */}
             <MotionInView variants={varZoomIn}>
               <Box
                 component="img"
-                src="/static/home/businesspeople.jpg"
+                src="/static/home/erp2.jpg"
               />
             </MotionInView>
 
-            {/* <MotionInView variants={varFadeInUp}>
+            <MotionInView variants={varFadeInUp}>
               <List
                 sx={{
                   mb: 5,
@@ -156,27 +163,23 @@ export default function LandingHugePackElements() {
                 }}
               >
                 <ListItem>
-                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
-                  Here is some information about the company.
+                  <ListItemIcon><FiberManualRecordIcon fontSize="small" /></ListItemIcon>
+                  Customer Relationship Management to Enhance Sales, Marketing, Service, and Satisfaction all at Once.
                 </ListItem>
                 <ListItem>
-                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
-                  Here is some information about the company.
+                  <ListItemIcon><FiberManualRecordIcon fontSize="small" /></ListItemIcon>
+                  Reinvent your business model with a multi-faceted industry-specific approach.
                 </ListItem>
                 <ListItem>
-                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
-                  Here is some information about the company.
+                  <ListItemIcon><FiberManualRecordIcon fontSize="small" /></ListItemIcon>
+                  Get a mobility solution that can cater to all of your business needs in the field sales teams, area and regional managers.
                 </ListItem>
                 <ListItem>
-                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
-                  Here is some information about the company.
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon><ArrowRightIcon color="primary" /></ListItemIcon>
-                  Here is some information about the company.
+                  <ListItemIcon><FiberManualRecordIcon fontSize="small" /></ListItemIcon>
+                  Custom CRM solutions to solve the shortcomings across all industries.
                 </ListItem>
               </List>
-            </MotionInView> */}
+            </MotionInView>
           </Grid>
         </Grid>
       </Container>

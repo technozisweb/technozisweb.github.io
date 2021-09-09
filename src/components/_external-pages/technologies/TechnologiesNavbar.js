@@ -1,22 +1,22 @@
-import PropTypes from 'prop-types';
+import { AppBar, Container } from '@material-ui/core';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Card, Paper, Stack, Container, AppBar, Typography } from '@material-ui/core';
+import PropTypes from 'prop-types';
+import { MHidden } from 'src/components/@material-extend';
+import { TechnologiesDesktopMenu } from '.';
 // routes
 // components
 import Page from '../../../components/Page';
-import { MHidden } from 'src/components/@material-extend';
 // import HeaderBreadcrumbs from '../../../components/HeaderBreadcrumbs';
 import MenuConfig from './TechnologiesMenuConfig';
-import { TechnologiesDesktopMenu } from '.';
 import TechnologiesMobileMenu from './TechnologiesMobileMenu';
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(Page)(({ theme }) => ({
   // paddingTop: theme.spacing(2),
-  paddingBottom: theme.spacing(5),
-  display: 'flex',
+  paddingBottom: theme.spacing(2),
+  // display: 'flex',
   // backgroundColor: theme.palette.grey[300],
 }));
 
@@ -38,7 +38,7 @@ export default function MegaMenu(props) {
         color="transparent"
         sx={{
           // boxShadow: (theme) => theme.customShadows.z8,
-          alignContent: 'center',
+          // alignContent: 'center',
           backgroundColor: (theme) => theme.palette.grey[300],
           paddingTop: 1,
           paddingBottom: 1
@@ -47,9 +47,9 @@ export default function MegaMenu(props) {
         <Container
           maxWidth="lg"
           sx={{
-            display: 'flex',
+            // display: 'flex',
             // alignItems: 'center',
-            justifyContent: 'space-between'
+            // justifyContent: 'space-between'
           }}
         >
           <MHidden width="lgDown">
@@ -59,7 +59,7 @@ export default function MegaMenu(props) {
           </MHidden>
 
           <MHidden width="lgUp">
-            <Container sx={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
+            <Container>
               <TechnologiesMobileMenu navConfig={MenuConfig} />
             </Container>
           </MHidden>

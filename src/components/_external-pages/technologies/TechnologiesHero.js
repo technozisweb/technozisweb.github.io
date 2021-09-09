@@ -12,7 +12,7 @@ import TECHNOLOGY from 'src/utils/technologies';
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: 'url(/static/overlay.svg), url(/static/about/hero.jpg)',
+  backgroundImage: 'url(/static/technologies/technology-main.jpg)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
     height: 480,
@@ -54,12 +54,20 @@ export default function AboutHero() {
                       sx={{
                         mt: 5,
                         color: 'common.white',
-                        fontWeight: 'fontWeightLarge'
+                        fontWeight: 'fontWeightLarge',
+                        fontFamily: 'Roboto',
+                        fontStyle: 'italic'
                       }}
                     >
                       {tech.header}
                     </Typography>
-                    <Typography variant="subtitle1">
+                    <Typography
+                      variant="subtitle1"
+                      sx={{
+                        fontFamily: 'Roboto',
+                        fontStyle: 'italic'
+                      }}
+                    >
                       {tech.subheader}
                     </Typography>
                   </motion.div>

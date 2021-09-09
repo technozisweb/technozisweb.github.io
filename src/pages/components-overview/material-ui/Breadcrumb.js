@@ -61,7 +61,7 @@ export default function BreadcrumbComponent() {
               <Breadcrumbs>
                 <Link color="inherit" href="#" sx={{ display: 'flex', alignItems: 'center' }}>
                   <HomeIcon sx={{ mr: 0.5, width: 20, height: 20 }} />
-                  Material-UI
+                  {/* Material-UI */}
                 </Link>
                 <Link color="inherit" href="#" sx={{ display: 'flex', alignItems: 'center' }}>
                   <WhatshotIcon sx={{ mr: 0.5, width: 20, height: 20 }} />

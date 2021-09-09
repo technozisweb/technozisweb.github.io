@@ -25,7 +25,7 @@ export default function About() {
   // }
 
   return (
-    <RootStyle title="About us | Minimal-UI">
+    <RootStyle title="Technologies | Technozis">
       <TechnologiesHero />
       {/* <DesktopMenu /> */}
       <TechnologiesNavbar setTitle={setTitle} />
