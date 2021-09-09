@@ -1,12 +1,11 @@
-import { Link as RouterLink } from 'react-router-dom';
+import { Box, Container, Grid, List, ListItem, ListItemIcon, Typography, ListItemText } from '@material-ui/core';
 // material
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { Box, Grid, Button, Container, Typography, List, ListItem, ListItemIcon } from '@material-ui/core';
-// routes
-import { PATH_PAGE } from '../../../routes/paths';
-//
-import { varFadeInUp, MotionInView, varZoomIn } from '../../animate';
+import { styled, useTheme } from '@material-ui/core/styles';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import RemoveOutlinedIcon from '@material-ui/icons/RemoveOutlined';
+
+//
+import { MotionInView, varFadeInUp, varZoomIn } from '../../animate';
 
 // ----------------------------------------------------------------------
 
@@ -28,48 +27,6 @@ const ContentStyle = styled('div')(({ theme }) => ({
   }
 }));
 
-const ScreenStyle = styled(MotionInView)(({ theme }) => ({
-  paddingRight: 2,
-  paddingBottom: 1,
-  maxWidth: 160,
-  borderRadius: 8,
-  backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 300 : 800],
-  [theme.breakpoints.up('sm')]: {
-    maxWidth: 320,
-    paddingRight: 4,
-    borderRadius: 12
-  },
-  '& img': {
-    borderRadius: 8,
-    [theme.breakpoints.up('sm')]: {
-      borderRadius: 12
-    }
-  }
-}));
-
-const COMMON = {
-  scaleX: 0.86,
-  skewY: 8,
-  skewX: 0,
-  scaleY: 1,
-  translateX: 0,
-  translateY: 0,
-  opacity: 0
-};
-
-// const variantScreenLeft = {
-//   initial: COMMON,
-//   animate: { ...COMMON, translateX: '-50%', translateY: 40, opacity: 1 }
-// };
-// const variantScreenCenter = {
-//   initial: COMMON,
-//   animate: { ...COMMON, opacity: 1 }
-// };
-// const variantScreenRight = {
-//   initial: COMMON,
-//   animate: { ...COMMON, translateX: '50%', translateY: -40, opacity: 1 }
-// };
-
 // ----------------------------------------------------------------------
 
 export default function LandingHugePackElements() {
@@ -85,11 +42,11 @@ export default function LandingHugePackElements() {
     <RootStyle>
       <Container maxWidth="lg">
         <Grid container spacing={5} justifyContent="center">
-          <Grid item xs={12} md={6} sx={{ alignItems: 'center' }}>
+          <Grid item xs={12} md={6} sx={{ textAlign: 'justify' }}>
             <ContentStyle>
 
               <MotionInView variants={varFadeInUp}>
-                <Typography variant="h3" sx={{ mb: 3, backgroundColor: '#C4CDD5', textAlign: 'center' }}>
+                <Typography variant="h3" sx={{ mb: 3, borderBottom: '4px solid lightpink' }}>
                   Custom Mobile ERP
                 </Typography>
               </MotionInView>
@@ -99,6 +56,7 @@ export default function LandingHugePackElements() {
                 <Box
                   component="img"
                   src="/static/home/crm.jpg"
+                  sx={{ p: 5 }}
                 />
               </MotionInView>
 
@@ -106,34 +64,34 @@ export default function LandingHugePackElements() {
                 <List
                   sx={{
                     mb: 5,
-                    color: isLight ? 'text.secondary' : 'common.white'
+                    // color: isLight ? 'text.secondary' : 'common.white',  
                   }}
                 >
                   <ListItem>
-                    <ListItemIcon><FiberManualRecordIcon fontSize="small" /></ListItemIcon>
+                    <ListItemIcon><RemoveOutlinedIcon fontSize="small" /></ListItemIcon>
                     Cloud-based, scalable, customizable, and integrated Mobile ERP software.
                   </ListItem>
                   <ListItem>
-                    <ListItemIcon><FiberManualRecordIcon fontSize="small" /></ListItemIcon>
+                    <ListItemIcon><RemoveOutlinedIcon fontSize="small" /></ListItemIcon>
                     Enable a 360-degree business view and a single point of real-time data reference.
                   </ListItem>
                   <ListItem>
-                    <ListItemIcon><FiberManualRecordIcon fontSize="small" /></ListItemIcon>
+                    <ListItemIcon><RemoveOutlinedIcon fontSize="small" /></ListItemIcon>
                     Automate, manage, and integrate various business components.
                   </ListItem>
                   <ListItem>
-                    <ListItemIcon><FiberManualRecordIcon fontSize="small" /></ListItemIcon>
-                    Advanced ERP software is accessible on mobile/desktops/laptops/tablets/smart screens/wireless display devices, providing data visibility and availability anywhere, anytime.
+                    <ListItemIcon><RemoveOutlinedIcon fontSize="small" /></ListItemIcon>
+                    <ListItemText> Advanced ERP software is accessible on mobile/ desktops/ laptops/ tablets/ smart screens/ wireless display devices, providing data visibility and availability anywhere, anytime.</ListItemText>
                   </ListItem>
                 </List>
               </MotionInView>
             </ContentStyle>
           </Grid>
 
-          <Grid item xs={12} md={6} dir="ltr">
+          <Grid item xs={12} md={6} dir="ltr" sx={{ textAlign: 'justify' }}>
 
             <MotionInView variants={varFadeInUp}>
-              <Typography variant="h3" sx={{ mb: 3, backgroundColor: '#C4CDD5', textAlign: 'center' }}>
+              <Typography variant="h3" sx={{ mb: 3, borderBottom: '4px solid lightpink' }}>
                 Enterprise CRM
               </Typography>
             </MotionInView>
@@ -152,6 +110,7 @@ export default function LandingHugePackElements() {
               <Box
                 component="img"
                 src="/static/home/erp2.jpg"
+                sx={{ p: 5 }}
               />
             </MotionInView>
 
@@ -159,23 +118,23 @@ export default function LandingHugePackElements() {
               <List
                 sx={{
                   mb: 5,
-                  color: isLight ? 'text.secondary' : 'common.white'
+                  // color: isLight ? 'text.secondary' : 'common.white',
                 }}
               >
                 <ListItem>
-                  <ListItemIcon><FiberManualRecordIcon fontSize="small" /></ListItemIcon>
+                  <ListItemIcon><RemoveOutlinedIcon fontSize="small" /></ListItemIcon>
                   Customer Relationship Management to Enhance Sales, Marketing, Service, and Satisfaction all at Once.
                 </ListItem>
                 <ListItem>
-                  <ListItemIcon><FiberManualRecordIcon fontSize="small" /></ListItemIcon>
+                  <ListItemIcon><RemoveOutlinedIcon fontSize="small" /></ListItemIcon>
                   Reinvent your business model with a multi-faceted industry-specific approach.
                 </ListItem>
                 <ListItem>
-                  <ListItemIcon><FiberManualRecordIcon fontSize="small" /></ListItemIcon>
+                  <ListItemIcon><RemoveOutlinedIcon fontSize="small" /></ListItemIcon>
                   Get a mobility solution that can cater to all of your business needs in the field sales teams, area and regional managers.
                 </ListItem>
                 <ListItem>
-                  <ListItemIcon><FiberManualRecordIcon fontSize="small" /></ListItemIcon>
+                  <ListItemIcon><RemoveOutlinedIcon fontSize="small" /></ListItemIcon>
                   Custom CRM solutions to solve the shortcomings across all industries.
                 </ListItem>
               </List>
@@ -183,6 +142,23 @@ export default function LandingHugePackElements() {
           </Grid>
         </Grid>
       </Container>
+      <Box sx={{ backgroundColor: 'black', p: 5, mt: 10 }}>
+        <Container>
+        <Typography
+          variant='h5'
+          sx={{
+            // mt: 15,
+            color: 'common.white',
+            fontWeight: 'fontWeightLarge',
+            fontFamily: 'Roboto',
+            fontStyle: 'italic',
+            textAlign: 'center'
+          }}
+        >
+          Come, Join us to improve your company’s processes, enhance performance, and ultimately make the company more profitable. Let's work together to scale your Business.
+          </Typography>
+        </Container>
+      </Box>
     </RootStyle>
   );
 }

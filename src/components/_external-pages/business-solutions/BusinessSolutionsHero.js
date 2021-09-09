@@ -1,19 +1,19 @@
-import { motion } from 'framer-motion';
+import { Container, Typography } from '@material-ui/core';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Container, Typography } from '@material-ui/core';
+import { motion } from 'framer-motion';
 //
-import { varWrapEnter, varFadeInRight, TextAnimate } from '../../animate';
+import { TextAnimate, varFadeInRight, varWrapEnter } from '../../animate';
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: 'url(/static/overlay.svg), url(/static/about/hero.jpg)',
+  backgroundImage: 'url(/static/overlay.svg), url(/static/home/business-solution.jpg)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
-    height: 360,
+    height: 480,
     padding: 0
   }
 }));
@@ -36,6 +36,23 @@ export default function AboutHero() {
         <ContentStyle>
           <TextAnimate text="Business" sx={{ color: 'primary.main', mr: 3 }} variants={varFadeInRight} />
           <TextAnimate text="Solutions" sx={{ color: 'primary.main' }} variants={varFadeInRight} />
+
+          <motion.div variants={varFadeInRight}>
+            <Typography
+              variant="h5"
+              sx={{
+                mt: 5,
+                color: 'common.white',
+                fontWeight: 'fontWeightLarge',
+                fontFamily: 'Roboto',
+                fontStyle: 'italic'
+              }}
+            >
+              Modern Business Technologies that matter
+              <br />
+              Uplifting Client Experience with Problem-solving Attitude
+            </Typography>
+          </motion.div>
         </ContentStyle>
       </Container>
     </RootStyle>
