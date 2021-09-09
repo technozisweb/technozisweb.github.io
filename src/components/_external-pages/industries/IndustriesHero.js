@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { styled } from '@material-ui/core/styles';
 import { Box, Container, Typography } from '@material-ui/core';
 //
-import { varWrapEnter, varFadeInRight, TextAnimate } from '../../animate';
+import { varWrapEnter, varFadeInRight, TextAnimate, MotionInView } from '../../animate';
 import TECHNOLOGY from 'src/utils/technologies';
 
 // ----------------------------------------------------------------------
@@ -12,7 +12,7 @@ import TECHNOLOGY from 'src/utils/technologies';
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: 'url(/static/overlay.svg), url(/static/about/hero.jpg)',
+  backgroundImage: ' url(/static/industry/innovatingindustries.jpg)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
     height: 480,
@@ -38,6 +38,20 @@ export default function AboutHero() {
         <ContentStyle>
           <TextAnimate text="Industries" sx={{ color: 'primary.main' }} variants={varFadeInRight} />
           <br />
+          <motion.div variant={varFadeInRight}>
+            <Typography
+              variant="h5"
+              sx={{
+                mt: 5,
+                color: 'common.white',
+                fontWeight: 'fontWeightLarge',
+                fontFamily: 'Roboto',
+                fontStyle: 'italic'
+              }}
+            >
+              We have Solutions for All the Industries. Technology that Serves the People.
+            </Typography>
+          </motion.div>
         </ContentStyle>
       </Container>
     </RootStyle>

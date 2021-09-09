@@ -102,7 +102,7 @@ const IndustryData = [
 ]
 
 const RootStyle = styled('div')(({ theme }) => ({
-  paddingTop: theme.spacing(5),
+  paddingTop: theme.spacing(10),
   // border: '2px solid',
   [theme.breakpoints.up('md')]: {
     paddingBottom: theme.spacing(15)
