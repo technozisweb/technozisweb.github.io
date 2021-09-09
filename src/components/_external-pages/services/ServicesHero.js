@@ -44,7 +44,7 @@ export default function AboutHero() {
     <RootStyle initial="initial" animate="animate" variants={varWrapEnter}>
       <Container maxWidth="lg" sx={{ position: 'relative', height: '100%' }}>
         <ContentStyle>
-          <TextAnimate text="SERVICES" sx={{ color: 'primary.main' }} variants={varFadeInRight} />
+          <TextAnimate text="Services" sx={{ color: 'primary.main' }} variants={varFadeInRight} />
           <br />
           {SERVICES.map((tech) => (
             <Box sx={{ display: 'inline-flex', color: 'common.white' }}>
@@ -56,7 +56,9 @@ export default function AboutHero() {
                       sx={{
                         mt: 5,
                         color: 'common.white',
-                        fontWeight: 'fontWeightLarge'
+                        fontWeight: 'fontWeightLarge',
+                        fontFamily: 'Roboto',
+                        fontStyle: "italic",
                       }}
                     >
                       {tech.title}
