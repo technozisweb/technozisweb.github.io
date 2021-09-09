@@ -100,8 +100,8 @@ const menuConfig = [
         items: [
           { title: 'IOS', icon: <img src="/static/technologies/mobile/ios.png" />, path: '/technologies/mobile' },
           { title: 'Android', icon: <img src="/static/technologies/mobile/android.png" />, path: '/technologies/mobile' },
-          { title: 'React Native', icon: <img src="/static/technologies/mobile/anhularjs.png" />, path: '/technologies/mobile' },
-          { title: 'Hybrid', icon: <img src="/static/technologies/mobile/anhularjs.png" />, path: '/technologies/mobile' },
+          { title: 'React Native', icon: <img src="/static/technologies/frontend/reactjs.png" />, path: '/technologies/mobile' },
+          { title: 'Hybrid', icon: <img src="/static/technologies/mobile/hybrid.png" />, path: '/technologies/mobile' },
           { title: 'Flutter', icon: <img src="/static/technologies/mobile/flutter.png" />, path: '/technologies/mobile' },
           { title: 'Swift', icon: <img src="/static/technologies/mobile/swift.png" />, path: '/technologies/mobile' },
         ]
@@ -118,7 +118,7 @@ const menuConfig = [
         items: [
           { title: '.NET', icon: <img src="/static/technologies/backend/netdevelopment.png" />, path: '/technologies/back' },
           { title: 'Node JS', icon: <img src="/static/technologies/backend/node-js.png" />, path: '/technologies/back' },
-          { title: 'C#', icon: <img src="/static/technologies/backend/C#.png" />, path: '/technologies/back' },
+          { title: 'C#', icon: <img src="/static/technologies/backend/csharp.png" />, path: '/technologies/back' },
           { title: 'PHP', icon: <img src="/static/technologies/backend/php.png" />, path: '/technologies/back' },
           { title: 'C++', icon: <img src="/static/technologies/backend/C++.png" />, path: '/technologies/back' },
           { title: '.NETcore', icon: <img src="/static/technologies/backend/netcore.png" />, path: '/technologies/back' },
@@ -127,7 +127,7 @@ const menuConfig = [
       {
         subheader: 'Frameworks',
         items: [
-          { title: 'Laravel', icon: <img src="/static/technologies/frameworks/lavarel.png" />, path: '/technologies/frameworks' },
+          { title: 'Laravel', icon: <img src="/static/technologies/frameworks/laravel.png" />, path: '/technologies/frameworks' },
           { title: 'MEAN', icon: <img src="/static/technologies/frameworks/mean stack.png" />, path: '/technologies/frameworks' },
           { title: 'Codeigniter', icon: <img src="/static/technologies/frameworks/codeigniter.png" />, path: '/technologies/frameworks' },
           { title: 'RubyOnRails', icon: <img src="/static/technologies/frameworks/Ruby_On_Rails_Logo.png" />, path: '/technologies/frameworks' },
@@ -137,7 +137,7 @@ const menuConfig = [
       {
         subheader: 'E-commerce',
         items: [
-          { title: 'Magneto', icon: <img src="/static/technologies/ecommerce/monento-logo.png" />, path: '/technologies/ecommerce' },
+          { title: 'Magento', icon: <img src="/static/technologies/ecommerce/magento-logo.png" />, path: '/technologies/ecommerce' },
           { title: 'Shopify', icon: <img src="/static/technologies/ecommerce/Shopify-Logo.png" />, path: '/technologies/ecommerce' },
           { title: 'WooCommerce', icon: <img src="/static/technologies/ecommerce/WooCommerce.png" />, path: '/technologies/ecommerce' },
           { title: 'NopCommerce', icon: <img src="/static/technologies/ecommerce/nopcommerce.png" />, path: '/technologies/ecommerce' }

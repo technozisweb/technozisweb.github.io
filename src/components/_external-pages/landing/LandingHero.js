@@ -1,11 +1,11 @@
 
-import { motion } from 'framer-motion';
+import { Box } from '@material-ui/core';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Button, Box, Link, Container, Typography, Stack } from '@material-ui/core';
+import { motion } from 'framer-motion';
 // routes
 //
-import { varFadeIn, varFadeInUp, varWrapEnter, varFadeInRight } from '../../animate';
+import { varWrapEnter } from '../../animate';
 import CarouselAnimation from '../../carousel/CarouselAnimation';
 
 // ----------------------------------------------------------------------

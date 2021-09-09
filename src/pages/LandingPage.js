@@ -1,20 +1,12 @@
 // material
 import { styled } from '@material-ui/core/styles';
+import MainFooter from 'src/layouts/main/MainFooter';
 // components
 import Page from '../components/Page';
-import {
-  LandingHero,
-  LandingMinimal,
-  LandingDarkMode,
-  LandingThemeColor,
-  LandingPricingPlans,
-  LandingAdvertisement,
-  LandingCleanInterfaces,
-  LandingHugePackElements,
-  LandingHighlights
-} from '../components/_external-pages/landing';
 import { AboutWhat } from '../components/_external-pages/about';
-import MainFooter from 'src/layouts/main/MainFooter';
+import {
+  LandingCleanInterfaces, LandingHero, LandingHighlights, LandingMinimal
+} from '../components/_external-pages/landing';
 // import LandingServices from 'src/components/_external-pages/landing/LandingServices';
 
 // ----------------------------------------------------------------------

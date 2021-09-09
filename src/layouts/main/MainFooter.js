@@ -44,7 +44,8 @@ const LINKS = [
 
 const RootStyle = styled('div')(({ theme }) => ({
   position: 'relative',
-  backgroundColor: theme.palette.background.default
+  backgroundColor: theme.palette.background.default,
+  padding: 10
 }));
 
 // ----------------------------------------------------------------------
@@ -74,16 +75,17 @@ export default function MainFooter() {
           justifyContent={{ xs: 'center', md: 'space-between' }}
           sx={{ textAlign: { xs: 'center', md: 'left' } }}
         >
-          <Grid item xs={12} sx={{ mb: 1 }}>
-            <ScrollLink to="move_top" spy smooth>
-              <Logo sx={{ mx: { xs: 'auto', md: 'inherit' } }} />
-              {/* <Label></Label> */}
-            </ScrollLink>
-            <Label color="info">
-              Technozis
-            </Label>
-          </Grid>
+
           <Grid item xs={8} md={3}>
+            <Grid item xs={12} sx={{ mb: 1 }}>
+              <ScrollLink to="move_top" spy smooth>
+                <Logo sx={{ mx: { xs: 'auto', md: 'inherit' } }} />
+                {/* <Label></Label> */}
+              </ScrollLink>
+              <Label color="info">
+                Technozis
+              </Label>
+            </Grid>
             {/* <Typography variant="body2" sx={{ pr: { md: 5 } }}>
               The starting point for your next project with Minimal UI Kit, built on the newest version of Material-UI
               ©, ready to be customized to your style.
@@ -121,7 +123,7 @@ export default function MainFooter() {
             </Stack>
           </Grid>
 
-          <Grid item xs={12} md={7}>
+          <Grid item xs={12} md={7} sx={{ pb: 15 }}>
             <Stack spacing={5} direction={{ xs: 'column', md: 'row' }} justifyContent="space-between">
               {LINKS.map((list) => {
                 const { headline, children } = list;
@@ -149,7 +151,7 @@ export default function MainFooter() {
           </Grid>
         </Grid>
 
-        <Typography
+        {/* <Typography
           component="p"
           variant="body2"
           sx={{
@@ -160,7 +162,7 @@ export default function MainFooter() {
           }}
         >
           © 2021. All rights reserved
-        </Typography>
+        </Typography> */}
       </Container>
     </RootStyle>
   );

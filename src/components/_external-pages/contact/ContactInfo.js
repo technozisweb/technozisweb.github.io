@@ -1,22 +1,22 @@
-import PropTypes from 'prop-types';
-import { useRef } from 'react';
-import Slider from 'react-slick';
-import { Icon } from '@iconify/react';
-import twitterFill from '@iconify/icons-eva/twitter-fill';
-import linkedinFill from '@iconify/icons-eva/linkedin-fill';
-import facebookFill from '@iconify/icons-eva/facebook-fill';
-import roundArrowRightAlt from '@iconify/icons-ic/round-arrow-right-alt';
-import instagramFilled from '@iconify/icons-ant-design/instagram-filled';
+import { Box, Card, Container, Grid, Typography } from '@material-ui/core';
 // material
 import { useTheme } from '@material-ui/core/styles';
-import { Box, Card, Button, Container, Typography, IconButton, Grid } from '@material-ui/core';
 import DraftsTwoToneIcon from '@material-ui/icons/DraftsTwoTone';
-import PhoneIphoneTwoToneIcon from '@material-ui/icons/PhoneIphoneTwoTone';
 import ExploreTwoToneIcon from '@material-ui/icons/ExploreTwoTone';
-// utils
-import mockData from '../../../utils/mock-data';
+import PhoneIphoneTwoToneIcon from '@material-ui/icons/PhoneIphoneTwoTone';
+import { styled, alpha } from '@material-ui/core/styles';
 //
-import { varFadeIn, varFadeInUp, MotionInView, varFadeInDown } from '../../animate';
+import { MotionInView, varFadeIn, varFadeInDown, varFadeInUp } from '../../animate';
+
+const CardStyle = styled(Card)(({ theme }) => ({
+  padding: theme.spacing(1),
+  height: 140,
+  fontFamily: 'Roboto', 
+  margin: 1.5,
+  '&:hover': {
+    boxShadow: `0px 10px 10px 10px ${alpha(theme.palette.grey[300], 1)}`,
+  },
+}));
 
 // ----------------------------------------------------------------------
 
@@ -56,7 +56,7 @@ export default function ContactUs() {
       <Grid container spacing={5}>
         <Grid item xs={12} md={4}>
           <MotionInView variants={varFadeIn}>
-            <Card sx={{ p: 1, mx: 1.5 }}>
+            <CardStyle sx={{ p: 1, mx: 1.5 }}>
               <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
                 <DraftsTwoToneIcon color="error" fontSize="large" />
               </Typography>
@@ -64,12 +64,12 @@ export default function ContactUs() {
                 contact@technozis.com
               </Typography>
               <Box component="img" sx={{ width: '100%', borderRadius: 1.5 }} />
-            </Card>
+            </CardStyle>
           </MotionInView>
         </Grid>
         <Grid item xs={12} md={4}>
           <MotionInView variants={varFadeIn}>
-            <Card sx={{ p: 1, mx: 1.5 }}>
+            <CardStyle sx={{ p: 1, mx: 1.5 }}>
               <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
                 <PhoneIphoneTwoToneIcon color="success" fontSize="large" />
               </Typography>
@@ -77,12 +77,12 @@ export default function ContactUs() {
                 9996600068
               </Typography>
               {/* <Box component="img" sx={{ width: '100%', borderRadius: 1.5 }} /> */}
-            </Card>
+            </CardStyle>
           </MotionInView>
         </Grid>
         <Grid item xs={12} md={4}>
           <MotionInView variants={varFadeIn}>
-            <Card sx={{ p: 1, mx: 1.5 }}>
+            <CardStyle sx={{ p: 1, mx: 1.5 }}>
               <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
                 <ExploreTwoToneIcon color="info" fontSize="large" />
               </Typography>
@@ -90,7 +90,7 @@ export default function ContactUs() {
                 210, Tower 2, DLF Corporate Greens, Sector 74A, Gurugram, 122004  
               </Typography>
               <Box component="img" sx={{ width: '100%', borderRadius: 1.5 }} />
-            </Card>
+            </CardStyle>
           </MotionInView>
         </Grid>
       </Grid>
