@@ -1,12 +1,8 @@
-import PropTypes from 'prop-types';
-import { Icon } from '@iconify/react';
-import roundArrowRightAlt from '@iconify/icons-ic/round-arrow-right-alt';
+import { CardContent, Container, Grid, Typography, useMediaQuery } from '@material-ui/core';
 // material
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { Box, Grid, Link, Paper, Rating, Container, Typography, useMediaQuery, CardContent, Divider } from '@material-ui/core';
+import { styled, useTheme } from '@material-ui/core/styles';
 //
-import { varFadeInUp, varFadeInLeft, MotionInView } from '../../animate';
-import { MHidden } from '../../@material-extend';
+import { MotionInView, varFadeInLeft } from '../../animate';
 // import FontStyle from '../../../../public/fonts'
 
 // ----------------------------------------------------------------------

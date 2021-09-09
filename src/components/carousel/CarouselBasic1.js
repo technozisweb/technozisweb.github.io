@@ -1,21 +1,19 @@
-import Slider from 'react-slick';
-import PropTypes from 'prop-types';
-import { useState, useRef } from 'react';
+import { Box, Card } from '@material-ui/core';
 // material
 import { useTheme } from '@material-ui/core/styles';
-import { Box, Card } from '@material-ui/core';
+import PropTypes from 'prop-types';
+import { useRef, useState } from 'react';
+import Slider from 'react-slick';
 // utils
 import mockData from '../../utils/mock-data';
-//
-import { CarouselControlsArrowsIndex } from './controls';
 
 // ----------------------------------------------------------------------
 
-const MOCK_CAROUSELS = [...Array(5)].map((_, index) => ({
-  id: mockData.id(index),
-  title: mockData.text.title(index),
+const MOCK_CAROUSELS = [...Array(2)].map((_, index) => ({
+  // id: mockData.id(index),
+  // title: mockData.text.title(index),
   image: mockData.image.feed(index),
-  description: mockData.text.description(index)
+  // description: mockData.text.description(index)
 }));
 
 CarouselItem.propTypes = {
@@ -25,7 +23,7 @@ CarouselItem.propTypes = {
 function CarouselItem({ item }) {
   const { image, title } = item;
 
-  return <Box component="img" alt={title} src={image} sx={{ width: '100%', height: 480, objectFit: 'cover' }} />;
+  return <Box component="img" alt={title} src={image} sx={{ width: '100%', height: '100%', objectFit: 'cover' }} />;
 }
 
 export default function CarouselBasic1() {
@@ -34,6 +32,7 @@ export default function CarouselBasic1() {
   const [currentIndex, setCurrentIndex] = useState(theme.direction === 'rtl' ? MOCK_CAROUSELS.length - 1 : 0);
 
   const settings = {
+    speed: 500,
     dots: false,
     arrows: false,
     autoplay: true,
@@ -58,13 +57,6 @@ export default function CarouselBasic1() {
           <CarouselItem key={item.title} item={item} />
         ))}
       </Slider>
-
-      <CarouselControlsArrowsIndex
-        index={currentIndex}
-        total={MOCK_CAROUSELS.length}
-        onNext={handleNext}
-        onPrevious={handlePrevious}
-      />
     </Card>
   );
 }

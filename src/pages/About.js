@@ -1,13 +1,12 @@
 // material
-import { styled } from '@material-ui/core/styles';
 import { Divider } from '@material-ui/core';
+import { styled } from '@material-ui/core/styles';
 // components
 import Page from '../components/Page';
-import { AboutHero, AboutWhat, AboutTeam, AboutVision, AboutTestimonials } from '../components/_external-pages/about';
+import { AboutHero, AboutTeam, AboutTestimonials, AboutVision } from '../components/_external-pages/about';
 import {
-  LandingDarkMode,
+  LandingDarkMode
 } from '../components/_external-pages/landing';
-import LandingServices from 'src/components/_external-pages/landing/LandingServices';
 
 // ----------------------------------------------------------------------
 

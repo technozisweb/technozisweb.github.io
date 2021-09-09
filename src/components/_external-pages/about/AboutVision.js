@@ -1,14 +1,16 @@
 // material
-import { Box, Container, Typography, Grid } from '@material-ui/core';
+import { Box, Container, Grid, Typography } from '@material-ui/core';
 //
-import { varFadeInUp, varFadeIn, MotionInView } from '../../animate';
+import { MotionInView, varFadeInUp } from '../../animate';
+import { CarouselBasic1 } from 'src/components/carousel';
 
 // ----------------------------------------------------------------------
 
 export default function AboutVision() {
   return (
-    <Container maxWidth="lg" sx={{ mt: 10 }}>
-      <Box
+    <Container maxWidth="lg" sx={{ mt: 15 }}>
+      <CarouselBasic1 />
+      {/* <Box
         sx={{
           mb: 10,
           position: 'relative',
@@ -16,32 +18,10 @@ export default function AboutVision() {
           overflow: 'hidden'
         }}
       >
-        <img src="/static/about/vision.jpg" alt="about-vision" />
+        <img src="/static/about/interior1.jpg" alt="about-vision" />
+      </Box> */}
 
-        <Box
-          sx={{
-            bottom: { xs: 24, md: 80 },
-            width: '100%',
-            display: 'flex',
-            flexWrap: 'wrap',
-            alignItems: 'center',
-            position: 'absolute',
-            justifyContent: 'center'
-          }}
-        >
-          {['logo_amazon', 'logo_hbo', 'logo_ibm', 'logo_lya', 'logo_spotify', 'logo_netflix'].map((logo) => (
-            <MotionInView key={logo} variants={varFadeIn}>
-              <Box
-                component="img"
-                src={`/static/about/${logo}.svg`}
-                sx={{ m: { xs: 1.5, md: 5 }, height: { xs: 24, md: 40 } }}
-              />
-            </MotionInView>
-          ))}
-        </Box>
-      </Box>
-
-      <Grid container justifyContent="center">
+      <Grid container justifyContent="center" sx={{ mt: 15 }}>
         <Grid item xs={12} sm={8}>
           <MotionInView variants={varFadeInUp}>
             <Typography variant="h3" sx={{ textAlign: 'center' }}>
