@@ -1,33 +1,25 @@
 import { useState, useEffect } from 'react';
 // material
-import { styled, alpha } from '@material-ui/core/styles';
-import { Box, Grid, Container, Typography, List, ListItem, ListItemIcon } from '@material-ui/core';
+import { styled } from '@material-ui/core/styles';
+import { Grid, Container, Typography } from '@material-ui/core';
 //
-import { MotionInView, varFadeInUp, varFadeInDown } from '../../animate';
-import StopTwoToneIcon from '@material-ui/icons/StopTwoTone';
+import { MotionInView, varFadeInUp } from '../../animate';
 import SERVICES from 'src/utils/servicesInfo';
 
 const RootStyle = styled('div')(({ theme }) => ({
   padding: theme.spacing(5, 0),
-  // backgroundColor: 'lightyellow',
-  // backgroundImage: `url(/static/home/bgimg.jpg)`
-  // theme.palette.mode === 'light'
-  //   ? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 50%)`
-  //   : 'none'
+  textAlign: 'justify',
+  fontFamily: 'Roboto'
 }));
 
 const ContentStyle = styled('div')(({ theme }) => ({
-  textAlign: 'center',
   position: 'relative',
   borderBottom: '2px solid lightblue',
   borderRight: '2px solid lightblue',
-  // borderColor: theme.palette.grey[400],
   marginBottom: theme.spacing(20),
-  // backgroundColor: theme.palette.grey[200],
   [theme.breakpoints.up('md')]: {
     height: '100%',
     marginBottom: 0,
-    textAlign: 'left',
     display: 'inline-flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -59,6 +51,7 @@ export default function ServicesExtended() {
     });
     // window.scrollTo(100, 300);
   }, [serviceInfo, path]);
+
   return (
     <RootStyle>
       <Container maxWidth="lg" sx={{ position: 'relative', mb: 5 }}>

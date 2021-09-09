@@ -35,7 +35,7 @@ export default function ServicesDescription({ serviceData }) {
       <Container maxWidth="lg">
         {serviceData && serviceData.content
           ? (
-            <List>
+            <List sx={{ textAlign: 'justify' }}>
               {/* <ListItem>
                 <ListItemIcon sx={{ height: 60, width: 60 }}><img src={serviceData.path} /></ListItemIcon>
               </ListItem> */}

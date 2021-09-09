@@ -12,7 +12,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  textAlign: 'center',
+  textAlign: 'justify',
   padding: theme.spacing(10, 0),
   backgroundSize: 'cover',
   backgroundImage: `linear-gradient(to right, ${alpha(theme.palette.grey[900], 0.8)} , ${alpha(
@@ -20,7 +20,7 @@ const RootStyle = styled('div')(({ theme }) => ({
     0.8
   )}), url(/static/about/testimonials.jpg)`,
   [theme.breakpoints.up('md')]: {
-    textAlign: 'left',
+    textAlign: 'justify',
     padding: 0,
     height: 840,
     overflow: 'hidden'
