@@ -1,17 +1,15 @@
 import { Box, Card, Container, Grid, Typography } from '@material-ui/core';
-// material
-import { useTheme } from '@material-ui/core/styles';
+import { alpha, styled } from '@material-ui/core/styles';
 import DraftsTwoToneIcon from '@material-ui/icons/DraftsTwoTone';
 import ExploreTwoToneIcon from '@material-ui/icons/ExploreTwoTone';
 import PhoneIphoneTwoToneIcon from '@material-ui/icons/PhoneIphoneTwoTone';
-import { styled, alpha } from '@material-ui/core/styles';
 //
 import { MotionInView, varFadeIn, varFadeInDown, varFadeInUp } from '../../animate';
 
 const CardStyle = styled(Card)(({ theme }) => ({
   padding: theme.spacing(1),
   height: 140,
-  fontFamily: 'Roboto', 
+  fontFamily: 'Roboto',
   margin: 1.5,
   '&:hover': {
     boxShadow: `0px 10px 10px 10px ${alpha(theme.palette.grey[300], 1)}`,
@@ -21,7 +19,6 @@ const CardStyle = styled(Card)(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function ContactUs() {
-  const theme = useTheme();
 
   return (
     <Container maxWidth="lg" sx={{ pb: 10, textAlign: 'center' }}>
@@ -61,7 +58,12 @@ export default function ContactUs() {
                 <DraftsTwoToneIcon color="error" fontSize="large" />
               </Typography>
               <Typography variant="body1" sx={{ mt: 2, mb: 2 }}>
-                contact@technozis.com
+                <a
+                  href="mailto:contact@technozis.com"
+                  style={{ textDecoration: 'none' }}
+                >
+                  contact@technozis.com
+                </a>
               </Typography>
               <Box component="img" sx={{ width: '100%', borderRadius: 1.5 }} />
             </CardStyle>
@@ -74,7 +76,12 @@ export default function ContactUs() {
                 <PhoneIphoneTwoToneIcon color="success" fontSize="large" />
               </Typography>
               <Typography variant="body1" sx={{ mt: 2, mb: 2 }}>
-                9996600068
+                <a
+                  href="tel:9996600068"
+                  style={{ textDecoration: 'none' }}
+                >
+                  9996600068
+                </a>
               </Typography>
               {/* <Box component="img" sx={{ width: '100%', borderRadius: 1.5 }} /> */}
             </CardStyle>
@@ -87,7 +94,7 @@ export default function ContactUs() {
                 <ExploreTwoToneIcon color="info" fontSize="large" />
               </Typography>
               <Typography variant="body2" sx={{ mt: 2, mb: 2 }}>
-                210, Tower 2, DLF Corporate Greens, Sector 74A, Gurugram, 122004  
+                <a href="geo://?q=https://www.google.com/maps/place/DLF+Corporate+Greens/@28.4072995,76.9952951,17z/data=!3m1!4b1!4m5!3m4!1s0x390d3d5ab5c439e1:0xdee55a2c01e31695!8m2!3d28.4072948!4d76.9974838" style={{ textDecoration: 'none' }}>210, Tower 2, DLF Corporate Greens, Sector 74A, Gurugram, 122004</a>
               </Typography>
               <Box component="img" sx={{ width: '100%', borderRadius: 1.5 }} />
             </CardStyle>

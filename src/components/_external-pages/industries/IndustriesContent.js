@@ -53,15 +53,10 @@ const IndustryData = [
     content: 'We provide cutting-edge software solutions for publishing houses, independent software vendors, digital agencies, media companies, and game producers. We cover software development and maintenance helping our clients focus entirely on excellent content, new thrilling ideas, and better user engagement.'
   },
   {
-    title: 'FMCG',
-    icon: '/static/industry/whiteicons/bank.png',
-    description: 'Description about industry.'
+    title: 'Banking',
+    icon: '/static/industry/whiteicons/1bank.png',
+    description: 'Get an Upper hand in the Rapidly Evolving FInance & Banking Sector.'
   },
-  // {
-  //   title: 'Engineering',
-  //   icon: '/static/industry/whiteicons/11engineering.png',
-  //   description: 'Description about industry.'
-  // },
   {
     title: 'Pharmaceutical',
     icon: '/static/industry/whiteicons/13-pharma.png',
@@ -82,20 +77,20 @@ const IndustryData = [
 
   },
   {
-    title: 'Retail',
-    icon: '/static/industry/whiteicons/bank.png',
+    title: 'Retail and FMCG',
+    icon: '/static/industry/whiteicons/5retail-and-fmcg.png',
     description: 'Deliver round-the-clock shopping experience and take your retail business to newer heights.',
     content: 'We provides end-to-end retail software development services for leading companies. Our software developers have delivered multiple solutions for Lebara, a global telecom operator, including a mobile app that has helped Lebara to significantly boost conversions and ensured seamless omnichannel user experiences. Also, we provided Lebara with BI development and reporting to improve efficiency of their marketing campaigns.'
   },
   {
     title: 'Healthcare',
-    icon: '/static/industry/whiteicons/6healthcare_pharma.png',
+    icon: '/static/industry/whiteicons/6healthcare.png',
     description: 'Get your jab of technology today for an effective healthcare management solutions.',
     content: 'Healthcare industry is undergoing a transformational change with heavy penetration of emerging technology in both providers as well as patient segments. The time is now to transform your current systems to cloud, mobility, and IoT driven experiences for consumers. Recuperate the health systems with aptly designed solutions by Technozis. Some of the key services we have been offering to our healthcare clients include IT Strategy Consulting, Tailored Healthcare Applications, Data Integration & Management, Patient Engagement.'
   },
   {
     title: 'Telecom',
-    icon: '/static/industry/whiteicons/bank.png',
+    icon: '/static/industry/whiteicons/8telecom.png',
     description: 'Become the most reliable telecommunication network with right technoloy.',
     content: 'Modern telcos require a whole array of solutions that meet the ever-growing demands of the tech-savvy customers. The list includes mobile applications, web platforms, mobile e-commerce solutions, streaming services, and much more. We have been designing omnichannel systems and unique digital solutions for telecom companies. Our dedicated development teams ensure entire system and their separate services work flawlessly to deliver smooth digital experiences to telecom users.'
   },

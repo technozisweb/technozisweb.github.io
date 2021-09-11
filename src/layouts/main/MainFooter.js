@@ -64,7 +64,6 @@ export default function MainFooter() {
   };
 
   const open = Boolean(anchorEl);
-  const id = open ? 'simple-popover' : undefined;
 
   return (
     <RootStyle>

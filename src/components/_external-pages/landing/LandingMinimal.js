@@ -1,16 +1,14 @@
+import { Box, Button, Card, CardMedia, Container, Link, Typography } from '@material-ui/core';
+// material
+import { alpha, styled, useTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import { useRef } from 'react';
 import Slider from 'react-slick';
-import { Icon } from '@iconify/react';
-import roundArrowRightAlt from '@iconify/icons-ic/round-arrow-right-alt';
-// material
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { Box, Card, Button, Container, Typography, Link, CardMedia, CardContent } from '@material-ui/core';
+import ServiceData from 'src/utils/servicesInfo';
 // utils
 //
-import { varFadeIn, varFadeInUp, MotionInView, varFadeInDown, varFadeInLeft } from '../../animate';
+import { MotionInView, varFadeIn, varFadeInLeft, varFadeInUp } from '../../animate';
 import { CarouselControlsArrowsBasic2 } from '../../carousel';
-import ServiceData from 'src/utils/servicesInfo';
 
 // ----------------------------------------------------------------------
 // ----------------------------------------------------------------------
@@ -117,30 +115,32 @@ export default function AboutTeam() {
   };
 
   return (
-    <Container maxWidth="lg" sx={{ pb: 10, textAlign: 'center' }}>
-      <MotionInView variants={varFadeInDown}>
+    <Container maxWidth="lg" sx={{ pb: {xs: 0, md: 10}, textAlign: 'center' }}>
+      {/* <MotionInView variants={varFadeInDown}>
         <Typography component="p" variant="overline" sx={{ mb: 2, color: 'text.secondary' }}>
           The Header
         </Typography>
-      </MotionInView>
+      </MotionInView> */}
 
-      <MotionInView variants={varFadeInUp}>
+      {/* <MotionInView variants={varFadeInUp}>
         <Typography variant="h2" sx={{ mb: 3 }}>
           Some header
         </Typography>
-      </MotionInView>
+      </MotionInView> */}
 
       <MotionInView variants={varFadeInUp}>
         <Typography
           sx={{
+            mt: 10,
             mb: 10,
             mx: 'auto',
-            maxWidth: 630,
+            maxWidth: 930,
+            // textAlign: 'justify',
             color: (theme) => (theme.palette.mode === 'light' ? 'text.secondary' : 'common.white')
           }}
+          variant="h5"
         >
-          Technozis will provide you support if you have any problems, our support team will reply within a day and we
-          also have detailed documentation.
+          One-stop solution provider for comprehensive enterprise business solutions, fundamental service offerings, and enterprise mobile analytics.
         </Typography>
       </MotionInView>
 

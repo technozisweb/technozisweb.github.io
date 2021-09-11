@@ -1,4 +1,5 @@
 // material
+import { Divider } from '@material-ui/core';
 import { styled } from '@material-ui/core/styles';
 import { ServiceProcess, ServicesExtended, ServicesHero, ServicesMenu, ServicesVision } from 'src/components/_external-pages/services';
 // components
@@ -17,12 +18,13 @@ const RootStyle = styled(Page)(({ theme }) => ({
 
 export default function About() {
   return (
-    <RootStyle title="Software development">
+    <RootStyle title="Services | Technozis">
       <ServicesHero />
       <ServicesMenu />
       {/* <ServicesDescription /> */}
-      <ServicesExtended />
       <ServicesVision />
+      <ServicesExtended />
+      <Divider />
       <ServiceProcess />
       {/* <AboutWhat />
       <AboutVision />

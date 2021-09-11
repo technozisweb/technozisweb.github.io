@@ -1,19 +1,18 @@
-import { NavLink as RouterLink, useLocation } from 'react-router-dom';
+import { AppBar, Box, Button, Container, Link, Toolbar } from '@material-ui/core';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Button, AppBar, Toolbar, Container, Link } from '@material-ui/core';
-// hooks
-import useOffSetTop from '../../hooks/useOffSetTop';
+import { NavLink as RouterLink, useLocation } from 'react-router-dom';
+import { MHidden } from '../../components/@material-extend';
+import Label from '../../components/Label';
 // components
 import Logo from '../../components/Logo';
-import Label from '../../components/Label';
-import { MHidden } from '../../components/@material-extend';
 import {
-  MegaMenuDesktopVertical,
   MegaMenuDesktopHorizon,
   MegaMenuMobile,
   MenuConfig
 } from '../../components/mega-menu';
+// hooks
+import useOffSetTop from '../../hooks/useOffSetTop';
 //
 // import MenuDesktop from './MenuDesktop';
 // import MenuMobile from './MenuMobile';

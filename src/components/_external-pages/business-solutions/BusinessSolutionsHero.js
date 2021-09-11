@@ -36,20 +36,31 @@ export default function AboutHero() {
         <ContentStyle>
           <TextAnimate text="Business" sx={{ color: 'primary.main', mr: 3 }} variants={varFadeInRight} />
           <TextAnimate text="Solutions" sx={{ color: 'primary.main' }} variants={varFadeInRight} />
-
           <motion.div variants={varFadeInRight}>
             <Typography
-              variant="h5"
+              variant="h4"
               sx={{
                 mt: 5,
                 color: 'common.white',
                 fontWeight: 'fontWeightLarge',
+                // fontFamily: 'Roboto',
+                // fontStyle: 'italic'
+              }}
+            >
+              Modern Business Technologies that matter
+            </Typography>
+          </motion.div>
+          <motion.div variants={varFadeInRight}>
+            <Typography
+              variant="h6"
+              sx={{
+                // mt: 5,
+                color: 'common.white',
+                // fontWeight: 'fontWeightLarge',
                 fontFamily: 'Roboto',
                 fontStyle: 'italic'
               }}
             >
-              Modern Business Technologies that matter
-              <br />
               Uplifting Client Experience with Problem-solving Attitude
             </Typography>
           </motion.div>

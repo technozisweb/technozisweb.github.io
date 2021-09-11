@@ -65,6 +65,29 @@ const services = [
     ]
   },
   {
+    title: 'Digital Transformation',
+    subheader: 'Blend innovation, security, and speed to help you transition your business seamlessly tthrough our digital solutions.',
+    path: '/services/digital-transformation',
+    icon: '/static/services/13dt.png',
+    content: 'Upscale to digital innovation for a constantly evolving business model and value-driven architecture',
+    points: [
+      {
+        header: 'Futuristic Approach ',
+        description: 'We don’t just offer technical solutions to our esteemed clientele, we provide them with a revolutionary approach as a wholesome. '
+      },
+      {
+        header: 'Well-defined Processes',
+        description: 'Our definite project execution methodologies and engagement models keep us a step further than the rest."'
+      },
+    ],
+    info: [
+      'Technozis Digital Transformation solutions are based on analyzing and understanding the need for bringing about change in terms of organizational mindset and culture.',
+      ' We believe in starting with small yet strategic steps towards a bigger vision and help choose technology solutions meant for fulfilling long-term vision.',
+      ' Through our domain expertise and valuable experience, we have helped businesses ranging from SME’s to large-scale enterprises change their digital strategy by understanding their industry and tailor-made solutions.',
+      ' We have worked primarily in the Automotive, Aviation, BFSI, Energy, Entertainment, Government, Healthcare, IT, Retail, Telecom and other industries.'
+    ]
+  },
+  {
     title: 'SAP',
     subheader: 'We will help you unlock the value of your SAP application portfolio with the power of intelligence, innovation and industry.',
     path: '/services/sap',
@@ -92,49 +115,25 @@ const services = [
     ]
   },
   {
-    title: 'Product Engineering',
-    subheader: 'Scale, modernize, or launch your product with our end-to-end product product engineering services that can meet the ever-changing business needs.',
-    path: '/services/product-engineering',
-    icon: '/static/services/11pe.png',
-    content: 'Every project is a product and requires regular improvement to meet the ever-changing business needs. our product engineers to build a product from scratch, modernize legacy systems, re-engineer products with data-driven systems or migrate to the cloud.',
+    title: 'Software Testing',
+    subheader: 'Enhance quality at each junction of your project with our one stop shop for all our testing needs.',
+    path: '/services/software-testing',
+    icon: '/static/services/12sta.png',
+    content: "Our testing resources assure you of unmatched software testing services that offers the best of outputs in terms of a robust and high-quality solution.",
     points: [
       {
-        header: 'Agile Mindset',
-        description: 'Tehnozis  follows agile and devops approach to building software, ensuring continuous integration and continuous testing and deployments.'
+        header: 'Persistent Test Processes',
+        description: 'With effective testing processes in place, there is detailed process & performance management, right from beginning of the project.'
       },
       {
-        header: 'Round-The-Clock Support',
-        description: 'We provide consistent support and maintenance by experts to make sure your systems are running efficiently and faultlessly.'
-      }
-    ],
-    info: [
-      'Growth is continuous and so should be your approach towards accelerating your technology stack.',
-      ' Our diverse and dynamic solutions, helps businesses right from suggesting ideas, building product roadmap, developing, and continuously delivering business-centric, simple, and seamless software products. ',
-      'Our software engineering team help decide the most suitable technology stack for your ideas, bringing ideas to life through pragmatic, premier, and powerful solutions.',
-      ' Our team of architects, consultants, designers, and engineers help you modernize your existing product to meet the ever-changing business requirement in the era of cloud, data, and collaboration.'
-    ]
-  },
-  {
-    title: 'Management and Support',
-    subheader: 'We are quality & commitment focused–Get support across the project delivery process and post delivery of the project.',
-    path: '/services/management-and-support',
-    icon: '/static/services/2ms.png',
-    content: 'Our accomplished experts understand the prevailing functionalities and challenges met by the client and set up consistent support methods along with communication protocols to be followed.',
-    points: [
-      {
-        header: 'Technical Proficiency',
-        description: 'Technozis\' technical and support experts are well versed with all topmost technologies in relevant domains.'
-      },
-      {
-        header: 'Quality of Service',
-        description: 'It is our continuous efforts to have quality as a part of all processes initiated at Technozis confirming we meet the needs of our customers."'
+        header: 'Security is a Priority',
+        description: 'Be it any type of software or app, security is our top priority at every level with strict adherence to security and privacy guidelines."'
       },
     ],
     info: [
-      'We are a customer-centric organziation with an aim of making our clients successful. ',
-      'Our proficient experts acknowledge the challenges faced by the client and set up consistent support methods along with communication protocols to be followed. ',
-      'Some of our major support activities includes, On-Going Issues Management, Initiatives Management, Release Management, Change Management, Support Management, Knowledge Transfer & Transition, 3 Level Escalation Protocol, Status Reviews & Feedback, and Knowledge Management.',
-      'We have proven experience of taking up enterprise systems, by understanding the prevailing functionalities and challenges met by the client and setting up consistent support methods along with communication protocols,'
+      'Experience the best customer satisfaction with consistent analysis and sophisticated and impartial assessment with our exhaustive Software Testing services.',
+      ' We have a dedicated team of  committed and competent testing team, dedicated to persistently refining quality.',
+      ' With the implementation of our extensive ticket management tool, which tracks the history of the tickets generated and has proved to be of great utility for issue analysis, rework effort/analysis, and SLA compliance reporting, we have been able to streamline the quality practices at each interval of the project.'
     ]
   },
   {
@@ -159,6 +158,29 @@ const services = [
     ]
   },
   {
+    title: 'Product Engineering',
+    subheader: 'Scale, modernize, or launch your product with our end-to-end product product engineering services that can meet the ever-changing business needs.',
+    path: '/services/product-engineering',
+    icon: '/static/services/11pe.png',
+    content: 'Every project is a product and requires regular improvement to meet the ever-changing business needs. our product engineers to build a product from scratch, modernize legacy systems, re-engineer products with data-driven systems or migrate to the cloud.',
+    points: [
+      {
+        header: 'Agile Mindset',
+        description: 'Tehnozis  follows agile and devops approach to building software, ensuring continuous integration and continuous testing and deployments.'
+      },
+      {
+        header: 'Round-The-Clock Support',
+        description: 'We provide consistent support and maintenance by experts to make sure your systems are running efficiently and faultlessly.'
+      }
+    ],
+    info: [
+      'Growth is continuous and so should be your approach towards accelerating your technology stack.',
+      ' Our diverse and dynamic solutions, helps businesses right from suggesting ideas, building product roadmap, developing, and continuously delivering business-centric, simple, and seamless software products. ',
+      'Our software engineering team help decide the most suitable technology stack for your ideas, bringing ideas to life through pragmatic, premier, and powerful solutions.',
+      ' Our team of architects, consultants, designers, and engineers help you modernize your existing product to meet the ever-changing business requirement in the era of cloud, data, and collaboration.'
+    ]
+  },
+  {
     title: 'Enterprise Mobility',
     subheader: 'Build mobilized workforces that can supercharge productivity, increase sales, and improve customer experience.',
     path: '/services/enterprise-mobility',
@@ -176,50 +198,6 @@ const services = [
     ],
     info: ['Supercharge productivity, increase your sales, and improve your customer experience– Enterprise mobility allows you to achieve all with modern, secure, and first-rate enterprise apps.',
       ' We offer a range of services including CRM, Mobile, ERP solutions, Sales Force Automation, Cloud-based Apps, Modern IoT apps, Beacons Apps, and Native Mobile Apps to help you become future-ready for all your digital endeavours. We help startups, enterprises, and the world’s renowned brands to design, develop, and deploy first-rate enterprise mobile apps that help them increase sales and profit levels.'
-    ]
-  },
-  {
-    title: 'Business Intelligence and Analytics',
-    subheader: 'Unlock business success to make smart and quick decisions with our Buinsess Intelligence and analytics services to discover the hidden value in data.',
-    path: '/services/business-intelligence-and-analytics',
-    icon: '/static/services/8bia.png',
-    content: 'Our Business Analytics Tools And BI Reporting Expertise help companies to drive better decisions regardless of business type and size',
-    points: [
-      {
-        header: 'Proven BI Expertise',
-        description: 'We have helped a number of global clientele with our analysis and reporting services to drive better performance based on data.'
-      },
-      {
-        header: 'Security Compliance',
-        description: 'Our professionals are well aware of data compliance and security standards to help create secure and advanced data flows."'
-      },
-    ],
-    info: [
-      'Get access to advanced business analytics that gives you the proficiency and ability to see and predict everything.',
-      ' Every interaction with your customer, every fiscal transaction, and every moving part in your supply chain of the organization– Discover new business and growth strategies while analyzing and extracting useful information from your data.',
-      ' We offer an upscale level of business intelligence and analytics capabilities to generate meaningful outcomes for your enterprise. We help companies to get optimum support in terms of customer analytics, market analytics, sales analytics, and other information analytics under one single roof here.'
-    ],
-  },
-  {
-    title: 'Software Testing & QA',
-    subheader: 'Enhance quality at each junction of your project with our one stop shop for all our testing needs.',
-    path: '/services/software-testing',
-    icon: '/static/services/12sta.png',
-    content: "Our testing resources assure you of unmatched software testing services that offers the best of outputs in terms of a robust and high-quality solution.",
-    points: [
-      {
-        header: 'Persistent Test Processes',
-        description: 'With effective testing processes in place, there is detailed process & performance management, right from beginning of the project.'
-      },
-      {
-        header: 'Security is a Priority',
-        description: 'Be it any type of software or app, security is our top priority at every level with strict adherence to security and privacy guidelines."'
-      },
-    ],
-    info: [
-      'Experience the best customer satisfaction with consistent analysis and sophisticated and impartial assessment with our exhaustive Software Testing services.',
-      ' We have a dedicated team of  committed and competent testing team, dedicated to persistently refining quality.',
-      ' With the implementation of our extensive ticket management tool, which tracks the history of the tickets generated and has proved to be of great utility for issue analysis, rework effort/analysis, and SLA compliance reporting, we have been able to streamline the quality practices at each interval of the project.'
     ]
   },
   {
@@ -246,26 +224,26 @@ const services = [
     ]
   },
   {
-    title: 'Embedded Product',
-    subheader: 'From conceptualizing to the go-to-market startegy– we have covered it all for you.',
-    path: '/services/embedded-product',
-    icon: '/static/services/9EP.png',
-    content: 'We have developed a strong presence in the area of Firmware development for embedded systems.',
+    title: 'Management and Support',
+    subheader: 'We are quality & commitment focused–Get support across the project delivery process and post delivery of the project.',
+    path: '/services/management-and-support',
+    icon: '/static/services/2ms.png',
+    content: 'Our accomplished experts understand the prevailing functionalities and challenges met by the client and set up consistent support methods along with communication protocols to be followed.',
     points: [
       {
-        header: 'Time-to-market',
-        description: 'High-quality, on-time project execution for faster time -to-market'
+        header: 'Technical Proficiency',
+        description: 'Technozis\' technical and support experts are well versed with all topmost technologies in relevant domains.'
       },
       {
-        header: 'Intellectual Property Protection',
-        description: 'High-level of protection of the data/defined security policies"'
+        header: 'Quality of Service',
+        description: 'It is our continuous efforts to have quality as a part of all processes initiated at Technozis confirming we meet the needs of our customers."'
       },
     ],
     info: [
-      'Whether it is a new product development, or product-re-engineering, and product lifecycle management, our services are designed to meet your diverse requirements. ',
-      'We take complete responsibilities of your embeded product development life cycle from the scratch– from conceptualizing to the go-to-market startegy. ',
-      'Our embedded product development services includes: Hardware engineering, Software engineering, Internet of Things (IoT), BSP and OS porting, Device drivers development, WHQL Certification.',
-      'With in-depth experince and knowledge in embedded product development across indutstries, we help entreprises embrace atest technology, bring products faster to teh market, and minimize post-deployment defects.'
+      'We are a customer-centric organziation with an aim of making our clients successful. ',
+      'Our proficient experts acknowledge the challenges faced by the client and set up consistent support methods along with communication protocols to be followed. ',
+      'Some of our major support activities includes, On-Going Issues Management, Initiatives Management, Release Management, Change Management, Support Management, Knowledge Transfer & Transition, 3 Level Escalation Protocol, Status Reviews & Feedback, and Knowledge Management.',
+      'We have proven experience of taking up enterprise systems, by understanding the prevailing functionalities and challenges met by the client and setting up consistent support methods along with communication protocols,'
     ]
   },
   {
@@ -293,27 +271,49 @@ const services = [
     ]
   },
   {
-    title: 'Digital Transformation',
-    subheader: 'Blend innovation, security, and speed to help you transition your business seamlessly tthrough our digital solutions.',
-    path: '/services/digital-transformation',
-    icon: '/static/services/13dt.png',
-    content: 'Upscale to digital innovation for a constantly evolving business model and value-driven architecture',
+    title: 'Embedded Product',
+    subheader: 'From conceptualizing to the go-to-market startegy– we have covered it all for you.',
+    path: '/services/embedded-product',
+    icon: '/static/services/9EP.png',
+    content: 'We have developed a strong presence in the area of Firmware development for embedded systems.',
     points: [
       {
-        header: 'Futuristic Approach ',
-        description: 'We don’t just offer technical solutions to our esteemed clientele, we provide them with a revolutionary approach as a wholesome. '
+        header: 'Time-to-market',
+        description: 'High-quality, on-time project execution for faster time -to-market'
       },
       {
-        header: 'Well-defined Processes',
-        description: 'Our definite project execution methodologies and engagement models keep us a step further than the rest."'
+        header: 'Intellectual Property Protection',
+        description: 'High-level of protection of the data/defined security policies"'
       },
     ],
     info: [
-      'Technozis Digital Transformation solutions are based on analyzing and understanding the need for bringing about change in terms of organizational mindset and culture.',
-      ' We believe in starting with small yet strategic steps towards a bigger vision and help choose technology solutions meant for fulfilling long-term vision.',
-      ' Through our domain expertise and valuable experience, we have helped businesses ranging from SME’s to large-scale enterprises change their digital strategy by understanding their industry and tailor-made solutions.',
-      ' We have worked primarily in the Automotive, Aviation, BFSI, Energy, Entertainment, Government, Healthcare, IT, Retail, Telecom and other industries.'
+      'Whether it is a new product development, or product-re-engineering, and product lifecycle management, our services are designed to meet your diverse requirements. ',
+      'We take complete responsibilities of your embeded product development life cycle from the scratch– from conceptualizing to the go-to-market startegy. ',
+      'Our embedded product development services includes: Hardware engineering, Software engineering, Internet of Things (IoT), BSP and OS porting, Device drivers development, WHQL Certification.',
+      'With in-depth experince and knowledge in embedded product development across indutstries, we help entreprises embrace atest technology, bring products faster to teh market, and minimize post-deployment defects.'
     ]
+  },
+  {
+    title: 'Business Intelligence and Analytics',
+    subheader: 'Unlock business success to make smart and quick decisions with our Buinsess Intelligence and analytics services to discover the hidden value in data.',
+    path: '/services/business-intelligence-and-analytics',
+    icon: '/static/services/8bia.png',
+    content: 'Our Business Analytics Tools And BI Reporting Expertise help companies to drive better decisions regardless of business type and size',
+    points: [
+      {
+        header: 'Proven BI Expertise',
+        description: 'We have helped a number of global clientele with our analysis and reporting services to drive better performance based on data.'
+      },
+      {
+        header: 'Security Compliance',
+        description: 'Our professionals are well aware of data compliance and security standards to help create secure and advanced data flows."'
+      },
+    ],
+    info: [
+      'Get access to advanced business analytics that gives you the proficiency and ability to see and predict everything.',
+      ' Every interaction with your customer, every fiscal transaction, and every moving part in your supply chain of the organization– Discover new business and growth strategies while analyzing and extracting useful information from your data.',
+      ' We offer an upscale level of business intelligence and analytics capabilities to generate meaningful outcomes for your enterprise. We help companies to get optimum support in terms of customer analytics, market analytics, sales analytics, and other information analytics under one single roof here.'
+    ],
   },
 ]
 

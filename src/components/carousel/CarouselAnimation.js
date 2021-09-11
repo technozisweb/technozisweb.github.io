@@ -76,7 +76,7 @@ function CarouselItem({ item, isActive }) {
           sx={{
             bottom: 0,
             width: '100%',
-            maxWidth: 680,
+            maxWidth: 580,
             textAlign: 'left',
             position: 'absolute',
             color: 'black',

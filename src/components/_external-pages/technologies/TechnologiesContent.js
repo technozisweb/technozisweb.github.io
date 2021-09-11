@@ -50,17 +50,13 @@ export default function LandingMinimalHelps() {
   const listicon = <ArrowRightIcon fontSize="large" sx={{ color: "black" }} />
 
   useEffect(() => {
-    // setTech([]);
-    // console.log(TECHNOLOGY);
     let pathname = window.location.pathname;
     setLocation(pathname.slice(14,));
     if (TECHNOLOGY && TECHNOLOGY.length) {
       TECHNOLOGY.map((obj) => {
         if (location === obj.title.replace(/ /g, '').toLowerCase()) {
-          // console.log('obj.tech', obj.tech);
           const data = obj;
           setValue(data);
-          console.log('value', value);
         }
       })
     }
@@ -141,16 +137,20 @@ export default function LandingMinimalHelps() {
                         >
                           <Box sx={{ borderLeft: '2px solid black', borderLeftColor: theme.palette.grey[300], borderRight: '2px solid black', borderRightColor: theme.palette.grey[300], mt: 5 }}>
                             <ListItem sx={{ textAlign: 'justify' }}>
-                              <ListItemIcon sx={{ mr: 3, height: 60, width: 60 }}>
+                              <ListItemIcon sx={{ mr: 3, height: { xs: 40, md: 60}, width: { xs: 40, md: 60} }}>
                                 <img src={item.path} alt={item.title} />
                               </ListItemIcon>
                               <ListItemText
                                 primary={
-                                  <Typography>
+                                  <Typography variant="subtitle1">
                                     {item.title}
                                   </Typography>
                                 }
-                                secondary={item.data} />
+                                secondary={
+                                  <Typography color="textSecondary">
+                                    {item.data}
+                                  </Typography>
+                                } />
                             </ListItem>
                           </Box>
                         </List>

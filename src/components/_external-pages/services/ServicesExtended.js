@@ -9,16 +9,18 @@ import SERVICES from 'src/utils/servicesInfo';
 const RootStyle = styled('div')(({ theme }) => ({
   padding: theme.spacing(5, 0),
   textAlign: 'justify',
-  fontFamily: 'Roboto'
+  fontFamily: 'Roboto',
+  // backgroundColor: '#fce4ec'
 }));
 
 const ContentStyle = styled('div')(({ theme }) => ({
-  position: 'relative',
-  borderBottom: '2px solid lightblue',
-  borderRight: '2px solid lightblue',
-  marginBottom: theme.spacing(20),
-  [theme.breakpoints.up('md')]: {
-    height: '100%',
+  // position: 'relative',
+  // display: 'flex',
+  border: '2px solid lightpink',
+  // marginBottom: theme.spacing(20),
+  [theme.breakpoints.up('sm')]: {
+    // height: '100%',
+    padding: 30,
     marginBottom: 0,
     display: 'inline-flex',
     flexDirection: 'column',
@@ -42,11 +44,9 @@ export default function ServicesExtended() {
 
   useEffect(async () => {
     SERVICES.map((item, index) => {
-      console.log('item.info', item.info);
       if (path == item.title.replace(/ /g, '').toLowerCase()) {
         const info = item.info;
         setServiceInfo(info);
-        console.log('serviceInfo', serviceInfo);
       }
     });
     // window.scrollTo(100, 300);
@@ -61,21 +61,23 @@ export default function ServicesExtended() {
               <Grid item xs={12} sx={{ mt: 5, mb: 5 }}>
                 <ContentStyle>
                   {serviceInfo.map((item) => (
-                    <MotionInView variants={varFadeInUp}>
-                      <Typography
-                        variant="body1"
-                        sx={{
-                          // fontFamily: 'Raleway',
-                          color: 'gray',
-                          // fontSize: 22,
-                          // fontStyle: 'italic',
-                          m: 1,
-                          // fontWeight: 'fontWeightMedium'
-                        }}
-                      >
-                        {item}
-                      </Typography>
-                    </MotionInView>
+                    <Grid item={12}>
+                      <MotionInView variants={varFadeInUp}>
+                        <Typography
+                          variant="body1"
+                          sx={{
+                            fontFamily: 'Roboto',
+                            // color: 'gray',
+                            fontSize: 22,
+                            // fontStyle: 'italic',
+                            m: 1,
+                            // fontWeight: 'fontWeightMedium'
+                          }}
+                        >
+                          {item}
+                        </Typography>
+                      </MotionInView>
+                    </Grid>
                   ))}
                   {/* <MotionInView variants={varFadeInUp}>
                     <Typography component="p" variant="overline" sx={{ mb: 10, color: 'text.disabled', display: 'block' }}>

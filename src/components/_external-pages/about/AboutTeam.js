@@ -1,7 +1,6 @@
-import { Card, CardContent, CardMedia, Container, Grid, Typography, Paper, Box } from "@material-ui/core";
+import { CardContent, CardMedia, Container, Grid, Paper, Typography } from "@material-ui/core";
 //
-
-import { varFadeInUp, varFadeIn, MotionInView } from '../../animate';
+import { MotionInView, varFadeInUp } from '../../animate';
 
 const TEAM = [
   {
@@ -48,7 +47,7 @@ const AboutTeam = () => {
           }} />
           <Grid item xs={12} md={5} sx={{ border: '2px solid' }}>
             <Paper>
-              <CardContent>
+              <CardContent sx={{ textAlign: 'justify' }} >
                 <Typography
                   variant="h5"
                   sx={{

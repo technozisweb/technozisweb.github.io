@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types';
-import { Icon } from '@iconify/react';
 import roundArrowRightAlt from '@iconify/icons-ic/round-arrow-right-alt';
+import { Icon } from '@iconify/react';
+import { Box, Button, Container, Grid, LinearProgress, Typography } from '@material-ui/core';
 // material
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { Box, Grid, Button, Container, Typography, LinearProgress } from '@material-ui/core';
+import { styled } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 // utils
 import { fPercent } from '../../../utils/formatNumber';
 //
 import { MHidden } from '../../@material-extend';
-import { varFadeInUp, varFadeInRight, MotionInView } from '../../animate';
+import { MotionInView, varFadeInRight, varFadeInUp } from '../../animate';
 
 // ----------------------------------------------------------------------
 

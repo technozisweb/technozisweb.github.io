@@ -28,16 +28,10 @@ export default function LandingPage() {
     <RootStyle title="Technozis" id="move_top">
       <LandingHero />
       <ContentStyle>
-        {/* <LandingServices /> */}
         <LandingMinimal />
         <AboutWhat />
-        {/* <LandingDarkMode /> */}
-        {/* <LandingHugePackElements /> */}
         <LandingHighlights />
-        {/* <LandingThemeColor /> */}
         <LandingCleanInterfaces />
-        {/* <LandingPricingPlans /> */}
-        {/* <LandingAdvertisement /> */}
       </ContentStyle>
       <MainFooter />  
     </RootStyle>

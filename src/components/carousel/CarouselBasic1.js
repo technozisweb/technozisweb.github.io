@@ -9,7 +9,7 @@ import mockData from '../../utils/mock-data';
 
 // ----------------------------------------------------------------------
 
-const MOCK_CAROUSELS = [...Array(2)].map((_, index) => ({
+const MOCK_CAROUSELS = [...Array(4)].map((_, index) => ({
   // id: mockData.id(index),
   // title: mockData.text.title(index),
   image: mockData.image.feed(index),
@@ -40,14 +40,6 @@ export default function CarouselBasic1() {
     slidesToScroll: 1,
     rtl: Boolean(theme.direction === 'rtl'),
     beforeChange: (current, next) => setCurrentIndex(next)
-  };
-
-  const handlePrevious = () => {
-    carouselRef.current.slickPrev();
-  };
-
-  const handleNext = () => {
-    carouselRef.current.slickNext();
   };
 
   return (

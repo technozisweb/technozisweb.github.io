@@ -1,6 +1,6 @@
-import { Grid, Card, Stack, Typography, Box, Container, CardContent, List, ListItem, ListItemIcon } from "@material-ui/core";
+import { Container, Grid, List, ListItem, ListItemIcon, Typography } from "@material-ui/core";
+import { styled } from '@material-ui/core/styles';
 import TECHNOLOGY from 'src/utils/technologies';
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
 
 const RootStyle = styled('div')(({ theme }) => ({
   paddingTop: theme.spacing(5),

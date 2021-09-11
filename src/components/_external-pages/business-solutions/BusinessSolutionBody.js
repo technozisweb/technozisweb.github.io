@@ -1,11 +1,11 @@
-import { Box, Container, Grid, List, ListItem, ListItemIcon, Typography, ListItemText } from '@material-ui/core';
-// material
-import { styled, useTheme } from '@material-ui/core/styles';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import RemoveOutlinedIcon from '@material-ui/icons/RemoveOutlined';
 
+import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@material-ui/core';
+// material
+import { styled } from '@material-ui/core/styles';
+import RemoveOutlinedIcon from '@material-ui/icons/RemoveOutlined';
 //
 import { MotionInView, varFadeInUp, varZoomIn } from '../../animate';
+
 
 // ----------------------------------------------------------------------
 
@@ -19,7 +19,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 const ContentStyle = styled('div')(({ theme }) => ({
   width: '100%',
-  textAlign: 'center',
+  // textAlign: 'center',
   marginBottom: theme.spacing(10),
   [theme.breakpoints.up('md')]: {
     textAlign: 'left',
@@ -30,8 +30,6 @@ const ContentStyle = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function LandingHugePackElements() {
-  const theme = useTheme();
-  const isLight = theme.palette.mode === 'light';
   // const isRTL = theme.direction === 'rtl';
 
   // const screenLeftAnimate = variantScreenLeft;
@@ -64,7 +62,8 @@ export default function LandingHugePackElements() {
                 <List
                   sx={{
                     mb: 5,
-                    // color: isLight ? 'text.secondary' : 'common.white',  
+                    // color: isLight ? 'text.secondary' : 'common.white', 
+                    textAlign: 'justify'
                   }}
                 >
                   <ListItem>
@@ -119,6 +118,7 @@ export default function LandingHugePackElements() {
                 sx={{
                   mb: 5,
                   // color: isLight ? 'text.secondary' : 'common.white',
+                  textAlign: 'justify'
                 }}
               >
                 <ListItem>

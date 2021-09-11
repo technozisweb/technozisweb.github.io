@@ -1,15 +1,29 @@
-import PropTypes from 'prop-types';
-import { Icon } from '@iconify/react';
 import roundArrowRightAlt from '@iconify/icons-ic/round-arrow-right-alt';
+import { Icon } from '@iconify/react';
+import { Box, Container, Grid, Link, Paper, Rating, Typography, useMediaQuery } from '@material-ui/core';
 // material
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { Box, Grid, Link, Paper, Rating, Container, Typography, useMediaQuery } from '@material-ui/core';
-//
-import { varFadeInUp, varFadeInLeft, MotionInView } from '../../animate';
+import { alpha, styled, useTheme } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 import { MHidden } from '../../@material-extend';
-import GitHubIcon from '@material-ui/icons/GitHub';
+//
+import { MotionInView, varFadeInLeft, varFadeInUp } from '../../animate';
 
 // ----------------------------------------------------------------------
+
+const POINTS = [
+  {
+    point: 'Get comprehensive technology roadmaps for end - to - end development of scalable solutions.',
+    src: '/static/services/service1.png'
+  },
+  {
+    point: 'Technozis aims to deliver a full - cycle services for software development seamlessly adapting to your project requirements and business needs.',
+    src: '/static/services/service2.png'
+  },
+  {
+    point: 'Our software products not only solve the problems for the users, but also create joyful experience and interactions for them.',
+    src: '/static/services/service3.png'
+  }
+]
 
 const RootStyle = styled('div')(({ theme }) => ({
   textAlign: 'justify',
@@ -27,6 +41,11 @@ const RootStyle = styled('div')(({ theme }) => ({
   }
 }));
 
+const ButtonStyle = styled('div')(() => ({
+  transition: "transform 0.15s ease-in-out",
+  "&:hover": { transform: "scale3d(1.1, 1.1, 1)" },
+}));
+
 // ----------------------------------------------------------------------
 
 TestimonialCard.propTypes = {
@@ -35,10 +54,12 @@ TestimonialCard.propTypes = {
 
 function TestimonialLink() {
   return (
-    <Link href="#" variant="subtitle2" sx={{ display: 'flex', alignItems: 'center' }}>
-      Read more testimonials
-      <Box component={Icon} icon={roundArrowRightAlt} sx={{ ml: 1, width: 20, height: 20 }} />
-    </Link>
+    <ButtonStyle>
+      <Link href="/contact-us" variant="subtitle2" sx={{ display: 'flex', alignItems: 'center' }}>
+        Contact Us
+        <Box component={Icon} icon={roundArrowRightAlt} sx={{ ml: 1, width: 20, height: 20 }} />
+      </Link>
+    </ButtonStyle>
   );
 }
 
@@ -85,11 +106,11 @@ export default function SoftwareDevVision() {
         >
           <Grid item xs={10} md={4}>
             <Box sx={{ maxWidth: { md: 360 } }}>
-              <MotionInView variants={varFadeInUp}>
+              {/* <MotionInView variants={varFadeInUp}>
                 <Typography component="p" variant="overline" sx={{ mb: 2, color: 'text.secondary' }}>
                   Testimonials
                 </Typography>
-              </MotionInView>
+              </MotionInView> */}
 
               <MotionInView variants={varFadeInUp}>
                 <Box sx={{ border: '20px solid' }}>
@@ -101,10 +122,8 @@ export default function SoftwareDevVision() {
               </MotionInView>
 
               <MotionInView variants={varFadeInUp}>
-                <Typography sx={{ mt: 5, color: 'common.white' }}>
-                  Our goal is to create a product and service that you’re satisfied with and use it every day. This is
-                  why we’re constantly working on our services to make it better every day and really listen to what our
-                  users has to say.
+                <Typography variant="subtitle1" sx={{ mt: 5, color: 'common.white' }}>
+                  Technozis service portfolio has Everything -  the complete software development life cycle that meets all your business needs.
                 </Typography>
               </MotionInView>
 
@@ -117,7 +136,6 @@ export default function SoftwareDevVision() {
               </MHidden>
             </Box>
           </Grid>
-
           <Grid
             item
             xs={12}
@@ -128,70 +146,32 @@ export default function SoftwareDevVision() {
           //   position: { md: 'absolute' }
           // }}
           >
-            <Grid container spacing={isDesktop ? 3 : 0} alignItems="center">
-              <Paper
-                sx={{
-                  mt: 3,
-                  p: 4,
-                  flexWrap: 'wrap',
-                  // maxWidth: 980,
-                  color: 'common.white',
-                  backdropFilter: 'blur(4px)',
-                  WebkitBackdropFilter: 'blur(4px)', // Fix on Mobile
-                  bgcolor: (theme) => alpha(theme.palette.common.white, 0.1)
-                }}
-              >
-                <Box><GitHubIcon color="error" fontSize="large" /></Box>
-                <Typography>End to end software product development</Typography>
-              </Paper>
-              {/* <Grid item xs={12} md={6}>
-                {TESTIMONIALS.slice(0, 3).map((testimonial) => (
-                  <MotionInView key={testimonial.name} variants={varFadeInUp}>
-                    <TestimonialCard testimonial={testimonial} />
-                  </MotionInView>
-                ))}
+            {POINTS.map((item) => (
+              <Grid container spacing={isDesktop ? 3 : 0} alignItems="center">
+                <Paper
+                  sx={{
+                    mt: 5,
+                    p: 4,
+                    flexWrap: 'wrap',
+                    // maxWidth: 980,
+                    color: 'common.white',
+                    backdropFilter: 'blur(4px)',
+                    WebkitBackdropFilter: 'blur(4px)', // Fix on Mobile
+                    bgcolor: (theme) => alpha(theme.palette.common.white, 0.1)
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={item.src}
+                    sx={{
+                      height: 50,
+                      width: 50
+                    }}
+                  />
+                  <Typography variant="body1">{item.point}</Typography>
+                </Paper>
               </Grid>
-
-              <Grid item xs={12} md={6}>
-                {TESTIMONIALS.slice(3, 6).map((testimonial) => (
-                  <MotionInView key={testimonial.name} variants={varFadeInUp}>
-                    <TestimonialCard testimonial={testimonial} />
-                  </MotionInView>
-                ))}
-              </Grid> */}
-            </Grid>
-            <Grid container spacing={isDesktop ? 3 : 0} alignItems="center">
-              <Paper
-                sx={{
-                  mt: 5,
-                  p: 4,
-                  flexWrap: 'wrap',
-                  // maxWidth: 980,
-                  color: 'common.white',
-                  backdropFilter: 'blur(4px)',
-                  WebkitBackdropFilter: 'blur(4px)', // Fix on Mobile
-                  bgcolor: (theme) => alpha(theme.palette.common.white, 0.1)
-                }}
-              >
-                <Box><GitHubIcon color="error" fontSize="large" /></Box>
-                <Typography>End to end software product development</Typography>
-              </Paper>
-              {/* <Grid item xs={12} md={6}>
-                {TESTIMONIALS.slice(0, 3).map((testimonial) => (
-                  <MotionInView key={testimonial.name} variants={varFadeInUp}>
-                    <TestimonialCard testimonial={testimonial} />
-                  </MotionInView>
-                ))}
-              </Grid>
-
-              <Grid item xs={12} md={6}>
-                {TESTIMONIALS.slice(3, 6).map((testimonial) => (
-                  <MotionInView key={testimonial.name} variants={varFadeInUp}>
-                    <TestimonialCard testimonial={testimonial} />
-                  </MotionInView>
-                ))}
-              </Grid> */}
-            </Grid>
+            ))}
           </Grid>
         </Grid>
 

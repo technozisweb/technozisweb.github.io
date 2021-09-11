@@ -1,9 +1,15 @@
 // material
+import { Container, Grid, List, ListItem, ListItemIcon, Typography } from '@material-ui/core';
 import { styled } from '@material-ui/core/styles';
-import { Box, Grid, Container, Typography, List, ListItem, ListItemIcon } from '@material-ui/core';
-//
-import { MotionInView, varFadeInUp, varFadeInDown } from '../../animate';
 import StopTwoToneIcon from '@material-ui/icons/StopTwoTone';
+//
+import { MotionInView, varFadeInUp } from '../../animate';
+
+const ENPOWER = [
+  'Technozis is a team that has passion for developing and delivering solutions that matters.',
+  'We combine our in-depth expertise, nimble and creative approach, and time-tested processes to achieve your business goals.',
+  'Our vision is to bring ideas to life by simplifying complicated issues and build scalable solutions.'
+]
 
 const RootStyle = styled('div')(({ theme }) => ({
   padding: theme.spacing(5, 0),
@@ -11,13 +17,13 @@ const RootStyle = styled('div')(({ theme }) => ({
 }));
 
 const ContentStyle = styled('div')(({ theme }) => ({
-  textAlign: 'center',
+  textAlign: 'justify',
   position: 'relative',
   marginBottom: theme.spacing(10),
   [theme.breakpoints.up('md')]: {
     height: '100%',
     marginBottom: 0,
-    textAlign: 'left',
+    textAlign: 'justify',
     display: 'inline-flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -88,19 +94,13 @@ export default function LandingDarkMode() {
               </MotionInView>
 
               <MotionInView variants={varFadeInUp}>
-                <List sx={{ color: 'text.secondary' }}>
-                  <ListItem>
-                    <ListItemIcon><StopTwoToneIcon fontSize="small" /></ListItemIcon>
-                    Technozis is a team that has passion for developing and delivering solutions that matters.
-                  </ListItem>
-                  <ListItem>
-                    <ListItemIcon><StopTwoToneIcon fontSize="small" /></ListItemIcon>
-                    We combine our in-depth expertise, nimble and creative approach, and time-tested processes to achieve your business goals.
-                  </ListItem>
-                  <ListItem>
-                    <ListItemIcon><StopTwoToneIcon fontSize="small" /></ListItemIcon>
-                    Our vision is to bring ideas to life by simplifying complicated issues and build scalable solutions.
-                  </ListItem>
+                <List sx={{ color: 'text.secondary', textAlign: 'justify' }}>
+                  {ENPOWER.map((item) => (
+                    <ListItem>
+                      <ListItemIcon><StopTwoToneIcon fontSize="small" /></ListItemIcon>
+                      {item}
+                    </ListItem>
+                  ))}
                 </List>
               </MotionInView>
             </ContentStyle>

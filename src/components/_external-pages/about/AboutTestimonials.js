@@ -1,6 +1,6 @@
-import { CardContent, Container, Grid, Typography, useMediaQuery } from '@material-ui/core';
+import { CardContent, Container, Grid, Typography } from '@material-ui/core';
 // material
-import { styled, useTheme } from '@material-ui/core/styles';
+import { styled } from '@material-ui/core/styles';
 //
 import { MotionInView, varFadeInLeft } from '../../animate';
 // import FontStyle from '../../../../public/fonts'
@@ -53,12 +53,12 @@ const TESTIMONIALS = [
 ];
 
 const RootStyle = styled('div')(({ theme }) => ({
-  textAlign: 'center',
+  textAlign: 'justify',
   // padding: theme.spacing(20, 0),
   backgroundSize: 'cover',
   backgroundColor: theme.palette.grey[800],
   [theme.breakpoints.up('md')]: {
-    textAlign: 'left',
+    textAlign: 'justify',
     padding: 0,
     height: 640,
     overflow: 'hidden'
@@ -81,8 +81,6 @@ const RootStyle = styled('div')(({ theme }) => ({
 // },
 
 export default function AboutTestimonials() {
-  const theme = useTheme();
-  const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
 
   return (
     <RootStyle>
@@ -94,6 +92,7 @@ export default function AboutTestimonials() {
               sx={{
                 color: 'common.white',
                 fontFamily: 'Roboto',
+                mt: {xs: 5, md: 0}
               }}
             >
               How are we different?

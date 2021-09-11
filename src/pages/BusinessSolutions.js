@@ -1,10 +1,9 @@
 // material
 import { styled } from '@material-ui/core/styles';
-import { Divider } from '@material-ui/core';
+import BusinessSolutionsBody from 'src/components/_external-pages/business-solutions/BusinessSolutionBody';
 // components
 import Page from '../components/Page';
 import BusinessSolutionsHero from '../components/_external-pages/business-solutions/BusinessSolutionsHero';
-import BusinessSolutionsBody from 'src/components/_external-pages/business-solutions/BusinessSolutionBody';
 // import { LandingDarkMode } from 'src/components/_external-pages/landing';
 
 // ----------------------------------------------------------------------
@@ -20,7 +19,7 @@ const RootStyle = styled(Page)(({ theme }) => ({
 
 export default function About() {
   return (
-    <RootStyle title="Software development | Minimal-UI">
+    <RootStyle title="Business Solutions | Technozis">
       <BusinessSolutionsHero />
       <BusinessSolutionsBody />
     </RootStyle>
