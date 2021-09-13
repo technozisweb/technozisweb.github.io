@@ -1,46 +1,17 @@
-import { Link as RouterLink } from 'react-router-dom';
+import { Card, CardContent, CardMedia, Container, Grid, Typography } from '@material-ui/core';
 // material
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { Box, Grid, Button, Container, Typography, List, ListItem, ListItemIcon, Card, CardContent, CardMedia, Paper } from '@material-ui/core';
-// routes
-import { PATH_PAGE } from '../../../routes/paths';
-//
-import { varFadeInUp, MotionInView } from '../../animate';
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import { alpha, styled } from '@material-ui/core/styles';
 import CountUp from 'react-countup';
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
   padding: theme.spacing(10, 0),
-  // backgroundImage:
-  //   theme.palette.mode === 'light'
-  //     ? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 100%)`
-  //     : 'none'
+  backgroundImage:
+    theme.palette.mode === 'light'
+      ? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 100%)`
+      : 'none'
 }));
-
-const COMMON = {
-  scaleX: 0.86,
-  skewY: 8,
-  skewX: 0,
-  scaleY: 1,
-  translateX: 0,
-  translateY: 0,
-  opacity: 0
-};
-
-const variantScreenLeft = {
-  initial: COMMON,
-  animate: { ...COMMON, translateX: '-50%', translateY: 40, opacity: 1 }
-};
-const variantScreenCenter = {
-  initial: COMMON,
-  animate: { ...COMMON, opacity: 1 }
-};
-const variantScreenRight = {
-  initial: COMMON,
-  animate: { ...COMMON, translateX: '50%', translateY: -40, opacity: 1 }
-};
 
 // ----------------------------------------------------------------------
 
@@ -67,7 +38,6 @@ const highlights = [
 ]
 
 export default function LandingHugePackElements() {
-  const theme = useTheme();
 
   return (
     <RootStyle>

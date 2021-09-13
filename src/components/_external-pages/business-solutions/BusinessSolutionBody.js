@@ -10,7 +10,9 @@ import { MotionInView, varFadeInUp, varZoomIn } from '../../animate';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  padding: theme.spacing(10, 0),
+  // padding: theme.spacing(10, 0),
+  paddingBottom: 0,
+  paddingTop: 50
   //   backgroundImage:
   //     theme.palette.mode === 'light'
   //       ? `linear-gradient(180deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 100%)`

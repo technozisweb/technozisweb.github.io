@@ -12,7 +12,7 @@ import SERVICES from 'src/utils/servicesInfo';
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: ' url(/static/home/service-top.jpg)',
+  backgroundImage: ' url(/static/services/service-top.jpg)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
     height: 480,
@@ -47,7 +47,7 @@ export default function AboutHero() {
           <TextAnimate text="Services" sx={{ color: 'primary.main' }} variants={varFadeInRight} />
           <br />
           {SERVICES.map((tech) => (
-            <Box sx={{ display: 'inline-flex', color: 'common.white' }}>
+            <Box sx={{ display: 'inline-flex' }}>
               {tech.title.replace(/ /g, '').toLowerCase() == path.replace(/[^a-zA-Z0-9]/g, '').slice(8,)
                 ? (
                   <motion.div variants={varFadeInRight}>
@@ -55,7 +55,7 @@ export default function AboutHero() {
                       variant="h3"
                       sx={{
                         mt: 5,
-                        color: 'common.white',
+                        // color: 'common.white',
                         fontWeight: 'fontWeightLarge',
                         fontFamily: 'Roboto',
                         fontStyle: "italic",

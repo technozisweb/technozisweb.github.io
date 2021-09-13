@@ -14,7 +14,7 @@ import { CarouselControlsArrowsBasic2 } from '../../carousel';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
-  backgroundColor: theme.palette.grey[200],
+  backgroundImage: `linear-gradient(0deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 100%)`,
 }));
 
 const CardStyle = styled(Card)(({ theme }) => ({

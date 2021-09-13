@@ -4,9 +4,7 @@ import MainFooter from 'src/layouts/main/MainFooter';
 // components
 import Page from '../components/Page';
 import { AboutWhat } from '../components/_external-pages/about';
-import {
-  LandingCleanInterfaces, LandingHero, LandingHighlights, LandingMinimal
-} from '../components/_external-pages/landing';
+import { LandingHero, LandingHighlights, LandingMinimal } from '../components/_external-pages/landing';
 // import LandingServices from 'src/components/_external-pages/landing/LandingServices';
 
 // ----------------------------------------------------------------------
@@ -31,7 +29,7 @@ export default function LandingPage() {
         <LandingMinimal />
         <AboutWhat />
         <LandingHighlights />
-        <LandingCleanInterfaces />
+        {/* <LandingCleanInterfaces /> */}
       </ContentStyle>
       <MainFooter />  
     </RootStyle>

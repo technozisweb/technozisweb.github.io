@@ -1,8 +1,8 @@
 // material
-import { Box, Container, Grid, Typography } from '@material-ui/core';
+import { Container, Grid, Typography } from '@material-ui/core';
+import { CarouselBasic1 } from 'src/components/carousel';
 //
 import { MotionInView, varFadeInUp } from '../../animate';
-import { CarouselBasic1 } from 'src/components/carousel';
 
 // ----------------------------------------------------------------------
 
@@ -25,7 +25,7 @@ export default function AboutVision() {
         <Grid item xs={12} sm={8}>
           <MotionInView variants={varFadeInUp}>
             <Typography variant="h3" sx={{ textAlign: 'center' }}>
-              Our vision offering the best product nulla vehicula tortor scelerisque ultrices malesuada.
+              Our vision is offering the best product and servicesO.
             </Typography>
           </MotionInView>
         </Grid>

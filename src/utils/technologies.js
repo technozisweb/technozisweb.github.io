@@ -2,6 +2,7 @@ const TECHNOLOGY = [
   {
     title: 'Front',
     header: 'Frontend Development',
+    heroimg: '/static/technologies/frontend/frontendhero.jpg',
     imagesrc: '/static/technologies/frontend/frontendmain.jpg',
     subheader: 'Innovative and robust front end development services to build best  visual experince across devices.',
     description: 'First impression is the last impression! Fronted helps create intuitive and business concentric user experience for websites and mobile.',
@@ -118,7 +119,7 @@ const TECHNOLOGY = [
     heroimg: '/static/technologies/backend/backendmain.jpg',
     imagesrc: '/static/technologies/backend/backend.jpg',
     header: 'Backend Development',
-    subheader: 'Backend: Backbone of software solutions that drives the business growth strategies.',
+    subheader: 'Backbone of software solutions that drives the business growth strategies.',
     description: 'Leveraging cloud environments enable businesses to scale their compute and storage needs up on an as-needed basis, which can keep costs low',
     points: [
       "Create services that process business logic and access other resources such as databases, file servers, cloud services and more.",

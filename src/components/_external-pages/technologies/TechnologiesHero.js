@@ -12,7 +12,7 @@ import TECHNOLOGY from 'src/utils/technologies';
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: 'url(/static/technologies/technology-main.jpg)',
+  // backgroundImage: 'url(/static/technologies/technology-main.jpg)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
     height: 480,
@@ -33,13 +33,25 @@ const ContentStyle = styled('div')(({ theme }) => ({
 
 export default function AboutHero() {
   const [path, setPath] = useState('');
+  const [bgimg, setBgimg] = useState('');
+  console.log(bgimg)
 
   useEffect(() => {
     setPath(window.location.pathname);
   }, [window.location.pathname])
 
+  useEffect(() => {
+    if (TECHNOLOGY && TECHNOLOGY.length) {
+      TECHNOLOGY.map((tech) => {
+        if (tech.title.replace(/ /g, '').toLowerCase() === path.slice(14,)) {
+          setBgimg(tech.heroimg);
+        }
+      })
+    }
+  }, [path, bgimg])
+
   return (
-    <RootStyle initial="initial" animate="animate" variants={varWrapEnter}>
+    <RootStyle initial="initial" animate="animate" variants={varWrapEnter} sx={{ backgroundImage: `url(${bgimg})` }}>
       <Container maxWidth="lg" sx={{ position: 'relative', height: '100%' }}>
         <ContentStyle>
           <TextAnimate text="Technologies" sx={{ color: 'primary.main' }} variants={varFadeInRight} />
@@ -53,7 +65,7 @@ export default function AboutHero() {
                       variant="h3"
                       sx={{
                         mt: 5,
-                        color: 'common.white',
+                        // color: 'common.white',
                         fontWeight: 'fontWeightLarge',
                         fontFamily: 'Roboto',
                         fontStyle: 'italic'
