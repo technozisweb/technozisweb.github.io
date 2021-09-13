@@ -1,20 +1,12 @@
+import { Link, List, ListItem, ListItemIcon, ListItemText, Paper, Stack, Typography } from '@material-ui/core';
+// material
+import { styled } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { NavLink as RouterLink, useLocation } from 'react-router-dom';
-import { Icon } from '@iconify/react';
-import chevronDownFill from '@iconify/icons-eva/chevron-down-fill';
-// material
-import { styled } from '@material-ui/core/styles';
-import { Box, Link, Paper, Typography, List, Stack, ListItemIcon, ListItem, Divider, ListItemText } from '@material-ui/core';
-import arrowIosUpwardFill from '@iconify/icons-eva/arrow-ios-upward-fill';
-import arrowIosDownwardFill from '@iconify/icons-eva/arrow-ios-downward-fill';
-//
-import MenuHotProducts from './MenuHotProducts';
-import MegaMenuCarousel from './MegaMenuCarousel';
 
 // ----------------------------------------------------------------------
 
-const CONTENT_HEIGHT = 400;
 const ITEM_SPACING = 4;
 const ITEM_HEIGHT = 64;
 const ITEM_ON_ROW4 = {
@@ -59,7 +51,6 @@ function ParentItem({ path, title, open, hasSub, pathname, isHome, isOffset, ...
   const activeStyle = {
     color: 'primary.main'
   };
-  const isActive = pathname === path;
 
   return (
     <LinkStyle
@@ -103,9 +94,8 @@ MegaMenuItem.propTypes = {
 };
 
 function MegaMenuItem({ parent, pathname }) {
-  const { title, path, more, products, tags, children, isHome, isOffset } = parent;
+  const { title, path, children } = parent;
   const [open, setOpen] = useState(false);
-  const isActive = pathname === path;
 
   const handleOpen = () => {
     setOpen(true);
