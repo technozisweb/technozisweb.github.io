@@ -130,7 +130,8 @@ export default function AboutTeam() {
               maxWidth: 980,
               fontFamily: 'Roboto',
               textAlign: 'center',
-              fontStyle: 'italic'
+              fontStyle: 'italic',
+              fontSize: {xs: 22, md: 28}
               // color: (theme) => (theme.palette.mode === 'light' ? 'text.secondary' : 'common.white')
             }}
             variant="h4"
@@ -148,7 +149,7 @@ export default function AboutTeam() {
       </MotionInView> */}
 
           <MotionInView variants={varFadeInUp}>
-            <Typography variant="h5" sx={{ p: 5, fontFamily: 'Raleway' }} color="textSecondary">
+            <Typography variant="h5" sx={{ p: 5, fontFamily: 'Raleway', fontSize: {xs: 20, md: 26} }} color="textSecondary">
               We excel in providing Worldclass technological services to cater all your business needs
             </Typography>
           </MotionInView>

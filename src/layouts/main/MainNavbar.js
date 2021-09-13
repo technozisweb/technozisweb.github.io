@@ -73,7 +73,7 @@ export default function MainNavbar() {
             justifyContent: 'space-between'
           }}
         >
-          <RouterLink to="/">
+          <RouterLink to="/"style={{ width: 60, height: 40, marginRight: 10}}>
             <Logo />
           </RouterLink>
           <Label color="info" sx={{ ml: 1 }}>

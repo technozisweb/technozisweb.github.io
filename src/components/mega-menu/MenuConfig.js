@@ -51,15 +51,15 @@ const menuConfig = [
         // subheader: 'Agriculture Machinery',
         items: [
           { title: 'Custom Software', icon: <img src="/static/services/1custom-software.png" />, path: '/services/custom-software-development' },
-          { title: 'Hire Developer', icon: <img src="/static/services/4hire-developers.png" />, path: '/services/hire-developer' },
-          { title: 'Technologies Consultant', icon: <img src="/static/services/10technology-consulting.png" />, path: '/services/technology-consultant' },
+          { title: 'Enterprise Mobility', icon: <img src="/static/services/3enterprise-mobility.png" />, path: '/services/enterprise-mobility' },
+          { title: 'Cloud Application', icon: <img src="/static/services/6cloud-application.png" />, path: '/services/cloud-application' },
           { title: 'Management and Support', icon: <img src="/static/services/2Management-and-Support.png" />, path: '/services/management-and-support' },
           { title: 'System Integration', icon: <img src="/static/services/7system-integration.png" />, path: '/services/system-integration' },
         ]
       },
       {
         items: [
-          { title: 'Enterprise Mobility', icon: <img src="/static/services/3enterprise-mobility.png" />, path: '/services/enterprise-mobility' },
+          { title: 'Hire Developer', icon: <img src="/static/services/4hire-developers.png" />, path: '/services/hire-developer' },
           { title: 'Product Engineering', icon: <img src="/static/services/11product-engineering.png" />, path: '/services/product-engineering' },
           { title: 'Software Testing & QA', icon: <img src="/static/services/12software-testing-and-qa.png" />, path: '/services/software-testing' },
           { title: 'Application Development', icon: <img src="/static/services/5app-development.png" />, path: '/services/application-development' },
@@ -68,7 +68,7 @@ const menuConfig = [
       },
       {
         items: [
-          { title: 'Cloud Application', icon: <img src="/static/services/6cloud-application.png" />, path: '/services/cloud-application' },
+          {title: 'Technologies Consultant', icon: <img src="/static/services/10technology-consulting.png" />, path: '/services/technology-consultant'},
           { title: 'SAP', icon: <img src="/static/services/14sap.png" />, path: '/services/sap' },
           { title: 'Digital Transformation', icon: <img src="/static/services/13digital-transformation.png" />, path: '/services/digital-transformation' },
           { title: 'Business Intelligence and Analytics', icon: <img src="/static/services/8business-intelligence-analytics.png" />, path: '/services/business-intelligence-and-analytics' },
