@@ -10,9 +10,10 @@ const CardStyle = styled(Card)(({ theme }) => ({
   padding: theme.spacing(1),
   height: 140,
   fontFamily: 'Roboto',
+  boxShadow: `0px 5px 5px 5px ${alpha(theme.palette.grey[300], 1)}`,
   margin: 1.5,
   '&:hover': {
-    boxShadow: `0px 10px 10px 10px ${alpha(theme.palette.grey[300], 1)}`,
+    boxShadow: `0px 15px 15px 15px ${alpha(theme.palette.grey[300], 1)}`,
   },
 }));
 
@@ -57,10 +58,10 @@ export default function ContactUs() {
               <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
                 <DraftsTwoToneIcon color="error" fontSize="large" />
               </Typography>
-              <Typography variant="body1" sx={{ mt: 2, mb: 2 }}>
+              <Typography variant="subtitle1" sx={{ mt: 2, mb: 2 }}>
                 <a
                   href="mailto:contact@technozis.com"
-                  style={{ textDecoration: 'none' }}
+                  style={{ textDecoration: 'none', color: 'black' }}
                 >
                   contact@technozis.com
                 </a>
@@ -75,10 +76,10 @@ export default function ContactUs() {
               <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
                 <PhoneIphoneTwoToneIcon color="success" fontSize="large" />
               </Typography>
-              <Typography variant="body1" sx={{ mt: 2, mb: 2 }}>
+              <Typography variant="subtitle1" sx={{ mt: 2, mb: 2 }}>
                 <a
                   href="tel:9996600068"
-                  style={{ textDecoration: 'none' }}
+                  style={{ textDecoration: 'none', color: 'black' }}
                 >
                   9996600068
                 </a>
@@ -93,8 +94,8 @@ export default function ContactUs() {
               <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
                 <ExploreTwoToneIcon color="info" fontSize="large" />
               </Typography>
-              <Typography variant="body2" sx={{ mt: 2, mb: 2 }}>
-                <a href="geo://?q=https://www.google.com/maps/place/DLF+Corporate+Greens/@28.4072995,76.9952951,17z/data=!3m1!4b1!4m5!3m4!1s0x390d3d5ab5c439e1:0xdee55a2c01e31695!8m2!3d28.4072948!4d76.9974838" style={{ textDecoration: 'none' }}>210, Tower 2, DLF Corporate Greens, Sector 74A, Gurugram, 122004</a>
+              <Typography variant="subtitle2" sx={{ mt: 2, mb: 2 }}>
+                <a href="geo://?q=https://www.google.com/maps/place/DLF+Corporate+Greens/@28.4072995,76.9952951,17z/data=!3m1!4b1!4m5!3m4!1s0x390d3d5ab5c439e1:0xdee55a2c01e31695!8m2!3d28.4072948!4d76.9974838" style={{ textDecoration: 'none', color: 'black' }}>210, Tower 2, DLF Corporate Greens, Sector 74A, Gurugram, 122004</a>
               </Typography>
               <Box component="img" sx={{ width: '100%', borderRadius: 1.5 }} />
             </CardStyle>

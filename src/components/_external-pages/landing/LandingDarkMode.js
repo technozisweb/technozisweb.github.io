@@ -55,7 +55,7 @@ export default function LandingDarkMode() {
         <Grid container spacing={2} direction="row-reverse" justifyContent="space-between" sx={{ mt: 5 }}>
           <Grid item xs={12} md={5} sx={{ position: 'relative', height: '100%' }}>
             <MotionInView threshold={0.5} variants={varFadeInUp}>
-              <img alt="light mode" src="/static/home/team.png" />
+              <img alt="light mode" src="/static/about/whatdowedo.png" />
             </MotionInView>
             {/* <MotionInView threshold={0.5} variants={varFadeInDown} sx={{ top: 0, left: 0, position: 'absolute' }}>
               <img alt="dark mode" src="/static/home/darkmode.png" />

@@ -13,13 +13,17 @@ import { CarouselControlsArrowsBasic2 } from '../../carousel';
 // ----------------------------------------------------------------------
 // ----------------------------------------------------------------------
 
+const RootStyle = styled('div')(({ theme }) => ({
+  backgroundColor: theme.palette.grey[200],
+}));
+
 const CardStyle = styled(Card)(({ theme }) => ({
   // padding: theme.spacing(3, 3, 0),
   maxWidth: 320,
   minHeight: 380,
   fontFamily: 'Roboto',
   '&:hover': {
-    boxShadow: `0px 10px 10px 10px ${alpha(theme.palette.grey[300], 1)}`,
+    boxShadow: `0px 10px 10px 10px ${alpha(theme.palette.grey[400], 1)}`,
   },
 }));
 
@@ -115,50 +119,55 @@ export default function AboutTeam() {
   };
 
   return (
-    <Container maxWidth="lg" sx={{ pb: {xs: 0, md: 10}, textAlign: 'center' }}>
-      {/* <MotionInView variants={varFadeInDown}>
+    <>
+      <Container>
+        <MotionInView variants={varFadeInUp}>
+          <Typography
+            sx={{
+              mt: 5,
+              mb: 5,
+              mx: 'auto',
+              maxWidth: 980,
+              fontFamily: 'Roboto',
+              textAlign: 'center',
+              fontStyle: 'italic'
+              // color: (theme) => (theme.palette.mode === 'light' ? 'text.secondary' : 'common.white')
+            }}
+            variant="h4"
+          >
+            One-stop solution provider for comprehensive enterprise business solutions, fundamental service offerings, and enterprise mobile analytics.
+          </Typography>
+        </MotionInView>
+      </Container>
+      <RootStyle>
+        <Container maxWidth="lg" sx={{ mb: { xs: 0, md: 5 }, textAlign: 'center' }}>
+          {/* <MotionInView variants={varFadeInDown}>
         <Typography component="p" variant="overline" sx={{ mb: 2, color: 'text.secondary' }}>
           The Header
         </Typography>
       </MotionInView> */}
 
-      {/* <MotionInView variants={varFadeInUp}>
-        <Typography variant="h2" sx={{ mb: 3 }}>
-          Some header
-        </Typography>
-      </MotionInView> */}
+          <MotionInView variants={varFadeInUp}>
+            <Typography variant="h5" sx={{ p: 5, fontFamily: 'Raleway' }} color="textSecondary">
+              We excel in providing Worldclass technological services to cater all your business needs
+            </Typography>
+          </MotionInView>
 
-      <MotionInView variants={varFadeInUp}>
-        <Typography
-          sx={{
-            mt: 10,
-            mb: 10,
-            mx: 'auto',
-            maxWidth: 930,
-            // textAlign: 'justify',
-            color: (theme) => (theme.palette.mode === 'light' ? 'text.secondary' : 'common.white')
-          }}
-          variant="h5"
-        >
-          One-stop solution provider for comprehensive enterprise business solutions, fundamental service offerings, and enterprise mobile analytics.
-        </Typography>
-      </MotionInView>
-
-      <Box sx={{ position: 'relative' }}>
-        <Slider ref={carouselRef} {...settings}>
-          {ServiceData.map((member) => (
-            <MotionInView key={member.id} variants={varFadeIn}>
-              <MemberCard member={member} />
-            </MotionInView>
-          ))}
-        </Slider>
-        <CarouselControlsArrowsBasic2
-          onNext={handleNext}
-          onPrevious={handlePrevious}
-          sx={{ transform: 'translateY(-64px)' }}
-        />
-      </Box>
-      {/* <Button
+          <Box sx={{ position: 'relative' }}>
+            <Slider ref={carouselRef} {...settings}>
+              {ServiceData.map((member) => (
+                <MotionInView key={member.id} variants={varFadeIn}>
+                  <MemberCard member={member} />
+                </MotionInView>
+              ))}
+            </Slider>
+            <CarouselControlsArrowsBasic2
+              onNext={handleNext}
+              onPrevious={handlePrevious}
+              sx={{ transform: 'translateY(-64px)' }}
+            />
+          </Box>
+          {/* <Button
         variant="outlined"
         color="inherit"
         size="large"
@@ -167,6 +176,8 @@ export default function AboutTeam() {
       >
         View all team members
       </Button> */}
-    </Container>
+        </Container>
+      </RootStyle>
+    </>
   );
 }

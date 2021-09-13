@@ -26,7 +26,7 @@ const SOCIALS = [
 
 const LINKS = [
   {
-    headline: 'Technozis',
+    headline: 'Technozis pvt lmt',
     children: [
       { name: 'About us', href: PATH_PAGE.about },
       { name: 'Contact us', href: PATH_PAGE.contact },
@@ -77,13 +77,15 @@ export default function MainFooter() {
 
           <Grid item xs={8} md={3}>
             <Grid item xs={12} sx={{ mb: 1 }}>
-              <ScrollLink to="move_top" spy smooth>
-                <Logo sx={{ mx: { xs: 'auto', md: 'inherit' } }} />
-                {/* <Label></Label> */}
-              </ScrollLink>
-              <Label color="info">
-                Technozis
-              </Label>
+              <Stack direction="row">
+                <ScrollLink to="move_top" spy smooth>
+                  <Logo sx={{ mx: { xs: 'auto', md: 'auto' }, height: 50, width: 50 }} />
+                  {/* <Label></Label> */}
+                </ScrollLink>
+                <Label color="info" sx={{ mt: 2, fontSize: 30 }}>
+                  Technozis
+                </Label>
+              </Stack>
             </Grid>
             {/* <Typography variant="body2" sx={{ pr: { md: 5 } }}>
               The starting point for your next project with Minimal UI Kit, built on the newest version of Material-UI

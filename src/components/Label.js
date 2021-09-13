@@ -36,8 +36,8 @@ const RootStyle = styled('span')(({ theme, styleProps }) => {
     justifyContent: 'center',
     padding: theme.spacing(0, 1),
     color: theme.palette.grey[800],
-    fontSize: theme.typography.pxToRem(16),
-    fontFamily: theme.typography.fontFamily,
+    fontSize: theme.typography.pxToRem(20),
+    fontFamily: 'Roboto',
     // backgroundColor: theme.palette.grey[300],
     fontWeight: theme.typography.fontWeightBold,
 

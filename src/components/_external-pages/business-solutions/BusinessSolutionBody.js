@@ -19,10 +19,10 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 const ContentStyle = styled('div')(({ theme }) => ({
   width: '100%',
-  // textAlign: 'center',
-  marginBottom: theme.spacing(10),
+  textAlign: 'center',
+  // marginBottom: theme.spacing(10),
   [theme.breakpoints.up('md')]: {
-    textAlign: 'left',
+    textAlign: 'center',
     marginBottom: 0
   }
 }));
@@ -90,7 +90,7 @@ export default function LandingHugePackElements() {
           <Grid item xs={12} md={6} dir="ltr" sx={{ textAlign: 'justify' }}>
 
             <MotionInView variants={varFadeInUp}>
-              <Typography variant="h3" sx={{ mb: 3, borderBottom: '4px solid lightpink' }}>
+              <Typography variant="h3" sx={{ mb: 3, borderBottom: '4px solid lightpink', textAlign: 'center' }}>
                 Enterprise CRM
               </Typography>
             </MotionInView>
