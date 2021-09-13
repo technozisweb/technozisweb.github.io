@@ -25,7 +25,7 @@ export default function AboutVision() {
         <Grid item xs={12} sm={8}>
           <MotionInView variants={varFadeInUp}>
             <Typography variant="h3" sx={{ textAlign: 'center' }}>
-              Our vision is offering the best product and servicesO.
+              Our vision is offering the best product and services.
             </Typography>
           </MotionInView>
         </Grid>
