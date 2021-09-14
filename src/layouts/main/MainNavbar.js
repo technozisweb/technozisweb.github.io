@@ -73,7 +73,7 @@ export default function MainNavbar() {
             justifyContent: 'space-between'
           }}
         >
-          <RouterLink to="/"style={{ width: 60, height: 40, marginRight: 10}}>
+          <RouterLink to="/" style={{ width: 60, marginRight: {xs: 10, md: 0} }}>
             <Logo />
           </RouterLink>
           <Label color="info" sx={{ ml: 1 }}>
@@ -91,7 +91,7 @@ export default function MainNavbar() {
                 <Link
                   underline="none"
                   href="/contact-us"
-                  // color="black"
+                // color="black"
                 >
                   Contact us
                 </Link>
@@ -105,7 +105,7 @@ export default function MainNavbar() {
             <Container sx={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
               <Box sx={{ flexGrow: 1 }} />
               <MegaMenuMobile navConfig={MenuConfig} />
-              <Box sx={{ flexGrow: 0.5 }} />
+              {/* <Box sx={{ flexGrow: 0.5 }} /> */}
             </Container>
           </MHidden>
         </Container>

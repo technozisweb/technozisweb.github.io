@@ -225,6 +225,11 @@ const menuConfig = [
     title: 'About',
     icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
     path: PATH_PAGE.about
+  },
+  {
+    title: 'Contact',
+    icon: <Icon icon={bookOpenFill} {...ICON_SIZE} />,
+    path: PATH_PAGE.contact
   }
 ];
 

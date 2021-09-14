@@ -108,7 +108,11 @@ function MegaMenuItem({ parent, pathname }) {
   if (children) {
     return (
       <>
-        <ParentItem onMouseEnter={handleOpen} onMouseLeave={handleClose} path={path} title={title} open={open} hasSub />
+        {title === 'Contact'
+          ? null
+          : (
+            <ParentItem onMouseEnter={handleOpen} onMouseLeave={handleClose} path={path} title={title} open={open} hasSub />
+          )}
 
         {open && (
           <Paper
@@ -239,11 +243,17 @@ export default function MegaMenuDesktopHorizon({ navConfig, ...other }) {
   return (
     <Stack direction="row" spacing={ITEM_SPACING} {...other}>
       {navConfig.map((parent) => (
-        <MegaMenuItem
-          key={parent.title}
-          parent={parent}
-          pathname={pathname}
-        />
+        <>
+          {parent.title === 'Contact'
+            ? null
+            : (
+              <MegaMenuItem
+                key={parent.title}
+                parent={parent}
+                pathname={pathname}
+              />
+            )}
+        </>
       ))}
     </Stack>
   );
