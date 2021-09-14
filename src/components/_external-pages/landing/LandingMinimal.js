@@ -17,6 +17,10 @@ const RootStyle = styled('div')(({ theme }) => ({
   backgroundImage: `linear-gradient(0deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 100%)`,
 }));
 
+const Back  = styled('div')(({ theme }) => ({
+  // backgroundImage: 'url(/static/home/transparentbg1.png)',
+}));
+
 const CardStyle = styled(Card)(({ theme }) => ({
   // padding: theme.spacing(3, 3, 0),
   maxWidth: 320,
@@ -55,7 +59,7 @@ function MemberCard({ member }) {
       </Typography>
       <Box sx={{ p: 2 }}>
         {/* <Divider /> */}
-        <Typography variant="body2" sx={{ mt: 1, color: 'text.secondary', textAlign: 'justify' }}>
+        <Typography variant="body1" sx={{ mt: 1, color: 'text.secondary', textAlign: 'justify', fontFamily: 'Roboto' }}>
           {subheader}
         </Typography>
         <CardButton
@@ -120,26 +124,28 @@ export default function AboutTeam() {
 
   return (
     <>
-      <Container>
-        <MotionInView variants={varFadeInUp}>
-          <Typography
-            sx={{
-              mt: 5,
-              mb: 5,
-              mx: 'auto',
-              maxWidth: 980,
-              fontFamily: 'Roboto',
-              textAlign: 'center',
-              fontStyle: 'italic',
-              fontSize: {xs: 22, md: 28}
-              // color: (theme) => (theme.palette.mode === 'light' ? 'text.secondary' : 'common.white')
-            }}
-            variant="h4"
-          >
-            One-stop solution provider for comprehensive enterprise business solutions, fundamental service offerings, and enterprise mobile analytics.
-          </Typography>
-        </MotionInView>
-      </Container>
+      <Back>
+        <Container>
+          <MotionInView variants={varFadeInUp}>
+            <Typography
+              sx={{
+                pt: 5,
+                pb: 5,
+                mx: 'auto',
+                maxWidth: 980,
+                fontFamily: 'Roboto',
+                textAlign: 'center',
+                fontStyle: 'italic',
+                fontSize: { xs: 22, md: 28 }
+                // color: (theme) => (theme.palette.mode === 'light' ? 'text.secondary' : 'common.white')
+              }}
+              variant="h4"
+            >
+              One-stop solution provider for comprehensive enterprise business solutions, fundamental service offerings, and enterprise mobile analytics.
+            </Typography>
+          </MotionInView>
+        </Container>
+      </Back>
       <RootStyle>
         <Container maxWidth="lg" sx={{ mb: { xs: 0, md: 5 }, textAlign: 'center' }}>
           {/* <MotionInView variants={varFadeInDown}>
@@ -149,8 +155,8 @@ export default function AboutTeam() {
       </MotionInView> */}
 
           <MotionInView variants={varFadeInUp}>
-            <Typography variant="h5" sx={{ p: 5, fontFamily: 'Raleway', fontSize: {xs: 20, md: 26} }} color="textSecondary">
-              We excel in providing Worldclass technological services to cater all your business needs
+            <Typography variant="h5" sx={{ p: 5, fontFamily: 'Raleway', fontSize: { xs: 20, md: 26 } }} color="textSecondary">
+              We excel in providing worldclass technological services to cater all your business needs
             </Typography>
           </MotionInView>
 

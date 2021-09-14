@@ -79,10 +79,10 @@ export default function MainFooter() {
             <Grid item xs={12} sx={{ mb: 1 }}>
               <Stack direction="row">
                 <ScrollLink to="move_top" spy smooth>
-                  <Logo sx={{ mx: { xs: 'auto', md: 'auto' }, height: 50, width: 50 }} />
+                  <Logo sx={{ mx: { xs: 'auto', md: 'auto' }, height: {xs: 40, md: 50}, width: {xs: 40, md: 50} }} />
                   {/* <Label></Label> */}
                 </ScrollLink>
-                <Label color="info" sx={{ mt: 2, fontSize: 30 }}>
+                <Label color="info" sx={{ mt: {xs: 1, md: 2}, fontSize: 30 }}>
                   Technozis
                 </Label>
               </Stack>

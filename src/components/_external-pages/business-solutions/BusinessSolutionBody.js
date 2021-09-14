@@ -70,19 +70,19 @@ export default function LandingHugePackElements() {
                 >
                   <ListItem>
                     <ListItemIcon><RemoveOutlinedIcon fontSize="small" /></ListItemIcon>
-                    Cloud-based, scalable, customizable, and integrated Mobile ERP software.
+                    <Typography>Cloud-based, scalable, customizable, and integrated Mobile ERP software.</Typography>
                   </ListItem>
                   <ListItem>
                     <ListItemIcon><RemoveOutlinedIcon fontSize="small" /></ListItemIcon>
-                    Enable a 360-degree business view and a single point of real-time data reference.
+                    <Typography>Enable a 360-degree business view and a single point of real-time data reference.</Typography>
                   </ListItem>
                   <ListItem>
                     <ListItemIcon><RemoveOutlinedIcon fontSize="small" /></ListItemIcon>
-                    Automate, manage, and integrate various business components.
+                    <Typography>Automate, manage, and integrate various business components.</Typography>
                   </ListItem>
                   <ListItem>
                     <ListItemIcon><RemoveOutlinedIcon fontSize="small" /></ListItemIcon>
-                    <ListItemText> Advanced ERP software is accessible on mobile/ desktops/ laptops/ tablets/ smart screens/ wireless display devices, providing data visibility and availability anywhere, anytime.</ListItemText>
+                    <Typography> Advanced ERP software is accessible on mobile/ desktops/ laptops/ tablets/ smart screens/ wireless display devices, providing data visibility and availability anywhere, anytime.</Typography>
                   </ListItem>
                 </List>
               </MotionInView>
@@ -125,19 +125,19 @@ export default function LandingHugePackElements() {
               >
                 <ListItem>
                   <ListItemIcon><RemoveOutlinedIcon fontSize="small" /></ListItemIcon>
-                  Customer Relationship Management to Enhance Sales, Marketing, Service, and Satisfaction all at Once.
+                  <Typography>Customer Relationship Management to Enhance Sales, Marketing, Service, and Satisfaction all at Once.</Typography>
                 </ListItem>
                 <ListItem>
                   <ListItemIcon><RemoveOutlinedIcon fontSize="small" /></ListItemIcon>
-                  Reinvent your business model with a multi-faceted industry-specific approach.
+                  <Typography>Reinvent your business model with a multi-faceted industry-specific approach.</Typography>
                 </ListItem>
                 <ListItem>
                   <ListItemIcon><RemoveOutlinedIcon fontSize="small" /></ListItemIcon>
-                  Get a mobility solution that can cater to all of your business needs in the field sales teams, area and regional managers.
+                  <Typography>Get a mobility solution that can cater to all of your business needs in the field sales teams, area and regional managers.</Typography>
                 </ListItem>
                 <ListItem>
                   <ListItemIcon><RemoveOutlinedIcon fontSize="small" /></ListItemIcon>
-                  Custom CRM solutions to solve the shortcomings across all industries.
+                  <Typography>Custom CRM solutions to solve the shortcomings across all industries.</Typography>
                 </ListItem>
               </List>
             </MotionInView>
