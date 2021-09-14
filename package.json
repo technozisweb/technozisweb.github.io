@@ -3,7 +3,6 @@
   "author": "minimals.cc",
   "version": "2.4.0",
   "private": true,
-  "homepage": "https://technozisweb.github.io/technozisweb.github.io",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
