@@ -17,8 +17,8 @@ const RootStyle = styled('div')(({ theme }) => ({
   backgroundImage: `linear-gradient(0deg, ${alpha(theme.palette.grey[300], 0)} 0%, ${theme.palette.grey[300]} 100%)`,
 }));
 
-const Back  = styled('div')(({ theme }) => ({
-  // backgroundImage: 'url(/static/home/transparentbg1.png)',
+const BackStyle  = styled('div')(() => ({
+  // backgroundImage: 'url(/static/home/spiral.jpg)',
 }));
 
 const CardStyle = styled(Card)(({ theme }) => ({
@@ -124,7 +124,7 @@ export default function AboutTeam() {
 
   return (
     <>
-      <Back>
+      <BackStyle>
         <Container>
           <MotionInView variants={varFadeInUp}>
             <Typography
@@ -135,7 +135,7 @@ export default function AboutTeam() {
                 maxWidth: 980,
                 fontFamily: 'Roboto',
                 textAlign: 'center',
-                fontStyle: 'italic',
+                // fontStyle: 'italic',
                 fontSize: { xs: 22, md: 28 }
                 // color: (theme) => (theme.palette.mode === 'light' ? 'text.secondary' : 'common.white')
               }}
@@ -145,7 +145,7 @@ export default function AboutTeam() {
             </Typography>
           </MotionInView>
         </Container>
-      </Back>
+      </BackStyle>
       <RootStyle>
         <Container maxWidth="lg" sx={{ mb: { xs: 0, md: 5 }, textAlign: 'center' }}>
           {/* <MotionInView variants={varFadeInDown}>
@@ -155,7 +155,7 @@ export default function AboutTeam() {
       </MotionInView> */}
 
           <MotionInView variants={varFadeInUp}>
-            <Typography variant="h5" sx={{ p: 5, fontFamily: 'Raleway', fontSize: { xs: 20, md: 26 } }} color="textSecondary">
+            <Typography variant="h5" sx={{ p: 5, fontFamily: 'Raleway', fontSize: { xs: 20, md: 24 } }} color="textSecondary">
               We excel in providing worldclass technological services to cater all your business needs
             </Typography>
           </MotionInView>

@@ -1,41 +1,38 @@
-import { motion } from 'framer-motion';
+import youtubeIcon from '@iconify/icons-ci/youtube';
+import linkedinFill from '@iconify/icons-eva/linkedin-fill';
+import { Icon } from '@iconify/react';
+import { Box, Container, Grid, Typography } from '@material-ui/core';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Container, Typography, Grid } from '@material-ui/core';
+import { motion } from 'framer-motion';
 //
-import { varFadeIn, varWrapEnter, varFadeInRight, TextAnimate } from '../../animate';
-import { Icon } from '@iconify/react';
-import twitterFill from '@iconify/icons-eva/twitter-fill';
-import linkedinFill from '@iconify/icons-eva/linkedin-fill';
-import facebookFill from '@iconify/icons-eva/facebook-fill';
-import roundArrowRightAlt from '@iconify/icons-ic/round-arrow-right-alt';
-import instagramFilled from '@iconify/icons-ant-design/instagram-filled';
+import { TextAnimate, varFadeIn, varFadeInRight, varWrapEnter } from '../../animate';
 
 // ----------------------------------------------------------------------
 
 const CONTACTS = [
   {
-    icon: twitterFill,
-    address: 'twitter.com',
+    icon: youtubeIcon,
+    address: 'youtube.com',
   },
   {
     icon: linkedinFill,
-    address: 'linkedin.com',
+    address: 'linkedin.com/company/technozis',
   },
-  {
-    icon: facebookFill,
-    address: 'facebook.com',
-  },
-  {
-    icon: instagramFilled,
-    address: 'instagram.com',
-  }
+  // {
+  //   icon: facebookFill,
+  //   address: 'facebook.com',
+  // },
+  // {
+  //   icon: instagramFilled,
+  //   address: 'instagram.com',
+  // }
 ];
 
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: 'url(/static/overlay.svg), url(/static/contact/hero.jpg)',
+  backgroundImage: 'url(/static/overlay.svg), url(/static/contact/contacthero.jpg)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
     height: 480,
@@ -69,7 +66,7 @@ export default function ContactHero() {
 
           <Grid container spacing={5} sx={{ mt: 5, color: 'common.white' }}>
             {CONTACTS.map((contact) => (
-              <Grid key={contact.icon} item xs={12} sm={6} md={3} lg={2} sx={{ pr: { md: 5 } }}>
+              <Grid key={contact.icon} item xs={12} sm={6} md={3} lg={2} sx={{ pr: { md: 15 } }}>
                 <motion.div variants={varFadeIn}>
                   <Typography variant="h6" paragraph>
                     <Icon icon={contact.icon} />

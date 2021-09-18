@@ -1,5 +1,5 @@
 
-import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@material-ui/core';
+import { Box, Container, Grid, List, ListItem, ListItemIcon, Typography } from '@material-ui/core';
 // material
 import { styled } from '@material-ui/core/styles';
 import RemoveOutlinedIcon from '@material-ui/icons/RemoveOutlined';
