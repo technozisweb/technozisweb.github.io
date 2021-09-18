@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { Navigate, useRoutes } from 'react-router-dom';
 // guards
 // import RoleBasedGuard from '../guards/RoleBasedGuard';
+import { useLocation } from 'react-router';
 // components
 import LoadingScreen from '../components/LoadingScreen';
 // import DashboardLayout from '../layouts/dashboard';
@@ -13,21 +14,21 @@ import MainLayout from '../layouts/main';
 
 const Loadable = (Component) => (props) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  // const { pathname } = useLocation();
-  // const isDashboard = pathname.includes('/dashboard');
+  const { pathname } = useLocation();
+  const isDashboard = pathname.includes('/dashboard');
 
   return (
     <Suspense
       fallback={
         <LoadingScreen
           sx={{
-            // ...(!isDashboard && {
-            //   top: 0,
-            //   left: 0,
-            //   width: 1,
-            //   zIndex: 9999,
-            //   position: 'fixed'
-            // })
+            ...(!isDashboard && {
+              top: 0,
+              left: 0,
+              width: 1,
+              zIndex: 9999,
+              position: 'fixed'
+            })
           }}
         />
       }
