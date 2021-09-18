@@ -12,7 +12,7 @@ import SERVICES from 'src/utils/servicesInfo';
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: ' url(/static/services/service-top.jpg)',
+  backgroundImage: 'url(/static/overlay.svg), url(/static/services/service-top.jpg)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
     height: 480,
@@ -34,17 +34,27 @@ const ContentStyle = styled('div')(({ theme }) => ({
 
 export default function AboutHero() {
   const [path, setPath] = useState('');
+  const [bgimg, setBgimg] = useState();
 
   useEffect(() => {
     setPath(window.location.pathname);
-    console.log(path.replace(/[^a-zA-Z0-9]/g, '').slice(8,));
   }, [window.location.pathname])
 
+  useEffect(() => {
+    if (SERVICES && SERVICES.length) {
+      SERVICES.map((service) => {
+        if (service.title.replace(/ /g, '').toLowerCase() === path.replace(/[^a-zA-Z0-9]/g, '').slice(8,)) {
+          setBgimg(service.heroimg);
+        }
+      })
+    }
+  }, [path, bgimg])
+
   return (
-    <RootStyle initial="initial" animate="animate" variants={varWrapEnter}>
+    <RootStyle initial="initial" animate="animate" variants={varWrapEnter} sx={{ backgroundImage: `url(/static/overlay.svg), url(${bgimg})`}}>
       <Container maxWidth="lg" sx={{ position: 'relative', height: '100%' }}>
         <ContentStyle>
-          <TextAnimate text="Services" sx={{ color: 'primary.main' }} variants={varFadeInRight} />
+          <TextAnimate text="Services" sx={{ color: 'primary.main', fontSize: {xs: 26, md: 40} }} variants={varFadeInRight} />
           <br />
           {SERVICES.map((tech) => (
             <Box sx={{ display: 'inline-flex' }}>
@@ -54,11 +64,12 @@ export default function AboutHero() {
                     <Typography
                       variant="h3"
                       sx={{
-                        mt: 5,
-                        // color: 'common.white',
+                        mt: 3,
+                        color: 'common.white',
                         fontWeight: 'fontWeightLarge',
                         fontFamily: 'Roboto',
                         fontStyle: "italic",
+                        fontSize: { xs: 30, md: 40 }
                       }}
                     >
                       {tech.title}
