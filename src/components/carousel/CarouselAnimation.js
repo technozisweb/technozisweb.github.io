@@ -1,14 +1,12 @@
-import Slider from 'react-slick';
-import PropTypes from 'prop-types';
-import { motion } from 'framer-motion';
-import { useState, useRef } from 'react';
+import { Box, Button, Card, CardContent, Container, Paper, Typography } from '@material-ui/core';
 // material
-import { alpha, useTheme, styled } from '@material-ui/core/styles';
-import { Box, Card, Paper, Button, Typography, CardContent, Container } from '@material-ui/core';
-// utils
-import mockData from '../../utils/mock-data';
+import { styled, useTheme } from '@material-ui/core/styles';
+import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
+import { useRef, useState } from 'react';
+import Slider from 'react-slick';
 //
-import { varFadeInRight, MotionContainer } from '../animate';
+import { MotionContainer, varFadeInRight } from '../animate';
 // import { CarouselControlsArrowsIndex } from './controls';
 import { CarouselControlsArrowsBasic2 } from './controls';
 
@@ -48,7 +46,6 @@ CarouselItem.propTypes = {
 };
 
 function CarouselItem({ item, isActive }) {
-  const theme = useTheme();
   const { image, title } = item;
 
   return (
@@ -86,7 +83,7 @@ function CarouselItem({ item, isActive }) {
         >
           <MotionContainer open={isActive}>
             <motion.div variants={varFadeInRight}>
-              <Typography variant='h1' gutterBottom sx={{ fontSize: { xs: 30, md: 60 }}}>
+              <Typography variant='h1' gutterBottom sx={{ fontSize: { xs: 30, md: 60 }, fontWeight: 'fontWeightMedium', color: 'primary.main', textShadow: '0 0 10px #000'}}>
                 {item.title}
               </Typography>
             </motion.div>
@@ -97,7 +94,7 @@ function CarouselItem({ item, isActive }) {
                 sx={{
                   fontFamily: 'Roboto',
                   fontStyle: "italic",
-                  color: 'common.white',
+                  // color: 'common.white',
                   fontSize: { xs: 20, md: 30 }
                 }}
               >

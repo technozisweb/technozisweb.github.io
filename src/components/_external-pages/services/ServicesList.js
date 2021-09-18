@@ -1,24 +1,12 @@
-import { useState, useEffect } from 'react';
-import { Icon } from '@iconify/react';
-import listFill from '@iconify/icons-eva/list-fill';
+import { Box, Container, Grid, Paper } from '@material-ui/core';
 // material
-import { styled, alpha } from '@material-ui/core/styles';
-import { Box, Card, Paper, Stack, Container, AppBar, Typography, Grid } from '@material-ui/core';
-// routes
-import { PATH_PAGE } from 'src/routes/paths';
-import { withRouter } from 'react-router-dom';
+import { styled } from '@material-ui/core/styles';
+import { useEffect, useState } from 'react';
 // components
 import Page from 'src/components/Page';
-import HeaderBreadcrumbs from 'src/components/HeaderBreadcrumbs';
-import {
-  MegaMenuDesktopVertical,
-  MegaMenuDesktopHorizon,
-  MegaMenuMobile,
-  // MenuConfig
-} from 'src/components/mega-menu';
 import MenuConfig from 'src/layouts/main/MenuConfig.js';
-import ServicesDescription from './ServicesDescription';
 import services from 'src/utils/servicesInfo';
+import ServicesDescription from './ServicesDescription';
 import ServicesMenuConfig from './ServicesMenu';
 
 // ----------------------------------------------------------------------
@@ -55,11 +43,8 @@ export default function MegaMenu() {
 
   useEffect(async () => {
     services.map((_, index) => {
-      // console.log('path', path);
-      // console.log('services[index]', services[index].title.replace(/ /g, '').toLowerCase());
       if (path == services[index].title.replace(/ /g, '').toLowerCase()) {
         setServiceData(services[index]);
-        console.log('serviceData', serviceData);
       }
     });
     // window.scrollTo(100, 300);

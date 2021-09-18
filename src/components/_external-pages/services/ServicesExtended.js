@@ -54,7 +54,7 @@ export default function ServicesExtended() {
 
   return (
     <RootStyle>
-      <Container maxWidth="lg" sx={{ position: 'relative', mb: 5 }}>
+      <Container maxWidth="lg" sx={{ position: 'relative' }}>
         {serviceInfo && serviceInfo.length
           ? (
             <Grid container spacing={2} direction="row-reverse" justifyContent="space-between">
@@ -68,7 +68,7 @@ export default function ServicesExtended() {
                           sx={{
                             fontFamily: 'Roboto',
                             // color: 'gray',
-                            fontSize: 22,
+                            fontSize: {xs: 18, md: 24},
                             // fontStyle: 'italic',
                             m: 1,
                             // fontWeight: 'fontWeightMedium'

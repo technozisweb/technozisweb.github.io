@@ -34,7 +34,6 @@ const ContentStyle = styled('div')(({ theme }) => ({
 export default function AboutHero() {
   const [path, setPath] = useState('');
   const [bgimg, setBgimg] = useState('');
-  console.log(bgimg)
 
   useEffect(() => {
     setPath(window.location.pathname);
