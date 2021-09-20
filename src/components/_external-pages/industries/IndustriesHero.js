@@ -1,18 +1,16 @@
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import { Container, Typography } from '@material-ui/core';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Box, Container, Typography } from '@material-ui/core';
+import { motion } from 'framer-motion';
 //
-import { varWrapEnter, varFadeInRight, TextAnimate, MotionInView } from '../../animate';
-import TECHNOLOGY from 'src/utils/technologies';
+import { TextAnimate, varFadeInRight, varWrapEnter } from '../../animate';
 
 // ----------------------------------------------------------------------
 
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: ' url(/static/industry/innovatingindustries.jpg)',
+  backgroundImage: 'url(/static/overlay.svg), url(/static/industry/industry2.webp)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
     height: 480,

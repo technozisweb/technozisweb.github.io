@@ -3,7 +3,7 @@ const services = [
     title: 'Custom Software Development',
     path: '/services/custom-software-development',
     icon: '/static/services/1csd.png',
-    heroimg: '/static/services/custome-software-development.jpg',
+    heroimg: '/static/services/custome-software-development.webp',
     subheader: 'Get a competitive advantage in the market with our superior custom solutions to build next-level digital experiences.',
     content: 'Every project is a product and requires regular improvement to meet the ever-changing business needs. Our product engineers to build a product from scratch, modernize legacy systems, re-engineer products with data-driven systems or migrate to the cloud.',
     points: [
@@ -25,7 +25,7 @@ const services = [
     title: 'Hire Developer',
     subheader: 'Add competitive agility and lon-term value add to your digital needs with domain-experts.',
     path: '/services/hire-developer',
-    heroimg: '/static/services/hire-developers.jpg',
+    heroimg: '/static/services/hire-developers.webp',
     icon: '/static/services/4hd.png',
     content: 'Hire dedicated team from Technozis and execute at speed and scale.',
     points: [
@@ -48,7 +48,7 @@ const services = [
     title: 'Technology Consultant',
     subheader: 'Our technology strategy and advisory services help reinvent organizations and build business value.',
     path: '/services/technology-consultant',
-    heroimg: '/static/services/tcmain2.jpg',
+    heroimg: '/static/services/tcmain2.webp',
     icon: '/static/services/10TC.png',
     content: 'Our versatile & skilled technology consultants are experts in all peripheries of IT consulting, growing your business multifold, maximizing your RoI to the apex and proving that they are not just development partners, but much more.',
     points: [
@@ -71,7 +71,7 @@ const services = [
     title: 'Digital Transformation',
     subheader: 'Blend innovation, security, and speed to help you transition your business seamlessly tthrough our digital solutions.',
     path: '/services/digital-transformation',
-    heroimg: '/static/services/digital-transformation.jpg',
+    heroimg: '/static/services/digital-transformation.webp',
     icon: '/static/services/13dt.png',
     content: 'Upscale to digital innovation for a constantly evolving business model and value-driven architecture',
     points: [
@@ -95,7 +95,7 @@ const services = [
     title: 'SAP',
     subheader: 'We will help you unlock the value of your SAP application portfolio with the power of intelligence, innovation and industry.',
     path: '/services/sap',
-    heroimg: '/static/services/sapmain2.jpg',
+    heroimg: '/static/services/sapmain2.webp',
     icon: '/static/services/14SAP.png',
     content: 'Technozis\' SAP practice helps enterprises maximize their ERP investments for the digital economy. By implementing or optimizing SAP platforms to reduce costs, elegantly integrate with customer-facing systems and drive digital acceleration, we prepare you for the future.',
     points: [
@@ -123,7 +123,7 @@ const services = [
     title: 'Software Testing',
     subheader: 'Enhance quality at each junction of your project with our one stop shop for all our testing needs.',
     path: '/services/software-testing',
-    heroimg: '/static/services/software-testing2.jpg',
+    heroimg: '/static/services/software-testing2.webp',
     icon: '/static/services/12sta.png',
     content: "Our testing resources assure you of unmatched software testing services that offers the best of outputs in terms of a robust and high-quality solution.",
     points: [
@@ -146,7 +146,7 @@ const services = [
     title: 'System Integration',
     subheader: 'Get desired ROI, enhanced efficiency, and streamlined process with our top of the line application integration system.',
     path: '/services/system-integration',
-    heroimg: '/static/services/system-integration.jpg',
+    heroimg: '/static/services/system-integration.webp',
     icon: '/static/services/7si.png',
     content: 'Harness the power of your IT stack with seamless system integration that drives business and achive results. ',
     points: [
@@ -168,7 +168,7 @@ const services = [
     title: 'Product Engineering',
     subheader: 'Scale, modernize, or launch your product with our end-to-end product product engineering services that can meet the ever-changing business needs.',
     path: '/services/product-engineering',
-    heroimg: '/static/services/product-engineering.jpg',
+    heroimg: '/static/services/product-engineering.webp',
     icon: '/static/services/11pe.png',
     content: 'Every project is a product and requires regular improvement to meet the ever-changing business needs. our product engineers to build a product from scratch, modernize legacy systems, re-engineer products with data-driven systems or migrate to the cloud.',
     points: [
@@ -192,7 +192,7 @@ const services = [
     title: 'Enterprise Mobility',
     subheader: 'Build mobilized workforces that can supercharge productivity, increase sales, and improve customer experience.',
     path: '/services/enterprise-mobility',
-    heroimg: '/static/services/emmain.jpg',
+    heroimg: '/static/services/emmain.webp',
     icon: '/static/services/3em.png',
     content: 'Our skillful business apps developers to expedite business growth, improve customer engagement, increase collaboration between teams, and gain maximum benefits to increase sales.',
     points: [
@@ -213,7 +213,7 @@ const services = [
     title: 'Application Development',
     subheader: 'Attract and engage customers through  feature-rich web applications with our cutting-edge web appliations development services .',
     path: '/services/application-development',
-    heroimg: '/static/services/admain.jpg',
+    heroimg: '/static/services/admain.webp',
     icon: '/static/services/5ad.png',
     content: 'Be the game-changer by being early adopter of new trends with our application development services.',
     points: [
@@ -237,7 +237,7 @@ const services = [
     title: 'Management and Support',
     subheader: 'We are quality & commitment focused–Get support across the project delivery process and post delivery of the project.',
     path: '/services/management-and-support',
-    heroimg: '/static/services/management-and-support.jpg',
+    heroimg: '/static/services/management-and-support.webp',
     icon: '/static/services/2ms.png',
     content: 'Our accomplished experts understand the prevailing functionalities and challenges met by the client and set up consistent support methods along with communication protocols to be followed.',
     points: [
@@ -261,7 +261,7 @@ const services = [
     title: 'Cloud Application',
     subheader: 'Accelerate your business profiatbility with robust and secure cloud applications while reducing the ownership cost.',
     path: '/services/cloud-application',
-    heroimg: '/static/services/cloud-technology-main2.jpg',
+    heroimg: '/static/services/cloud-technology-main2.webp',
     icon: '/static/services/6ca.png',
     content: 'Extend the power of your cloud infrastructure while simplifying operations & moving closer to your users.',
     points: [
@@ -286,7 +286,7 @@ const services = [
     title: 'Embedded Product',
     subheader: 'From conceptualizing to the go-to-market startegy– we have covered it all for you.',
     path: '/services/embedded-product',
-    heroimg: '/static/services/embedded-product.jpg',
+    heroimg: '/static/services/embedded-product.webp',
     icon: '/static/services/9EP.png',
     content: 'We have developed a strong presence in the area of Firmware development for embedded systems.',
     points: [
@@ -310,7 +310,7 @@ const services = [
     title: 'Business Intelligence and Analytics',
     subheader: 'Unlock business success to make smart and quick decisions with our Buinsess Intelligence and analytics services to discover the hidden value in data.',
     path: '/services/business-intelligence-and-analytics',
-    heroimg: '/static/services/biamain2.jpg',
+    heroimg: '/static/services/biamain2.webp',
     icon: '/static/services/8bia.png',
     content: 'Our Business Analytics Tools And BI Reporting Expertise help companies to drive better decisions regardless of business type and size',
     points: [

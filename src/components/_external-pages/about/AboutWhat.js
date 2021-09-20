@@ -90,7 +90,7 @@ export default function AboutWhat() {
                 </Grid> */}
                 <Grid item xs={12}>
                   <MotionInView variants={varFadeInUp}>
-                    <Box component="img" src="/static/home/team.png" sx={{ borderRadius: 2 }} />
+                    <Box component="img" src="/static/home/team.webp" sx={{ borderRadius: 2 }} />
                   </MotionInView>
                 </Grid>
               </Grid>

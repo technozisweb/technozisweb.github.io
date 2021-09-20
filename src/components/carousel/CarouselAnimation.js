@@ -16,17 +16,17 @@ const MOCK_CAROUSELS = [
   {
     title: 'Digital Transformation',
     description: 'We blend innovation, security, and speed to help you transition your business seamlessly to digital.',
-    image: '/static/home/1dt-blank.jpg'
+    image: '/static/home/dt.webp'
   },
   {
     title: 'Custom Software development',
     description: 'Design, Create, Deploy, and manage requirements efficiently for the future.',
-    image: '/static/home/2csd-blank.jpg'
+    image: '/static/home/sd.webp'
   },
   {
     title: 'Business Intelligence and Analytics',
     description: 'Unlock meaningful insights to improve performance, reduce risk, and plan future with data-driven strategy.',
-    image: '/static/home/3bia-blank.jpg'
+    image: '/static/home/bia.webp'
   },
 ]
 
@@ -83,7 +83,7 @@ function CarouselItem({ item, isActive }) {
         >
           <MotionContainer open={isActive}>
             <motion.div variants={varFadeInRight}>
-              <Typography variant='h1' gutterBottom sx={{ fontSize: { xs: 30, md: 60 }, fontWeight: 'fontWeightMedium', color: 'primary.main', textShadow: '0 0 10px #000'}}>
+              <Typography variant='h1' gutterBottom sx={{ fontSize: { xs: 30, md: 60 }, fontWeight: 'fontWeightMedium', color: 'primary.main', textShadow: '2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;' }}>
                 {item.title}
               </Typography>
             </motion.div>

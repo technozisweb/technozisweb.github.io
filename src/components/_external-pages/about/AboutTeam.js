@@ -85,7 +85,7 @@ const AboutTeam = () => {
             <Paper>
               <CardMedia
                 component='img'
-                image='/static/home/aboutteam.jpg'
+                image='/static/about/aboutteam.webp'
                 height='280'
               />
             </Paper>

@@ -50,7 +50,7 @@ export default function AboutHero() {
   }, [path, bgimg])
 
   return (
-    <RootStyle initial="initial" animate="animate" variants={varWrapEnter} sx={{ backgroundImage: `url(${bgimg})` }}>
+    <RootStyle initial="initial" animate="animate" variants={varWrapEnter} sx={{ backgroundImage: `url(/static/overlay.svg), url(${bgimg})` }}>
       <Container maxWidth="lg" sx={{ position: 'relative', height: '100%' }}>
         <ContentStyle>
           <TextAnimate text="Technologies" sx={{ color: 'primary.main' }} variants={varFadeInRight} />
