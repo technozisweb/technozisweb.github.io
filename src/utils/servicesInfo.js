@@ -3,7 +3,7 @@ const services = [
     title: 'Custom Software Development',
     path: '/services/custom-software-development',
     icon: '/static/services/1csd.png',
-    heroimg: '/static/services/custome-software-development.webp',
+    heroimg: '/static/services/csdmain.webp',
     subheader: 'Get a competitive advantage in the market with our superior custom solutions to build next-level digital experiences.',
     content: 'Every project is a product and requires regular improvement to meet the ever-changing business needs. Our product engineers to build a product from scratch, modernize legacy systems, re-engineer products with data-driven systems or migrate to the cloud.',
     points: [
@@ -213,7 +213,7 @@ const services = [
     title: 'Application Development',
     subheader: 'Attract and engage customers through  feature-rich web applications with our cutting-edge web appliations development services .',
     path: '/services/application-development',
-    heroimg: '/static/services/admain.webp',
+    heroimg: '/static/services/application-dev.webp',
     icon: '/static/services/5ad.png',
     content: 'Be the game-changer by being early adopter of new trends with our application development services.',
     points: [
