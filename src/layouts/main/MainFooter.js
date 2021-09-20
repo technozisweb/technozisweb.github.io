@@ -20,13 +20,13 @@ import Label from 'src/components/Label';
 const SOCIALS = [
   { name: 'FaceBook', icon: facebookFill, link: 'facebook.com' },
   { name: 'Google', icon: googleFill, link: 'google.com' },
-  { name: 'Linkedin', icon: linkedinFill, link: 'linkedin.com' },
+  { name: 'Linkedin', icon: linkedinFill, link: 'linkedin.com/company/technozis' },
   { name: 'Twitter', icon: twitterFill, link: 'twitter.com' }
 ];
 
 const LINKS = [
   {
-    headline: 'Technozis pvt lmt',
+    headline: 'Technozis Pvt. Ltd.',
     children: [
       { name: 'About us', href: PATH_PAGE.about },
       { name: 'Contact us', href: PATH_PAGE.contact },
