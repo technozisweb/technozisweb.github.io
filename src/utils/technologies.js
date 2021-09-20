@@ -2,8 +2,8 @@ const TECHNOLOGY = [
   {
     title: 'Front',
     header: 'Frontend Development',
-    heroimg: '/static/technologies/frontend/frontendhero.jpg',
-    imagesrc: '/static/technologies/frontend/frontendmain.jpg',
+    heroimg: '/static/technologies/frontend/frontendmain.webp',
+    imagesrc: '/static/technologies/frontend/frontend.webp',
     subheader: 'Innovative and robust front end development services to build best  visual experince across devices.',
     description: 'First impression is the last impression! Fronted helps create intuitive and business concentric user experience for websites and mobile.',
     points: [
@@ -14,12 +14,12 @@ const TECHNOLOGY = [
     expertise: [
       {
         title: 'Angular JS',
-        path: "/static/technologies/frontend/angularjs.png",
+        path: "/static/technologies/frontend/angularjs.webp",
         data: 'Set off your brand presence with the aim of building intuitive and dynamic web applications for your business. Our skillful AngularJS developers have unleashed the potential of this wonderful technology, by implementing cutting-edge and robust AngularJS application development solutions, achieving complete customer satisfaction, fulfilling business requirements.'
       },
       {
         title: 'React JS',
-        path: "/static/technologies/frontend/reactjs.png",
+        path: "/static/technologies/frontend/reactjs.webp",
         data: 'Leverage the component-based architecture of React for best user interface, rapid real-time updates, swift loading and high-performance. Our skilled ReactJS developers possess demonstrable involvement in developing and deploying mobile and web apps, be it any hardware, device or browser. '
       },
       {
@@ -34,7 +34,7 @@ const TECHNOLOGY = [
       },
       {
         title: 'CSS3',
-        path: "/static/technologies/frontend/css3.png",
+        path: "/static/technologies/frontend/css3.webp",
         data: 'Build well-designed user interfaces for your website with CSS3 front-end development services. Our in-depth expertise in CSS and HTML5 enables a high focus on UI/UX that offers visually appealing websites, animated and enhanced visual designs which are multi-browser compatible.'
       },
       {
@@ -46,8 +46,8 @@ const TECHNOLOGY = [
   },
   {
     title: 'Mobile',
-    heroimg: '/static/technologies/mobile/mobilemain.jpg',
-    imagesrc: '/static/technologies/mobile/mobile.jpg',
+    heroimg: '/static/technologies/mobile/mobilemain.webp',
+    imagesrc: '/static/technologies/mobile/mobile.webp',
     header: 'Mobile Development',
     subheader: 'Get your business directly into the palms of your customers with mobile apps with incredible user experience.',
     description: 'Businesses with customized mobile apps helps improve customer service, increase  business visibility, augment  brand loyalty.',
@@ -59,40 +59,40 @@ const TECHNOLOGY = [
     expertise: [
       {
         title: 'IOS',
-        path: "/static/technologies/mobile/ios.png",
+        path: "/static/technologies/mobile/ios.webp",
         data: 'Build feature-rich, interactive iOS app which is tailored to your audience and is extremely scalable. Our experts have been in the business of iOS app development since a number of years. We assess the specific needs of particular business to create visually appealing and functional IOS apps.'
       },
       {
         title: 'Android',
-        path: "/static/technologies/mobile/android.png",
+        path: "/static/technologies/mobile/android.webp",
         data: 'Add value to your business identity with distinctive mobile apps that ensure a smooth and user-friendly interface for the user. Our innovative UI is visually stunning and relevant to our client’s business.'
       },
       {
         title: 'React Native',
-        path: "/static/technologies/frontend/reactjs.png",
+        path: "/static/technologies/frontend/reactjs.webp",
         data: 'Develop native apps for their business which are extremely reliant, load faster and are more flexible than other mobile applications. Every business has different needs. We help to customize native apps according to the business need of our client and tailor it accordingly.'
       },
       {
         title: 'Hybrid',
-        path: "/static/technologies/mobile/hybrid.png",
+        path: "/static/technologies/mobile/hybrid.webp",
         data: 'As experts of hybrid app development, we combine the exceptional HTML5 with various mobile platforms like Phone Gap and Sencha. We contribute in developing the perfect app that has the flexibility to access mobile features and is highly interactive.'
       },
       {
         title: 'Flutter',
-        path: "/static/technologies/mobile/flutter.png",
+        path: "/static/technologies/mobile/flutter.webp",
         data: 'By using a single codebase, Flutter allows you to build creative and stunning native apps on iOS and Android. Add the power of speed to your app development with fast and easy UI building and faster and continuous testing.'
       },
       {
         title: 'Swift',
-        path: "/static/technologies/mobile/swift.png",
+        path: "/static/technologies/mobile/swift.webp",
         data: 'Induce new level of enterprise mobility with dynamic dispatches, the flexibility of language used, late binding, and extensible Swift programming taht adds to optimized app performance and highly engaging application.'
       },
     ]
   },
   {
     title: 'Cloud',
-    heroimg: '/static/technologies/cloud/cloud-technology-main.jpg',
-    imagesrc: '/static/technologies/cloud/cloud-technology.jpg',
+    heroimg: '/static/technologies/cloud/cloud-technology-main.webp',
+    imagesrc: '/static/technologies/cloud/cloud-technology.webp',
     header: 'Cloud Development',
     subheader: 'Redefine and future-proof your business with intelligent cloud serivices',
     description: 'Leveraging cloud environments enable businesses to scale their compute and storage needs up on an as-needed basis, which can keep costs low',
@@ -104,20 +104,20 @@ const TECHNOLOGY = [
     expertise: [
       {
         title: 'AWS',
-        path: "/static/technologies/cloud/AWS.png",
+        path: "/static/technologies/cloud/AWS.webp",
         data: 'Amazon Web Services (AWS) has been leveraging the potential of the cloud, showcasing itself as one of the prime leaders in the cloud computing arena. Our developers and designers offer a full proof set of activities for cloud platform development activities for AWS that include developing customized solutions and apps along with implementing, migrating, supporting, training and integrating them. '
       },
       {
         title: 'Google Cloud',
-        path: "/static/technologies/cloud/google cloud.png",
+        path: "/static/technologies/cloud/google cloud.webp",
         data: 'Google Cloud Platform lets you build, deploy, and scale applications, websites, and services on the same infrastructure as Google. Boost your cloud competence with Google Cloud as our domain experts will help you create customized solutions, enterprise-scale implementations, with round-the-clock maintenance, and third-party integartions.'
       }
     ]
   },
   {
     title: 'Back',
-    heroimg: '/static/technologies/backend/backendmain.jpg',
-    imagesrc: '/static/technologies/backend/backend.jpg',
+    heroimg: '/static/technologies/backend/backendmain.webp',
+    imagesrc: '/static/technologies/backend/backend.webp',
     header: 'Backend Development',
     subheader: 'Backbone of software solutions that drives the business growth strategies.',
     description: 'Leveraging cloud environments enable businesses to scale their compute and storage needs up on an as-needed basis, which can keep costs low',
@@ -129,40 +129,40 @@ const TECHNOLOGY = [
     expertise: [
       {
         title: '.NET',
-        path: "/static/technologies/backend/netdevelopment.png",
+        path: "/static/technologies/backend/netdevelopment.webp",
         data: 'Get dynamic solutions that works cross-platform. .NETDevelopment is an open source developer platform for building many different types of applications. With .NET, you can use multiple languages, editors, and libraries to build for web, mobile, desktop, games, and IoT.'
       },
       {
         title: 'Node JS',
-        path: "/static/technologies/backend/node-js.png",
+        path: "/static/technologies/backend/node-js.webp",
         data: 'An event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.'
       },
       {
         title: 'C#',
-        path: "/static/technologies/backend/csharp.png",
+        path: "/static/technologies/backend/csharp.webp",
         data: ' Develop desktop, web application, and games with C#. Have high memeory backup with no memory leak problems.              '
       },
       {
         title: 'PHP',
-        path: "/static/technologies/backend/php.png",
+        path: "/static/technologies/backend/php.webp",
         data: 'With expert PHP developers, create rich and vibrant web applications. Capable of meeting and exceeding all the business goals. '
       },
       {
         title: 'C++',
-        path: "/static/technologies/backend/C++.png",
+        path: "/static/technologies/backend/C++.webp",
         data: 'Free-form programming language that supports procedural, object-oriented, and generic programming. Secure and stabilise backend C++ development that fortifies backend application.'
       },
       {
         title: '.NETcore',
-        path: "/static/technologies/backend/netcore.png",
+        path: "/static/technologies/backend/netcore.webp",
         data: 'With .NETcore, unleash the most versatile framework used to build all kinds of software including Web applications, Mobile apps, Desktop applications, Cloud services, Microservices, APIs, Games, and IoT applications. Get the extensive .NETCore services like ASP .NET Migration, Web and Cloud App Development, 3rd party integration, etc. '
       },
     ]
   },
   {
     title: 'Frameworks',
-    heroimg: '/static/technologies/backend/backendmain.jpg',
-    imagesrc: '/static/technologies/frameworks/framework.jpg',
+    heroimg: '/static/technologies/backend/backendmain.webp',
+    imagesrc: '/static/technologies/frameworks/framework.webp',
     header: 'Frameworks',
     subheader: 'Build interactive and powerful web and mobile servirces powered by superior software frameworks',
     description: 'Modern frameworks offers the most efficient ways to uild enterprise-grade website and mobile inetrfaces that delivers matchless exoerience.',
@@ -174,35 +174,35 @@ const TECHNOLOGY = [
     expertise: [
       {
         title: 'Laravel',
-        path: "/static/technologies/frameworks/laravel.png",
+        path: "/static/technologies/frameworks/laravel.webp",
         data: 'Leverage the outstanding features from security to localization of Laravel to invoke trust and safety of your customers. Our in-house experts will help you build websites that gives suburb scaling opportunities, and makes testing your website or business application easier than ever.  Laravel framework is a great option if you are worried about security breaches and will ensure that you keep your clients, and your business, safe.'
       },
       {
         title: 'MEAN',
-        path: "/static/technologies/frameworks/mean stack.png",
+        path: "/static/technologies/frameworks/mean stack.webp",
         data: 'Make an impact with your web application. Dveleop super responsive, load-bearing web experiences and APIs backed by JavaScript framework. Our experts, in past have delivered highly adaptable and versatile web interfaces and mobile apps with our customer-centric and end-to-end MEAN stack development services.'
       },
       {
         title: 'Codeigniter',
-        path: "/static/technologies/frameworks/codeigniter.png",
+        path: "/static/technologies/frameworks/codeigniter.webp",
         data: 'Build fully-functional, enterprise-grade and immersive web experience with CodeIgnitor. Our in-house CodeIgniter deveopers are adept at crafting cost-efficient PHP solutions at unparalled speed and precision. We offer customized website development, software development, and API development through robust COdeIgniter services.'
       },
       {
         title: 'RubyOnRails',
-        path: "/static/technologies/frameworks/Ruby_On_Rails_Logo.png",
+        path: "/static/technologies/frameworks/Ruby_On_Rails_Logo.webp",
         data: 'Deploy the features of rapid and efficient application development of Ruby on Rails and build enterprise-ready prototypes as per your busienss needs and save development costs in a swift. We cater to a host of industry domains and have extensive experience in designing , architecting, and building Ruby on Rail-powered solutions.'
       },
       {
         title: 'CakePHP',
-        path: "/static/technologies/frameworks/CakePHP.png",
+        path: "/static/technologies/frameworks/CakePHP.webp",
         data: 'Build scalable, agile and modern web app with CakePhP and get the high-end returns with our cost-effective services. Our cakePHP developers have the right knowledge and experience in designing extremely innovative and interactive interfaces. We deploy standard industry libraries and plug-ins to build higly scalable web solutions.'
       }
     ]
   },
   {
     title: 'Ecommerce',
-    heroimg: '/static/technologies/ecommerce/e-commercemain.jpg',
-    imagesrc: '/static/technologies/ecommerce/e-commerce.jpg',
+    heroimg: '/static/technologies/ecommerce/e-commercemain.webp',
+    imagesrc: '/static/technologies/ecommerce/e-commerce.webp',
     header: 'E-Commerce',
     subheader: 'Build highy intuitive and visually-rich website and e-commerce solutions that ensures great user experience and engagement',
     description: 'Launch omni-channel e-commerce store, build brand experience, or expand your  business into new geographies with e-commerce development services',
@@ -214,30 +214,30 @@ const TECHNOLOGY = [
     expertise: [
       {
         title: 'Magento',
-        path: "/static/technologies/ecommerce/magento-logo.png",
+        path: "/static/technologies/ecommerce/magento-logo.webp",
         data: 'Deliver high-end user experience by building e-commerce stores with Magneto which are visually-rich and customer-centric. As an adept partner, we will help you articultae your business goals and transform them into optimal tech solutions with Magneto web development. Evoke a full suite of Magneto development services with aligned e-commerce startegy to give your brnad an exceptional value and dleiver bsuienss results.'
       },
       {
         title: 'Shopify',
-        path: "/static/technologies/ecommerce/Shopify-Logo.png",
+        path: "/static/technologies/ecommerce/Shopify-Logo.webp",
         data: 'Unlock new opportunities for your e-commerce store with Shopify. With Shopify you can launch a new store or renovate your existing brand presence without having to worry about  intutiveness and security. Power your online retail store that add value and drive sales effortlessly.'
       },
       {
         title: 'WooCommerce',
-        path: "/static/technologies/ecommerce/WooCommerce.png",
+        path: "/static/technologies/ecommerce/WooCommerce.webp",
         data: 'WooCommerce helps you create appealling e-stores that offers personlaized and intuitive interface and powerful extension. Deploy a dedicated team of WooCommerce developers and design experts in ingenious WooCommerce theme development, plug-in development, and WooCommerce app development perfectly suited to your enterprise needs.'
       },
       {
         title: 'NopCommerce',
-        path: "/static/technologies/ecommerce/nopcommerce.png",
+        path: "/static/technologies/ecommerce/nopcommerce.webp",
         data: 'Be it hosting dynamic product gallaries, secure payment gateway support, distingusihed shopping cart, or easy to use customizable solutions, we are here to craeet an impact of your e-Commerce stores with nopCommerce development. We use the latest versions and techniques of nopCommerce development frameworks keeping in mind your requirements.'
       }
     ]
   },
   {
     title: 'Database',
-    heroimg: '/static/technologies/database/database-main.jpg',
-    imagesrc: '/static/technologies/database/database.jpg',
+    heroimg: '/static/technologies/database/database-main.webp',
+    imagesrc: '/static/technologies/database/database.webp',
     header: 'Database',
     subheader: 'Spend less time managing data and security with high-quality database managemnet system ',
     description: 'Reduce the negative impacts of exponential, uncontorlled data growth with the right database. ',
@@ -249,35 +249,35 @@ const TECHNOLOGY = [
     expertise: [
       {
         title: 'SQL Lerver',
-        path: "/static/technologies/database/sqlserver.png",
+        path: "/static/technologies/database/sqlserver.webp",
         data: 'Speed up your application advancement utilizing the most recent SQL  Server capacities and simplify performance management to build applications faster and most efficiently. Our team will help you keep your data secure with multiple layers of protection, built in controls, and intuitive threat detection'
       },
       {
         title: 'MySQL',
-        path: "/static/technologies/database/mysql-logo.png",
+        path: "/static/technologies/database/mysql-logo.webp",
         data: 'Support mission-critical database deployments with MySQL Services. With our MySQL services, drive benefits like high-performance storage, data encryption, storage, and process optimization.'
       },
       {
         title: 'PostgreSQL',
-        path: "/static/technologies/database/PostgreSQL.png",
+        path: "/static/technologies/database/PostgreSQL.webp",
         data: 'Leverage PostgreSQL database server management to store transactional data as well as drive application health and critical data derivative decision making. Our team will help you maximize the effectiveness of your data aviding time-intesive tasks with PostgreSQL database management services.'
       },
       {
         title: 'MongoDB',
-        path: "/static/technologies/database/mongodb.png",
+        path: "/static/technologies/database/mongodb.webp",
         data: 'Create, utilize, and scale non-relational databases in your cloud infrastructure with with our MongoDB services. Deploy the powerful MongoDB experience in managing large, distributed data systems with ever increasing operational efficiencies while securing critical data on premise and as well as on cloud.'
       },
       {
         title: 'DynamoDB',
-        path: "/static/technologies/database/DynamoDB.png",
+        path: "/static/technologies/database/DynamoDB.webp",
         data: 'Build fater, flexible, and functional applications with our DynamoDB services. Leverage DynamoDB to add value to your mobile application management, online gaming, online advertisements, and various other applications which requires fast turnaround time and ease of scalability.'
       },
     ]
   },
   {
     title: 'CMS',
-    heroimg: '/static/technologies/cms/cmsmain.jpg',
-    imagesrc: '/static/technologies/cms/cms.jpg',
+    heroimg: '/static/technologies/cms/cmsmain.webp',
+    imagesrc: '/static/technologies/cms/cms.webp',
     header: 'CMS',
     subheader: 'Ensure brand consistency and govern content quality and deliver your content at scale.',
     description: 'Accelearte your online presence with a robust content platform and publish content on the go.',
@@ -289,35 +289,35 @@ const TECHNOLOGY = [
     expertise: [
       {
         title: 'WordPress',
-        path: "/static/technologies/cms/wordpress.png",
+        path: "/static/technologies/cms/wordpress.webp",
         data: 'Develop feature-rich, light, modern, appealling web solutions with custome WordPress Development. With our Wordpress development services gain access to perfect balance between flawless web operations, cost-effectiveness, and user engagement. Teamup with our Wordpress developers to deliver web experiences that result in revenue generation and augmenting brand recognition.'
       },
       {
         title: 'Kentico',
-        path: "/static/technologies/cms/kentico.png",
+        path: "/static/technologies/cms/kentico.webp",
         data: 'Get features like flexible content storehouse, multiple-site and multiple-language configurations, and buil-in modules like ecommerce, online forms, forums, polls, web analytics with Kentico CMS Development. Our Kentico experts will create best-in-class enterprise content management tailored to your busienss and audience needs.'
       },
       {
         title: 'Joomla',
-        path: "/static/technologies/cms/joomla.png",
+        path: "/static/technologies/cms/joomla.webp",
         data: 'Add multiple extentions to add desired features and functionalities with Joomla web design and Joomla web development. Joomla lets you achieve feasilbility, ease of use and authenticity with the goal of managing and controlling your enterprise content effortlessly. Leverage our years of experince in Joomla in building cost-effective and high value solutions and achieve desired ROI.'
       },
       {
         title: 'DotNetNuke',
-        path: "/static/technologies/cms/DotNetNuke.png",
+        path: "/static/technologies/cms/DotNetNuke.webp",
         data: 'Develop an edge over your competitors by deploying, managing, and developing extranet, intranet, and websites with DotNetNuke. DotNetNuke stores content efficientlythrough different databases and make your developmentprocess more efficient. Our DNN developers are continuously leveraging this technology to drive innovative services.'
       },
       {
         title: 'Sitefinity',
-        path: "/static/technologies/cms/Sitefinity.png",
+        path: "/static/technologies/cms/Sitefinity.webp",
         data: 'Craft your digital and web presence diligently with Sifinity CMS technology that help craete, develop, and optimize digital marketing and web content platform for your enterprise. Dive into the features of advanced, next-gen, .NET based CMS seamlessly and allows for developing apealling websites, intranets, community websites.'
       }
     ]
   },
   {
     title: 'Devops',
-    heroimg: '/static/technologies/devops/devops-main.jpg',
-    imagesrc: '/static/technologies/devops/devops.jpg',
+    heroimg: '/static/technologies/devops/devops-main.webp',
+    imagesrc: '/static/technologies/devops/devops.webp',
     header: 'DevOps',
     subheader: 'Plan smarter, collaborate better, and deliver faster with modern Dev services.',
     description: 'Teams who fully embrace DevOps practices work smarter and faster, and deliver better quality to their customers.',
@@ -329,15 +329,15 @@ const TECHNOLOGY = [
     expertise: [
       {
         title: 'Azure Ops',
-        path: "/static/technologies/devops/azure-devops.png",
+        path: "/static/technologies/devops/azure-devops.webp",
         data: 'With a stringent focus on attaining business growth and efficiency for our esteemed clients, our Azure experts ensures best of development and architecture designing services. We offer a simplistic approach to work on the global network which delivers a range of services that can execute, in parallel, taking care of several tasks for your app / website. '
       },
     ]
   },
   {
     title: 'Platforms',
-    heroimg: '/static/technologies/platforms/platformsmain2.jpg',
-    imagesrc: '/static/technologies/platforms/platforms.jpg',
+    heroimg: '/static/technologies/platforms/platformsmain2.webp',
+    imagesrc: '/static/technologies/platforms/platforms.webp',
     header: 'Platforms',
     subheader: 'Offer hyper-personalized customer experience, lead management, and data intelligence- anywhere, anytime, and all at one place.',
     description: 'Manage your day-to-day customer experiences seemlessly and effortlessly with the right platform to manage diffrent touchpoints in a customer journey',
@@ -349,17 +349,17 @@ const TECHNOLOGY = [
     expertise: [
       {
         title: 'Zoho',
-        path: '/static/technologies/platforms/zoho.png',
+        path: '/static/technologies/platforms/zoho.webp',
         data: 'With Zoho, integegrate a dynamic platform that unifies all your business processes in order for your business cloud to function efficiently. Our Zoho Consultation services will help you discover and transform your customer experiences throughout the multiple touchpoints– right from acquiring lead to robust customer services. '
       },
       {
         title: 'MS Dynamics CRM',
-        path: "/static/technologies/platforms/MS_Dynamics_CRM.png",
+        path: "/static/technologies/platforms/microsoft_dynamics.webp",
         data: 'Get dynamic solutions that optimize sales, operations, financials, field service, project service automation, and marketing. We will enable you to thrive in the digital landscape effectively and augment your ways of working with Microsoft Dynamics Integration.'
       },
       {
         title: 'PowerBI',
-        path: "/static/technologies/platforms/PowerBI.png",
+        path: "/static/technologies/platforms/PowerBI.webp",
         data: 'We will help you take informed decisions and help you make right analysis and organize reports with our experinced Power BI consulting team. Wether it is telling stories through data, or Power BI implementation, or Power BI upgrades– we have covered each aspect for your PowerBI needs.'
       },
     ]
