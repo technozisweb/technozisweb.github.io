@@ -108,13 +108,13 @@ const CardStyle = styled(Paper)(({ theme }) => {
   return {
     // minWidth: 320,
     height: 280,
-    color: 'common.white',
     boxShadow: 'none',
-    backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 800 : 800],
+    backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 500 : 800],
     transition: "transform 0.15s ease-in-out",
     "&:hover": {
       transform: "scale3d(1.02, 1.02, 1)",
-      backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 700 : 800],
+      backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 600 : 800],
+      color: 'common.white',
     },
   };
 });
@@ -150,7 +150,7 @@ export default function LandingMinimalHelps() {
             }}>
               <MotionInView variants={varZoomIn}>
                 <CardActionArea onClick={() => { setOpen(true); setTitle(card.title); }}>
-                  <CardStyle sx={{ borderBottom: '5px solid lightcoral', color: 'common.white' }}>
+                  <CardStyle sx={{ borderBottom: '5px solid lightgreen', color: 'common.white', }}>
                     {/* <CardContent sx={{ backgroundColor: 'primary.main' }} /> */}
                     <CardContent>
                       <CardMedia
@@ -158,7 +158,7 @@ export default function LandingMinimalHelps() {
                         image={card.icon}
                         sx={{ height: 50, width: 50, mb: 2 }}
                       />
-                      <Typography variant="subtitle2" sx={{ mb: 1, color: 'lightcoral' }}>
+                      <Typography variant="subtitle1" sx={{ mb: 1, color: 'lightgreen' }}>
                         {card.title}
                       </Typography>
                       <Typography variant="body2">
