@@ -90,7 +90,7 @@ export default function MainNavbar() {
               <Button variant="outlined" target="_blank">
                 <Link
                   underline="none"
-                  href="/contact-us"
+                  to="/contact-us"
                 // color="black"
                 >
                   Contact us
