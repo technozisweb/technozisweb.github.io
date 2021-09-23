@@ -91,6 +91,7 @@ export default function MainNavbar() {
                 <Link
                   underline="none"
                   to="/contact-us"
+                  component={RouterLink}
                 // color="black"
                 >
                   Contact us
