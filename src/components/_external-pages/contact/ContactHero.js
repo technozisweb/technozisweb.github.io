@@ -13,11 +13,13 @@ import { TextAnimate, varFadeIn, varFadeInRight, varWrapEnter } from '../../anim
 const CONTACTS = [
   {
     icon: youtubeIcon,
-    address: 'youtube.com',
+    address: 'Youtube',
+    path: 'https://www.youtube.com/channel/UC37H615tFsVX3t2Nc1fxqZQ'
   },
   {
     icon: linkedinFill,
-    address: 'linkedin.com/company/technozis',
+    address: 'Linkedin',
+    path: 'https://www.linkedin.com/company/75654940/admin/'
   },
   // {
   //   icon: facebookFill,
@@ -74,8 +76,14 @@ export default function ContactHero() {
                 </motion.div>
                 <motion.div variants={varFadeInRight}>
                   <Typography variant="body2">
-                    {contact.address}
-                    <br /> {contact.phoneNumber}
+                    <a
+                      href={contact.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: 'none'}}
+                    >
+                      {contact.address}
+                    </a>
                   </Typography>
                 </motion.div>
               </Grid>
