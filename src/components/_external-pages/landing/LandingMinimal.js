@@ -54,12 +54,12 @@ function MemberCard({ member }) {
         image={icon}
         height="120"
       />
-      <Typography variant="subtitle2" sx={{ mt: 2, textAlign: 'center' }}>
+      <Typography variant="subtitle2" sx={{ mt: 2, textAlign: 'center', textSize: {md: 20, xs: 18} }}>
         {title}
       </Typography>
-      <Box sx={{ p: 2 }}>
+      <Box sx={{ p: 2, pb: 0 }}>
         {/* <Divider /> */}
-        <Typography variant="body1" sx={{ mt: 1, color: 'text.secondary', textAlign: 'justify', fontFamily: 'Roboto' }}>
+        <Typography variant="body1" sx={{ color: 'text.secondary', textAlign: 'justify', fontFamily: 'Roboto' }}>
           {subheader}
         </Typography>
         <CardButton
