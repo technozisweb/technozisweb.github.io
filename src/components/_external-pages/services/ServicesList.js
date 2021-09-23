@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Paper } from '@material-ui/core';
 // material
-import { styled } from '@material-ui/core/styles';
+import { styled, alpha } from '@material-ui/core/styles';
 import { useEffect, useState } from 'react';
 // components
 import Page from 'src/components/Page';
@@ -21,10 +21,10 @@ const RootStyle = styled(Page)(({ theme }) => ({
 }));
 
 const ContentStyle = styled(Page)(({ theme }) => ({
-  // backgroundImage: 
-  //   theme.palette.mode === 'light'
-  //     ? `linear-gradient(0deg, ${alpha(theme.palette.grey[900], 0)} 0%, ${theme.palette.grey[400]} 200%)`
-  //     : 'none',
+  backgroundImage: 
+    theme.palette.mode === 'light'
+      ? `linear-gradient(0deg, ${alpha(theme.palette.grey[900], 0)} 0%, ${theme.palette.grey[400]} 200%)`
+      : 'none',
   // backgroundColor: theme.palette.grey[800]
 }));
 
@@ -54,10 +54,10 @@ export default function MegaMenu() {
     <RootStyle title="Mega Menu | Minimal-UI">
 
       <Container maxWidth="lg" sx={{ position: 'relative' }}>
-        <Box
+        {/* <Box
           component="img"
-          alt="image shape"
-          src="/static/home/bg2.jpg"
+          // alt="image shape"
+          // src="/static/home/bg2.jpg"
           sx={{
             top: 0,
             right: 24,
@@ -67,7 +67,7 @@ export default function MegaMenu() {
             filter: 'grayscale(1) opacity(100%)',
             display: { xs: 'none', md: 'block' }
           }}
-        />
+        /> */}
         <Grid container>
           <Grid item xs={12} md={4}>
             <Box sx={{ width: 420, flexShrink: 0, overflow: 'unset' }}>
@@ -76,7 +76,7 @@ export default function MegaMenu() {
           </Grid>
           <Grid item xs={12} md={1}></Grid>
           <Grid item xs={12} md={7}>
-            <Paper sx={{ minHeight: 340, maxWidth: 740, overflow: 'hidden' }}>
+            {/* <Paper sx={{ overflow: 'hidden' }}> */}
               <ContentStyle>
                 <Box
                   // component="img"
@@ -89,7 +89,7 @@ export default function MegaMenu() {
                   <ServicesDescription serviceData={serviceData} />
                 </Box>
               </ContentStyle>
-            </Paper>
+            {/* </Paper> */}
           </Grid>
         </Grid>
       </Container>

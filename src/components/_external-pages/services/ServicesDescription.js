@@ -1,5 +1,5 @@
 // material
-import { Box, Container, List, ListItem, ListItemIcon, Typography } from '@material-ui/core';
+import { Container, List, ListItem, ListItemIcon, Typography } from '@material-ui/core';
 import { styled } from '@material-ui/core/styles';
 import RemoveIcon from '@material-ui/icons/Remove';
 import PropTypes from 'prop-types';
@@ -30,7 +30,7 @@ export default function ServicesDescription({ serviceData }) {
               <Typography
                 sx={{
                   // fontSize : {xs: 16, md: 20},
-                  marginTop: 5,
+                  marginTop: 2,
                   fontFamily: 'Roboto',
                   // fontStyle: "italic",
                   fontWeight: 'fontWeightMedium'
