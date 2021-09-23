@@ -24,12 +24,12 @@ const TECHNOLOGY = [
       },
       {
         title: 'Vue JS',
-        path: "/static/technologies/frontend/vue-js.png",
+        path: "/static/technologies/frontend/vue-js.webp",
         data: 'Execute the light weight, versatile and scalable framework of Vue that offers to create highly intuitive interface and single page applications. Leveraging the potential of full stack JavaScript development technologies, we have built some splendid interfaces.As it adopts the MVVM architectural pattern, it creates uder experience that is engaging and invtes user retention.'
       },
       {
         title: 'Javascript',
-        path: "/static/technologies/frontend/javascript.png",
+        path: "/static/technologies/frontend/javascript.webp",
         data: 'Add WOW factor to your websites with the user-centric design and service-oriented architecture of JavaScript. Our deep experience in core Java, modern Java architecture, java front-end and backend frameworks, along with design-centric approach help you meet your business and technology goals, seamlessly.'
       },
       {
@@ -39,7 +39,7 @@ const TECHNOLOGY = [
       },
       {
         title: 'HTML5',
-        path: "/static/technologies/frontend/html5.png",
+        path: "/static/technologies/frontend/html5.webp",
         data: 'Employ the best of HTML solutions like Ember.js, AngulaJS, Phonegap, SproutCore to create hyper-perosnalized, robust, and innovative websites and moblie applications. '
       },
     ],
