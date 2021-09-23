@@ -153,7 +153,7 @@ const menuConfig = [
         subheader: 'Platforms',
         items: [
           { title: 'Zoho', icon: <img src="/static/technologies/platforms/zoho.webp" alt="" />, path: '/technologies/platforms' },
-          { title: 'MS Dynamics CRM', icon: <img src="/static/technologies/platforms/MS_Dynamics_CRM.webp" alt="" />, path: '/technologies/platforms' },
+          { title: 'MS Dynamics CRM', icon: <img src="/static/technologies/platforms/microsoft_dynamics.webp" alt="" />, path: '/technologies/platforms' },
           { title: 'PowerBI', icon: <img src="/static/technologies/platforms/PowerBI.webp" alt="" />, path: '/technologies/platforms' },
         ]
       },
