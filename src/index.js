@@ -11,7 +11,7 @@ import './utils/highlight';
 import 'simplebar/src/simplebar.css';
 
 // map
-import 'mapbox-gl/dist/mapbox-gl.css';
+// import 'mapbox-gl/dist/mapbox-gl.css';
 
 // lightbox
 import 'react-image-lightbox/style.css';
