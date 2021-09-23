@@ -1,27 +1,25 @@
-import { useState } from 'react';
-import { Icon } from '@iconify/react';
-import googleFill from '@iconify/icons-eva/google-fill';
-import twitterFill from '@iconify/icons-eva/twitter-fill';
-import facebookFill from '@iconify/icons-eva/facebook-fill';
+import youtubeIcon from '@iconify/icons-ci/youtube';
 import linkedinFill from '@iconify/icons-eva/linkedin-fill';
-import { Link as ScrollLink } from 'react-scroll';
-import { Link as RouterLink } from 'react-router-dom';
+import { Icon } from '@iconify/react';
+import { Container, Divider, Grid, IconButton, Link, Popover, Stack, Typography } from '@material-ui/core';
 // material
 import { styled } from '@material-ui/core/styles';
-import { Grid, Link, Divider, Container, Typography, IconButton, Stack, Popover } from '@material-ui/core';
-// routes
-import { PATH_PAGE } from '../../routes/paths';
+import { useState } from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
+import Label from 'src/components/Label';
 //
 import Logo from '../../components/Logo';
-import Label from 'src/components/Label';
+// routes
+import { PATH_PAGE } from '../../routes/paths';
 
 // ----------------------------------------------------------------------
 
 const SOCIALS = [
-  { name: 'FaceBook', icon: facebookFill, link: 'facebook.com' },
-  { name: 'Google', icon: googleFill, link: 'google.com' },
+  // { name: 'FaceBook', icon: facebookFill, link: 'facebook.com' },
+  // { name: 'Google', icon: googleFill, link: 'google.com' },
   { name: 'Linkedin', icon: linkedinFill, link: 'linkedin.com/company/technozis' },
-  { name: 'Twitter', icon: twitterFill, link: 'twitter.com' }
+  { name: 'Youtube', icon: youtubeIcon, link: 'bit.ly/3oe6fTR' }
 ];
 
 const LINKS = [
