@@ -10,7 +10,7 @@ import { TextAnimate, varFadeInRight, varWrapEnter } from '../../animate';
 const RootStyle = styled(motion.div)(({ theme }) => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: 'url(/static/overlay.svg), url(/static/home/business-solutions.webp)',
+  backgroundImage: 'url(/static/overlay.svg), url(/static/business-solutions/main2.webp)',
   padding: theme.spacing(10, 0),
   [theme.breakpoints.up('md')]: {
     height: 480,
