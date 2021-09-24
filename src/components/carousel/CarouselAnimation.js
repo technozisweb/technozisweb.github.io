@@ -14,19 +14,19 @@ import { CarouselControlsArrowsBasic2 } from './controls';
 
 const MOCK_CAROUSELS = [
   {
-    title: 'Digital Transformation',
-    description: 'We blend innovation, security, and speed to help you transition your business seamlessly to digital.',
-    image: '/static/home/dt.webp'
+    title: 'Custom Software Development',
+    description: 'Design, Create, Deploy, and manage requirements efficiently for the future.',
+    image: '/static/landing-main/softwaredev.webp'
   },
   {
-    title: 'Custom Software development',
-    description: 'Design, Create, Deploy, and manage requirements efficiently for the future.',
-    image: '/static/home/sd.webp'
+    title: 'Digital Transformation',
+    description: 'We blend innovation, security, and speed to help you transition your business seamlessly to digital.',
+    image: '/static/landing-main/digitaltransformation.webp'
   },
   {
     title: 'Business Intelligence and Analytics',
     description: 'Unlock meaningful insights to improve performance, reduce risk, and plan future with data-driven strategy.',
-    image: '/static/home/bia.webp'
+    image: '/static/landing-main/biabanner.webp'
   },
 ]
 
@@ -77,39 +77,50 @@ function CarouselItem({ item, isActive }) {
             textAlign: 'left',
             position: 'absolute',
             color: 'black',
+            // mb: { md: '10%' },
             // ml: { xs: 0, md: '5%' },
             // mt: {xs: '30%', md: 0},
+            top: '50%',
+  // -ms-transform: translateY(-50%);
+  //       transform: translateY(-50%);
           }}
         >
-          <MotionContainer open={isActive}>
-            <motion.div variants={varFadeInRight}>
-              <Typography variant='h1' gutterBottom sx={{ fontSize: { xs: 30, md: 60 }, fontWeight: 'fontWeightMedium', color: 'primary.main', textShadow: '2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;' }}>
-                {item.title}
-              </Typography>
-            </motion.div>
-            <motion.div variants={varFadeInRight}>
-              <Typography
-                variant="h4"
-                gutterBottom
-                sx={{
-                  fontFamily: 'Roboto',
-                  fontStyle: "italic",
-                  // color: 'common.white',
-                  fontSize: { xs: 20, md: 30 }
-                }}
-              >
-                {item.description}
-              </Typography>
-            </motion.div>
-            <motion.div variants={varFadeInRight}>
-              <Button variant="outlined" sx={{ mt: 3, color: 'black' }}>
-                Contact us
-              </Button>
-            </motion.div>
-          </MotionContainer>
+        <MotionContainer open={isActive}>
+          <motion.div variants={varFadeInRight}>
+            <Typography
+              variant='h1'
+              gutterBottom
+              sx={{
+                fontFamily: 'Roboto',
+                fontSize: { xs: 28, md: 50 },
+                fontWeight: 'fontWeightLarge',
+              }}>
+              {item.title}
+            </Typography>
+          </motion.div>
+          <motion.div variants={varFadeInRight}>
+            <Typography
+              variant="body1"
+              gutterBottom
+              sx={{
+                fontFamily: 'Roboto',
+                // fontStyle: "italic",
+                // color: 'common.white',
+                fontSize: { xs: 20, md: 26 }
+              }}
+            >
+              {item.description}
+            </Typography>
+          </motion.div>
+          <motion.div variants={varFadeInRight}>
+            <Button variant="outlined" sx={{ mt: 3, color: 'black' }}>
+              Contact us
+            </Button>
+          </motion.div>
+        </MotionContainer>
         </CardContent>
       </Container>
-    </Paper>
+    </Paper >
   );
 }
 
