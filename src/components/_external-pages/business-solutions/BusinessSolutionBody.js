@@ -55,7 +55,7 @@ export default function LandingHugePackElements() {
               <MotionInView variants={varZoomIn}>
                 <Box
                   component="img"
-                  src="/static/home/crm.webp"
+                  src="/static/business-solutions/crm.webp"
                   sx={{ p: 5 }}
                 />
               </MotionInView>
@@ -110,7 +110,7 @@ export default function LandingHugePackElements() {
             <MotionInView variants={varZoomIn}>
               <Box
                 component="img"
-                src="/static/home/erp2.webp"
+                src="/static/business-solutions/erp2.webp"
                 sx={{ p: 5 }}
               />
             </MotionInView>
